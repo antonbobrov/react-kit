@@ -1,0 +1,24 @@
+@import '../../settings';
+@import './Mp4/';
+@import './Vimeo/';
+@import './YouTube/';
+
+.#{$rkc-prefix}-video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.25s;
+
+  &.#{$rkc-prefix}-loaded {
+    opacity: 1;
+  }
+}

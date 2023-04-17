@@ -1,0 +1,6 @@
+@import '../../settings';
+
+.#{$rkc-prefix}-expand-content {
+  height: 0;
+  overflow: hidden;
+}

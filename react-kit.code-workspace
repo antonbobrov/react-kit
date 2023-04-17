@@ -1,0 +1,29 @@
+{
+	"folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+    {
+      "name": "@eslint-config",
+      "path": "apps/eslint-config"
+    },
+    {
+      "name": "@react-hooks",
+      "path": "apps/react-hooks"
+    },
+    {
+      "name": "@vevet-init",
+      "path": "apps/vevet-init"
+    },
+    {
+      "name": "@react-vevet-hooks",
+      "path": "apps/react-vevet-hooks"
+    },
+    {
+      "name": "@react-components",
+      "path": "apps/react-components"
+    },
+	],
+	"settings": {}
+}

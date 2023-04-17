@@ -1,0 +1,47 @@
+@import '../../settings';
+
+.#{$rkc-prefix}-scroll-view {
+  &.#{$rkc-prefix}-fadeIn {
+    opacity: 0;
+
+    &.#{$rkc-prefix}-viewed {
+      animation-name: #{$rkc-prefix}-scroll-view-fadeIn;
+      animation-duration: 1.25s;
+      animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+      animation-fill-mode: both;
+  
+      @keyframes #{$rkc-prefix}-scroll-view-fadeIn {
+        from {
+          opacity: 0;
+        }
+  
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  &.#{$rkc-prefix}-fadeInUp {
+    opacity: 0;
+
+    &.#{$rkc-prefix}-viewed {
+      animation-name: #{$rkc-prefix}-scroll-view-fadeInUp;
+      animation-duration: 1.25s;
+      animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+      animation-fill-mode: both;
+  
+      @keyframes #{$rkc-prefix}-scroll-view-fadeInUp {
+        from {
+          transform: translate3d(0, 32px, 0);
+          opacity: 0;
+        }
+  
+        to {
+          transform: none;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

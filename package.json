@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "push-docs": "node ./push-docs.js",
+    "publish": "rush build && rush version --bump && git add . && git commit -m \"Release\" && npm run publish:rush && npm run push-docs",
+    "publish:rush": "rush publish --include-all --publish --apply --set-access-level public"
+  }
+}

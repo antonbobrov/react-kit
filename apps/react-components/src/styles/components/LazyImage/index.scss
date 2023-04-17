@@ -1,0 +1,31 @@
+@import '../../settings';
+
+.#{$rkc-prefix}-lazy-image {
+  &.#{$rkc-prefix}-cover,
+  &.#{$rkc-prefix}-contain,
+  &.#{$rkc-prefix}-fullabs {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.#{$rkc-prefix}-cover {
+    object-fit: cover;
+  }
+
+  &.#{$rkc-prefix}-contain {
+    object-fit: cover;
+  }
+
+  &.#{$rkc-prefix}-has-alpha {
+    transition: opacity 0.35s ease-in;
+    opacity: 0;
+
+    &.#{$rkc-prefix}-is-loaded {
+      opacity: 1;
+    }
+  }
+}
