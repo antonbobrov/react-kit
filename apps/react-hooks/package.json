@@ -23,7 +23,9 @@
     "type": "git",
     "url": "git+https://github.com/antonbobrov/react-kit.git"
   },
-  "keywords": ["react hooks"],
+  "keywords": [
+    "react hooks"
+  ],
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",
   "peerDependencies": {

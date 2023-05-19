@@ -22,7 +22,9 @@
     "type": "git",
     "url": "git+https://github.com/antonbobrov/react-kit.git"
   },
-  "keywords": ["vevet"],
+  "keywords": [
+    "vevet"
+  ],
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",
   "dependencies": {

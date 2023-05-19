@@ -25,7 +25,14 @@
     "type": "git",
     "url": "git+https://github.com/antonbobrov/react-kit.git"
   },
-  "keywords": ["react components", "lazy image", "modal", "accordion", "scroll", "video player"],
+  "keywords": [
+    "react components",
+    "lazy image",
+    "modal",
+    "accordion",
+    "scroll",
+    "video player"
+  ],
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",
   "peerDependencies": {
