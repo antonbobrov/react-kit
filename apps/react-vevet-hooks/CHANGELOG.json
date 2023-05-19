@@ -1,0 +1,17 @@
+{
+  "name": "@anton.bobrov/react-vevet-hooks",
+  "entries": [
+    {
+      "version": "1.4.0",
+      "tag": "@anton.bobrov/react-vevet-hooks_v1.4.0",
+      "date": "Fri, 19 May 2023 17:33:46 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add useAnimationFrame"
+          }
+        ]
+      }
+    }
+  ]
+}
