@@ -1,3 +1,4 @@
+export * from './useAnimationFrame';
 export * from './useBreakpointName';
 export * from './useDragDirection';
 export * from './useNonMobileHover';
