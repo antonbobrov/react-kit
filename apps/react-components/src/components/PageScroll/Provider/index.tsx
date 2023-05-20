@@ -55,7 +55,7 @@ export const Provider: FC<IPageScrollProviderProps> = ({
         lerp: 0.1,
         approximation: 0.5,
       },
-      enabled: false,
+      enabled: true,
       ...initialSmoothProps,
     });
     setSelector?.(scroll);

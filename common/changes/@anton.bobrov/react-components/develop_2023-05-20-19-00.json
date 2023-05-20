@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "PageScroll.Provider: enable smooth scroll by default",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}
