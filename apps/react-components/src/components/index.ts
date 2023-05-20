@@ -27,6 +27,8 @@ export * from './Marquee';
 export * from './ModalAnchor';
 export * from './ModalAnchor/types';
 
+export * from './PageScroll';
+
 export * from './ScrollView';
 
 export * from './SplitText';

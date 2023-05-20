@@ -31,7 +31,8 @@
     "modal",
     "accordion",
     "scroll",
-    "video player"
+    "video player",
+    "smooth scroll"
   ],
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",
