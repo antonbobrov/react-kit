@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Sat, 20 May 2023 18:50:00 GMT and should not be manually modified.
+This log was last generated on Sat, 20 May 2023 19:01:33 GMT and should not be manually modified.
+
+## 1.4.1
+Sat, 20 May 2023 19:01:33 GMT
+
+### Patches
+
+- PageScroll.Provider: enable smooth scroll by default
 
 ## 1.4.0
 Sat, 20 May 2023 18:50:00 GMT
