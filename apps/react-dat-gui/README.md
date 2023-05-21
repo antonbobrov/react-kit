@@ -37,3 +37,12 @@ const gui = useDatGUISettings({
   },
 });
 ```
+
+## Disable dat.GUI
+To disable dat.GUI, add this code to `head` tag
+
+```html
+<script>
+  window.USE_DAT_GUI = false;
+</script>
+```
