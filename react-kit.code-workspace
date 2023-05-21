@@ -9,20 +9,24 @@
       "path": "apps/eslint-config"
     },
     {
-      "name": "@react-hooks",
-      "path": "apps/react-hooks"
+      "name": "@react-components",
+      "path": "apps/react-components"
     },
     {
-      "name": "@vevet-init",
-      "path": "apps/vevet-init"
+      "name": "@react-dat-gui",
+      "path": "apps/react-dat-gui"
+    },
+    {
+      "name": "@react-hooks",
+      "path": "apps/react-hooks"
     },
     {
       "name": "@react-vevet-hooks",
       "path": "apps/react-vevet-hooks"
     },
     {
-      "name": "@react-components",
-      "path": "apps/react-components"
+      "name": "@vevet-init",
+      "path": "apps/vevet-init"
     },
 	],
 	"settings": {}

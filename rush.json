@@ -416,6 +416,11 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@anton.bobrov/react-dat-gui",
+      "projectFolder": "apps/react-dat-gui/",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@anton.bobrov/react-components",
       "projectFolder": "apps/react-components/",
       "shouldPublish": true
