@@ -13,6 +13,7 @@ export * from './useForwardedRef';
 export * from './useHover';
 export * from './useIsOnceMounted';
 export * from './useLiteInteraction';
+export * from './useMouseClientPosition';
 export * from './useOnElementResize';
 export * from './useOnEscape';
 export * from './useOnInViewport';
