@@ -1,11 +1,11 @@
 import { useForwardedRef } from '@anton.bobrov/react-hooks';
 import React, { PropsWithChildren, forwardRef } from 'react';
-import { TButtonanchor } from './types';
+import { TButtonAnchor } from './types';
 import { Link } from '../Link';
 
 export const ButtonAnchor = forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
-  PropsWithChildren<TButtonanchor>
+  PropsWithChildren<TButtonAnchor>
 >(({ tag, className, style, children, ...props }, forwardedRef) => {
   const ref = useForwardedRef(forwardedRef);
 
