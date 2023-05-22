@@ -1,6 +1,20 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Sat, 20 May 2023 19:01:33 GMT and should not be manually modified.
+This log was last generated on Mon, 22 May 2023 14:30:47 GMT and should not be manually modified.
+
+## 1.5.0
+Mon, 22 May 2023 14:30:47 GMT
+
+### Minor changes
+
+- TButtonAnchor: fix typo
+- Add `BaseVideo`
+- Add `useOnPageScroll`
+- Add `LazyVideo`
+
+### Patches
+
+- `LazyImage`: fix position `contain`
 
 ## 1.4.1
 Sat, 20 May 2023 19:01:33 GMT
