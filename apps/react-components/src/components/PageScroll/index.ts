@@ -14,3 +14,4 @@ export const PageScroll = {
 
 export * from './types';
 export * from './hooks/usePageScrollSelector';
+export * from './hooks/useOnPageScroll';
