@@ -17,7 +17,7 @@
   }
 
   &.#{$rkc-prefix}-contain {
-    object-fit: cover;
+    object-fit: contain;
   }
 
   &.#{$rkc-prefix}-has-alpha {
