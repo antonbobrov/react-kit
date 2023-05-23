@@ -1,4 +1,23 @@
+@use 'sass:math';
 @import '../../../settings';
+
+@import '~vevet/src/sass/base';
+
+@function px-to-rem($px) {
+  @return #{math.div($px, 16)}rem;
+}
+
+$primary-foreground-color: #fff !default;
+$primary-background-color: #000 !default;
+$secondary-background-color: #222 !default;
+$primary-background-transparency: 0.3 !default;
+$secondary-background-transparency: 0.5 !default;
+
+$player-x-space: 0.875rem !default;
+$player-control-height: 3rem !default;
+$player-progress-height: 1rem !default;
+$player-load-progress-color: rgba(255, 255, 255, 0.3) !default;
+$player-holder-color: rgba(255, 255, 255, 0.3) !default;
 
 .#{$rkc-prefix}-video-player-mp4 {
   position: absolute;
@@ -14,5 +33,234 @@
     width: 100%;
     height: 100%;
     outline: none;
+  }
+
+  .video-js {
+    width: 100%;
+    height: 100%;
+  }
+
+  @import '~video.js/src/css/vjs';
+
+  .video-js {
+    overflow: hidden;
+
+    * {
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    &:not(.vjs-fullscreen) {
+      video {
+        object-fit: cover;
+      }
+    }
+
+    &.vjs-has-started .vjs-control-bar {
+      opacity: 1;
+    }
+
+    .vjs {
+      &-big-play-button {
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+
+        @include viewport-desktop {
+          width: px-to-rem(120);
+          height: px-to-rem(120);
+          font-size: px-to-rem(40);
+          line-height: px-to-rem(118);
+          margin-top: px-to-rem(-60);
+          margin-left: px-to-rem(-60);
+        }
+
+        @include viewport-tablet {
+          width: px-to-rem(100);
+          height: px-to-rem(100);
+          font-size: px-to-rem(32);
+          line-height: px-to-rem(98);
+          margin-top: px-to-rem(-50);
+          margin-left: px-to-rem(-50);
+        }
+
+        @include viewport-phone {
+          width: px-to-rem(72);
+          height: px-to-rem(72);
+          font-size: px-to-rem(30);
+          line-height: px-to-rem(68);
+          margin-top: px-to-rem(-36);
+          margin-left: px-to-rem(-36);
+        }
+
+      }
+
+      &-control-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        height: $player-control-height;
+        opacity: 0;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          z-index: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: calc(100% + #{$player-progress-height});
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+        }
+      }
+
+      &-progress-control {
+        position: absolute;
+        bottom: 100%;
+        left: $player-x-space;
+        width: calc(100% - #{$player-x-space} * 2);
+        height: $player-progress-height;
+
+        .vjs-progress-holder {
+          margin: 0;
+          background-color: $player-holder-color;
+        }
+      }
+
+      &-progress-holder {
+        height: px-to-rem(4);
+      }
+
+      &-load-progress {
+        background-color: $player-load-progress-color;
+
+        div {
+          background-color: transparent;
+        }
+      }
+
+      &-play-progress {
+        &::before {
+          display: none;
+        }
+      }
+
+      &-current-time,
+      &-duration {
+        display: block;
+        position: absolute;
+        bottom: calc(100% + #{$player-progress-height});
+        height: auto;
+        padding: 0;
+        font-size: px-to-rem(14);
+        line-height: 160%;
+      }
+
+      &-current-time {
+        left: $player-x-space;
+      }
+
+      &-duration {
+        right: $player-x-space;
+      }
+
+      &-play-control {
+        position: absolute;
+        top: 0;
+        left: calc(#{$player-control-height * -0.32} + #{$player-x-space});
+        width: $player-control-height;
+        height: $player-control-height;
+
+        .vjs-icon-placeholder {
+          &::before {
+            font-size: $player-control-height * 0.55;
+            line-height: $player-control-height * 1;
+          }
+        }
+      }
+
+      &-volume-panel {
+        position: absolute;
+        top: 0;
+        left: $player-control-height;
+        margin-left: calc(#{$player-control-height * -0.3958} + #{$player-x-space});
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        &.vjs-volume-panel-horizontal {
+          &.vjs-hover,
+          &.vjs-slider-active {
+            width: auto;
+            transition: 0s;
+          }
+        }
+
+        @at-root html.v-mobile & {
+          display: none;
+        }
+      }
+
+      &-mute-control {
+        width: $player-control-height;
+        height: $player-control-height;
+
+        .vjs-icon-placeholder {
+          &::before {
+            font-size: $player-control-height * 0.45;
+            line-height: $player-control-height * 1;
+          }
+        }
+      }
+
+      &-volume-control.vjs-volume-horizontal {
+        visibility: visible;
+        opacity: 1;
+        width: px-to-rem(60) !important;
+        height: px-to-rem(4) !important;
+        background-color: $player-load-progress-color;
+        margin: 0;
+      }
+
+      &-volume-bar.vjs-slider-horizontal {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+
+        .vjs-volume-level {
+          height: 100%;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      &-fullscreen-control {
+        position: absolute;
+        top: 0;
+        right: 0;
+        right: calc(#{$player-control-height * -0.3125} + #{$player-x-space});
+        width: $player-control-height;
+        height: $player-control-height;
+
+        .vjs-icon-placeholder {
+          &::before {
+            font-size: $player-control-height * 0.55;
+            line-height: $player-control-height * 1;
+          }
+        }
+      }
+
+      &-picture-in-picture-control,
+      &-remaining-time {
+        display: none;
+      }
+    }
   }
 }
