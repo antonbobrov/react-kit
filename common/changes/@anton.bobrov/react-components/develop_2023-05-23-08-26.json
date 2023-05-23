@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "VideoPlayer: add `youtubeProps` and `vimeoProps`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}

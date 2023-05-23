@@ -14,6 +14,8 @@ export const VideoPlayer: FC<IVideoPlayerProps> = ({
   src,
   id,
   onLoad: onLoadProp,
+  youtubeProps,
+  vimeoProps,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -44,7 +46,11 @@ export const VideoPlayer: FC<IVideoPlayerProps> = ({
   if (['yt', 'youtube'].includes(source) && !!id) {
     return (
       <div className={classNames} style={style}>
-        <VideoPlayerYoutube id={id} onLoad={() => setIsLoaded(true)} />
+        <VideoPlayerYoutube
+          {...youtubeProps}
+          id={id}
+          onLoad={() => setIsLoaded(true)}
+        />
       </div>
     );
   }
@@ -52,7 +58,11 @@ export const VideoPlayer: FC<IVideoPlayerProps> = ({
   if (['vm', 'vimeo'].includes(source) && !!id) {
     return (
       <div className={classNames} style={style}>
-        <VideoPlayerVimeo id={id} onLoad={() => setIsLoaded(true)} />
+        <VideoPlayerVimeo
+          {...vimeoProps}
+          id={id}
+          onLoad={() => setIsLoaded(true)}
+        />
       </div>
     );
   }
