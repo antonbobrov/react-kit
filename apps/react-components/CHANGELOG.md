@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Mon, 22 May 2023 14:30:47 GMT and should not be manually modified.
+This log was last generated on Tue, 23 May 2023 07:25:59 GMT and should not be manually modified.
+
+## 1.5.1
+Tue, 23 May 2023 07:25:59 GMT
+
+### Patches
+
+- VideoPlayerMp4: use video.js
 
 ## 1.5.0
 Mon, 22 May 2023 14:30:47 GMT
