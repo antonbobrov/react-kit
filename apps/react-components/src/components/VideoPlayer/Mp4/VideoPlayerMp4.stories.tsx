@@ -22,18 +22,5 @@ export default meta;
 export const Default: StoryObj<TComponent> = {
   args: {
     src: './video/video.mp4',
-    onVideoReady(video) {
-      console.log(video);
-
-      return () => {};
-    },
-    onPlayerReady(player) {
-      console.log(player);
-
-      return () => {};
-    },
-    onLoad() {
-      console.log('load');
-    },
   },
 };
