@@ -2,6 +2,24 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "1.6.0",
+      "tag": "@anton.bobrov/react-components_v1.6.0",
+      "date": "Tue, 23 May 2023 08:59:47 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "VideoPlayerVimeo: add `onPlayerReady` and vimeo props"
+          },
+          {
+            "comment": "VideoPlayerYoutube: add `onPlayerReady` and youtube props"
+          },
+          {
+            "comment": "VideoPlayer: add `youtubeProps` and `vimeoProps`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.5.1",
       "tag": "@anton.bobrov/react-components_v1.5.1",
       "date": "Tue, 23 May 2023 07:25:59 GMT",

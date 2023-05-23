@@ -1,6 +1,15 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Tue, 23 May 2023 07:25:59 GMT and should not be manually modified.
+This log was last generated on Tue, 23 May 2023 08:59:47 GMT and should not be manually modified.
+
+## 1.6.0
+Tue, 23 May 2023 08:59:47 GMT
+
+### Minor changes
+
+- VideoPlayerVimeo: add `onPlayerReady` and vimeo props
+- VideoPlayerYoutube: add `onPlayerReady` and youtube props
+- VideoPlayer: add `youtubeProps` and `vimeoProps`
 
 ## 1.5.1
 Tue, 23 May 2023 07:25:59 GMT
