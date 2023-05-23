@@ -23,3 +23,10 @@ const meta: Meta<TComponent> = {
 export default meta;
 
 export const Default: StoryObj<TComponent> = {};
+
+export const Autolplay: StoryObj<TComponent> = {
+  args: {
+    autoplay: true,
+    muted: true,
+  },
+};
