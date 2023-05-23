@@ -5,9 +5,9 @@ import {
   useOnInViewport,
 } from '@anton.bobrov/react-hooks';
 import cn from 'classnames';
+import { generatePlaceholderImage } from '../BaseImage/utils/generatePlaceholderImage';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 import { ILazyImageProps } from './types';
-import { placeholderImage } from '../BaseImage/placeholderImage';
 import { BaseImage } from '../BaseImage';
 
 export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
@@ -58,13 +58,18 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
       isLoaded && 'is-loaded'
     );
 
+    const width = tagProps?.width ?? tagProps.width;
+    const height = tagProps?.height ?? tagProps.height;
+
     return (
       <BaseImage
         ref={ref}
         {...tagProps}
         className={cn(classNames, className)}
         style={style}
-        srcSet={isToBeLoaded ? undefined : placeholderImage}
+        srcSet={
+          isToBeLoaded ? undefined : generatePlaceholderImage(width, height)
+        }
         onLoad={(event) => {
           if (isToBeLoaded) {
             setIsLoaded(true);

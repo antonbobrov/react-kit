@@ -1,5 +1,5 @@
 import { utils } from '@anton.bobrov/vevet-init';
-import { IBaseImageProps } from './types';
+import { IBaseImageProps } from '../types';
 
 interface IGetSrcProps extends Pick<IBaseImageProps, 'paths' | 'src'> {}
 
