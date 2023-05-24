@@ -2,6 +2,7 @@ import { CustomCursor, vevet } from '@anton.bobrov/vevet-init';
 import React, { FC, useEffect, useMemo, useState } from 'react';
 import { Portal } from 'react-portal';
 import { useDeepCompareMemoize } from 'use-deep-compare-effect';
+import { isString } from '@anton.bobrov/react-hooks';
 import { prefixedClassName } from '../../../utils/prefixedClassName';
 import { IPageCursorProviderProps } from './types';
 import { usePageCursorProviderStore } from './usePageCursorProviderStore';
@@ -20,7 +21,12 @@ export const Provider: FC<IPageCursorProviderProps> = ({
   const { cursor, setCursor, types } = store;
 
   const hasDefault = useMemo(
-    () => !!cursors.find((item) => item.props.type === 'default'),
+    () =>
+      !!cursors.find((item) =>
+        isString(item.props.type)
+          ? item.props.type === 'default'
+          : item.props.type.includes('default')
+      ),
     [cursors]
   );
 
