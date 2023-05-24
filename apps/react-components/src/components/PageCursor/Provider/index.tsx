@@ -2,7 +2,7 @@ import { CustomCursor, vevet } from '@anton.bobrov/vevet-init';
 import React, { FC, useEffect, useMemo, useState } from 'react';
 import { Portal } from 'react-portal';
 import { useDeepCompareMemoize } from 'use-deep-compare-effect';
-import { isString } from '@anton.bobrov/react-hooks';
+import { isString, useEvent } from '@anton.bobrov/react-hooks';
 import { prefixedClassName } from '../../../utils/prefixedClassName';
 import { IPageCursorProviderProps } from './types';
 import { usePageCursorProviderStore } from './usePageCursorProviderStore';
@@ -11,14 +11,21 @@ import { PageCursorContext } from '../interal/context';
 export const Provider: FC<IPageCursorProviderProps> = ({
   children,
   cursors,
+  onInit: onInitProp,
+  onTypeChange: onTypeChangeProp,
   isNativeCursorHidden,
   size = { width: 36, height: 36 },
   ...props
 }) => {
   const [portalNode, setPortalNode] = useState<HTMLElement | null>(null);
 
+  const onInit = useEvent(onInitProp);
+  const onTypeChange = useEvent(onTypeChangeProp);
+
   const store = usePageCursorProviderStore();
   const { cursor, setCursor, types } = store;
+
+  const [initialSize] = useState(size);
 
   const hasDefault = useMemo(
     () =>
@@ -30,7 +37,10 @@ export const Provider: FC<IPageCursorProviderProps> = ({
     [cursors]
   );
 
-  const [initialSize] = useState(size);
+  // callback on type change
+  useEffect(() => {
+    onTypeChange?.(types);
+  }, [onTypeChange, types]);
 
   // create cursor
   useEffect(() => {
@@ -50,16 +60,18 @@ export const Provider: FC<IPageCursorProviderProps> = ({
 
     // update default cursor classnames
     instance.outerCursor.classList.add(prefixedClassName('page-cursor-outer'));
-    // instance.innerCursor.classList.add(prefixedClassName('page-cursor-inner'));
 
     // run cursor
     instance.enable();
+
+    // callback
+    onInit?.(instance);
 
     return () => {
       instance?.destroy();
       setCursor?.(undefined);
     };
-  }, [setCursor, initialSize]);
+  }, [setCursor, initialSize, onInit]);
 
   // update props
   useEffect(() => {
