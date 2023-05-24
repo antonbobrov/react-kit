@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Mon, 22 May 2023 14:30:47 GMT and should not be manually modified.
+This log was last generated on Wed, 24 May 2023 14:54:15 GMT and should not be manually modified.
+
+## 1.5.0
+Wed, 24 May 2023 14:54:15 GMT
+
+### Minor changes
+
+- Add `useOnViewportOritentationChange`
+
+### Patches
+
+- useAnimationFrame: props optimization
 
 ## 1.4.1
 Mon, 22 May 2023 14:30:47 GMT

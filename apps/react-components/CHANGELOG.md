@@ -1,6 +1,19 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Tue, 23 May 2023 08:59:47 GMT and should not be manually modified.
+This log was last generated on Wed, 24 May 2023 14:54:15 GMT and should not be manually modified.
+
+## 1.7.0
+Wed, 24 May 2023 14:54:15 GMT
+
+### Minor changes
+
+- Add `PageCursor`
+
+### Patches
+
+- Image: use dynamically generated placeholders
+- PageScroll: optimize `changeProp`
+- ScrollView: optimize `changeProp`
 
 ## 1.6.0
 Tue, 23 May 2023 08:59:47 GMT
