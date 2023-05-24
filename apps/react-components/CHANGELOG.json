@@ -2,6 +2,23 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "1.8.0",
+      "tag": "@anton.bobrov/react-components_v1.8.0",
+      "date": "Wed, 24 May 2023 15:27:43 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "PageCursor.Provider: fix check for default cursor"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "PageCursor: add `onInit` and `onTypeChange`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.7.0",
       "tag": "@anton.bobrov/react-components_v1.7.0",
       "date": "Wed, 24 May 2023 14:54:15 GMT",

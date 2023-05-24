@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 24 May 2023 14:54:15 GMT and should not be manually modified.
+This log was last generated on Wed, 24 May 2023 15:27:43 GMT and should not be manually modified.
+
+## 1.8.0
+Wed, 24 May 2023 15:27:43 GMT
+
+### Minor changes
+
+- PageCursor: add `onInit` and `onTypeChange`
+
+### Patches
+
+- PageCursor.Provider: fix check for default cursor
 
 ## 1.7.0
 Wed, 24 May 2023 14:54:15 GMT
