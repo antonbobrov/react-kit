@@ -6,6 +6,7 @@ import {
   vevet,
 } from '@anton.bobrov/vevet-init';
 import { isBoolean, isUndefined } from '@anton.bobrov/react-hooks';
+import { useDeepCompareMemoize } from 'use-deep-compare-effect';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { usePageScrollProviderStore } from './utils/usePageScrollProviderStore';
 import { IPageScrollProviderProps } from './types';
@@ -86,7 +87,8 @@ export const Provider: FC<IPageScrollProviderProps> = ({
     if (selector instanceof SmoothScroll) {
       selector.changeProp({ ...smoothProps });
     }
-  }, [selector, smoothProps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selector, useDeepCompareMemoize(smoothProps)]);
 
   useEffect(() => {
     if (!isUndefined(selector) && 'resize' in selector) {
