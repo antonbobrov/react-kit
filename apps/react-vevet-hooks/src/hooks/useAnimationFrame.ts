@@ -30,8 +30,8 @@ export function useAnimationFrame({
   }, [onRender, initialProps]);
 
   useEffect(() => {
-    frame?.changeProp({ ...props });
-  }, [frame, props]);
+    frame?.changeProp({ fps: props.fps });
+  }, [frame, props?.fps]);
 
   const play = () => frame?.play();
 
