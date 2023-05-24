@@ -33,6 +33,8 @@ export * from './Marquee';
 export * from './ModalAnchor';
 export * from './ModalAnchor/types';
 
+export * from './PageCursor';
+
 export * from './PageScroll';
 
 export * from './ScrollView';

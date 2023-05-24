@@ -1,0 +1,83 @@
+@import '../../settings';
+
+.#{$rkc-prefix}-hide-native-cursor {
+  cursor: none;
+
+  * {
+    cursor: none;
+  }
+}
+
+.#{$rkc-prefix}-page-cursor-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 999;
+  pointer-events: none;
+
+  will-change: transform;
+  
+  &.in-window {
+    position: fixed;
+  }
+
+  transition: opacity 0.25s;
+  opacity: 0;
+
+  &.in-action {
+    opacity: 1;
+  }
+
+  &.disabled {
+    opacity: 0;
+  }
+  
+  .v-custom-cursor__inner {
+    position: relative;
+    margin: 0;
+    width: var(--cursor-w);
+    height: var(--cursor-h);
+    margin-left: calc(var(--cursor-w) / -2);
+    margin-top: calc(var(--cursor-h) / -2);
+
+    background-color: transparent;
+    opacity: 1;
+
+    transition: transform 0.5s;
+
+    &.click {
+      transform: scale(0.75);
+    }
+  }
+}
+
+.#{$rkc-prefix}-page-cursor-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5) translateZ(0);
+  
+  transition: transform 0.25s, opacity 0.25s, visibility 0.25s;
+
+  &.#{$rkc-prefix}-active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateZ(0);
+  }
+
+  > * {
+    flex-shrink: 0;
+  }
+}
