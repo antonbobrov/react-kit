@@ -3,11 +3,15 @@ import { NTimeline, Timeline, utils, vevet } from '@anton.bobrov/vevet-init';
 import { useEvent } from '@anton.bobrov/react-hooks';
 
 export interface IUseScopedTimelineProgressProps {
+  /** Event on progress update */
   onProgress: (args: NTimeline.CallbacksTypes['progress']) => void;
+  /** Target scope */
   scope: [number, number];
+  /** `vevet` `Timeline` */
   timeline?: Timeline;
 }
 
+/** Cast timeline progress relative to the given scope */
 export function useScopedTimelineProgress({
   onProgress: onProgressProp,
   scope,

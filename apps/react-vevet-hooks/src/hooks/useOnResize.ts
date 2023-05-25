@@ -21,6 +21,7 @@ export interface IUseOnResizeSettings
   target?: TTarget;
 }
 
+/** Event on viewport resize */
 export function useOnResize(
   effect: EffectCallback,
   deps: DependencyList,

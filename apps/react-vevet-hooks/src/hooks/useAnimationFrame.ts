@@ -3,10 +3,13 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimationFrame } from '@anton.bobrov/vevet-init';
 
 export interface IUseAnimationFrameProps {
+  /** Event on each frame */
   onRender: () => void;
+  /** Frames per second */
   fps?: number;
 }
 
+/** Create `vevet` `AnimationFrame` */
 export function useAnimationFrame({
   onRender: onRenderProp,
   ...props

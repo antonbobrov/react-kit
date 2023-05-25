@@ -9,6 +9,10 @@ import { useState } from 'react';
 export interface IUseNonMobilePointerHoverProps
   extends IUseEventListenerSettings {}
 
+/**
+ * Hook for hover detection (**non-mobile devices only**)
+ * @see https://developer.mozilla.org/docs/Web/API/Element/pointerenter_event
+ */
 export function useNonMobilePointerHover(
   ref: THookEventElement,
   props?: IUseNonMobilePointerHoverProps

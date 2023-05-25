@@ -3,13 +3,19 @@ import { DraggerDirection } from '@anton.bobrov/vevet-init';
 import { RefObject, useEffect } from 'react';
 
 export interface IUseDragDirectionProps {
+  /** Element ref */
   ref: RefObject<HTMLElement>;
+  /** Event on left swipe */
   onLeft?: () => void;
+  /** Event on right swipe */
   onRight?: () => void;
+  /** Event on up swipe */
   onUp?: () => void;
+  /** Event on down swipe */
   onDown?: () => void;
 }
 
+/** Use `vevet` `DraggerDirection` */
 export function useDragDirection({
   ref,
   onLeft: onLeftProp,

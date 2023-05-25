@@ -1,6 +1,7 @@
 import { vevet } from '@anton.bobrov/vevet-init';
 import { DependencyList, EffectCallback, useEffect } from 'react';
 
+/** Event on page load */
 export function useOnPageLoad(effect: EffectCallback, deps: DependencyList) {
   useEffect(() => {
     let unsubscribe: ReturnType<EffectCallback>;

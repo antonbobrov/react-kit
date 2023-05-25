@@ -2,6 +2,7 @@ import { useEvent } from '@anton.bobrov/react-hooks';
 import { vevet } from '@anton.bobrov/vevet-init';
 import { useEffect } from 'react';
 
+/** Event on viewport orientation change */
 export function useOnViewportOritentationChange(effectProp: () => void) {
   const effect = useEvent(effectProp);
 

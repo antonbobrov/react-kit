@@ -3,12 +3,17 @@ import { NTimeline, Timeline, vevet } from '@anton.bobrov/vevet-init';
 import { useEffect, useState } from 'react';
 
 export interface IUseTimelineProps {
+  /** Timeline duration */
   duration: number;
+  /** Event on timeline start */
   onStart?: (data: NTimeline.CallbacksTypes['start']) => void;
+  /** Event on timeline update */
   onProgress?: (data: NTimeline.CallbacksTypes['progress']) => void;
+  /** Event on timeline end */
   onEnd?: (data: NTimeline.CallbacksTypes['end']) => void;
 }
 
+/** Create `vevet` `Timeline` */
 export function useTimeline({
   duration,
   onStart: onStartProp,

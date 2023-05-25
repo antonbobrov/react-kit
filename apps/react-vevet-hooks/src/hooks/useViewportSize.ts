@@ -7,6 +7,7 @@ export type TUseViewportSize = {
   height: number;
 };
 
+/** Use `vevet` `Viewport` size */
 export function useViewportSize() {
   const [size, setSize] = useState<TUseViewportSize>({ width: 0, height: 0 });
 

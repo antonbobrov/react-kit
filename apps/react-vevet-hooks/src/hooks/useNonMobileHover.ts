@@ -9,6 +9,9 @@ import { useState } from 'react';
 export interface IUseNonMobileHoverProps
   extends Omit<IUseEventListenerSettings, 'getIsDisabled'> {}
 
+/**
+ * Hook for hover detection (**non-mobile devices only**)
+ */
 export function useNonMobileHover(
   ref: THookEventElement,
   props?: IUseNonMobileHoverProps
