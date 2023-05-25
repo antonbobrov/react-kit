@@ -18,7 +18,7 @@ export * from './ButtonAnchor/types';
 export * from './ExpandContent';
 
 export * from './LazyImage';
-export type { ILazyImageBaseProps, ILazyImageProps } from './LazyImage/types';
+export * from './LazyImage/types';
 
 export * from './LazyVideo';
 export * from './LazyVideo/types';

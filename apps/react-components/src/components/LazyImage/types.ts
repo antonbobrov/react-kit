@@ -22,12 +22,3 @@ export interface ILazyImageBaseProps {
 export interface ILazyImageProps
   extends ILazyImageBaseProps,
     Omit<IBaseImageProps, 'loading' | 'onLoad'> {}
-
-export interface IImageProps {
-  /** Image position */
-  $position: ILazyImageBaseProps['position'];
-  /** Use opacity animation */
-  $hasAlpha: ILazyImageBaseProps['hasAlpha'];
-  /** The image is loaded */
-  $isLoaded: boolean;
-}
