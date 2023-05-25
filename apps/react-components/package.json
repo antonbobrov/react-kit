@@ -27,12 +27,16 @@
   },
   "keywords": [
     "react components",
-    "lazy image",
+    "responsive image",
     "modal",
     "accordion",
-    "scroll",
-    "video player",
-    "smooth scroll"
+    "lazy image",
+    "lazy video",
+    "marquee",
+    "custom cursor",
+    "smooth scroll",
+    "scroll view",
+    "video player"
   ],
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",
