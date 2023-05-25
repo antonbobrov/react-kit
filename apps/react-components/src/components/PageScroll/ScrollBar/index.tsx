@@ -7,13 +7,14 @@ import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
   children,
   resizeKey,
+  isDisabled,
 }) => {
   const [scrollbar, setScrollbar] = useState<VevetScrollBar | undefined>();
 
   const scrollSelector = usePageScrollSelector();
 
   useEffect(() => {
-    if (vevet.isMobile || !scrollSelector) {
+    if (vevet.isMobile || !scrollSelector || isDisabled) {
       return undefined;
     }
 
@@ -47,7 +48,7 @@ export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
         prefixedClasNames('page-scroll-scrollbar-parent')
       );
     };
-  }, [scrollSelector]);
+  }, [scrollSelector, isDisabled]);
 
   useEffect(() => {
     if (!scrollbar?.destroyed) {

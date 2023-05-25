@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "PageScroll.ScrollBar: add `isDisabled`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}
