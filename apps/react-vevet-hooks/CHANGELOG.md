@@ -1,6 +1,11 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Wed, 24 May 2023 14:54:15 GMT and should not be manually modified.
+This log was last generated on Thu, 25 May 2023 13:54:27 GMT and should not be manually modified.
+
+## 1.5.1
+Thu, 25 May 2023 13:54:27 GMT
+
+_Version update only_
 
 ## 1.5.0
 Wed, 24 May 2023 14:54:15 GMT

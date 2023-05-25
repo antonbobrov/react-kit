@@ -1,6 +1,16 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 24 May 2023 15:27:43 GMT and should not be manually modified.
+This log was last generated on Thu, 25 May 2023 13:54:27 GMT and should not be manually modified.
+
+## 1.9.0
+Thu, 25 May 2023 13:54:27 GMT
+
+### Minor changes
+
+- PageCursor.Provider: add `isDisabled`
+- LazyImage: add `isNativeLazy`
+- usePageCursor: add `addType` and `removeType`
+- PageScroll.ScrollBar: add `isDisabled`
 
 ## 1.8.0
 Wed, 24 May 2023 15:27:43 GMT

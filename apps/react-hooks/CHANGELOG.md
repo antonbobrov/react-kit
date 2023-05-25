@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Mon, 22 May 2023 14:30:47 GMT and should not be manually modified.
+This log was last generated on Thu, 25 May 2023 13:54:27 GMT and should not be manually modified.
+
+## 1.5.0
+Thu, 25 May 2023 13:54:27 GMT
+
+### Minor changes
+
+- useOnInViewport: add `isDisabled`
 
 ## 1.4.0
 Mon, 22 May 2023 14:30:47 GMT
