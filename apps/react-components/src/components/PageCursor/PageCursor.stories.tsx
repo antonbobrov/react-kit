@@ -19,7 +19,7 @@ const meta: Meta<TComponent> = {
 
 export default meta;
 
-const CursorType: FC<PropsWithChildren> = ({ children }) => (
+const StyledCursorBlock: FC<PropsWithChildren> = ({ children }) => (
   <div
     style={{
       display: 'flex',
@@ -43,15 +43,15 @@ const Template: StoryFn<TComponent> = ({ children, cursors, ...props }) => (
     cursors={[
       ...cursors,
       <PageCursor.Type key={1} type="first">
-        <CursorType>first cursor</CursorType>
+        <StyledCursorBlock>first cursor</StyledCursorBlock>
       </PageCursor.Type>,
 
       <PageCursor.Type key={2} type="second">
-        <CursorType>second cursor</CursorType>
+        <StyledCursorBlock>second cursor</StyledCursorBlock>
       </PageCursor.Type>,
 
       <PageCursor.Type key={3} type="inner">
-        <CursorType> inner cursor</CursorType>
+        <StyledCursorBlock> inner cursor</StyledCursorBlock>
       </PageCursor.Type>,
     ]}
   >
@@ -104,7 +104,7 @@ export const WithDefault = Template.bind({});
 WithDefault.args = {
   cursors: [
     <PageCursor.Type key={0} type="default">
-      <CursorType>default cursor</CursorType>
+      <StyledCursorBlock>default cursor</StyledCursorBlock>
     </PageCursor.Type>,
   ],
 };

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "usePageCursor: add `addType` and `removeType`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}
