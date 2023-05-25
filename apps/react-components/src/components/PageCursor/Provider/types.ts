@@ -6,6 +6,7 @@ import { IPageCursorType } from '../types';
 export interface IPageCursorProviderProps {
   children: ReactNode;
   cursors: ReactElement<IPageCursorTypeProps>[];
+  isDisabled?: boolean;
   onInit?: (cursor: CustomCursor) => void;
   onTypeChange?: (types: IPageCursorType[]) => void;
   isNativeCursorHidden?: boolean;

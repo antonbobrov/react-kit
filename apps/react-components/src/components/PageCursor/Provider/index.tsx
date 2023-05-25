@@ -11,6 +11,7 @@ import { PageCursorContext } from '../interal/context';
 export const Provider: FC<IPageCursorProviderProps> = ({
   children,
   cursors,
+  isDisabled,
   onInit: onInitProp,
   onTypeChange: onTypeChangeProp,
   isNativeCursorHidden,
@@ -44,7 +45,7 @@ export const Provider: FC<IPageCursorProviderProps> = ({
 
   // create cursor
   useEffect(() => {
-    if (!vevet || vevet.isMobile) {
+    if (!vevet || vevet.isMobile || isDisabled) {
       return undefined;
     }
 
@@ -71,7 +72,7 @@ export const Provider: FC<IPageCursorProviderProps> = ({
       instance?.destroy();
       setCursor?.(undefined);
     };
-  }, [setCursor, initialSize, onInit]);
+  }, [setCursor, initialSize, onInit, isDisabled]);
 
   // update props
   useEffect(() => {
