@@ -3,12 +3,19 @@ import { useEvent } from '@anton.bobrov/react-hooks';
 import { ScrollViewContext } from './context';
 
 export interface IUseScrollView {
+  /** Element ref */
   ref: RefObject<HTMLElement>;
+  /** Event when element is in viewport */
   onIn?: () => void;
+  /** Event when element is out of viewport */
   onOut?: () => void;
+  /** The hook is disabled */
   isDisabled?: boolean;
 }
 
+/**
+ * ScrollView hook that helps you detect elements in or out of viewport
+ */
 export function useScrollView({
   ref,
   onIn: onInProp,

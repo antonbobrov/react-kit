@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { PageScrollContext } from '../context';
 
+/** Get global scrollable element */
 export function usePageScrollSelector() {
   const store = useContext(PageScrollContext);
 

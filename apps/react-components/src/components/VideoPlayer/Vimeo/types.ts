@@ -17,7 +17,10 @@ export interface IVideoPlayerVimeo
 }
 
 export interface IVideoPlayerVimeoProps extends IVideoPlayerVimeo {
+  /** Video ID from vimeo */
   id: string;
+  /** Event on video loaded */
   onLoad?: () => void;
+  /** Event on player ready */
   onPlayerReady?: (player: Player) => () => void;
 }

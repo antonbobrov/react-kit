@@ -3,6 +3,7 @@ import { useEvent, useForwardedRef } from '@anton.bobrov/react-hooks';
 import { SplitText as VevetSplitText, vevet } from '@anton.bobrov/vevet-init';
 import { ISplitTextProps } from './types';
 
+/** Split text into letters, words or lines */
 export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
   (
     {

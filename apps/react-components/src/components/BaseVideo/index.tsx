@@ -4,6 +4,7 @@ import React, { forwardRef, useEffect, useState } from 'react';
 import { IBaseVideoProps } from './types';
 import { requestVideoPlay } from './utils/requestVideoPlay';
 
+/** Base Video component */
 export const BaseVideo = forwardRef<HTMLVideoElement, IBaseVideoProps>(
   (
     { src, children, autoPlay, onLoadedMetadata, ...videoProps },

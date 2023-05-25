@@ -10,6 +10,7 @@ const GLOBAL_SCOPE = [0, 0.75];
 const EXPAND_SCOPE = [0, 0.75];
 const ALPHA_SCOPE = [0.5, 1];
 
+/** Accordion base */
 export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
   (
     {

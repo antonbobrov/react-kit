@@ -3,6 +3,7 @@ import React, { PropsWithChildren, forwardRef } from 'react';
 import { TButtonAnchor } from './types';
 import { Link } from '../Link';
 
+/** Button or Anchor */
 export const ButtonAnchor = forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
   PropsWithChildren<TButtonAnchor>

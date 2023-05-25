@@ -7,6 +7,8 @@ export type TLinkClickInterceptorHandler = (
 ) => void;
 
 export interface ILinkClickInterceptorProps extends IBaseComponent {
+  /** Event on internal link click */
   onInternalClick?: TLinkClickInterceptorHandler;
+  /** Event on external link click */
   onExternalClick?: TLinkClickInterceptorHandler;
 }

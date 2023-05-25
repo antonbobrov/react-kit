@@ -4,6 +4,7 @@ import type { YouTubePlayer } from 'youtube-player/dist/types';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { IVideoPlayerYoutubeProps } from './types';
 
+/** YouTube player */
 export const VideoPlayerYoutube: FC<IVideoPlayerYoutubeProps> = ({
   id,
   onLoad: onLoadProp,

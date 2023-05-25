@@ -7,6 +7,7 @@ import { VideoPlayerVimeo } from './Vimeo';
 import { VideoPlayerYoutube } from './YouTube';
 import { VideoPlayerMp4 } from './Mp4';
 
+/** Custom video player */
 export const VideoPlayer: FC<IVideoPlayerProps> = ({
   className,
   style,

@@ -9,6 +9,7 @@ import { isNumber, isUndefined } from '@anton.bobrov/react-hooks';
 import { IPageCursorTargetProps } from './types';
 import { usePageCursorSetSize, usePageCursorType } from '../hooks';
 
+/** Component that wraps an element and adds a cursor type or size to it */
 export const Target: FC<IPageCursorTargetProps> = ({
   children,
   size: targetSize,

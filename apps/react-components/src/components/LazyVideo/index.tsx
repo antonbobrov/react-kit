@@ -5,6 +5,7 @@ import { ILazyVideoProps } from './types';
 import { BaseVideo } from '../BaseVideo';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 
+/** Lazy video component */
 export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
   (
     { className, style, position = 'cover', onLoadedMetadata, ...videoProps },

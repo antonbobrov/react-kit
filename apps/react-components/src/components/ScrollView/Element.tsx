@@ -10,6 +10,10 @@ import { prefixedClasNames } from '../../utils/prefixedClassNames';
 import { useScrollView } from './utils/useScrollView';
 import { IScrollViewElementProps } from './types';
 
+/**
+ * ScrollView element.
+ * Wrap some element to detect when it appears or disappears from the page viewport
+ */
 export const Element: FC<IScrollViewElementProps> = ({
   viewClassName = 'view',
   viewedClassName = 'viewed',

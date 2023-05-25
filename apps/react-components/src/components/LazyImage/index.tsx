@@ -7,6 +7,7 @@ import { ILazyImageProps } from './types';
 import { BaseImage } from '../BaseImage';
 import { useLazyImageStates } from './useLazyImageStates';
 
+/** Lazy image component */
 export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
   (
     {

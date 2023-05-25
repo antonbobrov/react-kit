@@ -6,6 +6,7 @@ import type Player from 'video.js/dist/types/player';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { IVideoPlayerMp4Props } from './types';
 
+/** Custom mp4 player */
 export const VideoPlayerMp4: FC<IVideoPlayerMp4Props> = ({
   src,
   autoplay = false,

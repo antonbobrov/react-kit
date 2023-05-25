@@ -4,6 +4,7 @@ import { usePageScrollSelector } from '../hooks/usePageScrollSelector';
 import { IPageScrollSCrollBarProps } from './types';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 
+/** Custom scrollbar */
 export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
   children,
   resizeKey,

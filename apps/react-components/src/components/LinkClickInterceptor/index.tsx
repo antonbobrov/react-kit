@@ -3,6 +3,7 @@ import React, { MouseEventHandler, PropsWithChildren, forwardRef } from 'react';
 import { ILinkClickInterceptorProps } from './types';
 import { getAnchor } from './utils';
 
+/** Component that catches click on link */
 export const LinkClickInterceptor = forwardRef<
   HTMLDivElement,
   PropsWithChildren<ILinkClickInterceptorProps>

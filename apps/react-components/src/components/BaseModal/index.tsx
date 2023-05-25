@@ -14,6 +14,7 @@ import { IBaseModalProps } from './types';
 import { CloseButton as DefaultCloseButton } from './CloseButton';
 import { renderModalAnimation } from './utils';
 
+/** Base Modal */
 export const BaseModal: FC<IBaseModalProps> = ({
   className,
   style,

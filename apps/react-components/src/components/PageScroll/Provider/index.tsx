@@ -13,6 +13,7 @@ import { IPageScrollProviderProps } from './types';
 import { canBeSmooth as canBeSmoothDefault } from './utils/canBeSmooth';
 import { PageScrollContext } from '../context';
 
+/** PageScroll provider */
 export const Provider: FC<IPageScrollProviderProps> = ({
   smoothProps,
   canBeSmooth: canBeSmoothProp,

@@ -5,6 +5,7 @@ import { prefixedClassName } from '../../../utils/prefixedClassName';
 import { IPageCursorTypeProps } from './types';
 import { usePageCursor } from '../hooks';
 
+/** Custom cursor type wrapper */
 export const Type: FC<IPageCursorTypeProps> = ({
   type: typeProp,
   children,

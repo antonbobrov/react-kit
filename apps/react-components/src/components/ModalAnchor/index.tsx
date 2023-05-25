@@ -4,6 +4,7 @@ import { BaseModal } from '../BaseModal';
 
 const DefaultModal = memo(BaseModal);
 
+/** Modal trigger */
 export const ModalAnchor = <T,>({
   anchor,
   modal: ModalComponent = DefaultModal as any,

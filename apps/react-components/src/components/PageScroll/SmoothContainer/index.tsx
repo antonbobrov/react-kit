@@ -10,6 +10,10 @@ import { SmoothScroll } from '@anton.bobrov/vevet-init';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { PageScrollContext } from '../context';
 
+/**
+ * Smooth scrolling container.
+ * Wrap your page with this component to enable smooth scrolling
+ */
 export const SmoothContainer: FC<PropsWithChildren> = ({ children }) => {
   const ref = useRef<HTMLDivElement>(null);
 

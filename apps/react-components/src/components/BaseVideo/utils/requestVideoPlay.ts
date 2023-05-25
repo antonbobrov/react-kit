@@ -1,6 +1,10 @@
 import { utils } from '@anton.bobrov/vevet-init';
 import PCancelable from 'p-cancelable';
 
+/**
+ * Request video play.
+ * A cancelable promise that will try to play the video until success
+ */
 export const requestVideoPlay = (video: HTMLVideoElement) => {
   let timeout: ReturnType<typeof utils.common.timeoutCallback> | undefined;
 

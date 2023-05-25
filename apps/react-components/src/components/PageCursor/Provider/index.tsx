@@ -8,6 +8,7 @@ import { IPageCursorProviderProps } from './types';
 import { usePageCursorProviderStore } from './usePageCursorProviderStore';
 import { PageCursorContext } from '../interal/context';
 
+/** PageCursor provider */
 export const Provider: FC<IPageCursorProviderProps> = ({
   children,
   cursors,

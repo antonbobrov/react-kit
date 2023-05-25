@@ -5,6 +5,10 @@ import { useDeepCompareMemoize } from 'use-deep-compare-effect';
 import { IScrollViewContext, ScrollViewContext } from './utils/context';
 import { IScrollViewProviderProps } from './types';
 
+/**
+ * ScrollView provider.
+ * ScrollView lets you detect visible elements in viewport
+ */
 export const Provider: FC<IScrollViewProviderProps> = ({
   children,
   instanceKey,

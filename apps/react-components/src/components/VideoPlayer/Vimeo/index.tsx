@@ -4,6 +4,7 @@ import type { Player } from '@vimeo/player';
 import { IVideoPlayerVimeoProps } from './types';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 
+/** Vimeo player */
 export const VideoPlayerVimeo: FC<IVideoPlayerVimeoProps> = ({
   id,
   onLoad: onLoadProp,

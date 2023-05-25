@@ -7,6 +7,7 @@ export type TUseOnPageScrollEffect = Parameters<
   typeof utils.listeners.onScroll
 >[0]['callback'];
 
+/** Event on global scrollable element scrolling */
 export function useOnPageScroll(effectProp: TUseOnPageScrollEffect) {
   const effect = useEvent(effectProp);
   const scrollSelector = usePageScrollSelector();

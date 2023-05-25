@@ -15,6 +15,7 @@ import cn from 'classnames';
 import { IMarqueeProps } from './types';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 
+/** Custom marquee element */
 export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
   (
     {
