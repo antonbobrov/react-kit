@@ -8,6 +8,7 @@ declare global {
   }
 }
 
+/** dat.gui instance */
 export const datGUI = new Promise((resolve: (arg: GUI | null) => void) => {
   if (!isBrowser) {
     resolve(null);

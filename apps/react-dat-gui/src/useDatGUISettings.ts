@@ -30,6 +30,7 @@ export interface IUseDatGUISettingsProps<T> extends IUseDatGUIFolderProps {
   onChange?: (object: T) => void;
 }
 
+/** Create dat.gui settings */
 export function useDatGUISettings<T extends object>({
   source: sourceProp,
   controls: controlsProp,

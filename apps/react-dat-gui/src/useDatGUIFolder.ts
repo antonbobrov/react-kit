@@ -13,6 +13,7 @@ export interface IUseDatGUIFolderProps {
   onError?: (reason: any) => void;
 }
 
+/** Create a dat.gui folder */
 export function useDatGUIFolder({
   name,
   isOpen,
