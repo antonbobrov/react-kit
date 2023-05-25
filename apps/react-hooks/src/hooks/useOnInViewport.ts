@@ -52,6 +52,7 @@ export interface IUseOnInViewportProps {
   /** Triggered when IntersectionObserver is not supported */
   onFallback?: () => void;
   destroyOnIn?: boolean;
+  isDisabled?: boolean;
 }
 
 /**
@@ -63,6 +64,7 @@ export function useOnInViewport({
   onOut: onOutProp,
   onFallback: onFallbackProp,
   destroyOnIn,
+  isDisabled,
 }: IUseOnInViewportProps) {
   const id = useId();
 
@@ -73,6 +75,10 @@ export function useOnInViewport({
   const [state, setState] = useState<'in' | 'out' | undefined>();
 
   useEffect(() => {
+    if (isDisabled) {
+      return undefined;
+    }
+
     const element = getHookEventElement(ref) as IElement;
     if (!element) {
       return undefined;
@@ -127,7 +133,7 @@ export function useOnInViewport({
 
       observer.unobserve(element);
     };
-  }, [destroyOnIn, id, onFallback, onIn, onOut, ref]);
+  }, [destroyOnIn, id, onFallback, onIn, onOut, ref, isDisabled]);
 
   return { state };
 }
