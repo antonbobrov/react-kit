@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "LazyImage: add `isNativeLazy`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}

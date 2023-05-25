@@ -15,8 +15,16 @@ export interface ILazyImageBaseProps {
    * @default true
    */
   hasAlpha?: boolean;
-  /** Loading type */
+  /**
+   * Loading type
+   * @default 'lazy'
+   */
   loading?: IBaseImageProps['loading'];
+  /**
+   * Use native `lazy` attribute
+   * @default false
+   */
+  isNativeLazy?: boolean;
 }
 
 export interface ILazyImageProps

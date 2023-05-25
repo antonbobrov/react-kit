@@ -1,14 +1,11 @@
-import React, { forwardRef, useEffect, useState } from 'react';
-import {
-  useEvent,
-  useForwardedRef,
-  useOnInViewport,
-} from '@anton.bobrov/react-hooks';
+import React, { forwardRef, useState } from 'react';
+import { useEvent, useForwardedRef } from '@anton.bobrov/react-hooks';
 import cn from 'classnames';
 import { generatePlaceholderImage } from '../BaseImage/utils/generatePlaceholderImage';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 import { ILazyImageProps } from './types';
 import { BaseImage } from '../BaseImage';
+import { useLazyImageStates } from './useLazyImageStates';
 
 export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
   (
@@ -18,38 +15,17 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
       position = 'cover',
       onLoad: onLoadProp,
       hasAlpha = true,
-      loading = 'lazy',
+      loading: loadingProp = 'lazy',
+      isNativeLazy = false,
       ...tagProps
     },
     forwardedRef
   ) => {
     const ref = useForwardedRef(forwardedRef);
 
-    const [isToBeLoaded, setIsToBeLoaded] = useState(false);
-    const [isLoaded, setIsLoaded] = useState(false);
-
     const onLoad = useEvent(onLoadProp);
 
-    useOnInViewport({
-      ref,
-      onIn: () => {
-        if (loading === 'lazy') {
-          setIsToBeLoaded(true);
-        }
-      },
-      onFallback: () => {
-        if (loading === 'lazy') {
-          setIsToBeLoaded(true);
-        }
-      },
-      destroyOnIn: true,
-    });
-
-    useEffect(() => {
-      if (loading === 'eager') {
-        setIsToBeLoaded(true);
-      }
-    }, [loading]);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     const classNames = prefixedClasNames(
       'lazy-image',
@@ -61,12 +37,19 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
     const width = tagProps?.width ?? tagProps.width;
     const height = tagProps?.height ?? tagProps.height;
 
+    const { isToBeLoaded, loading } = useLazyImageStates({
+      ref,
+      loading: loadingProp,
+      isNativeLazy,
+    });
+
     return (
       <BaseImage
         ref={ref}
         {...tagProps}
         className={cn(classNames, className)}
         style={style}
+        loading={loading}
         srcSet={
           isToBeLoaded ? undefined : generatePlaceholderImage(width, height)
         }
