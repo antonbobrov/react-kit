@@ -13,6 +13,10 @@ export interface IUseOnResizeSettings {
   delay?: number;
 }
 
+/**
+ * Hook for element resize detection
+ * @see https://developer.mozilla.org/docs/Web/API/ResizeObserver
+ */
 export function useOnElementResize(
   ref: THookEventElement<Element>,
   effectProp: EffectCallback,

@@ -1,3 +1,4 @@
+/** Repeat something n times */
 export function times<T>(callback: (index: number) => T, count: number): T[] {
   let index = 0;
   const list: T[] = [];

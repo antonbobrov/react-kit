@@ -1,3 +1,4 @@
+/** Detect if `IntersectionObserver` is supported */
 export function isIntersectionObserverSupported() {
   if (
     !('IntersectionObserver' in window) ||

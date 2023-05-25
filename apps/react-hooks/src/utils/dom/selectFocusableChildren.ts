@@ -10,6 +10,7 @@ const focusableElementsSelector = [
   .map((item) => `${item}:not(:disabled):not([tabindex="-1"])`)
   .join(',');
 
+/** Select focusable elements within container */
 export function selectFocusableChildren(
   element: HTMLElement
 ): NodeListOf<HTMLElement> {

@@ -1,5 +1,6 @@
 import { DependencyList, EffectCallback, useEffect } from 'react';
 
+/** Debounced effect */
 export function useDebouncedEffect(
   effect: EffectCallback,
   deps: DependencyList,

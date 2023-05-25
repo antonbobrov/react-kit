@@ -19,6 +19,7 @@ export interface IUseEventListenerProps<T, L>
   options?: boolean | AddEventListenerOptions;
 }
 
+/** Hook for `addEventListener` */
 export function useEventListener<
   Target extends keyof HTMLElementEventMap,
   Listener extends (event: DocumentEventMap[Target]) => void

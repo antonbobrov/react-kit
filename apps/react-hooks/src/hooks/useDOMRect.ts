@@ -6,6 +6,7 @@ export interface IUseDomRectProps {
   isDisabled?: boolean;
 }
 
+/** `getBoundingClientRect` */
 export function useDOMRect({
   ref,
   isDisabled,

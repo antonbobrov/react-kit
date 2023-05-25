@@ -5,6 +5,7 @@ import { usePrevious } from './usePrevious';
 
 const INITIAL_VALUE = Symbol('Initial value');
 
+/** Hook that triggers a callback when the observable property changes */
 export function useChange<T>(
   observer: (value: T, prev: T) => void,
   observable: T

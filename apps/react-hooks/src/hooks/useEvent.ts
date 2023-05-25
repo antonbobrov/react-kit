@@ -8,6 +8,7 @@ interface IUseEventOverload {
 }
 
 /**
+ * Stable function link
  * @see https://stackoverflow.com/a/74679426
  */
 export const useEvent: IUseEventOverload = (callback) => {

@@ -47,11 +47,15 @@ const observer =
 
 export interface IUseOnInViewportProps {
   ref: THookEventElement<Element>;
+  /** Event when element is in viewport */
   onIn?: () => void;
+  /** Event when element is out of viewport */
   onOut?: () => void;
   /** Triggered when IntersectionObserver is not supported */
   onFallback?: () => void;
+  /** Destroy observable instance when the element once appears into viewport */
   destroyOnIn?: boolean;
+  /** The hook is disabled */
   isDisabled?: boolean;
 }
 

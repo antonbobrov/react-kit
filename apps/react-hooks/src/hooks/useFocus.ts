@@ -7,6 +7,7 @@ import { THookEventElement } from '../types';
 
 export interface IUseFocusProps extends IUseEventListenerSettings {}
 
+/** Hook for focus detection */
 export function useFocus(ref: THookEventElement, props?: IUseFocusProps) {
   const [isFocused, setIsFocused] = useState(false);
 

@@ -7,6 +7,7 @@ import { THookEventElement } from '../types';
 
 export interface IUseHoverProps extends IUseEventListenerSettings {}
 
+/** Hook for hover detection */
 export function useHover(ref: THookEventElement, props?: IUseHoverProps) {
   const [isHovered, setIsHovered] = useState(false);
 

@@ -1,5 +1,5 @@
 /**
- * Remove duplicate slashes
+ * Remove duplicate slashes from string
  */
 export function removeDublicateSlashes(value: string) {
   /** Check if a url starts with the protocol */

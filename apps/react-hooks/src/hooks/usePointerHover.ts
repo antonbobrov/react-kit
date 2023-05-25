@@ -7,6 +7,10 @@ import { THookEventElement } from '../types';
 
 export interface IUsePointerHoverProps extends IUseEventListenerSettings {}
 
+/**
+ * Hook for hover detection
+ * @see https://developer.mozilla.org/docs/Web/API/Element/pointerenter_event
+ */
 export function usePointerHover(
   ref: THookEventElement,
   props?: IUsePointerHoverProps

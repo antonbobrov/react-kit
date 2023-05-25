@@ -1,3 +1,4 @@
+/** Cast scope value relative to global scope */
 export function normalizeNestedScope(
   innerScope: [number, number] | number[],
   globalScope: [number, number] | number[]

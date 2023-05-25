@@ -10,6 +10,7 @@ export type TUseOutsideClickEvent = MouseEvent | TouchEvent;
 
 export interface IUseOutsideClickProps extends IUseEventListenerSettings {}
 
+/** Detect click outside some element */
 export function useOutsideClick(
   ref: THookEventElement<Element>,
   callback: (event: TUseOutsideClickEvent) => void,

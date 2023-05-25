@@ -8,6 +8,11 @@ import {
 export interface IUseFocusTrapProps
   extends Pick<IUseEventListenerSettings, 'isDisabled'> {}
 
+/**
+ * Hook that traps focus via `tab` key within an element.
+ * When enabled, the hook will focus the first child of the parent element.
+ * And when disabled, it will return focus to the previously focused element.
+ */
 export function useFocusTrap(
   ref: RefObject<HTMLElement>,
   options: IUseFocusTrapProps = {}

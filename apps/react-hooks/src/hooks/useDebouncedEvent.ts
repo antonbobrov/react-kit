@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { useEvent } from './useEvent';
 
+/** Debounced event function */
 export function useDebouncedEvent(effect: () => void, delay: number) {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 

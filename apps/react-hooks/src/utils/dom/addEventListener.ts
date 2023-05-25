@@ -1,5 +1,9 @@
 import { TEventElement } from '@types';
 
+/**
+ * `addEventListener` helper.
+ * The returned function should be called to `removeEventListener`
+ */
 export function addEventListener<
   Element extends TEventElement,
   Target extends keyof HTMLElementEventMap,

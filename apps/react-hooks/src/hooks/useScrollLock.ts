@@ -7,6 +7,7 @@ import { THookEventElement } from '../types';
 
 export interface IUseScrollLockProps extends IUseEventListenerSettings {}
 
+/** Disable element scrolling */
 export function useScrollLock(
   ref: THookEventElement<Element>,
   props?: IUseScrollLockProps

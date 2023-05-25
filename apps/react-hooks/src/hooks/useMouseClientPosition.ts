@@ -6,6 +6,7 @@ export interface IMouseClientPositionVector2 {
   y: number;
 }
 
+/** Get mouse position (`clientX` & `clientY`) */
 export function useMouseClientPosition() {
   const [position, setPosition] = useState<IMouseClientPositionVector2>({
     x: (typeof window !== 'undefined' ? window.innerWidth : 0) / 2,

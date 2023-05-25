@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+/** Debounced property */
 export function useDebouncedProp<T>(prop: T, delay: number): T {
   const [state, setState] = useState<T>(prop);
 

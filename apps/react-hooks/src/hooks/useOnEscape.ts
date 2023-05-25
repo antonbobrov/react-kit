@@ -6,9 +6,11 @@ import {
 } from './useEventListener';
 
 export interface IUseOnEscapeProps extends IUseEventListenerSettings {
+  /** Element ref */
   ref: THookEventElement;
 }
 
+/** Detect when `Esc` key is pressed */
 export function useOnEscape(callback: () => void, options?: IUseOnEscapeProps) {
   const callbackEvent = useEvent(callback);
 

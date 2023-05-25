@@ -1,3 +1,4 @@
+/** Get random integer */
 export function getRandomInt(minProp: number, maxProp: number) {
   const min = Math.ceil(minProp);
   const max = Math.floor(maxProp);

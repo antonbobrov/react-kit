@@ -1,5 +1,6 @@
 import { selectFocusableChildren } from './selectFocusableChildren';
 
+/** Get element's `focusable` siblings */
 export function getSiblingsFocusableElements(element: HTMLElement) {
   const focusableElements = Array.from(selectFocusableChildren(document.body));
   const index = focusableElements.findIndex((el) => el === element);
