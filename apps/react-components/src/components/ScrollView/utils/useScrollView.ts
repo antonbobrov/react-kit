@@ -11,6 +11,8 @@ export interface IUseScrollView {
   onOut?: () => void;
   /** The hook is disabled */
   isDisabled?: boolean;
+  /** Delay before `onIn` callback */
+  inDelay?: number;
 }
 
 /**
@@ -21,6 +23,7 @@ export function useScrollView({
   onIn: onInProp,
   onOut: onOutProp,
   isDisabled,
+  inDelay,
 }: IUseScrollView) {
   const { scrollView } = useContext(ScrollViewContext);
 
@@ -34,9 +37,15 @@ export function useScrollView({
       return undefined;
     }
 
+    let timeout: NodeJS.Timeout | undefined;
+
     const inCallback = scrollView.addCallback('in', (target) => {
       if (target === element) {
-        onIn?.();
+        if (inDelay) {
+          timeout = setTimeout(() => onIn?.(), inDelay);
+        } else {
+          onIn?.();
+        }
       }
     });
 
@@ -52,6 +61,10 @@ export function useScrollView({
       inCallback.remove();
       outCallback.remove();
       observer.remove();
+
+      if (timeout) {
+        clearTimeout(timeout);
+      }
     };
-  }, [isDisabled, onIn, onOut, ref, scrollView]);
+  }, [inDelay, isDisabled, onIn, onOut, ref, scrollView]);
 }
