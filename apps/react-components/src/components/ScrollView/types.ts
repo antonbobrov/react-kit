@@ -1,4 +1,5 @@
 import { PropsWithChildren, ReactElement } from 'react';
+import { IUseScrollView } from './utils/useScrollView';
 
 export interface IScrollViewProviderProps extends PropsWithChildren {
   instanceKey: string | number;
@@ -9,11 +10,10 @@ export interface IScrollViewProviderProps extends PropsWithChildren {
 
 export type TScrollViewElementAnimation = 'fadeIn' | 'fadeInUp';
 
-export interface IScrollViewElementProps {
+export interface IScrollViewElementProps
+  extends Pick<IUseScrollView, 'inDelay' | 'onIn' | 'onOut'> {
   viewClassName?: string;
   viewedClassName?: string;
-  onIn?: () => void;
-  onOut?: () => void;
   isDisabled?: boolean;
   animation?: TScrollViewElementAnimation;
   children: ReactElement;

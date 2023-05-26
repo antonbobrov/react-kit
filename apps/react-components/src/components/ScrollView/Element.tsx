@@ -20,6 +20,7 @@ export const Element: FC<IScrollViewElementProps> = ({
   onIn,
   onOut,
   isDisabled,
+  inDelay,
   animation,
   children,
 }) => {
@@ -39,6 +40,7 @@ export const Element: FC<IScrollViewElementProps> = ({
       onOut?.();
     },
     isDisabled,
+    inDelay,
   });
 
   const classNames = prefixedClasNames(
