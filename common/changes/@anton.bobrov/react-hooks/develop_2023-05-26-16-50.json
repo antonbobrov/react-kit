@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "Deprecate `getDomLanguage`",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}
