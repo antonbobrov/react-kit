@@ -9,6 +9,9 @@ export type {
 export * from './BaseModal';
 export * from './BaseModal/types';
 
+export * from './BasePopup';
+export * from './BasePopup/types';
+
 export * from './BaseVideo';
 export * from './BaseVideo/types';
 

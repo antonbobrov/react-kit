@@ -1,0 +1,105 @@
+@import '../../settings';
+
+.#{$rkc-prefix}-base-popup {
+  position: fixed;
+  z-index: 999;
+  width: max-content;
+  
+  &__container {
+    box-sizing: border-box;
+    max-width: 100%;
+
+    opacity: 0;
+    animation: #{$rkc-prefix}-base-popup-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+  
+    &.#{$rkc-prefix}-show {
+      animation-name: #{$rkc-prefix}-base-popup-in;
+    }
+      
+    @keyframes #{$rkc-prefix}-base-popup-in {
+      from {
+        opacity: 0;
+      }
+  
+      to {
+        opacity: 1;
+      }
+    }
+      
+    @keyframes #{$rkc-prefix}-base-popup-out {
+      from {
+        opacity: 1;
+      }
+  
+      to {
+        opacity: 0;
+      }
+    }
+
+    &.#{$rkc-prefix}-vertical_down {
+      animation-name: #{$rkc-prefix}-base-popup-out-down;
+  
+      &.#{$rkc-prefix}-show {
+        animation-name: #{$rkc-prefix}-base-popup-in-down;
+      }
+      
+      @keyframes #{$rkc-prefix}-base-popup-in-down {
+        from {
+          transform: translateY(1rem);
+          opacity: 0;
+        }
+  
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+          
+      @keyframes #{$rkc-prefix}-base-popup-out-down {
+        from {
+          transform: translateY(0);
+          opacity: 1;
+        }
+  
+        to {
+          transform: translateY(1rem);
+          opacity: 0;
+        }
+      }
+    }
+
+    &.#{$rkc-prefix}-vertical_up {
+      animation-name: #{$rkc-prefix}-base-popup-out-up;
+  
+      &.#{$rkc-prefix}-show {
+        animation-name: #{$rkc-prefix}-base-popup-in-up;
+      }
+      
+      @keyframes #{$rkc-prefix}-base-popup-in-up {
+        from {
+          transform: translateY(-1rem);
+          opacity: 0;
+        }
+  
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+          
+      @keyframes #{$rkc-prefix}-base-popup-out-up {
+        from {
+          transform: translateY(0);
+          opacity: 1;
+        }
+  
+        to {
+          transform: translateY(-1rem);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
