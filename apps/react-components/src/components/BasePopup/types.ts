@@ -25,6 +25,8 @@ export interface IBasePopupProps
   positionRef?: RefObject<HTMLElement>;
   /** Popup is visible */
   isActive?: boolean;
+  /** Callback on "isActive" state change */
+  onActive?: (isActive: boolean) => void;
   /** Vertical alignment */
   verticalAlignment?: TBasePopupVerticalAlignment;
   /** Horizontal alignment */

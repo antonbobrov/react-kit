@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import React, { forwardRef, memo, useEffect, useRef, useState } from 'react';
 import {
+  useChange,
   useForwardedRef,
   useOutsideClick,
   usePropState,
@@ -24,6 +25,7 @@ export const BasePopup = forwardRef<HTMLDivElement, IBasePopupProps>(
       renderAnchor: Anchor = DefaultAnchor,
       positionRef,
       isActive: isActiveProp,
+      onActive,
       showEvent = 'click',
       verticalAlignment: verticalAlignmentProp,
       horizontalAlignment: horizontalAlignmentProp,
@@ -41,6 +43,11 @@ export const BasePopup = forwardRef<HTMLDivElement, IBasePopupProps>(
 
     const [canRender, setCanRender] = useState(false);
     const [isActive, setIsActive] = usePropState(!!isActiveProp);
+
+    // `onActive` callback
+    useChange((value) => {
+      onActive?.(value);
+    }, isActive);
 
     // render
     useEffect(() => {
