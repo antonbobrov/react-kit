@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Mon, 29 May 2023 09:18:45 GMT and should not be manually modified.
+This log was last generated on Mon, 29 May 2023 10:10:51 GMT and should not be manually modified.
+
+## 1.11.0
+Mon, 29 May 2023 10:10:51 GMT
+
+### Minor changes
+
+- `BasePopup`: add `onActive`
 
 ## 1.10.0
 Mon, 29 May 2023 09:18:45 GMT
