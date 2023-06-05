@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-dat-gui",
   "entries": [
     {
+      "version": "1.3.4",
+      "tag": "@anton.bobrov/react-dat-gui_v1.3.4",
+      "date": "Mon, 05 Jun 2023 18:06:18 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Move `@types/dat.gui` to `dependencies`, export dat.gui types"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.3.3",
       "tag": "@anton.bobrov/react-dat-gui_v1.3.3",
       "date": "Mon, 29 May 2023 09:18:45 GMT",

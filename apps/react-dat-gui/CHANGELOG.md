@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-dat-gui
 
-This log was last generated on Mon, 29 May 2023 09:18:45 GMT and should not be manually modified.
+This log was last generated on Mon, 05 Jun 2023 18:06:18 GMT and should not be manually modified.
+
+## 1.3.4
+Mon, 05 Jun 2023 18:06:18 GMT
+
+### Patches
+
+- Move `@types/dat.gui` to `dependencies`, export dat.gui types
 
 ## 1.3.3
 Mon, 29 May 2023 09:18:45 GMT
