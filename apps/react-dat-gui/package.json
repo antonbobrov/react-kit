@@ -42,11 +42,11 @@
     "rimraf": "5.0.0",
     "tsc-alias": "1.8.5",
     "typedoc": "~0.24.4",
-    "typescript": "4.8.2",
-    "@types/dat.gui": "~0.7.10"
+    "typescript": "4.8.2"
   },
   "dependencies": {
-    "dat.gui": "~0.7.9",
-    "@anton.bobrov/react-hooks": "workspace:*"
+    "@anton.bobrov/react-hooks": "workspace:*",
+    "@types/dat.gui": "~0.7.10",
+    "dat.gui": "~0.7.9"
   }
 }
