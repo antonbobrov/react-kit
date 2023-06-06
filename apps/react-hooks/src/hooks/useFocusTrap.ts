@@ -32,6 +32,10 @@ export function useFocusTrap(
   const { isDisabled, isRestoreFocus } = options;
 
   useEffect(() => {
+    if (isDisabled) {
+      return undefined;
+    }
+
     const prevActiveElement =
       document.activeElement instanceof HTMLElement
         ? document.activeElement
