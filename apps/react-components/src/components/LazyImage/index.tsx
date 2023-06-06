@@ -18,6 +18,7 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
       hasAlpha = true,
       loading: loadingProp = 'lazy',
       isNativeLazy = false,
+      paths,
       ...tagProps
     },
     forwardedRef
@@ -35,8 +36,8 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
       isLoaded && 'is-loaded'
     );
 
-    const width = tagProps?.width ?? tagProps.width;
-    const height = tagProps?.height ?? tagProps.height;
+    const width = paths?.width ?? tagProps.width;
+    const height = paths?.height ?? tagProps.height;
 
     const { isToBeLoaded, loading } = useLazyImageStates({
       ref,
@@ -51,6 +52,7 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
         className={cn(classNames, className)}
         style={style}
         loading={loading}
+        paths={paths}
         srcSet={
           isToBeLoaded ? undefined : generatePlaceholderImage(width, height)
         }

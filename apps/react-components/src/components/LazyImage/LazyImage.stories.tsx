@@ -62,7 +62,6 @@ export const WithAdaptivePaths: StoryObj<TComponent> = {
         1920: './image/1920.webp',
         2560: './image/2560.webp',
       },
-      width: 200,
       alt: 'adaptive image',
     },
   },
