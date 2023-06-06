@@ -6,7 +6,13 @@ import {
 } from './useEventListener';
 
 export interface IUseFocusTrapProps
-  extends Pick<IUseEventListenerSettings, 'isDisabled'> {}
+  extends Pick<IUseEventListenerSettings, 'isDisabled'> {
+  /**
+   * Restore focus on unmount
+   * @default true
+   */
+  isRestoreFocus?: boolean;
+}
 
 /**
  * Hook that traps focus via `tab` key within an element.
@@ -15,9 +21,15 @@ export interface IUseFocusTrapProps
  */
 export function useFocusTrap(
   ref: RefObject<HTMLElement>,
-  options: IUseFocusTrapProps = {}
+  optionsProps: IUseFocusTrapProps = {}
 ) {
-  const { isDisabled } = options;
+  const defaultOptions: Required<IUseFocusTrapProps> = {
+    isDisabled: false,
+    isRestoreFocus: true,
+  };
+
+  const options = { ...defaultOptions, ...optionsProps };
+  const { isDisabled, isRestoreFocus } = options;
 
   useEffect(() => {
     const prevActiveElement =
@@ -42,9 +54,11 @@ export function useFocusTrap(
     }, 0);
 
     return () => {
-      prevActiveElement?.focus();
+      if (isRestoreFocus) {
+        prevActiveElement?.focus();
+      }
     };
-  }, [isDisabled, ref]);
+  }, [isDisabled, isRestoreFocus, ref]);
 
   useEventListener({
     ref,

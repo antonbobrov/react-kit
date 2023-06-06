@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "`useFocusTrap`: add `isRestoreFocus` property",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}
