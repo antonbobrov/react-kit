@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Mon, 29 May 2023 10:10:51 GMT and should not be manually modified.
+This log was last generated on Tue, 06 Jun 2023 12:09:19 GMT and should not be manually modified.
+
+## 1.12.0
+Tue, 06 Jun 2023 12:09:19 GMT
+
+### Minor changes
+
+- `BaseModal`: add `isRestoreFocusOnClose` property
+
+### Patches
+
+- `LazyImage`: fix placeholder size
 
 ## 1.11.0
 Mon, 29 May 2023 10:10:51 GMT
