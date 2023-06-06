@@ -37,6 +37,11 @@ export interface IBaseModalProps extends IBaseComponent {
    * @default true
    */
   isUnderneathScrollingDisabled?: boolean;
+  /**
+   * Restore focus on close
+   * @default true
+   */
+  isRestoreFocusOnClose?: boolean;
   /** Close Button custom renderer */
   renderCloseButton?: TModalCloseButtonRenderer;
   /** Custom animation renderer */

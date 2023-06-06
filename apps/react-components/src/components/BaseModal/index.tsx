@@ -23,6 +23,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
   onOpen,
   onClose,
   isUnderneathScrollingDisabled = true,
+  isRestoreFocusOnClose = true,
   renderCloseButton: CloseButton = DefaultCloseButton,
   renderAnimation: renderAnimationProp = renderModalAnimation,
   duration = 350,
@@ -64,7 +65,10 @@ export const BaseModal: FC<IBaseModalProps> = ({
 
   usePreventDocumentScrolling(isUnderneathScrollingDisabled && isOpen);
 
-  useFocusTrap(parentRef, { isDisabled: !isOpen });
+  useFocusTrap(parentRef, {
+    isDisabled: !isOpen,
+    isRestoreFocus: isRestoreFocusOnClose,
+  });
 
   const timeline = useTimeline({
     duration,
