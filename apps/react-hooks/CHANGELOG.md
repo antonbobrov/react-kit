@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Tue, 06 Jun 2023 12:09:19 GMT and should not be manually modified.
+This log was last generated on Tue, 06 Jun 2023 13:11:21 GMT and should not be manually modified.
+
+## 1.6.1
+Tue, 06 Jun 2023 13:11:21 GMT
+
+### Patches
+
+- `useFocusTrap`: fix `isDisabled` check
 
 ## 1.6.0
 Tue, 06 Jun 2023 12:09:19 GMT

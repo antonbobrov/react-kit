@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "1.6.1",
+      "tag": "@anton.bobrov/react-hooks_v1.6.1",
+      "date": "Tue, 06 Jun 2023 13:11:21 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "`useFocusTrap`: fix `isDisabled` check"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.6.0",
       "tag": "@anton.bobrov/react-hooks_v1.6.0",
       "date": "Tue, 06 Jun 2023 12:09:19 GMT",
