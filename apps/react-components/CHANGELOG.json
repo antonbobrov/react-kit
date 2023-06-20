@@ -2,6 +2,23 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "1.13.0",
+      "tag": "@anton.bobrov/react-components_v1.13.0",
+      "date": "Tue, 20 Jun 2023 18:49:42 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "SplitText: update text on prop change"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "SplitText: add `textSource` prop"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.12.1",
       "tag": "@anton.bobrov/react-components_v1.12.1",
       "date": "Tue, 06 Jun 2023 13:11:21 GMT",

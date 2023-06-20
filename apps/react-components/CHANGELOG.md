@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Tue, 06 Jun 2023 13:11:21 GMT and should not be manually modified.
+This log was last generated on Tue, 20 Jun 2023 18:49:42 GMT and should not be manually modified.
+
+## 1.13.0
+Tue, 20 Jun 2023 18:49:42 GMT
+
+### Minor changes
+
+- SplitText: add `textSource` prop
+
+### Patches
+
+- SplitText: update text on prop change
 
 ## 1.12.1
 Tue, 06 Jun 2023 13:11:21 GMT
