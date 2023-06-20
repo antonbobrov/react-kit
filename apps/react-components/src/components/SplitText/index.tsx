@@ -10,6 +10,7 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
       className,
       style,
       text: textProp,
+      textSource = 'innerHTML',
       appendLetters,
       appendLines,
       onInit: onInitProp,
@@ -32,7 +33,7 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
 
       const instance = new VevetSplitText({
         container,
-        textSource: 'innerHTML',
+        textSource,
         appendLetters,
         appendLines,
         viewportTarget: vevet.isMobile ? 'w' : undefined,
@@ -41,7 +42,7 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
       onInit(instance);
 
       return () => instance.destroy();
-    }, [ref, onInit, appendLetters, appendLines, textProp]);
+    }, [ref, onInit, textProp, textSource, appendLetters, appendLines]);
 
     return (
       <span
