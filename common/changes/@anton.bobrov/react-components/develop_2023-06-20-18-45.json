@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "SplitText: update text on prop change",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}
