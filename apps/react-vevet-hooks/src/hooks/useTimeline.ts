@@ -75,10 +75,18 @@ export function useTimeline({
     timeline?.pause();
   });
 
+  const reset = useEvent(() => {
+    if (timeline) {
+      pause();
+      timeline.progress = 0;
+    }
+  });
+
   return {
     timeline,
     play,
     reverse,
     pause,
+    reset,
   };
 }

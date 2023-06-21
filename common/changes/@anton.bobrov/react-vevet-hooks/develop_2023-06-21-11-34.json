@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-vevet-hooks",
+      "comment": "useTimeline: add `reset` method",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-vevet-hooks"
+}
