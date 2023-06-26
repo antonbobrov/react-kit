@@ -11,4 +11,5 @@ export interface ILinkClickInterceptorProps extends IBaseComponent {
   onInternalClick?: TLinkClickInterceptorHandler;
   /** Event on external link click */
   onExternalClick?: TLinkClickInterceptorHandler;
+  id?: string;
 }

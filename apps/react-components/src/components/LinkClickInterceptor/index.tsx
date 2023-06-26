@@ -9,7 +9,7 @@ export const LinkClickInterceptor = forwardRef<
   PropsWithChildren<ILinkClickInterceptorProps>
 >(
   (
-    { className, style, children, onExternalClick, onInternalClick },
+    { className, style, children, onExternalClick, onInternalClick, id },
     forwardedRef
   ) => {
     const ref = useForwardedRef(forwardedRef);
@@ -35,7 +35,13 @@ export const LinkClickInterceptor = forwardRef<
 
     return (
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-      <div ref={ref} className={className} style={style} onClick={onLinkClick}>
+      <div
+        ref={ref}
+        className={className}
+        style={style}
+        id={id}
+        onClick={onLinkClick}
+      >
         {children}
       </div>
     );
