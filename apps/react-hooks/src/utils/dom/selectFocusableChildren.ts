@@ -7,7 +7,9 @@ const focusableElementsSelector = [
   'details',
   '[tabindex]',
 ]
-  .map((item) => `${item}:not(:disabled):not([tabindex="-1"])`)
+  .map(
+    (item) => `${item}:not(:disabled):not([tabindex="-1"]):not([type="hidden"])`
+  )
   .join(',');
 
 /** Select focusable elements within container */
