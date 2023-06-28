@@ -1,6 +1,14 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Tue, 20 Jun 2023 18:49:42 GMT and should not be manually modified.
+This log was last generated on Wed, 28 Jun 2023 11:50:05 GMT and should not be manually modified.
+
+## 1.14.0
+Wed, 28 Jun 2023 11:50:05 GMT
+
+### Minor changes
+
+- `LinkClickInterceptor`: add `id` prop
+- Add `FadeContent`
 
 ## 1.13.0
 Tue, 20 Jun 2023 18:49:42 GMT

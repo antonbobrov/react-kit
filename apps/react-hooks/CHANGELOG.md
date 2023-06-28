@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Tue, 06 Jun 2023 13:11:21 GMT and should not be manually modified.
+This log was last generated on Wed, 28 Jun 2023 11:50:05 GMT and should not be manually modified.
+
+## 1.6.2
+Wed, 28 Jun 2023 11:50:05 GMT
+
+### Patches
+
+- `selectFocusableChildren`: exclude hidden inputs
 
 ## 1.6.1
 Tue, 06 Jun 2023 13:11:21 GMT
