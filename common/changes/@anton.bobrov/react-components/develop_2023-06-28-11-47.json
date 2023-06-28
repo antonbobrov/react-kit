@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "Add `FadeContent`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}

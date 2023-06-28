@@ -20,6 +20,9 @@ export * from './ButtonAnchor/types';
 
 export * from './ExpandContent';
 
+export * from './FadeContent';
+export * from './FadeContent/types';
+
 export * from './LazyImage';
 export * from './LazyImage/types';
 
