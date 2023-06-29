@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "1.15.0",
+      "tag": "@anton.bobrov/react-components_v1.15.0",
+      "date": "Thu, 29 Jun 2023 11:33:49 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add `MoreContent`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.14.0",
       "tag": "@anton.bobrov/react-components_v1.14.0",
       "date": "Wed, 28 Jun 2023 11:50:05 GMT",

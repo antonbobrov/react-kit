@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 28 Jun 2023 11:50:05 GMT and should not be manually modified.
+This log was last generated on Thu, 29 Jun 2023 11:33:49 GMT and should not be manually modified.
+
+## 1.15.0
+Thu, 29 Jun 2023 11:33:49 GMT
+
+### Minor changes
+
+- Add `MoreContent`
 
 ## 1.14.0
 Wed, 28 Jun 2023 11:50:05 GMT
