@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Thu, 29 Jun 2023 11:33:49 GMT and should not be manually modified.
+This log was last generated on Thu, 29 Jun 2023 13:20:17 GMT and should not be manually modified.
+
+## 1.16.0
+Thu, 29 Jun 2023 13:20:17 GMT
+
+### Minor changes
+
+- Add `BaseVideoModal`
 
 ## 1.15.0
 Thu, 29 Jun 2023 11:33:49 GMT
