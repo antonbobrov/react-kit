@@ -15,6 +15,9 @@ export * from './BasePopup/types';
 export * from './BaseVideo';
 export * from './BaseVideo/types';
 
+export * from './BaseVideoModal';
+export * from './BaseVideoModal/types';
+
 export * from './ButtonAnchor';
 export * from './ButtonAnchor/types';
 

@@ -1,0 +1,79 @@
+@import '../../settings';
+
+.#{$rkc-prefix}-base-video-modal {
+  &__wrapper {
+    position: relative;
+    margin: 40px auto;
+    min-width: 160px;
+    min-height: 90px;
+    overflow: visible;
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #000;
+    transition: background-color 0.35s;
+  
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+  
+      animation-name: base-video-modal-loading-indicator;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+  
+      transition: opacity 0.35s;
+    }
+  
+    @keyframes base-video-modal-loading-indicator {
+      from {
+        transform: scale(0, 1);
+        transform-origin: top left;
+      }
+  
+      50% {
+        transform-origin: top left;
+        transform: scale(1, 1);
+      }
+  
+      50.01% {
+        transform-origin: top right;
+        transform: scale(1, 1);
+      }
+  
+      to {
+        transform: scale(0, 1);
+        transform-origin: top right;
+      }
+    }
+  
+    &.#{$rkc-prefix}-base-video-modal__container_loaded {
+      background-color: transparent;
+  
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+}
