@@ -23,6 +23,9 @@ export * from './ExpandContent';
 export * from './FadeContent';
 export * from './FadeContent/types';
 
+export * from './MoreContent';
+export * from './MoreContent/types';
+
 export * from './LazyImage';
 export * from './LazyImage/types';
 

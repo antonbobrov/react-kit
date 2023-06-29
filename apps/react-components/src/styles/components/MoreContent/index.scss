@@ -1,0 +1,30 @@
+@import '../../settings';
+
+.#{$rkc-prefix}-more-content {
+  --bg--rgb: 255, 255, 255;
+
+  &__clipper {
+    position: relative;
+    overflow: hidden;
+  
+    &.#{$rkc-prefix}-more-content__clipper_enabled {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to top, rgba(var(--bg--rgb), 1), rgba(var(--bg--rgb), 0));
+  
+        transition: opacity 0.5s;
+      }
+  
+      &.#{$rkc-prefix}-more-content__clipper_active {
+        &::after {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
