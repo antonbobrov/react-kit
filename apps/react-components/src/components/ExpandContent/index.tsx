@@ -84,7 +84,12 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
         className={cn(className, prefixedClasNames('expand-content'))}
         style={style}
       >
-        <div ref={contentRef}>{children}</div>
+        <div
+          ref={contentRef}
+          className={prefixedClasNames('expand-content__content')}
+        >
+          {children}
+        </div>
       </div>
     );
   }
