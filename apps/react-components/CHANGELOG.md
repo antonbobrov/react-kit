@@ -1,6 +1,18 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Thu, 29 Jun 2023 13:20:17 GMT and should not be manually modified.
+This log was last generated on Mon, 10 Jul 2023 11:08:11 GMT and should not be manually modified.
+
+## 1.17.0
+Mon, 10 Jul 2023 11:08:11 GMT
+
+### Minor changes
+
+- BaseModal: add `parentNode` prop
+
+### Patches
+
+- `ExpandContent`: a11y fix
+- ExpandContent: update logic when active by default
 
 ## 1.16.0
 Thu, 29 Jun 2023 13:20:17 GMT

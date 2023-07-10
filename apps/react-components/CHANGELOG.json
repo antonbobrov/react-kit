@@ -2,6 +2,26 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "1.17.0",
+      "tag": "@anton.bobrov/react-components_v1.17.0",
+      "date": "Mon, 10 Jul 2023 11:08:11 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "`ExpandContent`: a11y fix"
+          },
+          {
+            "comment": "ExpandContent: update logic when active by default"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "BaseModal: add `parentNode` prop"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.16.0",
       "tag": "@anton.bobrov/react-components_v1.16.0",
       "date": "Thu, 29 Jun 2023 13:20:17 GMT",
