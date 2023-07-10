@@ -62,6 +62,11 @@ const Template: StoryFn<TComponent> = ({
 export const Default = Template.bind({});
 Default.args = {};
 
+export const DefaultActive = Template.bind({});
+DefaultActive.args = {
+  isActive: true,
+};
+
 export const WithoutAlpha = Template.bind({});
 WithoutAlpha.args = {
   hasAlpha: false,

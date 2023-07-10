@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, { forwardRef, useEffect, useRef, useState } from 'react';
 import { useEvent, useForwardedRef } from '@anton.bobrov/react-hooks';
 import { useTimeline } from '@anton.bobrov/react-vevet-hooks';
 import { utils, vevet } from '@anton.bobrov/vevet-init';
@@ -17,7 +17,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       className,
       style,
       isActive = false,
-      duration = 500,
+      duration: durationProp = 500,
       hasAlpha = true,
       onAnimationEnd: onAnimationEndProp,
       children,
@@ -26,6 +26,9 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
   ) => {
     const parentRef = useForwardedRef(forwardedRef);
     const contentRef = useRef<HTMLDivElement>(null);
+
+    const [isFirstExpand, setIsFirstExpand] = useState(isActive);
+    const duration = isFirstExpand ? 1 : durationProp;
 
     const onAnimationEnd = useEvent(onAnimationEndProp);
 
@@ -60,14 +63,16 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
 
         if (timeline.isReversed && progress === 0) {
           onAnimationEnd?.(false);
+          setIsFirstExpand(false);
         } else if (!timeline.isReversed && progress === 1) {
           onAnimationEnd?.(true);
+          setIsFirstExpand(false);
         }
       },
     });
 
     useEffect(() => {
-      if (!play) {
+      if (!timeline) {
         return;
       }
 
@@ -76,7 +81,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       } else {
         reverse();
       }
-    }, [isActive, play, reverse]);
+    }, [isActive, play, reverse, timeline]);
 
     return (
       <div
