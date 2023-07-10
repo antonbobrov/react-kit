@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Mon, 10 Jul 2023 11:08:11 GMT and should not be manually modified.
+This log was last generated on Mon, 10 Jul 2023 11:35:46 GMT and should not be manually modified.
+
+## 1.17.1
+Mon, 10 Jul 2023 11:35:46 GMT
+
+### Patches
+
+- ExpandContent: fix `hasAlpha`
 
 ## 1.17.0
 Mon, 10 Jul 2023 11:08:11 GMT

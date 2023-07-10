@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "1.17.1",
+      "tag": "@anton.bobrov/react-components_v1.17.1",
+      "date": "Mon, 10 Jul 2023 11:35:46 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "ExpandContent: fix `hasAlpha`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.17.0",
       "tag": "@anton.bobrov/react-components_v1.17.0",
       "date": "Mon, 10 Jul 2023 11:08:11 GMT",
