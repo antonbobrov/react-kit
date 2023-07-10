@@ -28,6 +28,8 @@ export interface IBaseModalProps extends IBaseComponent {
   /** The modal is opened */
   isOpen: boolean;
   children: ReactNode;
+  /** Parent element of the modal */
+  parentNode?: Element | null;
   /** Event on modal open */
   onOpen?: () => void;
   /** Event on modal close */

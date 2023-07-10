@@ -20,6 +20,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
   style,
   isOpen,
   children,
+  parentNode,
   onOpen,
   onClose,
   isUnderneathScrollingDisabled = true,
@@ -98,7 +99,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
   }, [isOpen, timeline]);
 
   return canRender ? (
-    <Portal>
+    <Portal node={parentNode}>
       <div
         ref={parentRef}
         className={cn(className, prefixedClasNames('base-modal'))}
