@@ -51,6 +51,8 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
         parent.style.height =
           progress === 1 ? 'auto' : `${contentHeight * heightProgress}px`;
 
+        content.style.visibility = progress === 0 ? 'hidden' : 'visible';
+
         if (hasAlpha) {
           const alpha = utils.math.easing(
             utils.math.clampScope(easing, ALPHA_SCOPE),
@@ -58,7 +60,6 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
           );
 
           content.style.opacity = `${alpha}`;
-          content.style.visibility = progress === 0 ? 'hidden' : 'visible';
         }
 
         if (timeline.isReversed && progress === 0) {
