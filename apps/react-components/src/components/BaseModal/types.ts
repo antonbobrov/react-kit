@@ -44,6 +44,11 @@ export interface IBaseModalProps extends IBaseComponent {
    * @default true
    */
   isRestoreFocusOnClose?: boolean;
+  /**
+   * Close the modal on outside click
+   * @default true
+   */
+  isCloseOnOutsideClick?: boolean;
   /** Close Button custom renderer */
   renderCloseButton?: TModalCloseButtonRenderer;
   /** Custom animation renderer */

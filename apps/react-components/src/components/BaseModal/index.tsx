@@ -25,6 +25,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
   onClose,
   isUnderneathScrollingDisabled = true,
   isRestoreFocusOnClose = true,
+  isCloseOnOutsideClick = true,
   renderCloseButton: CloseButton = DefaultCloseButton,
   renderAnimation: renderAnimationProp = renderModalAnimation,
   duration = 350,
@@ -58,11 +59,15 @@ export const BaseModal: FC<IBaseModalProps> = ({
     { ref: parentRef, isDisabled: !isOpen }
   );
 
-  useOutsideClick(wrapperRef, () => {
-    if (isOpen) {
-      onClose?.();
-    }
-  });
+  useOutsideClick(
+    wrapperRef,
+    () => {
+      if (isOpen) {
+        onClose?.();
+      }
+    },
+    { isDisabled: !isCloseOnOutsideClick }
+  );
 
   usePreventDocumentScrolling(isUnderneathScrollingDisabled && isOpen);
 
