@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "1.18.0",
+      "tag": "@anton.bobrov/react-components_v1.18.0",
+      "date": "Tue, 11 Jul 2023 16:25:30 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "BaseModal: add `isCloseOnOutsideClick` prop"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.17.1",
       "tag": "@anton.bobrov/react-components_v1.17.1",
       "date": "Mon, 10 Jul 2023 11:35:46 GMT",
