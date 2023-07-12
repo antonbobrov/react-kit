@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "Add `objectKeys`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}
