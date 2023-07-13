@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "1.7.0",
+      "tag": "@anton.bobrov/react-hooks_v1.7.0",
+      "date": "Thu, 13 Jul 2023 09:16:02 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add `objectKeys`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.6.2",
       "tag": "@anton.bobrov/react-hooks_v1.6.2",
       "date": "Wed, 28 Jun 2023 11:50:05 GMT",

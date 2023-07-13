@@ -2,6 +2,26 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "1.19.0",
+      "tag": "@anton.bobrov/react-components_v1.19.0",
+      "date": "Thu, 13 Jul 2023 09:16:02 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "BaseModal: add `onHidden`"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `1.7.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `1.6.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.18.0",
       "tag": "@anton.bobrov/react-components_v1.18.0",
       "date": "Tue, 11 Jul 2023 16:25:30 GMT",

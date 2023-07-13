@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Tue, 11 Jul 2023 16:25:30 GMT and should not be manually modified.
+This log was last generated on Thu, 13 Jul 2023 09:16:02 GMT and should not be manually modified.
+
+## 1.19.0
+Thu, 13 Jul 2023 09:16:02 GMT
+
+### Minor changes
+
+- BaseModal: add `onHidden`
 
 ## 1.18.0
 Tue, 11 Jul 2023 16:25:30 GMT
