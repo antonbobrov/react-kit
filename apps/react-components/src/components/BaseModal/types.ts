@@ -34,6 +34,8 @@ export interface IBaseModalProps extends IBaseComponent {
   onOpen?: () => void;
   /** Event on modal close */
   onClose?: () => void;
+  /** Event on modal totally hidden */
+  onHidden?: () => void;
   /**
    * Disable scrolling beneath the modal
    * @default true

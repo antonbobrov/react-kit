@@ -23,6 +23,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
   parentNode,
   onOpen,
   onClose,
+  onHidden: onHiddenProp,
   isUnderneathScrollingDisabled = true,
   isRestoreFocusOnClose = true,
   isCloseOnOutsideClick = true,
@@ -43,6 +44,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const renderAnimation = useEvent(renderAnimationProp);
+  const onHidden = useEvent(onHiddenProp);
 
   useEffect(() => {
     if (isOpen) {
@@ -89,6 +91,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
 
       if (progress === 0 && timeline?.timeline?.isReversed) {
         setCanRender(false);
+        onHidden?.();
       }
     },
   });
