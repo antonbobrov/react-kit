@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "useFocusTrap: prevet scroll on focus restoration",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}

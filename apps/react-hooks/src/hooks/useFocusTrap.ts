@@ -59,7 +59,7 @@ export function useFocusTrap(
 
     return () => {
       if (isRestoreFocus) {
-        prevActiveElement?.focus();
+        prevActiveElement?.focus({ preventScroll: true });
       }
     };
   }, [isDisabled, isRestoreFocus, ref]);
