@@ -2,6 +2,26 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "1.19.1",
+      "tag": "@anton.bobrov/react-components_v1.19.1",
+      "date": "Sun, 16 Jul 2023 18:31:55 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "FadeContent: preventScroll on focus"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `1.7.1`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `1.6.2`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.19.0",
       "tag": "@anton.bobrov/react-components_v1.19.0",
       "date": "Thu, 13 Jul 2023 09:16:02 GMT",

@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Thu, 13 Jul 2023 09:16:02 GMT and should not be manually modified.
+This log was last generated on Sun, 16 Jul 2023 18:31:55 GMT and should not be manually modified.
+
+## 1.19.1
+Sun, 16 Jul 2023 18:31:55 GMT
+
+### Patches
+
+- FadeContent: preventScroll on focus
 
 ## 1.19.0
 Thu, 13 Jul 2023 09:16:02 GMT

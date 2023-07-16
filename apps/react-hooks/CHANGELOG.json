@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "1.7.1",
+      "tag": "@anton.bobrov/react-hooks_v1.7.1",
+      "date": "Sun, 16 Jul 2023 18:31:55 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "useFocusTrap: prevet scroll on focus restoration"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.7.0",
       "tag": "@anton.bobrov/react-hooks_v1.7.0",
       "date": "Thu, 13 Jul 2023 09:16:02 GMT",
