@@ -64,7 +64,9 @@ export const FadeContent = forwardRef<HTMLDivElement, IFadeContentProps>(
               )}
               duration={duration / 2}
               state={state}
-              onShow={() => hasFocus && ref.current?.focus()}
+              onShow={() =>
+                hasFocus && ref.current?.focus({ preventScroll: true })
+              }
               onShowProgress={(element, progress) =>
                 parentHeight.interpolate(element.clientHeight, progress)
               }
