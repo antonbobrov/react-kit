@@ -11,3 +11,4 @@ export const ScrollView = {
 
 export * from './types';
 export * from './utils/useScrollView';
+export * from './utils/useScrollViewAnimationTrigger';
