@@ -6,7 +6,7 @@ import cn from 'classnames';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 import { IExpandContentProps } from './types';
 
-const GLOBAL_SCOPE = [0, 0.75];
+const GLOBAL_SCOPE = [0, 1];
 const EXPAND_SCOPE = [0, 0.75];
 const ALPHA_SCOPE = [0.5, 1];
 
