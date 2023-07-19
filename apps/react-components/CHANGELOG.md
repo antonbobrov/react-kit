@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 19 Jul 2023 10:44:59 GMT and should not be manually modified.
+This log was last generated on Wed, 19 Jul 2023 19:05:49 GMT and should not be manually modified.
+
+## 1.20.2
+Wed, 19 Jul 2023 19:05:49 GMT
+
+### Patches
+
+- ExpandContent: fix global scope
 
 ## 1.20.1
 Wed, 19 Jul 2023 10:44:59 GMT
