@@ -1,6 +1,6 @@
 import { useEvent } from '@anton.bobrov/react-hooks';
 import { NTimeline, Timeline, vevet } from '@anton.bobrov/vevet-init';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export interface IUseTimelineProps {
   /** Timeline duration */
@@ -59,28 +59,28 @@ export function useTimeline({
     }
   }, [duration, timeline]);
 
-  const play = useEvent(() => {
+  const play = useCallback(() => {
     timeline?.play();
-  });
+  }, [timeline]);
 
-  const reverse = useEvent(() => {
+  const reverse = useCallback(() => {
     if (!timeline || timeline.progress <= 0) {
       return;
     }
 
     timeline.reverse();
-  });
+  }, [timeline]);
 
-  const pause = useEvent(() => {
+  const pause = useCallback(() => {
     timeline?.pause();
-  });
+  }, [timeline]);
 
-  const reset = useEvent(() => {
+  const reset = useCallback(() => {
     if (timeline) {
       pause();
       timeline.progress = 0;
     }
-  });
+  }, [pause, timeline]);
 
   return {
     timeline,
