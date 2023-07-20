@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "1.7.2",
+      "tag": "@anton.bobrov/react-hooks_v1.7.2",
+      "date": "Thu, 20 Jul 2023 12:22:22 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Add `resize-observer-polyfill`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.7.1",
       "tag": "@anton.bobrov/react-hooks_v1.7.1",
       "date": "Sun, 16 Jul 2023 18:31:55 GMT",

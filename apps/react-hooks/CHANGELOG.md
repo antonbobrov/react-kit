@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Sun, 16 Jul 2023 18:31:55 GMT and should not be manually modified.
+This log was last generated on Thu, 20 Jul 2023 12:22:22 GMT and should not be manually modified.
+
+## 1.7.2
+Thu, 20 Jul 2023 12:22:22 GMT
+
+### Patches
+
+- Add `resize-observer-polyfill`
 
 ## 1.7.1
 Sun, 16 Jul 2023 18:31:55 GMT
