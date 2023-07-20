@@ -31,6 +31,9 @@
   "peerDependencies": {
     "react": ">= 18.0.0"
   },
+  "dependencies": {
+    "resize-observer-polyfill": "~1.5.1"
+  },
   "devDependencies": {
     "@anton.bobrov/eslint-config": "workspace:*",
     "@types/react": "18.0.18",

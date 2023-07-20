@@ -1,5 +1,6 @@
 import { addEventListener } from '@utils/dom';
 import { RefObject, useCallback, useEffect, useState } from 'react';
+import ResizeObserver from 'resize-observer-polyfill';
 
 export interface IUseDomRectProps {
   ref: RefObject<HTMLElement>;

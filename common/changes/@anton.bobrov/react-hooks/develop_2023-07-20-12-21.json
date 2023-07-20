@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "Add `resize-observer-polyfill`",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}
