@@ -54,7 +54,7 @@ export function useFocusTrap(
         resetFocus();
       }
 
-      firstFocusable?.focus();
+      firstFocusable?.focus({ preventScroll: true });
     }, 0);
 
     return () => {
