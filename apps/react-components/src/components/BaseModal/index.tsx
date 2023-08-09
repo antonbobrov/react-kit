@@ -27,6 +27,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
   isUnderneathScrollingDisabled = true,
   isRestoreFocusOnClose = true,
   isCloseOnOutsideClick = true,
+  isUnmountOnClose = true,
   renderCloseButton: CloseButton = DefaultCloseButton,
   renderAnimation: renderAnimationProp = renderModalAnimation,
   duration = 350,
@@ -35,6 +36,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
   overlayProps,
 }) => {
   const [canRender, setCanRender] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const onOpenEvent = useEvent(onOpen);
 
@@ -90,7 +92,12 @@ export const BaseModal: FC<IBaseModalProps> = ({
       });
 
       if (progress === 0 && timeline?.timeline?.isReversed) {
-        setCanRender(false);
+        if (isUnmountOnClose) {
+          setCanRender(false);
+        }
+
+        setIsVisible(false);
+
         onHidden?.();
       }
     },
@@ -100,6 +107,8 @@ export const BaseModal: FC<IBaseModalProps> = ({
   useEffect(() => {
     if (isOpen) {
       setCanRender(true);
+      setIsVisible(true);
+
       timeline?.play();
     } else {
       timeline?.reverse();
@@ -110,10 +119,14 @@ export const BaseModal: FC<IBaseModalProps> = ({
     <Portal node={parentNode}>
       <div
         ref={parentRef}
-        className={cn(className, prefixedClasNames('base-modal'))}
+        className={cn(
+          className,
+          prefixedClasNames('base-modal', !isVisible && 'invisible')
+        )}
         style={style}
         role="dialog"
         aria-modal
+        aria-hidden={!isVisible}
       >
         <div
           ref={overlayRef}

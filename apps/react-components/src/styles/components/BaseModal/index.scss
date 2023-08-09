@@ -15,6 +15,10 @@
 
   opacity: 0;
 
+  &.#{$rkc-prefix}-invisible {
+    display: none !important;
+  }
+
   &__close {
     display: block;
     margin: 0 auto 10px;
