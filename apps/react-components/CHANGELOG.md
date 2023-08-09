@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 26 Jul 2023 22:10:20 GMT and should not be manually modified.
+This log was last generated on Wed, 09 Aug 2023 19:23:35 GMT and should not be manually modified.
+
+## 1.22.0
+Wed, 09 Aug 2023 19:23:35 GMT
+
+### Minor changes
+
+- BaseModal: add `isUnmountOnClose`
+
+### Patches
+
+- PageCursor.Provider: fix container
 
 ## 1.21.0
 Wed, 26 Jul 2023 22:10:20 GMT
