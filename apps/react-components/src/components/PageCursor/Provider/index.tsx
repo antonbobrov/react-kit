@@ -51,7 +51,7 @@ export const Provider: FC<IPageCursorProviderProps> = ({
     }
 
     const instance = new CustomCursor({
-      container: window,
+      container: document.body,
       run: false,
       autoStop: true,
       size: initialSize,
