@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "LinkClickInterceptor: better logic",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}

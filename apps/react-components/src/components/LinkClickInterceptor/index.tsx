@@ -3,7 +3,13 @@ import React, { MouseEventHandler, PropsWithChildren, forwardRef } from 'react';
 import { ILinkClickInterceptorProps } from './types';
 import { getAnchor } from './utils';
 
-/** Component that catches click on link */
+/**
+ * Component that catches click on link
+ *
+ * Callbacks will never be triggered if an anchor
+ * has the `data-link`, `target` or `download` attribute
+ * or the `href` contains a `#`
+ */
 export const LinkClickInterceptor = forwardRef<
   HTMLDivElement,
   PropsWithChildren<ILinkClickInterceptorProps>
@@ -23,8 +29,25 @@ export const LinkClickInterceptor = forwardRef<
 
       const targetURL = new URL(anchor.href);
       const currentURL = new URL(window.location.href);
+      const isExternal = targetURL.origin !== currentURL.origin;
 
-      if (targetURL.origin !== currentURL.origin) {
+      if (anchor.hasAttribute('data-framework-link')) {
+        return;
+      }
+
+      if (anchor.target) {
+        return;
+      }
+
+      if (anchor.hasAttribute('download')) {
+        return;
+      }
+
+      if (anchor.href.includes('#')) {
+        return;
+      }
+
+      if (isExternal) {
         onExternalClick?.(event, anchor);
 
         return;
