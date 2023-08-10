@@ -1,7 +1,10 @@
 import { useForwardedRef } from '@anton.bobrov/react-hooks';
 import React, { AnchorHTMLAttributes, forwardRef } from 'react';
 
-/** Base link component */
+/**
+ * Base link component
+ * @deprecated
+ */
 export const Link = forwardRef<
   HTMLAnchorElement,
   AnchorHTMLAttributes<HTMLAnchorElement>
