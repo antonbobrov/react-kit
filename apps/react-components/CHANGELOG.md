@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 09 Aug 2023 19:23:35 GMT and should not be manually modified.
+This log was last generated on Thu, 10 Aug 2023 20:17:22 GMT and should not be manually modified.
+
+## 1.23.0
+Thu, 10 Aug 2023 20:17:22 GMT
+
+### Minor changes
+
+- `Link` is `deprecated`
+
+### Patches
+
+- LinkClickInterceptor: better logic
 
 ## 1.22.0
 Wed, 09 Aug 2023 19:23:35 GMT
