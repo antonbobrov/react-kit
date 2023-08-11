@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Thu, 10 Aug 2023 20:17:22 GMT and should not be manually modified.
+This log was last generated on Fri, 11 Aug 2023 10:43:13 GMT and should not be manually modified.
+
+## 1.24.0
+Fri, 11 Aug 2023 10:43:13 GMT
+
+### Minor changes
+
+- BaseModal: `isUnderneathScrollingDisabled` is `deprecated`
+
+### Patches
+
+- BaseModal: use `overscroll-behavior: contain`
 
 ## 1.23.0
 Thu, 10 Aug 2023 20:17:22 GMT
