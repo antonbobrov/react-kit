@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Fri, 11 Aug 2023 10:43:13 GMT and should not be manually modified.
+This log was last generated on Fri, 11 Aug 2023 11:05:14 GMT and should not be manually modified.
+
+## 1.8.1
+Fri, 11 Aug 2023 11:05:14 GMT
+
+### Patches
+
+- usePreventDocumentScrolling: remove deprecation
 
 ## 1.8.0
 Fri, 11 Aug 2023 10:43:13 GMT

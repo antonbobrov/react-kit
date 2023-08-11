@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "1.8.1",
+      "tag": "@anton.bobrov/react-hooks_v1.8.1",
+      "date": "Fri, 11 Aug 2023 11:05:14 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "usePreventDocumentScrolling: remove deprecation"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.8.0",
       "tag": "@anton.bobrov/react-hooks_v1.8.0",
       "date": "Fri, 11 Aug 2023 10:43:13 GMT",

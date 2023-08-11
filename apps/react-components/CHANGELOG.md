@@ -1,6 +1,14 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Fri, 11 Aug 2023 10:43:13 GMT and should not be manually modified.
+This log was last generated on Fri, 11 Aug 2023 11:05:14 GMT and should not be manually modified.
+
+## 1.24.1
+Fri, 11 Aug 2023 11:05:14 GMT
+
+### Patches
+
+- ButtonAnchor: use simple anchor
+- isUnderneathScrollingDisabled: remove deprecation
 
 ## 1.24.0
 Fri, 11 Aug 2023 10:43:13 GMT
