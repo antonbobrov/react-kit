@@ -1,7 +1,10 @@
 import { isBrowser } from '@utils/env';
 import { useCallback, useEffect, useId, useMemo } from 'react';
 
-/** Prevent document scrolling */
+/**
+ * Prevent document scrolling
+ * @deprecated
+ */
 export function usePreventDocumentScrolling(isPrevented: boolean) {
   const id = useId();
   const className = `prevent_scrolling-${id.replace(/:/g, '')}`;
