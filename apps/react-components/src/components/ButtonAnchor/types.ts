@@ -17,6 +17,3 @@ export interface IButtonAnchorLink
 }
 
 export type TButtonAnchor = IButtonAnchorLink | IButtonAnchorBtn;
-
-/** @deprecated */
-export type TButtonanchor = TButtonAnchor;

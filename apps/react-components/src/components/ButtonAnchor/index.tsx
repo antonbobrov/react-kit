@@ -1,7 +1,6 @@
 import { useForwardedRef } from '@anton.bobrov/react-hooks';
 import React, { PropsWithChildren, forwardRef } from 'react';
 import { TButtonAnchor } from './types';
-import { Link } from '../Link';
 
 /** Button or Anchor */
 export const ButtonAnchor = forwardRef<
@@ -11,15 +10,21 @@ export const ButtonAnchor = forwardRef<
   const ref = useForwardedRef(forwardedRef);
 
   if (tag === 'a') {
+    const defaultRel =
+      'target' in props && props.target === '_blank'
+        ? 'noopener noreferrer'
+        : undefined;
+
     return (
-      <Link
+      <a
         ref={ref as any}
         className={className}
         style={style}
         {...(props as any)}
+        rel={'rel' in props ? props.rel : defaultRel}
       >
         {children}
-      </Link>
+      </a>
     );
   }
 
