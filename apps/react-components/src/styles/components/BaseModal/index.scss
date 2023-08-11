@@ -42,6 +42,7 @@
   
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   
     -ms-overflow-style: none;
     scrollbar-width: none;
