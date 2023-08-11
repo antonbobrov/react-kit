@@ -3,7 +3,6 @@ import { useCallback, useEffect, useId, useMemo } from 'react';
 
 /**
  * Prevent document scrolling
- * @deprecated
  */
 export function usePreventDocumentScrolling(isPrevented: boolean) {
   const id = useId();

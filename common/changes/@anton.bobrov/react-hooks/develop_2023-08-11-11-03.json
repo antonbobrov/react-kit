@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "usePreventDocumentScrolling: remove deprecation",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}
