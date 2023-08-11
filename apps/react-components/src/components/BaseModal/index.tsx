@@ -24,7 +24,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
   onOpen,
   onClose,
   onHidden: onHiddenProp,
-  isUnderneathScrollingDisabled = true,
+  isUnderneathScrollingDisabled = false,
   isRestoreFocusOnClose = true,
   isCloseOnOutsideClick = true,
   isUnmountOnClose = true,

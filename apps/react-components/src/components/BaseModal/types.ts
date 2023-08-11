@@ -38,7 +38,8 @@ export interface IBaseModalProps extends IBaseComponent {
   onHidden?: () => void;
   /**
    * Disable scrolling beneath the modal
-   * @default true
+   * @default false
+   * @deprecated
    */
   isUnderneathScrollingDisabled?: boolean;
   /**
