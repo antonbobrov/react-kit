@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "Remove `Link` component",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}
