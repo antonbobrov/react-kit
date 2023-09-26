@@ -1,4 +1,4 @@
-import { utils } from '@anton.bobrov/vevet-init';
+import { imagePathsToProps } from '@anton.bobrov/vevet-init';
 import { IBaseImageProps } from '../types';
 
 interface IGetSrcProps extends Pick<IBaseImageProps, 'paths' | 'src'> {}
@@ -22,7 +22,7 @@ export function getSrcSet({ srcSet, paths }: IGetSrcSetProps) {
     return undefined;
   }
 
-  const imagePaths = paths ? utils.image.pathsToProps(paths) : undefined;
+  const imagePaths = paths ? imagePathsToProps(paths) : undefined;
   if (!imagePaths) {
     return undefined;
   }
