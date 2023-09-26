@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "BaseVideo: upgrade vevet",
+      "type": "none"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}
