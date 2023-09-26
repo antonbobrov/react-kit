@@ -206,9 +206,9 @@ importers:
       rimraf: 5.0.0
       tsc-alias: 1.8.5
       typescript: 4.8.2
-      vevet: 2.17.0
+      vevet: 3.0.0-beta.4
     dependencies:
-      vevet: 2.17.0
+      vevet: 3.0.0-beta.4_typescript@4.8.2
     devDependencies:
       '@anton.bobrov/eslint-config': link:../eslint-config
       eslint: 8.38.0
@@ -8666,6 +8666,11 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
+  /p-cancelable/4.0.1:
+    resolution: {integrity: sha512-wBowNApzd45EIKdO1LaU+LrMBwAcjfPaYtVzV3lmfM3gf8Z4CHZsiIqlM8TZZ8okYvh5A1cP6gTfCRQtwUpaUg==}
+    engines: {node: '>=14.16'}
+    dev: false
+
   /p-limit/2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
     engines: {node: '>=6'}
@@ -10189,6 +10194,17 @@ packages:
     engines: {node: '>=6.10'}
     dev: true
 
+  /ts-essentials/9.4.0_typescript@4.8.2:
+    resolution: {integrity: sha512-s4BzWZmTh926caZO7XF7MMbwCn1BioT3s3r9hT8ARnwW//30OD0XioEsMyq3ORAHP/deN4Zkst2ZvxXmL+tG6g==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 4.8.2
+    dev: false
+
   /tsc-alias/1.8.5:
     resolution: {integrity: sha512-Y3ka0olwSRdbHPyX5kXhYY2aoBKuT53DFdeY+PpQUR4hg5M/b8eIRmC8dL4FBdd0wT366iWc6iDUUGe6QwI7mg==}
     hasBin: true
@@ -10493,8 +10509,8 @@ packages:
     resolution: {integrity: sha512-Y/6CilyXm3uaA2NrecuU6sPBoIjBG7DiP2TrDsbND80qqhzPAdZ58lzk9oYHUTGq72MiDZYFvq94p26edZCadg==}
     dev: false
 
-  /vevet/2.17.0:
-    resolution: {integrity: sha512-HhvSZYnLQ6puto4JsRgGpGYDnf025RAaVBShnI2Qt+B9m+BZXf92EccFybBIvEpdmas0Z2o/pk3PrJUeSh0/8w==}
+  /vevet/3.0.0-beta.4_typescript@4.8.2:
+    resolution: {integrity: sha512-oxtkGTPtPKFvv43SLZzyiHLINSUfLlx7m6CIMhOfZIus0oWpCuSJpSi3Xuxdf3QhE7P/3Tvvj13jpPhGNbOZmQ==}
     dependencies:
       detect-browser: 5.3.0
       easing-progress: 0.0.4
@@ -10502,8 +10518,11 @@ packages:
       ismobilejs: 1.1.1
       lodash.mergewith: 4.6.2
       normalize-wheel: 1.0.1
-      p-cancelable: 3.0.0
+      p-cancelable: 4.0.1
+      ts-essentials: 9.4.0_typescript@4.8.2
       vevet-dom: 0.0.15
+    transitivePeerDependencies:
+      - typescript
     dev: false
 
   /video.js/8.2.1:

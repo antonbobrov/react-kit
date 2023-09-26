@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/vevet-init",
+      "comment": "Upgrade Vevet to v3",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/vevet-init"
+}
