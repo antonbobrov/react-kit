@@ -9,11 +9,19 @@ export type TUseViewportSize = {
 
 /** Use `vevet` `Viewport` size */
 export function useViewportSize() {
-  const [size, setSize] = useState<TUseViewportSize>({ width: 0, height: 0 });
+  const [size, setSize] = useState<TUseViewportSize>({
+    width: 0,
+    height: 0,
+  });
 
-  useOnResize(() => {
-    setSize({ width: vevet.viewport.width, height: vevet.viewport.height });
-  }, []);
+  useOnResize(
+    () =>
+      setSize({
+        width: vevet.viewport.width,
+        height: vevet.viewport.height,
+      }),
+    []
+  );
 
   return size;
 }

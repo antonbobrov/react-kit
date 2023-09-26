@@ -1,10 +1,15 @@
 import { useEffect } from 'react';
-import { NTimeline, Timeline, utils, vevet } from '@anton.bobrov/vevet-init';
+import {
+  NTimeline,
+  Timeline,
+  clampScope,
+  easing,
+} from '@anton.bobrov/vevet-init';
 import { useEvent } from '@anton.bobrov/react-hooks';
 
 export interface IUseScopedTimelineProgressProps {
   /** Event on progress update */
-  onProgress: (args: NTimeline.CallbacksTypes['progress']) => void;
+  onProgress: (args: NTimeline.ICallbacksTypes['progress']) => void;
   /** Target scope */
   scope: [number, number];
   /** `vevet` `Timeline` */
@@ -23,15 +28,16 @@ export function useScopedTimelineProgress({
     let prevProgress: undefined | number;
 
     const callback = timeline?.addCallback('progress', (data) => {
-      const progress = utils.math.clampScope(data.progress, scope);
+      const progress = clampScope(data.progress, scope);
+
       if (prevProgress === progress) {
         return;
       }
 
       prevProgress = progress;
-      const easing = utils.math.easing(progress, vevet.prop.easing);
+      const easingProgress = easing(progress);
 
-      onProgress({ progress, easing });
+      onProgress({ progress, easing: easingProgress });
     });
 
     return () => callback?.remove();
