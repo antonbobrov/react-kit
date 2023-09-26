@@ -4,7 +4,7 @@ import { useOnResize } from './useOnResize';
 
 export type TUseBreakpointName = 'desktop' | 'tablet' | 'phone';
 
-/** `vevet` breakpoint name */
+/** `vevet.viewport` breakpoint name */
 export function useBreakpointName() {
   const [name, setName] = useState<TUseBreakpointName>('phone');
 
