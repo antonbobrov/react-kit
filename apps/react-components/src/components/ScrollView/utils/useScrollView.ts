@@ -39,8 +39,8 @@ export function useScrollView({
 
     let timeout: NodeJS.Timeout | undefined;
 
-    const inCallback = scrollView.addCallback('in', (target) => {
-      if (target === element) {
+    const inCallback = scrollView.addCallback('in', (data) => {
+      if (data.element === element) {
         if (inDelay) {
           timeout = setTimeout(() => onIn?.(), inDelay);
         } else {
@@ -49,8 +49,8 @@ export function useScrollView({
       }
     });
 
-    const outCallback = scrollView.addCallback('out', (target) => {
-      if (target === element) {
+    const outCallback = scrollView.addCallback('out', (data) => {
+      if (data.element === element) {
         onOut?.();
       }
     });
