@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "SplitText: remove `appendLetters` & `appendLines`; add `hasLetters` & `hasLines`",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}

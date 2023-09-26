@@ -11,8 +11,8 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
       style,
       text: textProp,
       textSource = 'innerHTML',
-      appendLetters,
-      appendLines,
+      hasLetters,
+      hasLines,
       onInit: onInitProp,
     },
     forwardedRef
@@ -34,21 +34,21 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
       const instance = new VevetSplitText({
         container,
         textSource,
-        appendLetters,
-        appendLines,
-        viewportTarget: vevet.isMobile ? 'w' : undefined,
+        hasLetters,
+        hasLines,
+        viewportTarget: vevet.isMobile ? 'width' : undefined,
       });
 
       onInit(instance);
 
       return () => instance.destroy();
-    }, [ref, onInit, textProp, textSource, appendLetters, appendLines]);
+    }, [ref, onInit, textProp, textSource, hasLetters, hasLines]);
 
     return (
       <span
         ref={ref}
         className={className}
-        style={style}
+        style={{ ...style, display: 'block' }}
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: textProp }}
       />
