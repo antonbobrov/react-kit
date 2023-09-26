@@ -1,43 +1,31 @@
 import { DependencyList, EffectCallback, useEffect } from 'react';
 import { NViewport, NCallbacks, vevet } from '@anton.bobrov/vevet-init';
-import { isUndefined } from '@anton.bobrov/react-hooks';
 
-type TTarget = keyof NViewport.CallbacksTypes;
+type TTarget = keyof NViewport.ICallbacksTypes;
 
 export interface IUseOnResizeSettings
-  extends Omit<NCallbacks.CallbackBaseSettings, 'protected'> {
-  /**
-   * @default 0
-   */
-  timeout?: number;
+  extends Omit<NCallbacks.ISettings, 'isProtected'> {
+  /** Resize target */
+  target?: TTarget;
   /**
    * Use optimized target for mobile devices
    * @default true
    */
   isMobileOptimizedTarget?: boolean;
-  /**
-   * Resize target
-   */
-  target?: TTarget;
 }
 
 /** Event on viewport resize */
 export function useOnResize(
   effect: EffectCallback,
   deps: DependencyList,
-  settingsProp?: IUseOnResizeSettings
+  settings?: IUseOnResizeSettings
 ) {
   useEffect(() => {
     let destructor = effect();
 
-    const settings: IUseOnResizeSettings = {
-      timeout: 0,
-      isMobileOptimizedTarget: true,
-      ...settingsProp,
-    };
-
-    let target = !isUndefined(settings.target) ? settings.target : '';
-    target = settings.isMobileOptimizedTarget && vevet.isMobile ? 'w' : target;
+    let target = settings?.target ?? 'any';
+    target =
+      settings?.isMobileOptimizedTarget && vevet.isMobile ? 'width' : target;
 
     const viewportCallback = vevet.viewport.add(
       target,

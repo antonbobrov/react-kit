@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-vevet-hooks",
+      "comment": "useOnResize: use new vevet props",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-vevet-hooks"
+}
