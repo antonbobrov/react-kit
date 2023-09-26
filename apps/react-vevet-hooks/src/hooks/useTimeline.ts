@@ -23,7 +23,7 @@ export function useTimeline({
 }: IUseTimelineProps) {
   const [timeline, setTimeline] = useState<Timeline | undefined>();
 
-  const initialProps = useRef({ easing });
+  const initialProps = useRef({ easing, duration });
 
   const onStart = useEvent(onStartProp);
   const onProgress = useEvent(onProgressProp);
@@ -58,10 +58,8 @@ export function useTimeline({
     }
 
     const currentProps = timeline.props;
-    console.log('try change props');
 
     if (currentProps.duration !== duration) {
-      console.log('change');
       timeline.changeProps({ duration });
     }
   }, [duration, timeline]);

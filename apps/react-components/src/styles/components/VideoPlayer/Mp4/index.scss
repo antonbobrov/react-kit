@@ -1,7 +1,7 @@
 @use 'sass:math';
 @import '../../../settings';
 
-@import '~vevet/src/sass/base';
+@import '~vevet/lib/styles/base';
 
 @function px-to-rem($px) {
   @return #{math.div($px, 16)}rem;
