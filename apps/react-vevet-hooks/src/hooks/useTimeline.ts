@@ -1,28 +1,29 @@
 import { useEvent } from '@anton.bobrov/react-hooks';
 import { NTimeline, Timeline, vevet } from '@anton.bobrov/vevet-init';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
-export interface IUseTimelineProps {
-  /** Timeline duration */
-  duration: number;
+export interface IUseTimelineProps
+  extends Pick<NTimeline.IStaticProps, 'easing'>,
+    Pick<NTimeline.IChangeableProps, 'duration'> {
   /** Event on timeline start */
-  onStart?: (data: NTimeline.CallbacksTypes['start']) => void;
-  /** Event on timeline update */
-  onProgress?: (data: NTimeline.CallbacksTypes['progress']) => void;
+  onStart?: () => void;
+  /** Event on timeline progress update */
+  onProgress?: (data: NTimeline.ICallbacksTypes['progress']) => void;
   /** Event on timeline end */
-  onEnd?: (data: NTimeline.CallbacksTypes['end']) => void;
+  onEnd?: () => void;
 }
 
 /** Create `vevet` `Timeline` */
 export function useTimeline({
+  easing,
   duration,
   onStart: onStartProp,
   onProgress: onProgressProp,
   onEnd: onEndProp,
 }: IUseTimelineProps) {
-  const [startDuration] = useState(duration);
-
   const [timeline, setTimeline] = useState<Timeline | undefined>();
+
+  const initialProps = useRef({ easing });
 
   const onStart = useEvent(onStartProp);
   const onProgress = useEvent(onProgressProp);
@@ -33,60 +34,45 @@ export function useTimeline({
       return undefined;
     }
 
-    const tm = new Timeline({ duration: startDuration });
-    setTimeline(tm);
+    const instance = new Timeline({ ...initialProps.current, easing });
+    setTimeline(instance);
 
     if (onStart) {
-      tm.addCallback('start', onStart);
+      instance.addCallback('start', onStart);
     }
 
     if (onProgress) {
-      tm.addCallback('progress', onProgress);
+      instance.addCallback('progress', onProgress);
     }
 
     if (onEnd) {
-      tm.addCallback('end', onEnd);
+      instance.addCallback('end', onEnd);
     }
 
-    return () => tm.destroy();
-  }, [startDuration, onEnd, onProgress, onStart]);
+    return () => instance.destroy();
+  }, [easing, onEnd, onProgress, onStart]);
 
   useEffect(() => {
-    const currentDuration = timeline?.prop.duration;
-
-    if (currentDuration !== duration) {
-      timeline?.changeProp({ duration });
-    }
-  }, [duration, timeline]);
-
-  const play = useCallback(() => {
-    timeline?.play();
-  }, [timeline]);
-
-  const reverse = useCallback(() => {
-    if (!timeline || timeline.progress <= 0) {
+    if (!timeline) {
       return;
     }
 
-    timeline.reverse();
-  }, [timeline]);
+    const currentProps = timeline.props;
+    console.log('try change props');
 
-  const pause = useCallback(() => {
-    timeline?.pause();
-  }, [timeline]);
-
-  const reset = useCallback(() => {
-    if (timeline) {
-      pause();
-      timeline.progress = 0;
+    if (currentProps.duration !== duration) {
+      console.log('change');
+      timeline.changeProps({ duration });
     }
-  }, [pause, timeline]);
+  }, [duration, timeline]);
 
-  return {
-    timeline,
-    play,
-    reverse,
-    pause,
-    reset,
-  };
+  const play = useCallback(() => timeline?.play(), [timeline]);
+
+  const reverse = useCallback(() => timeline?.reverse(), [timeline]);
+
+  const pause = useCallback(() => timeline?.pause(), [timeline]);
+
+  const reset = useCallback(() => timeline?.reset(), [timeline]);
+
+  return { timeline, play, reverse, pause, reset };
 }
