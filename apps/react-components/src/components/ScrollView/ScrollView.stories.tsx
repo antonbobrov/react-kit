@@ -42,4 +42,4 @@ const Template: StoryFn<TComponent> = ({
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = { instanceKey: 0 };

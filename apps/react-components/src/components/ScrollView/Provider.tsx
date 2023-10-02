@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
 import { ScrollView, vevet } from '@anton.bobrov/vevet-init';
+import useDeepCompareEffect from 'use-deep-compare-effect';
+import { isUndefined } from '@anton.bobrov/react-hooks';
 import { IScrollViewContext, ScrollViewContext } from './utils/context';
 import { IScrollViewProviderProps } from './types';
 
@@ -10,23 +12,37 @@ import { IScrollViewProviderProps } from './types';
 export const Provider: FC<IScrollViewProviderProps> = ({
   children,
   instanceKey,
+  intersectionRoot,
+  states,
+  hasDelay,
+  maxDelay,
+  direction,
+  viewportTarget,
+  resizeDebounce,
   isEnabled = false,
-  rootMargin = 0.05,
   ...props
 }) => {
   const [scrollView, setScrollView] = useState<ScrollView | undefined>();
 
   const vevetRef = useRef(vevet);
-  const initialProps = useRef({ ...props, rootMargin });
+
+  const changeableProps = { ...props, isEnabled };
+  const initialChangeablePropsRef = useRef(changeableProps);
 
   useEffect(() => {
-    if (!vevetRef.current) {
+    if (!vevetRef.current || isUndefined(instanceKey)) {
       return undefined;
     }
 
     const instance = new ScrollView({
-      ...initialProps.current,
-      isEnabled: false,
+      ...initialChangeablePropsRef.current,
+      intersectionRoot,
+      states,
+      hasDelay,
+      maxDelay,
+      direction,
+      viewportTarget,
+      resizeDebounce,
     });
 
     setScrollView(instance);
@@ -35,27 +51,29 @@ export const Provider: FC<IScrollViewProviderProps> = ({
       setScrollView(undefined);
       instance.destroy();
     };
-  }, [instanceKey, rootMargin]);
+  }, [
+    instanceKey,
+    direction,
+    hasDelay,
+    intersectionRoot,
+    maxDelay,
+    resizeDebounce,
+    states,
+    viewportTarget,
+  ]);
 
   const contextValue: IScrollViewContext = useMemo(
     () => ({ scrollView }),
     [scrollView]
   );
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     if (!scrollView) {
       return;
     }
 
-    const currentProps = scrollView.props;
-
-    if (
-      currentProps.isEnabled !== isEnabled ||
-      currentProps.rootMargin !== rootMargin
-    ) {
-      scrollView.changeProps({ isEnabled, rootMargin });
-    }
-  }, [isEnabled, rootMargin, scrollView]);
+    scrollView.changeProps(changeableProps);
+  }, [changeableProps]);
 
   return (
     <ScrollViewContext.Provider value={contextValue}>

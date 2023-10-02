@@ -11,12 +11,16 @@ export interface IScrollViewProviderProps
       | 'hasDelay'
       | 'maxDelay'
       | 'direction'
-      | 'direction'
       | 'viewportTarget'
       | 'resizeDebounce'
     >,
     Pick<NScrollView.IChangeableProps, 'isEnabled' | 'rootMargin'> {
   instanceKey: string | number;
+  /**
+   * Enable `IntersectionObserver`
+   * @default false
+   */
+  isEnabled?: boolean;
 }
 
 export type TScrollViewElementAnimation = 'fadeIn' | 'fadeInUp';
