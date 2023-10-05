@@ -28,7 +28,7 @@
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "vevet": "3.0.0-beta.6"
+    "vevet": "3.0.0-beta.7"
   },
   "devDependencies": {
     "@anton.bobrov/eslint-config": "workspace:*",
