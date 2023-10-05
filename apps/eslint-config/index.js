@@ -45,7 +45,7 @@ module.exports = {
         selector: ['variable'],
         types: ['boolean'],
         format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-        prefix: ['is', 'IS', 'Is', 'has', 'HAS', 'Has', 'can', 'CAN', 'Can'],
+        prefix: ['is', 'IS', 'Is', 'has', 'HAS', 'Has', 'can', 'CAN', 'Can', 'should', 'SHOULD', 'Should', 'will', 'WILL', 'Will'],
       },
     ],
     'import/prefer-default-export': 0,
