@@ -1,6 +1,7 @@
 import { useEvent } from '@anton.bobrov/react-hooks';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimationFrame, NAnimationFrame } from '@anton.bobrov/vevet-init';
+import useDeepCompareEffect from 'use-deep-compare-effect';
 
 export interface IUseAnimationFrameProps
   extends Pick<NAnimationFrame.IChangeableProps, 'fps' | 'autoFpsFrames'> {
@@ -17,12 +18,11 @@ export function useAnimationFrame({
   onPlay: onPlayProp,
   onPause: onPauseProp,
   onFrame: onFrameProp,
-  fps,
-  autoFpsFrames,
+  ...changeableProps
 }: IUseAnimationFrameProps) {
   const [frame, setFrame] = useState<AnimationFrame | null>(null);
 
-  const initialProps = useRef({ fps, autoFpsFrames });
+  const initialChangeablePropsRef = useRef(changeableProps);
 
   const onPlay = useEvent(onPlayProp);
   const onPause = useEvent(onPauseProp);
@@ -30,7 +30,7 @@ export function useAnimationFrame({
 
   useEffect(() => {
     const instance = new AnimationFrame({
-      ...initialProps.current,
+      ...initialChangeablePropsRef.current,
       isEnabled: false,
     });
 
@@ -47,22 +47,13 @@ export function useAnimationFrame({
     return () => instance.destroy();
   }, [onFrame, onPause, onPlay]);
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     if (!frame) {
       return;
     }
 
-    const currentProps = frame.props;
-    console.log('try change props');
-
-    if (
-      currentProps.fps !== fps ||
-      currentProps.autoFpsFrames !== autoFpsFrames
-    ) {
-      console.log('change props');
-      frame.changeProps({ fps, autoFpsFrames });
-    }
-  }, [frame, fps, autoFpsFrames]);
+    frame.changeProps(changeableProps);
+  }, [changeableProps]);
 
   const play = useCallback(() => frame?.play(), [frame]);
 

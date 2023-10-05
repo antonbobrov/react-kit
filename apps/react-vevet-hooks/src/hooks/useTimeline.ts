@@ -20,11 +20,10 @@ export function useTimeline({
   onStart: onStartProp,
   onProgress: onProgressProp,
   onEnd: onEndProp,
-  ...props
+  ...changeableProps
 }: IUseTimelineProps) {
   const [timeline, setTimeline] = useState<Timeline | undefined>();
 
-  const changeableProps = { ...props };
   const initialChangeablePropsRef = useRef(changeableProps);
 
   const onStart = useEvent(onStartProp);

@@ -1,6 +1,7 @@
 import { useEvent } from '@anton.bobrov/react-hooks';
 import { DraggerDirection, NDraggerDirection } from '@anton.bobrov/vevet-init';
 import { RefObject, useEffect, useRef, useState } from 'react';
+import useDeepCompareEffect from 'use-deep-compare-effect';
 
 export interface IUseDraggerDirectionProps
   extends Pick<NDraggerDirection.IStaticProps, 'minLength'>,
@@ -21,11 +22,11 @@ export interface IUseDraggerDirectionProps
 export function useDraggerDirection({
   ref,
   minLength,
-  isEnabled,
   onLeft: onLeftProp,
   onRight: onRightProp,
   onUp: onUpProp,
   onDown: onDownProp,
+  ...changeableProps
 }: IUseDraggerDirectionProps) {
   const [dragger, setDragger] = useState<DraggerDirection | null>(null);
 
@@ -34,7 +35,7 @@ export function useDraggerDirection({
   const onUp = useEvent(onUpProp);
   const onDown = useEvent(onDownProp);
 
-  const initialProps = useRef({ minLength, isEnabled });
+  const initialChangeablePropsRef = useRef(changeableProps);
 
   useEffect(() => {
     if (!ref.current) {
@@ -42,7 +43,7 @@ export function useDraggerDirection({
     }
 
     const instance = new DraggerDirection({
-      ...initialProps.current,
+      ...initialChangeablePropsRef.current,
       container: ref.current,
     });
 
@@ -57,17 +58,11 @@ export function useDraggerDirection({
     return () => instance.destroy();
   }, [onDown, onLeft, onRight, onUp, ref]);
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     if (!dragger) {
       return;
     }
 
-    const currentProps = dragger.props;
-    console.log('try change props');
-
-    if (currentProps.isEnabled !== isEnabled) {
-      console.log('change props');
-      dragger.changeProps({ isEnabled });
-    }
-  }, [dragger, isEnabled]);
+    dragger.changeProps(changeableProps);
+  }, [changeableProps]);
 }
