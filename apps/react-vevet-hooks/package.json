@@ -34,7 +34,8 @@
   },
   "dependencies": {
     "@anton.bobrov/react-hooks": "workspace:*",
-    "@anton.bobrov/vevet-init": "workspace:*"
+    "@anton.bobrov/vevet-init": "workspace:*",
+    "use-deep-compare-effect": "~1.8.1"
   },
   "devDependencies": {
     "@anton.bobrov/eslint-config": "workspace:*",

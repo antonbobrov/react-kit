@@ -2,7 +2,7 @@
   "changes": [
     {
       "packageName": "@anton.bobrov/react-vevet-hooks",
-      "comment": "useTimeline: `easing` peroperty",
+      "comment": "useTimeline: add `easing` peroperty",
       "type": "minor"
     }
   ],

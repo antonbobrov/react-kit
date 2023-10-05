@@ -1,6 +1,7 @@
 import { useEvent } from '@anton.bobrov/react-hooks';
 import { NTimeline, Timeline, vevet } from '@anton.bobrov/vevet-init';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import useDeepCompareEffect from 'use-deep-compare-effect';
 
 export interface IUseTimelineProps
   extends Pick<NTimeline.IStaticProps, 'easing'>,
@@ -16,14 +17,15 @@ export interface IUseTimelineProps
 /** Create `vevet` `Timeline` */
 export function useTimeline({
   easing,
-  duration,
   onStart: onStartProp,
   onProgress: onProgressProp,
   onEnd: onEndProp,
+  ...props
 }: IUseTimelineProps) {
   const [timeline, setTimeline] = useState<Timeline | undefined>();
 
-  const initialProps = useRef({ easing, duration });
+  const changeableProps = { ...props };
+  const initialChangeablePropsRef = useRef(changeableProps);
 
   const onStart = useEvent(onStartProp);
   const onProgress = useEvent(onProgressProp);
@@ -34,7 +36,10 @@ export function useTimeline({
       return undefined;
     }
 
-    const instance = new Timeline({ ...initialProps.current, easing });
+    const instance = new Timeline({
+      ...initialChangeablePropsRef.current,
+      easing,
+    });
     setTimeline(instance);
 
     if (onStart) {
@@ -52,17 +57,13 @@ export function useTimeline({
     return () => instance.destroy();
   }, [easing, onEnd, onProgress, onStart]);
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     if (!timeline) {
       return;
     }
 
-    const currentProps = timeline.props;
-
-    if (currentProps.duration !== duration) {
-      timeline.changeProps({ duration });
-    }
-  }, [duration, timeline]);
+    timeline.changeProps(changeableProps);
+  }, [changeableProps]);
 
   const play = useCallback(() => timeline?.play(), [timeline]);
 
