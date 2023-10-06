@@ -37,7 +37,7 @@ export function useScrollView({
       return undefined;
     }
 
-    let timeout: NodeJS.Timeout | undefined;
+    let timeout: any | undefined;
 
     const inCallback = scrollView.addCallback('in', (data) => {
       if (data.element === element) {
