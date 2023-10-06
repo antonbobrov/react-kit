@@ -1,7 +1,6 @@
-import { useEvent } from '@anton.bobrov/react-hooks';
+import { useEvent, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
 import { NTimeline, Timeline, vevet } from '@anton.bobrov/vevet-init';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import useDeepCompareEffect from 'use-deep-compare-effect';
 
 export interface IUseTimelineProps
   extends Pick<NTimeline.IStaticProps, 'easing'>,

@@ -1,8 +1,11 @@
 import { CustomCursor, vevet } from '@anton.bobrov/vevet-init';
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
 import { Portal } from 'react-portal';
-import useDeepCompareEffect from 'use-deep-compare-effect';
-import { isString, useEvent } from '@anton.bobrov/react-hooks';
+import {
+  isString,
+  useEvent,
+  useDeepCompareEffect,
+} from '@anton.bobrov/react-hooks';
 import { prefixedClassName } from '../../../utils/prefixedClassName';
 import { IPageCursorProviderProps } from './types';
 import { usePageCursorProviderStore } from './usePageCursorProviderStore';

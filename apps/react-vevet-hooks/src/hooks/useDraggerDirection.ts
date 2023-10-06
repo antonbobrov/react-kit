@@ -1,7 +1,6 @@
-import { useEvent } from '@anton.bobrov/react-hooks';
+import { useEvent, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
 import { DraggerDirection, NDraggerDirection } from '@anton.bobrov/vevet-init';
 import { RefObject, useEffect, useRef, useState } from 'react';
-import useDeepCompareEffect from 'use-deep-compare-effect';
 
 export interface IUseDraggerDirectionProps
   extends Pick<NDraggerDirection.IStaticProps, 'minLength'>,

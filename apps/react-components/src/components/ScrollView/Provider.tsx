@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
 import { ScrollView, vevet } from '@anton.bobrov/vevet-init';
-import useDeepCompareEffect from 'use-deep-compare-effect';
-import { isUndefined } from '@anton.bobrov/react-hooks';
+import { isUndefined, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
 import { IScrollViewContext, ScrollViewContext } from './utils/context';
 import { IScrollViewProviderProps } from './types';
 

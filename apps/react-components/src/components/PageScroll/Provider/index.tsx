@@ -5,8 +5,11 @@ import {
   SmoothScrollKeyboardPlugin,
   vevet,
 } from '@anton.bobrov/vevet-init';
-import { isBoolean, isUndefined } from '@anton.bobrov/react-hooks';
-import useDeepCompareEffect from 'use-deep-compare-effect';
+import {
+  isBoolean,
+  isUndefined,
+  useDeepCompareEffect,
+} from '@anton.bobrov/react-hooks';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { usePageScrollProviderStore } from './utils/usePageScrollProviderStore';
 import { IPageScrollProviderProps } from './types';

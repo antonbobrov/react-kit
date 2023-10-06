@@ -1,7 +1,6 @@
-import { useEvent } from '@anton.bobrov/react-hooks';
+import { useEvent, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimationFrame, NAnimationFrame } from '@anton.bobrov/vevet-init';
-import useDeepCompareEffect from 'use-deep-compare-effect';
 
 export interface IUseAnimationFrameProps
   extends Pick<NAnimationFrame.IChangeableProps, 'fps' | 'autoFpsFrames'> {
