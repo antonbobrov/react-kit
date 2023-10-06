@@ -15,7 +15,7 @@ export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
   const scrollSelector = usePageScrollSelector();
 
   useEffect(() => {
-    if (vevet.isMobile || !scrollSelector || isDisabled) {
+    if (!scrollSelector || vevet.isMobile || isDisabled) {
       return undefined;
     }
 
@@ -52,7 +52,7 @@ export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
   }, [scrollSelector, isDisabled]);
 
   useEffect(() => {
-    if (!scrollbar?.destroyed) {
+    if (!scrollbar?.isDestroyed) {
       scrollbar?.resize();
     }
   }, [resizeKey, scrollbar]);
