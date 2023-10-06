@@ -9,7 +9,7 @@
 }
 
 .#{$rkc-prefix}-page-cursor-outer {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 0;
@@ -26,11 +26,11 @@
   transition: opacity 0.25s;
   opacity: 0;
 
-  &.in-action {
+  &.v-custom-cursor-in-action {
     opacity: 1;
   }
 
-  &.disabled {
+  &.v-custom-cursor-disabled {
     opacity: 0;
   }
   
@@ -47,7 +47,7 @@
 
     transition: transform 0.5s;
 
-    &.click {
+    &.v-custom-cursor-click {
       transform: scale(0.75);
     }
   }

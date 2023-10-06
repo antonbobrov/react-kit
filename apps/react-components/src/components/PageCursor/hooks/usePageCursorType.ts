@@ -3,9 +3,7 @@ import { addEventListener } from '@anton.bobrov/react-hooks';
 import { TPageCursorType } from '../types';
 import { PageCursorContext } from '../interal/context';
 
-/**
- * Use a definite cursor type for some element
- */
+/** Use a definite cursor type for some element */
 export function usePageCursorType(
   ref: RefObject<HTMLElement>,
   type?: TPageCursorType

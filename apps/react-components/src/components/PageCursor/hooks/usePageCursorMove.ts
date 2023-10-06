@@ -1,13 +1,13 @@
 import { useEvent } from '@anton.bobrov/react-hooks';
 import { useEffect } from 'react';
-import { CustomCursor } from '@anton.bobrov/vevet-init';
+import { NCustomCursor } from '@anton.bobrov/vevet-init';
 import { usePageCursor } from './usePageCursor';
 
 /**
  * Callback on cursor move
  */
 export function usePageCursorMove(
-  onMove: (coords: CustomCursor['coords']) => void
+  onMove: (coords: NCustomCursor.ICoords) => void
 ) {
   const handleMove = useEvent(onMove);
 

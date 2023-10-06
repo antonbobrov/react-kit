@@ -10,10 +10,8 @@ const meta: Meta<TComponent> = {
   tags: ['autodocs'],
   args: {
     cursors: [],
-    size: {
-      width: 100,
-      height: 100,
-    },
+    width: 100,
+    height: 100,
   },
 };
 
@@ -84,7 +82,7 @@ const Template: StoryFn<TComponent> = ({ children, cursors, ...props }) => (
           justifyContent: 'center',
         }}
       >
-        <PageCursor.Target type="inner" size={{ width: 150, height: 150 }}>
+        <PageCursor.Target type="inner" width={150} height={150}>
           <div
             style={{
               width: 100,

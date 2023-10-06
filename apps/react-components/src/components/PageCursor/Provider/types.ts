@@ -3,7 +3,9 @@ import { CustomCursor, NCustomCursor } from '@anton.bobrov/vevet-init';
 import { IPageCursorTypeProps } from '../Type/types';
 import { IPageCursorType } from '../types';
 
-export interface IPageCursorProviderProps {
+export interface IPageCursorProviderProps
+  extends Pick<NCustomCursor.IStaticProps, 'isNativeCursorHidden'>,
+    Omit<NCustomCursor.IChangeableProps, 'isEnabled' | 'shouldAutoStop'> {
   children: ReactNode;
   /** Your custom cursors */
   cursors: ReactElement<IPageCursorTypeProps>[];
@@ -13,12 +15,4 @@ export interface IPageCursorProviderProps {
   onInit?: (cursor: CustomCursor) => void;
   /** Event on cursor type change */
   onTypeChange?: (types: IPageCursorType[]) => void;
-  /** Hide native cursor */
-  isNativeCursorHidden?: boolean;
-  /** Cursor size */
-  size?: NCustomCursor.ChangeableProp['size'];
-  /** Render properties */
-  render?: NCustomCursor.ChangeableProp['render'];
-  /** Hover properties */
-  hover?: NCustomCursor.ChangeableProp['hover'];
 }

@@ -1,14 +1,17 @@
 import { RefObject, useEffect } from 'react';
-import { NCustomCursor } from '@anton.bobrov/vevet-init';
+import { pickObjectProps } from '@anton.bobrov/vevet-init';
 import { addEventListener, isUndefined } from '@anton.bobrov/react-hooks';
 import { usePageCursor } from './usePageCursor';
 
-/**
- * Scale cursor
- */
+export interface IPageCursorSize {
+  width?: number;
+  height?: number;
+}
+
+/** Scale cursor */
 export function usePageCursorSetSize(
   ref: RefObject<HTMLElement>,
-  targetSize?: NCustomCursor.ChangeableProp['size']
+  targetSize?: IPageCursorSize
 ) {
   const { cursor } = usePageCursor();
 
@@ -22,16 +25,16 @@ export function usePageCursorSetSize(
       return undefined;
     }
 
-    let prevSize: NCustomCursor.ChangeableProp['size'] | undefined;
+    let prevSize: IPageCursorSize | undefined;
 
     const mouseEnter = addEventListener(element, 'mouseenter', () => {
-      prevSize = { ...cursor.prop.size };
-      cursor.changeProp({ size: { width, height } });
+      prevSize = pickObjectProps(cursor.props, ['width', 'height']);
+      cursor.changeProps({ width, height });
     });
 
     const mouseLeave = addEventListener(element, 'mouseleave', () => {
       if (prevSize) {
-        cursor.changeProp({ size: prevSize });
+        cursor.changeProps(prevSize);
       }
     });
 
@@ -40,7 +43,7 @@ export function usePageCursorSetSize(
       mouseLeave?.();
 
       if (prevSize) {
-        cursor.changeProp({ size: prevSize });
+        cursor.changeProps(prevSize);
       }
     };
   }, [ref, cursor, hasTargetSize, width, height]);
