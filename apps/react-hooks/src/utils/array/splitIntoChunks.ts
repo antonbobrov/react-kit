@@ -1,4 +1,4 @@
-type TChunk<T> = {
+export type TChunk<T> = {
   key: number | string;
   items: T[];
 };
