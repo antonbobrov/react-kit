@@ -6,6 +6,10 @@ export interface IUseAnimationFrameOnFrameProps {
   easeMultiplier: number;
 }
 
+export type TUseAnimationFrameOnFrame = (
+  props: IUseAnimationFrameOnFrameProps
+) => void;
+
 export interface IUseAnimationFrameProps
   extends Pick<NAnimationFrame.IChangeableProps, 'fps' | 'autoFpsFrames'> {
   /** Event on animation play */
@@ -13,7 +17,7 @@ export interface IUseAnimationFrameProps
   /** Event on animation pause */
   onPause?: () => void;
   /** Event on each frame */
-  onFrame: (props: IUseAnimationFrameOnFrameProps) => void;
+  onFrame: TUseAnimationFrameOnFrame;
 }
 
 /** Create `vevet` `AnimationFrame` */
