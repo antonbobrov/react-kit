@@ -1,6 +1,22 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Fri, 11 Aug 2023 11:05:14 GMT and should not be manually modified.
+This log was last generated on Sat, 07 Oct 2023 11:05:28 GMT and should not be manually modified.
+
+## 2.0.0
+Sat, 07 Oct 2023 11:05:28 GMT
+
+### Breaking changes
+
+- Remove `Link` component
+- SplitText: remove `appendLetters` & `appendLines`; add `hasLetters` & `hasLines`
+- ScrollView.Provider: use props from vevet
+- PageCursor.Target: remove `size`; add `width` & `height`
+- PageCursor.Provider: use vevet props
+- PageScroll: use vevet props
+
+### Patches
+
+- BaseImage: use default `alt` from `src`
 
 ## 1.24.1
 Fri, 11 Aug 2023 11:05:14 GMT

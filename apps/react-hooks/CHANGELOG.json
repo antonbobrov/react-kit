@@ -2,6 +2,37 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "2.0.0",
+      "tag": "@anton.bobrov/react-hooks_v2.0.0",
+      "date": "Sat, 07 Oct 2023 11:05:28 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Remove `getDomLanguage`"
+          },
+          {
+            "comment": "Remove `times` & `normalizeNestedScope`"
+          },
+          {
+            "comment": "Remove `objectKeys`"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Add `splitIntoChunks`"
+          },
+          {
+            "comment": "Add `useDeepCompareEffect`"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `1.3.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.8.1",
       "tag": "@anton.bobrov/react-hooks_v1.8.1",
       "date": "Fri, 11 Aug 2023 11:05:14 GMT",

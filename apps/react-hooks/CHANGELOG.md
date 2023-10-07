@@ -1,6 +1,20 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Fri, 11 Aug 2023 11:05:14 GMT and should not be manually modified.
+This log was last generated on Sat, 07 Oct 2023 11:05:28 GMT and should not be manually modified.
+
+## 2.0.0
+Sat, 07 Oct 2023 11:05:28 GMT
+
+### Breaking changes
+
+- Remove `getDomLanguage`
+- Remove `times` & `normalizeNestedScope`
+- Remove `objectKeys`
+
+### Minor changes
+
+- Add `splitIntoChunks`
+- Add `useDeepCompareEffect`
 
 ## 1.8.1
 Fri, 11 Aug 2023 11:05:14 GMT

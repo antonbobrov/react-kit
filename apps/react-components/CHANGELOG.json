@@ -2,6 +2,52 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.0.0",
+      "tag": "@anton.bobrov/react-components_v2.0.0",
+      "date": "Sat, 07 Oct 2023 11:05:28 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Remove `Link` component"
+          },
+          {
+            "comment": "SplitText: remove `appendLetters` & `appendLines`; add `hasLetters` & `hasLines`"
+          },
+          {
+            "comment": "ScrollView.Provider: use props from vevet"
+          },
+          {
+            "comment": "PageCursor.Target: remove `size`; add `width` & `height`"
+          },
+          {
+            "comment": "PageCursor.Provider: use vevet props"
+          },
+          {
+            "comment": "PageScroll: use vevet props"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "BaseImage: use default `alt` from `src`"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `2.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/vevet-init\" to `4.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `1.3.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.24.1",
       "tag": "@anton.bobrov/react-components_v1.24.1",
       "date": "Fri, 11 Aug 2023 11:05:14 GMT",

@@ -1,6 +1,19 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Fri, 11 Aug 2023 11:05:14 GMT and should not be manually modified.
+This log was last generated on Sat, 07 Oct 2023 11:05:28 GMT and should not be manually modified.
+
+## 2.0.0
+Sat, 07 Oct 2023 11:05:28 GMT
+
+### Breaking changes
+
+- useAnimationFrame: add `onPlay`, `onPause`, `onFrame`, `autoFpsFrames` properties; remove `onRender` prop; return `frame`
+- Rename `useDragDirection` -> `useDraggerDirection`; add `minLength` & `isEnabled` properties
+- useOnResize: use new vevet props
+
+### Minor changes
+
+- useTimeline: add `easing` peroperty
 
 ## 1.6.7
 Fri, 11 Aug 2023 11:05:14 GMT
