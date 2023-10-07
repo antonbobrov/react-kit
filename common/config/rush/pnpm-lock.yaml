@@ -206,9 +206,9 @@ importers:
       rimraf: 5.0.0
       tsc-alias: 1.8.5
       typescript: 4.8.2
-      vevet: 3.0.0
+      vevet: 3.2.0
     dependencies:
-      vevet: 3.0.0_typescript@4.8.2
+      vevet: 3.2.0_typescript@4.8.2
     devDependencies:
       '@anton.bobrov/eslint-config': link:../eslint-config
       eslint: 8.38.0
@@ -226,6 +226,11 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
     dev: true
+
+  /@anton.bobrov/p-cancelable/4.0.1:
+    resolution: {integrity: sha512-f9kPvJUKhXIM/Ghx5jJfmYT3IQQ4Cg2Fpvd5AisPwbIXLQFDMb64L/1oqPUrAQoZChBCS8je/6D2dy1YSupc+Q==}
+    engines: {node: '>=14.16'}
+    dev: false
 
   /@aw-web-design/x-default-browser/1.4.88:
     resolution: {integrity: sha512-AkEmF0wcwYC2QkhK703Y83fxWARttIWXDmQN8+cof8FmFZ5BRhnNXGymeb1S73bOCLfWjYELxtujL56idCN/XA==}
@@ -8666,11 +8671,6 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
-  /p-cancelable/4.0.1:
-    resolution: {integrity: sha512-wBowNApzd45EIKdO1LaU+LrMBwAcjfPaYtVzV3lmfM3gf8Z4CHZsiIqlM8TZZ8okYvh5A1cP6gTfCRQtwUpaUg==}
-    engines: {node: '>=14.16'}
-    dev: false
-
   /p-limit/2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
     engines: {node: '>=6'}
@@ -10509,16 +10509,16 @@ packages:
     resolution: {integrity: sha512-Y/6CilyXm3uaA2NrecuU6sPBoIjBG7DiP2TrDsbND80qqhzPAdZ58lzk9oYHUTGq72MiDZYFvq94p26edZCadg==}
     dev: false
 
-  /vevet/3.0.0_typescript@4.8.2:
-    resolution: {integrity: sha512-2+w6bWBv1Ryb+MaIXhoWs9e8V4IlJ5Z1mr6jP9Sekn9OjAnDFEXjh6kFOP8JnL3oEY6Ics7QrGg1yb2r33ufpg==}
+  /vevet/3.2.0_typescript@4.8.2:
+    resolution: {integrity: sha512-1AP3TTx0wlw0ZmiAw6ByS1ylltxAY+ZNF9C668XizuuvkjwBk/z9jOJy7wYlrQGDZ+hB7KadLFlHd+W8PPHxDQ==}
     dependencies:
+      '@anton.bobrov/p-cancelable': 4.0.1
       detect-browser: 5.3.0
       easing-progress: 0.0.4
       get-image-pos: 0.0.11
       ismobilejs: 1.1.1
       lodash.mergewith: 4.6.2
       normalize-wheel: 1.0.1
-      p-cancelable: 4.0.1
       ts-essentials: 9.4.0_typescript@4.8.2
       vevet-dom: 0.0.15
     transitivePeerDependencies:
