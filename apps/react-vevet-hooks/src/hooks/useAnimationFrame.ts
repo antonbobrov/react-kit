@@ -2,6 +2,10 @@ import { useEvent, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimationFrame, NAnimationFrame } from '@anton.bobrov/vevet-init';
 
+export interface IUseAnimationFrameOnFrameProps {
+  easeMultiplier: number;
+}
+
 export interface IUseAnimationFrameProps
   extends Pick<NAnimationFrame.IChangeableProps, 'fps' | 'autoFpsFrames'> {
   /** Event on animation play */
@@ -9,7 +13,7 @@ export interface IUseAnimationFrameProps
   /** Event on animation pause */
   onPause?: () => void;
   /** Event on each frame */
-  onFrame: () => void;
+  onFrame: (props: IUseAnimationFrameOnFrameProps) => void;
 }
 
 /** Create `vevet` `AnimationFrame` */
@@ -41,7 +45,9 @@ export function useAnimationFrame({
     if (onPause) {
       instance.addCallback('pause', onPause);
     }
-    instance.addCallback('frame', onFrame);
+    instance.addCallback('frame', () =>
+      onFrame({ easeMultiplier: instance.easeMultiplier })
+    );
 
     return () => instance.destroy();
   }, [onFrame, onPause, onPlay]);

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-vevet-hooks",
+      "comment": "useAnimationFrame: add props in `onFrame`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-vevet-hooks"
+}
