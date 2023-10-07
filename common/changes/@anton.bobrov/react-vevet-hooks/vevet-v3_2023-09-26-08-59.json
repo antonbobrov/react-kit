@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-vevet-hooks",
+      "comment": "Rename `useDragDirection` -> `useDraggerDirection`; add `minLength` & `isEnabled` properties",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-vevet-hooks"
+}

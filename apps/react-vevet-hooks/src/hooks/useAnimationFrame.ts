@@ -1,44 +1,62 @@
-import { useEvent } from '@anton.bobrov/react-hooks';
-import { useEffect, useRef, useState } from 'react';
-import { AnimationFrame } from '@anton.bobrov/vevet-init';
+import { useEvent, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { AnimationFrame, NAnimationFrame } from '@anton.bobrov/vevet-init';
 
-export interface IUseAnimationFrameProps {
+export interface IUseAnimationFrameProps
+  extends Pick<NAnimationFrame.IChangeableProps, 'fps' | 'autoFpsFrames'> {
+  /** Event on animation play */
+  onPlay?: () => void;
+  /** Event on animation pause */
+  onPause?: () => void;
   /** Event on each frame */
-  onRender: () => void;
-  /** Frames per second */
-  fps?: number;
+  onFrame: () => void;
 }
 
 /** Create `vevet` `AnimationFrame` */
 export function useAnimationFrame({
-  onRender: onRenderProp,
-  ...props
+  onPlay: onPlayProp,
+  onPause: onPauseProp,
+  onFrame: onFrameProp,
+  ...changeableProps
 }: IUseAnimationFrameProps) {
   const [frame, setFrame] = useState<AnimationFrame | null>(null);
 
-  const initialProps = useRef(props);
+  const initialChangeablePropsRef = useRef(changeableProps);
 
-  const onRender = useEvent(onRenderProp);
+  const onPlay = useEvent(onPlayProp);
+  const onPause = useEvent(onPauseProp);
+  const onFrame = useEvent(onFrameProp);
 
   useEffect(() => {
     const instance = new AnimationFrame({
-      run: false,
-      ...initialProps.current,
+      ...initialChangeablePropsRef.current,
+      isEnabled: false,
     });
+
     setFrame(instance);
 
-    instance.addCallback('frame', onRender);
+    if (onPlay) {
+      instance.addCallback('play', onPlay);
+    }
+    if (onPause) {
+      instance.addCallback('pause', onPause);
+    }
+    instance.addCallback('frame', onFrame);
 
     return () => instance.destroy();
-  }, [onRender, initialProps]);
+  }, [onFrame, onPause, onPlay]);
 
-  useEffect(() => {
-    frame?.changeProp({ fps: props.fps });
-  }, [frame, props?.fps]);
+  useDeepCompareEffect(() => {
+    if (!frame) {
+      return;
+    }
 
-  const play = () => frame?.play();
+    frame.changeProps(changeableProps);
+  }, [changeableProps]);
 
-  const pause = () => frame?.pause();
+  const play = useCallback(() => frame?.play(), [frame]);
 
-  return { play, pause };
+  const pause = useCallback(() => frame?.pause(), [frame]);
+
+  return { frame, play, pause };
 }

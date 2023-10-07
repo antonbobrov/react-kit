@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
 import { useEvent, useForwardedRef } from '@anton.bobrov/react-hooks';
 import { useTimeline } from '@anton.bobrov/react-vevet-hooks';
-import { utils, vevet } from '@anton.bobrov/vevet-init';
+import { easing as easingProgress, clampScope } from '@anton.bobrov/vevet-init';
 import cn from 'classnames';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 import { IExpandContentProps } from './types';
@@ -34,7 +34,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
 
     const { play, reverse, timeline } = useTimeline({
       duration,
-      onProgress: ({ easing, progress }) => {
+      onProgress: ({ progress }) => {
         const parent = parentRef.current;
         const content = contentRef.current;
 
@@ -42,9 +42,8 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
           return;
         }
 
-        const heightProgress = utils.math.easing(
-          utils.math.clampScope(easing, hasAlpha ? EXPAND_SCOPE : GLOBAL_SCOPE),
-          vevet.prop.easing
+        const heightProgress = easingProgress(
+          clampScope(progress, hasAlpha ? EXPAND_SCOPE : GLOBAL_SCOPE)
         );
 
         const contentHeight = content.clientHeight;
@@ -54,10 +53,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
         content.style.visibility = progress === 0 ? 'hidden' : 'visible';
 
         if (hasAlpha) {
-          const alpha = utils.math.easing(
-            utils.math.clampScope(easing, ALPHA_SCOPE),
-            vevet.prop.easing
-          );
+          const alpha = easingProgress(clampScope(progress, ALPHA_SCOPE));
 
           content.style.opacity = `${alpha}`;
         }

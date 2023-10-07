@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/eslint-config",
+      "comment": "Update `naming-convention`",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/eslint-config"
+}

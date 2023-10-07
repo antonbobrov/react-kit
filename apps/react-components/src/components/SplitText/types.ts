@@ -1,7 +1,9 @@
-import { SplitText } from '@anton.bobrov/vevet-init';
+import { NSplitText, SplitText } from '@anton.bobrov/vevet-init';
 import { IBaseComponent } from '@types';
 
-export interface ISplitTextProps extends IBaseComponent {
+export interface ISplitTextProps
+  extends IBaseComponent,
+    Pick<NSplitText.IStaticProps, 'hasLetters' | 'hasLines'> {
   /** Source text */
   text: string;
   /**
@@ -9,10 +11,6 @@ export interface ISplitTextProps extends IBaseComponent {
    * @default 'innerHTML'
    */
   textSource?: 'textContent' | 'innerText' | 'innerHTML';
-  /** Wrap each letter in a single element */
-  appendLetters: boolean;
-  /** Wrap each line in a single element */
-  appendLines: boolean;
   /** Event on creation */
   onInit: (text: SplitText) => void;
 }

@@ -7,3 +7,7 @@
 - [`react-hooks`](apps/react-hooks) / ([`docs`](https://antonbobrov.github.io/react-kit/react-hooks/))
 - [`react-vevet-hooks`](apps/react-vevet-hooks) / ([`docs`](https://antonbobrov.github.io/react-kit/react-vevet-hooks/))
 - [`vevet-init`](apps/vevet-init)
+
+## Dev Config
+* node v16.13.0
+* npm v8.1.0

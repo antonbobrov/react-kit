@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
 import { ScrollView, vevet } from '@anton.bobrov/vevet-init';
-import { isIntersectionObserverSupported } from '@anton.bobrov/react-hooks';
-import { useDeepCompareMemoize } from 'use-deep-compare-effect';
+import { isUndefined, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
 import { IScrollViewContext, ScrollViewContext } from './utils/context';
 import { IScrollViewProviderProps } from './types';
 
@@ -12,30 +11,37 @@ import { IScrollViewProviderProps } from './types';
 export const Provider: FC<IScrollViewProviderProps> = ({
   children,
   instanceKey,
-  isEnabled,
+  intersectionRoot,
+  states,
+  hasDelay,
+  maxDelay,
+  direction,
+  viewportTarget,
+  resizeDebounce,
+  isEnabled = false,
   ...props
 }) => {
   const [scrollView, setScrollView] = useState<ScrollView | undefined>();
 
-  const initialProps = useRef(props);
+  const vevetRef = useRef(vevet);
+
+  const changeableProps = { ...props, isEnabled };
+  const initialChangeablePropsRef = useRef(changeableProps);
 
   useEffect(() => {
-    if (!isIntersectionObserverSupported()) {
+    if (!vevetRef.current || isUndefined(instanceKey)) {
       return undefined;
     }
 
     const instance = new ScrollView({
-      enabled: false,
-      container: window,
-      classToToggle: '',
-      useDelay: {
-        max: 1000,
-        dir: 'y',
-      },
-      viewportTarget: vevet.isMobile ? 'w' : '',
-      useIntersectionObserver: true,
-      intersectionRoot: null,
-      ...initialProps.current,
+      ...initialChangeablePropsRef.current,
+      intersectionRoot,
+      states,
+      hasDelay,
+      maxDelay,
+      direction,
+      viewportTarget,
+      resizeDebounce,
     });
 
     setScrollView(instance);
@@ -44,17 +50,29 @@ export const Provider: FC<IScrollViewProviderProps> = ({
       setScrollView(undefined);
       instance.destroy();
     };
-  }, [initialProps, instanceKey]);
+  }, [
+    instanceKey,
+    direction,
+    hasDelay,
+    intersectionRoot,
+    maxDelay,
+    resizeDebounce,
+    states,
+    viewportTarget,
+  ]);
 
   const contextValue: IScrollViewContext = useMemo(
     () => ({ scrollView }),
     [scrollView]
   );
 
-  useEffect(() => {
-    scrollView?.changeProp({ enabled: isEnabled, ...props });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scrollView, isEnabled, useDeepCompareMemoize(props)]);
+  useDeepCompareEffect(() => {
+    if (!scrollView) {
+      return;
+    }
+
+    scrollView.changeProps(changeableProps);
+  }, [changeableProps]);
 
   return (
     <ScrollViewContext.Provider value={contextValue}>

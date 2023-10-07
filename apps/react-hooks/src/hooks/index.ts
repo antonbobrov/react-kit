@@ -3,6 +3,7 @@ export * from './useClientSize';
 export * from './useDebouncedEffect';
 export * from './useDebouncedEvent';
 export * from './useDebouncedProp';
+export * from './useDeepCompareEffect';
 export * from './useDOMRect';
 export * from './useEvent';
 export * from './useEventListener';

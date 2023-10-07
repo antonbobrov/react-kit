@@ -1,4 +1,4 @@
-import { utils } from '@anton.bobrov/vevet-init';
+import { normalizedTimeoutCallback } from '@anton.bobrov/vevet-init';
 import PCancelable from 'p-cancelable';
 
 /**
@@ -6,7 +6,7 @@ import PCancelable from 'p-cancelable';
  * A cancelable promise that will try to play the video until success
  */
 export const requestVideoPlay = (video: HTMLVideoElement) => {
-  let timeout: ReturnType<typeof utils.common.timeoutCallback> | undefined;
+  let timeout: ReturnType<typeof normalizedTimeoutCallback> | undefined;
 
   const play = () =>
     new PCancelable<void>((resolve) => {
@@ -20,7 +20,7 @@ export const requestVideoPlay = (video: HTMLVideoElement) => {
   const playWithTimeout = (callback: () => void) => {
     timeout?.clear();
 
-    timeout = utils.common.timeoutCallback(() => {
+    timeout = normalizedTimeoutCallback(() => {
       play()
         // eslint-disable-next-line promise/no-callback-in-promise
         ?.then(callback)

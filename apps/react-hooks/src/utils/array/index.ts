@@ -1,1 +1,1 @@
-export * from './times';
+export * from './splitIntoChunks';

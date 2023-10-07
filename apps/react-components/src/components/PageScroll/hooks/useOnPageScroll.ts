@@ -1,11 +1,9 @@
 import { useEffect } from 'react';
-import { utils } from '@anton.bobrov/vevet-init';
 import { useEvent } from '@anton.bobrov/react-hooks';
+import { onScroll } from '@anton.bobrov/vevet-init';
 import { usePageScrollSelector } from './usePageScrollSelector';
 
-export type TUseOnPageScrollEffect = Parameters<
-  typeof utils.listeners.onScroll
->[0]['callback'];
+export type TUseOnPageScrollEffect = Parameters<typeof onScroll>[0]['callback'];
 
 /** Event on global scrollable element scrolling */
 export function useOnPageScroll(effectProp: TUseOnPageScrollEffect) {
@@ -17,7 +15,7 @@ export function useOnPageScroll(effectProp: TUseOnPageScrollEffect) {
       return undefined;
     }
 
-    const scrollListener = utils.listeners.onScroll({
+    const scrollListener = onScroll({
       container: scrollSelector,
       callback: effect,
     });

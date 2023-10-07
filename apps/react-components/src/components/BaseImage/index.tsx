@@ -10,7 +10,6 @@ export const BaseImage = forwardRef<HTMLImageElement, IBaseImageProps>(
   ({ src: srcProp, paths, srcSet: srcSetProp, ...props }, ref) => {
     const width = paths?.width ?? props.width;
     const height = paths?.height ?? props.height;
-    const alt = paths?.alt ?? props.alt;
 
     const src = getSrc({ src: srcProp, paths });
     const [srcSet, setSrcSet] = useState<string | undefined>(
@@ -20,6 +19,8 @@ export const BaseImage = forwardRef<HTMLImageElement, IBaseImageProps>(
     useEffect(() => {
       setSrcSet(getSrcSet({ srcSet: srcSetProp, paths }));
     }, [paths, srcSetProp]);
+
+    const alt = paths?.alt ?? props.alt ?? src;
 
     return (
       <img

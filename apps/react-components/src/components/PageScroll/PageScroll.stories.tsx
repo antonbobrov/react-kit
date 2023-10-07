@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react';
 import React, { FC } from 'react';
-import { times } from '@anton.bobrov/react-hooks';
+import { times } from '@anton.bobrov/vevet-init';
 import { PageScroll } from '.';
 
 type TComponent = typeof PageScroll.Provider;
@@ -34,8 +34,4 @@ const Template: StoryFn<TComponent> = (props) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  smoothProps: {
-    enabled: true,
-  },
-};
+Default.args = {};

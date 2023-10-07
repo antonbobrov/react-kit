@@ -1,6 +1,7 @@
 import type { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
-import { times, usePropState } from '@anton.bobrov/react-hooks';
+import { usePropState } from '@anton.bobrov/react-hooks';
+import { times } from '@anton.bobrov/vevet-init';
 import { FadeContent } from '.';
 
 type TComponent = typeof FadeContent;

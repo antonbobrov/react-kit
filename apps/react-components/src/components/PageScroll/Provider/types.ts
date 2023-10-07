@@ -2,9 +2,9 @@ import { ReactNode } from 'react';
 import { NSmoothScroll } from '@anton.bobrov/vevet-init';
 
 export interface IPageScrollProviderProps {
-  /** Smooth scrolling properties */
-  smoothProps?: NSmoothScroll.ChangeableProp;
+  children: ReactNode;
   /** Define if global scrolling should be custom */
   canBeSmooth?: boolean | (() => boolean);
-  children: ReactNode;
+  /** Smooth scrolling properties */
+  smoothProps?: NSmoothScroll.IChangeableProps;
 }

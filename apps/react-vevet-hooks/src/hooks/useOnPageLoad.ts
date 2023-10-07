@@ -6,7 +6,7 @@ export function useOnPageLoad(effect: EffectCallback, deps: DependencyList) {
   useEffect(() => {
     let unsubscribe: ReturnType<EffectCallback>;
 
-    const promise = vevet.onPageLoaded();
+    const promise = vevet.onPageLoad();
     promise
       .then(() => {
         unsubscribe = effect();

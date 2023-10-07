@@ -35,8 +35,6 @@ export * from './LazyImage/types';
 export * from './LazyVideo';
 export * from './LazyVideo/types';
 
-export * from './Link';
-
 export * from './LinkClickInterceptor';
 export * from './LinkClickInterceptor/types';
 

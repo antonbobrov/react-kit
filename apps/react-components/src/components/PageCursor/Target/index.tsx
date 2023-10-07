@@ -5,30 +5,27 @@ import React, {
   useMemo,
   useRef,
 } from 'react';
-import { isNumber, isUndefined } from '@anton.bobrov/react-hooks';
+import { isUndefined } from '@anton.bobrov/react-hooks';
 import { IPageCursorTargetProps } from './types';
 import { usePageCursorSetSize, usePageCursorType } from '../hooks';
 
 /** Component that wraps an element and adds a cursor type or size to it */
 export const Target: FC<IPageCursorTargetProps> = ({
   children,
-  size: targetSize,
+  width,
+  height,
   type,
 }) => {
   const ref = useRef<HTMLElement>(null);
   useImperativeHandle((children as any).ref, () => ref.current!);
 
   const size = useMemo(() => {
-    if (isUndefined(targetSize)) {
-      return undefined;
+    if (!isUndefined(width) || !isUndefined(height)) {
+      return { width, height };
     }
 
-    if (isNumber(targetSize)) {
-      return { width: targetSize, height: targetSize };
-    }
-
-    return targetSize;
-  }, [targetSize]);
+    return undefined;
+  }, [width, height]);
 
   usePageCursorSetSize(ref, size);
   usePageCursorType(ref, type);

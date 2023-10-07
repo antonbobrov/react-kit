@@ -1,14 +1,14 @@
 import { Application, NApplication } from 'vevet';
 
-type TProps = Omit<NApplication.Prop, 'prefix'>;
+type TProps = Omit<NApplication.IProps, 'prefix'>;
 
 const defaultProps: Required<TProps> = {
-  sayHi: true,
+  shouldPrintVersion: true,
   tablet: 1199,
   phone: 899,
-  viewportResizeTimeout: 30,
+  resizeDebounce: 30,
   easing: [0.25, 0.1, 0.25, 1],
-  webpSupport: true,
+  shouldCheckWebpSupport: true,
 };
 
 const overrideProps =

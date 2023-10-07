@@ -20,12 +20,15 @@
       height: 100%;
       overflow: hidden;
 
-      &__container {
-        width: 100%;
-
-        &.is-dragging {
-          pointer-events: none;
-          user-select: none;
+      &__wrapper {
+        &.v-smooth-scroll_vertical {
+          width: 100%;
+          height: auto;
+        }
+    
+        &.v-smooth-scroll_horizontal {
+          width: max-content;
+          height: 100%;
         }
       }
     }
@@ -38,6 +41,9 @@
 
   &::-webkit-scrollbar {
     display: none;
+    appearance: none;
+    width: 0;
+    height: 0;
   }
 }
 
@@ -46,20 +52,20 @@
     position: absolute;
     z-index: 9;
 
-    &.in-window {
+    &.v-scrollbar_in-window {
       position: fixed;
     }
 
-    &.is-empty {
+    &.v-scrollbar_is-empty {
       display: none;
     }
 
-    &.auto-hide {
+    &.v-scrollbar_auto-hide {
       opacity: 0;
       transition: opacity 0.5s;
 
-      &.is-hovered,
-      &.in-action {
+      &.v-scrollbar_is-hovered,
+      &.v-scrollbar_in-action {
         opacity: 1;
       }
     }

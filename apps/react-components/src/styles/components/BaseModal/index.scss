@@ -49,6 +49,9 @@
   
     &::-webkit-scrollbar {
       display: none;
+      appearance: none;
+      width: 0;
+      height: 0;
     }
   }
 

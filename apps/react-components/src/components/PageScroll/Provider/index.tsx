@@ -5,8 +5,11 @@ import {
   SmoothScrollKeyboardPlugin,
   vevet,
 } from '@anton.bobrov/vevet-init';
-import { isBoolean, isUndefined } from '@anton.bobrov/react-hooks';
-import { useDeepCompareMemoize } from 'use-deep-compare-effect';
+import {
+  isBoolean,
+  isUndefined,
+  useDeepCompareEffect,
+} from '@anton.bobrov/react-hooks';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { usePageScrollProviderStore } from './utils/usePageScrollProviderStore';
 import { IPageScrollProviderProps } from './types';
@@ -15,9 +18,9 @@ import { PageScrollContext } from '../context';
 
 /** PageScroll provider */
 export const Provider: FC<IPageScrollProviderProps> = ({
-  smoothProps,
-  canBeSmooth: canBeSmoothProp,
   children,
+  canBeSmooth: canBeSmoothProp,
+  smoothProps = {},
 }) => {
   const store = usePageScrollProviderStore();
   const { selector, setSelector, smoothContainer } = store;
@@ -50,14 +53,11 @@ export const Provider: FC<IPageScrollProviderProps> = ({
     html.classList.add(htmlSmoothClassName);
 
     const scroll = new SmoothScroll({
-      selectors: { outer: smoothContainer },
-      overscroll: false,
-      useWillChange: !vevet.browserName.includes('firefox'),
-      render: {
-        lerp: 0.1,
-        approximation: 0.5,
-      },
-      enabled: true,
+      container: smoothContainer,
+      hasWillChange: !vevet.browserName.includes('firefox'),
+      lerp: 0.1,
+      lerpApproximation: 0.5,
+      isEnabled: true,
       ...initialSmoothProps,
     });
     setSelector?.(scroll);
@@ -80,16 +80,15 @@ export const Provider: FC<IPageScrollProviderProps> = ({
     smoothContainer,
   ]);
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     if (!selector) {
       return;
     }
 
     if (selector instanceof SmoothScroll) {
-      selector.changeProp({ ...smoothProps });
+      selector.changeProps({ ...smoothProps });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selector, useDeepCompareMemoize(smoothProps)]);
+  }, [smoothProps]);
 
   useEffect(() => {
     if (!isUndefined(selector) && 'resize' in selector) {

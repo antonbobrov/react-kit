@@ -32,7 +32,8 @@
     "react": ">= 18.0.0"
   },
   "dependencies": {
-    "resize-observer-polyfill": "~1.5.1"
+    "resize-observer-polyfill": "~1.5.1",
+    "use-deep-compare-effect": "~1.8.1"
   },
   "devDependencies": {
     "@anton.bobrov/eslint-config": "workspace:*",

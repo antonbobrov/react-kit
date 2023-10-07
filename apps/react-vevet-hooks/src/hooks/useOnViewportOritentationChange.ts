@@ -21,7 +21,7 @@ export function useOnViewportOritentationChange(effectProp: () => void) {
   useEffect(() => {
     let prevOrientation = getOrientation();
 
-    const callback = vevet.viewport.add('', () => {
+    const callback = vevet.viewport.add('any', () => {
       const newOrientation = getOrientation();
 
       if (prevOrientation !== newOrientation) {

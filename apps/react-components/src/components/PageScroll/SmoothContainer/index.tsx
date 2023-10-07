@@ -36,7 +36,7 @@ export const SmoothContainer: FC<PropsWithChildren> = ({ children }) => {
       )}
     >
       <div ref={ref} className="v-smooth-scroll">
-        <div className="v-smooth-scroll__container">{children}</div>
+        <div className="v-smooth-scroll__wrapper">{children}</div>
       </div>
     </div>
   );

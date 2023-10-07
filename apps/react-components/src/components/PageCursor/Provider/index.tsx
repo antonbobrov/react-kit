@@ -1,8 +1,11 @@
 import { CustomCursor, vevet } from '@anton.bobrov/vevet-init';
-import React, { FC, useEffect, useMemo, useState } from 'react';
+import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
 import { Portal } from 'react-portal';
-import { useDeepCompareMemoize } from 'use-deep-compare-effect';
-import { isString, useEvent } from '@anton.bobrov/react-hooks';
+import {
+  isString,
+  useEvent,
+  useDeepCompareEffect,
+} from '@anton.bobrov/react-hooks';
 import { prefixedClassName } from '../../../utils/prefixedClassName';
 import { IPageCursorProviderProps } from './types';
 import { usePageCursorProviderStore } from './usePageCursorProviderStore';
@@ -16,18 +19,17 @@ export const Provider: FC<IPageCursorProviderProps> = ({
   onInit: onInitProp,
   onTypeChange: onTypeChangeProp,
   isNativeCursorHidden,
-  size = { width: 36, height: 36 },
-  ...props
+  ...changeableProps
 }) => {
   const [portalNode, setPortalNode] = useState<HTMLElement | null>(null);
+
+  const initialChangeablePropsRef = useRef(changeableProps);
 
   const onInit = useEvent(onInitProp);
   const onTypeChange = useEvent(onTypeChangeProp);
 
   const store = usePageCursorProviderStore();
   const { cursor, setCursor, types } = store;
-
-  const [initialSize] = useState(size);
 
   const hasDefault = useMemo(
     () =>
@@ -51,20 +53,20 @@ export const Provider: FC<IPageCursorProviderProps> = ({
     }
 
     const instance = new CustomCursor({
-      container: document.body,
-      run: false,
-      autoStop: true,
-      size: initialSize,
+      ...initialChangeablePropsRef.current,
+      container: window,
+      isEnabled: false,
+      shouldAutoStop: true,
     });
 
     setCursor?.(instance);
-    setPortalNode(instance.innerCursor);
+    setPortalNode(instance.innerElement);
 
     // update default cursor classnames
-    instance.outerCursor.classList.add(prefixedClassName('page-cursor-outer'));
+    instance.outerElement.classList.add(prefixedClassName('page-cursor-outer'));
 
     // run cursor
-    instance.enable();
+    instance.changeProps({ isEnabled: true });
 
     // callback
     onInit?.(instance);
@@ -73,16 +75,16 @@ export const Provider: FC<IPageCursorProviderProps> = ({
       instance?.destroy();
       setCursor?.(undefined);
     };
-  }, [setCursor, initialSize, onInit, isDisabled]);
+  }, [isDisabled, onInit, setCursor]);
 
-  // update props
-  useEffect(() => {
-    cursor?.changeProp({
-      size,
-      ...props,
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cursor, useDeepCompareMemoize({ size, props })]);
+  // change props
+  useDeepCompareEffect(() => {
+    if (!cursor) {
+      return;
+    }
+
+    cursor.changeProps(changeableProps);
+  }, [changeableProps]);
 
   // pause cursor
   useEffect(() => {
@@ -91,18 +93,14 @@ export const Provider: FC<IPageCursorProviderProps> = ({
     }
 
     if (types.length > 0) {
-      cursor.enable();
+      cursor.changeProps({ isEnabled: true });
 
       return undefined;
     }
 
     const disableCallback = cursor.addCallback('render', () => {
-      if (
-        cursor.coords.x === cursor.targetCoords.x &&
-        cursor.coords.y === cursor.targetCoords.y &&
-        types.length === 0
-      ) {
-        cursor.disable();
+      if (cursor.isCoordsInterpolated && types.length === 0) {
+        cursor.changeProps({ isEnabled: false });
       }
     });
 

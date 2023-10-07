@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "PageCursor.Target: remove `size`; add `width` & `height`",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}
