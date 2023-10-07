@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "2.1.0",
+      "tag": "@anton.bobrov/react-hooks_v2.1.0",
+      "date": "Sat, 07 Oct 2023 23:35:48 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Export `TChunk`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.0.0",
       "tag": "@anton.bobrov/react-hooks_v2.0.0",
       "date": "Sat, 07 Oct 2023 11:05:28 GMT",

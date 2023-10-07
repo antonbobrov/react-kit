@@ -2,6 +2,29 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.0.1",
+      "tag": "@anton.bobrov/react-components_v2.0.1",
+      "date": "Sat, 07 Oct 2023 23:35:48 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix `p-cancelable`"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `2.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/vevet-init\" to `3.2.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.0.0",
       "tag": "@anton.bobrov/react-components_v2.0.0",
       "date": "Sat, 07 Oct 2023 11:05:28 GMT",
