@@ -1,6 +1,6 @@
 {
   "name": "@anton.bobrov/react-components",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "React Components",
   "private": false,
   "main": "lib/cjs/index.js",

@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Sat, 07 Oct 2023 23:58:44 GMT and should not be manually modified.
+This log was last generated on Sun, 08 Oct 2023 09:22:18 GMT and should not be manually modified.
+
+## 2.1.0
+Sun, 08 Oct 2023 09:22:18 GMT
+
+### Minor changes
+
+- PageScroll: add `onSmoothInit`
 
 ## 2.0.2
 Sat, 07 Oct 2023 23:58:44 GMT
