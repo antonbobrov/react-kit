@@ -1,4 +1,4 @@
-import { useEvent, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
+import { useEvent, useDeepCompareMemoize } from '@anton.bobrov/react-hooks';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimationFrame, NAnimationFrame } from '@anton.bobrov/vevet-init';
 
@@ -56,13 +56,14 @@ export function useAnimationFrame({
     return () => instance.destroy();
   }, [onFrame, onPause, onPlay]);
 
-  useDeepCompareEffect(() => {
+  useEffect(() => {
     if (!frame) {
       return;
     }
 
     frame.changeProps(changeableProps);
-  }, [changeableProps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [frame, useDeepCompareMemoize(changeableProps)]);
 
   const play = useCallback(() => frame?.play(), [frame]);
 

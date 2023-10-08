@@ -8,8 +8,8 @@ import {
 import {
   isBoolean,
   isUndefined,
-  useDeepCompareEffect,
   useEvent,
+  useDeepCompareMemoize,
 } from '@anton.bobrov/react-hooks';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { usePageScrollProviderStore } from './utils/usePageScrollProviderStore';
@@ -87,7 +87,7 @@ export const Provider: FC<IPageScrollProviderProps> = ({
     smoothContainer,
   ]);
 
-  useDeepCompareEffect(() => {
+  useEffect(() => {
     if (!selector) {
       return;
     }
@@ -95,7 +95,8 @@ export const Provider: FC<IPageScrollProviderProps> = ({
     if (selector instanceof SmoothScroll) {
       selector.changeProps({ ...smoothProps });
     }
-  }, [smoothProps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selector, useDeepCompareMemoize(smoothProps)]);
 
   useEffect(() => {
     if (!isUndefined(selector) && 'resize' in selector) {

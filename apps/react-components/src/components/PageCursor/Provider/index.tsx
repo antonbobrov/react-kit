@@ -4,7 +4,7 @@ import { Portal } from 'react-portal';
 import {
   isString,
   useEvent,
-  useDeepCompareEffect,
+  useDeepCompareMemoize,
 } from '@anton.bobrov/react-hooks';
 import { prefixedClassName } from '../../../utils/prefixedClassName';
 import { IPageCursorProviderProps } from './types';
@@ -78,13 +78,14 @@ export const Provider: FC<IPageCursorProviderProps> = ({
   }, [isDisabled, onInit, setCursor]);
 
   // change props
-  useDeepCompareEffect(() => {
+  useEffect(() => {
     if (!cursor) {
       return;
     }
 
     cursor.changeProps(changeableProps);
-  }, [changeableProps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cursor, useDeepCompareMemoize(changeableProps)]);
 
   // pause cursor
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { useEvent, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
+import { useEvent, useDeepCompareMemoize } from '@anton.bobrov/react-hooks';
 import { DraggerDirection, NDraggerDirection } from '@anton.bobrov/vevet-init';
 import { RefObject, useEffect, useRef, useState } from 'react';
 
@@ -57,11 +57,12 @@ export function useDraggerDirection({
     return () => instance.destroy();
   }, [onDown, onLeft, onRight, onUp, ref]);
 
-  useDeepCompareEffect(() => {
+  useEffect(() => {
     if (!dragger) {
       return;
     }
 
     dragger.changeProps(changeableProps);
-  }, [changeableProps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dragger, useDeepCompareMemoize(changeableProps)]);
 }

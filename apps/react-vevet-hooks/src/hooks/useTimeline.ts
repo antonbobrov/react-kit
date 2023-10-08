@@ -1,4 +1,4 @@
-import { useEvent, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
+import { useEvent, useDeepCompareMemoize } from '@anton.bobrov/react-hooks';
 import { NTimeline, Timeline, vevet } from '@anton.bobrov/vevet-init';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -55,13 +55,14 @@ export function useTimeline({
     return () => instance.destroy();
   }, [easing, onEnd, onProgress, onStart]);
 
-  useDeepCompareEffect(() => {
+  useEffect(() => {
     if (!timeline) {
       return;
     }
 
     timeline.changeProps(changeableProps);
-  }, [changeableProps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timeline, useDeepCompareMemoize(changeableProps)]);
 
   const play = useCallback(() => timeline?.play(), [timeline]);
 

@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
 import { ScrollView, vevet } from '@anton.bobrov/vevet-init';
-import { isUndefined, useDeepCompareEffect } from '@anton.bobrov/react-hooks';
+import { isUndefined, useDeepCompareMemoize } from '@anton.bobrov/react-hooks';
 import { IScrollViewContext, ScrollViewContext } from './utils/context';
 import { IScrollViewProviderProps } from './types';
 
@@ -66,13 +66,14 @@ export const Provider: FC<IScrollViewProviderProps> = ({
     [scrollView]
   );
 
-  useDeepCompareEffect(() => {
+  useEffect(() => {
     if (!scrollView) {
       return;
     }
 
     scrollView.changeProps(changeableProps);
-  }, [changeableProps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scrollView, useDeepCompareMemoize(changeableProps)]);
 
   return (
     <ScrollViewContext.Provider value={contextValue}>
