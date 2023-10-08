@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "2.2.0",
+      "tag": "@anton.bobrov/react-hooks_v2.2.0",
+      "date": "Sun, 08 Oct 2023 10:11:27 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Export `useDeepCompareMemoize` & `useDeepCompareEffectNoCheck`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.0",
       "tag": "@anton.bobrov/react-hooks_v2.1.0",
       "date": "Sat, 07 Oct 2023 23:35:48 GMT",

@@ -2,6 +2,23 @@
   "name": "@anton.bobrov/react-vevet-hooks",
   "entries": [
     {
+      "version": "2.1.2",
+      "tag": "@anton.bobrov/react-vevet-hooks_v2.1.2",
+      "date": "Sun, 08 Oct 2023 10:11:27 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": " Update `changeProps` logic"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.2.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.1",
       "tag": "@anton.bobrov/react-vevet-hooks_v2.1.1",
       "date": "Sat, 07 Oct 2023 23:58:44 GMT",

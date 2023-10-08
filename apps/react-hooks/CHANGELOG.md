@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Sat, 07 Oct 2023 23:35:48 GMT and should not be manually modified.
+This log was last generated on Sun, 08 Oct 2023 10:11:27 GMT and should not be manually modified.
+
+## 2.2.0
+Sun, 08 Oct 2023 10:11:27 GMT
+
+### Minor changes
+
+- Export `useDeepCompareMemoize` & `useDeepCompareEffectNoCheck`
 
 ## 2.1.0
 Sat, 07 Oct 2023 23:35:48 GMT
