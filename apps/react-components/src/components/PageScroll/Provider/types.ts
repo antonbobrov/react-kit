@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { NSmoothScroll } from '@anton.bobrov/vevet-init';
+import { NSmoothScroll, SmoothScroll } from '@anton.bobrov/vevet-init';
 
 export interface IPageScrollProviderProps {
   children: ReactNode;
@@ -7,4 +7,6 @@ export interface IPageScrollProviderProps {
   canBeSmooth?: boolean | (() => boolean);
   /** Smooth scrolling properties */
   smoothProps?: NSmoothScroll.IChangeableProps;
+  /** Callback on smooth scroll initialization */
+  onSmoothInit?: (smoothScroll: SmoothScroll) => void;
 }

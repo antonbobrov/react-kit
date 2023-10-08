@@ -9,6 +9,7 @@ import {
   isBoolean,
   isUndefined,
   useDeepCompareEffect,
+  useEvent,
 } from '@anton.bobrov/react-hooks';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { usePageScrollProviderStore } from './utils/usePageScrollProviderStore';
@@ -21,6 +22,7 @@ export const Provider: FC<IPageScrollProviderProps> = ({
   children,
   canBeSmooth: canBeSmoothProp,
   smoothProps = {},
+  onSmoothInit: onSmoothInitProp,
 }) => {
   const store = usePageScrollProviderStore();
   const { selector, setSelector, smoothContainer } = store;
@@ -28,6 +30,8 @@ export const Provider: FC<IPageScrollProviderProps> = ({
   const [initialSmoothProps] = useState(smoothProps);
 
   const htmlSmoothClassName = prefixedClasNames('page-scroll-use-smooth');
+
+  const onSmoothInit = useEvent(onSmoothInitProp);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -68,6 +72,8 @@ export const Provider: FC<IPageScrollProviderProps> = ({
       scroll.addPlugin(new SmoothScrollDragPlugin({ lerp: 0.35 }));
     }
 
+    onSmoothInit?.(scroll);
+
     return () => {
       setSelector?.(undefined);
       scroll.destroy();
@@ -76,6 +82,7 @@ export const Provider: FC<IPageScrollProviderProps> = ({
     canBeSmoothProp,
     htmlSmoothClassName,
     initialSmoothProps,
+    onSmoothInit,
     setSelector,
     smoothContainer,
   ]);
