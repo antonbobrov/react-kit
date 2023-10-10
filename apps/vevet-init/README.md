@@ -11,9 +11,9 @@ npm i "@anton.bobrov/vevet-init"
 ```html
 <script>
   window.vevetProps = {
-    sayHi: true,
-    viewportResizeTimeout: 30,
-    webpSupport: true,
+    shouldPrintVersion: true,
+    resizeDebounce: 30,
+    shouldCheckWebpSupport: true,
   };
 </script>
 ```
