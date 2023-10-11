@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Sun, 08 Oct 2023 10:11:27 GMT and should not be manually modified.
+This log was last generated on Wed, 11 Oct 2023 20:09:45 GMT and should not be manually modified.
+
+## 2.2.1
+Wed, 11 Oct 2023 20:09:45 GMT
+
+### Patches
+
+- useEventListener: use stable link for `listener`
 
 ## 2.2.0
 Sun, 08 Oct 2023 10:11:27 GMT
