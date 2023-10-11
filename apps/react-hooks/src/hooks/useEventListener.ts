@@ -26,12 +26,13 @@ export function useEventListener<
 >({
   ref,
   target,
-  listener,
+  listener: listenerProp,
   options,
   isDisabled,
   getIsDisabled: getIsDisabledProp,
 }: IUseEventListenerProps<Target, Listener>) {
   const getIsDisabled = useEvent(getIsDisabledProp);
+  const listener = useEvent(listenerProp);
 
   useEffect(() => {
     const isGetDisabled = getIsDisabled ? getIsDisabled() : false;
