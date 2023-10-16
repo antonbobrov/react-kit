@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 11 Oct 2023 20:09:45 GMT and should not be manually modified.
+This log was last generated on Mon, 16 Oct 2023 11:13:41 GMT and should not be manually modified.
+
+## 2.1.4
+Mon, 16 Oct 2023 11:13:41 GMT
+
+### Patches
+
+- PageCursor: fix z-index
 
 ## 2.1.3
 Wed, 11 Oct 2023 20:09:45 GMT

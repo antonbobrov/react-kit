@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.1.4",
+      "tag": "@anton.bobrov/react-components_v2.1.4",
+      "date": "Mon, 16 Oct 2023 11:13:41 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "PageCursor: fix z-index"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.3",
       "tag": "@anton.bobrov/react-components_v2.1.3",
       "date": "Wed, 11 Oct 2023 20:09:45 GMT",
