@@ -27,8 +27,8 @@ export const ModalAnchor = <T,>({
 
       anchor.props.onKeyDown?.(event);
     },
-    tabIndex: 0,
-    role: 'button',
+    tabIndex: anchor.props.tabIndex ?? 0,
+    role: anchor.props.role ?? 'button',
   });
 
   return (
