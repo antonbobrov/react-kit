@@ -60,7 +60,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
         onClose?.();
       }
     },
-    { ref: parentRef, isDisabled: !isOpen }
+    { ref: parentRef, isDisabled: !isVisible }
   );
 
   useOutsideClick(
