@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.1.5",
+      "tag": "@anton.bobrov/react-components_v2.1.5",
+      "date": "Wed, 18 Oct 2023 13:45:41 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "ModalAnchor: fix html attributes"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.4",
       "tag": "@anton.bobrov/react-components_v2.1.4",
       "date": "Mon, 16 Oct 2023 11:13:41 GMT",
