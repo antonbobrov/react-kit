@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 18 Oct 2023 13:45:41 GMT and should not be manually modified.
+This log was last generated on Wed, 18 Oct 2023 16:17:38 GMT and should not be manually modified.
+
+## 2.1.6
+Wed, 18 Oct 2023 16:17:38 GMT
+
+### Patches
+
+- BaseModal: fix `escape` event
 
 ## 2.1.5
 Wed, 18 Oct 2023 13:45:41 GMT

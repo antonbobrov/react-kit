@@ -2,6 +2,26 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.1.6",
+      "tag": "@anton.bobrov/react-components_v2.1.6",
+      "date": "Wed, 18 Oct 2023 16:17:38 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "BaseModal: fix `escape` event"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `2.1.5`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/vevet-init\" to `3.2.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.5",
       "tag": "@anton.bobrov/react-components_v2.1.5",
       "date": "Wed, 18 Oct 2023 13:45:41 GMT",
