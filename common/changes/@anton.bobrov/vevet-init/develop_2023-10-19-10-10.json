@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/vevet-init",
+      "comment": "Upgrade Vevet to 3.3.1",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/vevet-init"
+}
