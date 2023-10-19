@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Wed, 11 Oct 2023 20:09:45 GMT and should not be manually modified.
+This log was last generated on Thu, 19 Oct 2023 10:08:29 GMT and should not be manually modified.
+
+## 2.2.2
+Thu, 19 Oct 2023 10:08:29 GMT
+
+### Patches
+
+- useOnInViewport: set `state` => `in` if IntersectionObserver is not supported
 
 ## 2.2.1
 Wed, 11 Oct 2023 20:09:45 GMT
