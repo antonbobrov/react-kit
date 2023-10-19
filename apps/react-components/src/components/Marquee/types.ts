@@ -4,6 +4,7 @@ import { ReactElement } from 'react';
 
 export interface IMarqueeProps
   extends NMarquee.IChangeableProps,
+    Pick<NMarquee.IStaticProps, 'prependWhitespace'>,
     IBaseComponent {
   /** Marquee text */
   children: string | ReactElement;
