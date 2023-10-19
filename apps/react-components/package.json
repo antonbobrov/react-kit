@@ -50,7 +50,6 @@
     "@anton.bobrov/vevet-init": "workspace:*",
     "@vimeo/player": "~2.19.0",
     "classnames": "2.3.2",
-    "node-marquee": "~3.0.6",
     "react-portal": "4.2.2",
     "video.js": "8.2.1",
     "youtube-player": "~5.6.0"

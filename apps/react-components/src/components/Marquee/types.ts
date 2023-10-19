@@ -1,15 +1,9 @@
+import { NMarquee } from '@anton.bobrov/vevet-init';
 import { IBaseComponent } from '@types';
-import { NodeMarqueeProp } from 'node-marquee';
 import { ReactElement } from 'react';
 
-type TNodeMarqueePickedProps =
-  | 'speed'
-  | 'minQuantity'
-  | 'pauseOnHover'
-  | 'prependWhitespace';
-
 export interface IMarqueeProps
-  extends Pick<NodeMarqueeProp, TNodeMarqueePickedProps>,
+  extends NMarquee.IChangeableProps,
     IBaseComponent {
   /** Marquee text */
   children: string | ReactElement;

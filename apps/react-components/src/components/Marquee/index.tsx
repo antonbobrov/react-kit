@@ -1,17 +1,12 @@
-import nodeMarquee, { NodeMarquee } from 'node-marquee';
-import React, {
-  RefObject,
-  forwardRef,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { forwardRef, useEffect, useRef, useState } from 'react';
 import {
   isString,
+  useDeepCompareMemoize,
   useForwardedRef,
   useOnInViewport,
 } from '@anton.bobrov/react-hooks';
 import cn from 'classnames';
+import { Marquee as VevetMarquee, vevet } from '@anton.bobrov/vevet-init';
 import { IMarqueeProps } from './types';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 
@@ -24,60 +19,69 @@ export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
       children,
       'aria-label': ariaLabel,
       separator,
-      pauseOnHover,
-      speed = 1,
-      minQuantity = 4,
-      prependWhitespace = true,
+      isEnabled = true,
+      prependWhitespace,
+      ...changeableProps
     },
     forwardedRef
   ) => {
     const ref = useForwardedRef(forwardedRef);
+    const marqueeContainerRef = useRef<HTMLSpanElement>(null);
 
-    const marqueeRef = useRef<NodeMarquee | null>(null);
+    const [marquee, setMarquee] = useState<VevetMarquee | undefined>();
 
-    // dynamic ref for useOnInViewport to trigger each time the marquee is updated
-    const [dynamicRef, setDynamicRef] = useState<RefObject<HTMLElement>>({
-      current: null,
-    });
+    const initialPropsRef = useRef({ isEnabled, ...changeableProps });
 
     useEffect(() => {
-      if (!ref.current) {
+      if (!marqueeContainerRef.current || !vevet) {
         return undefined;
       }
 
-      const instance =
-        nodeMarquee({
-          parent: ref.current,
-          pauseOnHover,
-          speed,
-          autoplay: false,
-          resize: true,
-          minQuantity,
-          prependWhitespace,
-        }) || null;
+      const instance = new VevetMarquee({
+        ...initialPropsRef.current,
+        container: marqueeContainerRef.current,
+        prependWhitespace,
+      });
 
-      marqueeRef.current = instance;
-      setDynamicRef({ current: ref.current });
+      setMarquee(instance);
 
       return () => instance?.destroy();
-    }, [ref, pauseOnHover, speed, minQuantity, prependWhitespace]);
+    }, [ref, prependWhitespace]);
 
-    useOnInViewport({
-      ref: dynamicRef,
-      onIn: () => marqueeRef.current?.play(),
-      onOut: () => marqueeRef.current?.pause(),
-      onFallback: () => marqueeRef.current?.play(),
-    });
+    const { state } = useOnInViewport({ ref });
+
+    useEffect(() => {
+      if (!marquee || !state) {
+        return;
+      }
+
+      if (state === 'in' && isEnabled) {
+        marquee.changeProps({ isEnabled: true });
+      } else {
+        marquee.changeProps({ isEnabled: false });
+      }
+    }, [marquee, state, isEnabled]);
+
+    // change props
+    useEffect(() => {
+      if (!marquee) {
+        return;
+      }
+
+      marquee.changeProps(changeableProps);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [marquee, useDeepCompareMemoize(changeableProps)]);
 
     return (
       <span
+        ref={ref}
         className={cn(className, prefixedClasNames('marquee'))}
         style={style}
         role="marquee"
         aria-label={ariaLabel ?? (isString(children) ? children : undefined)}
       >
         <span
-          ref={ref}
+          ref={marqueeContainerRef}
           className={prefixedClasNames('marquee__container')}
           aria-hidden
         >
