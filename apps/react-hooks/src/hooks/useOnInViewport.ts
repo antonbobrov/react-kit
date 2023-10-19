@@ -89,6 +89,7 @@ export function useOnInViewport({
     }
 
     if (!observer) {
+      setState('in');
       onFallback?.();
 
       return undefined;
