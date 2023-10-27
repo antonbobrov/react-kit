@@ -1,4 +1,4 @@
-import { GUI } from 'dat.gui';
+import type { GUI } from 'dat.gui';
 
 const isBrowser = typeof window !== 'undefined';
 

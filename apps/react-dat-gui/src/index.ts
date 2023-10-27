@@ -1,3 +1,3 @@
 export * from './datGUI';
-export * from './useDatGUIFolder';
-export * from './useDatGUISettings';
+export * from './folder';
+export * from './settings';
