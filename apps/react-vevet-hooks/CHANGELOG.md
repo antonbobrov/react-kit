@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Thu, 19 Oct 2023 10:42:28 GMT and should not be manually modified.
+This log was last generated on Tue, 31 Oct 2023 08:59:30 GMT and should not be manually modified.
+
+## 2.2.0
+Tue, 31 Oct 2023 08:59:30 GMT
+
+### Minor changes
+
+- Add `useViewportOrientation`
 
 ## 2.1.8
 Thu, 19 Oct 2023 10:42:28 GMT
