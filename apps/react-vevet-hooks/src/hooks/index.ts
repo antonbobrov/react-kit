@@ -8,4 +8,5 @@ export * from './useOnResize';
 export * from './useOnViewportOritentationChange';
 export * from './useScopedTimelineProgress';
 export * from './useTimeline';
+export * from './useViewportOrientation';
 export * from './useViewportSize';
