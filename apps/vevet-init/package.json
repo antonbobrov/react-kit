@@ -28,7 +28,7 @@
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "vevet": "3.3.2"
+    "vevet": "3.4.0"
   },
   "devDependencies": {
     "@anton.bobrov/eslint-config": "workspace:*",
@@ -37,6 +37,6 @@
     "rimraf": "5.0.0",
     "tsc-alias": "1.8.5",
     "typescript": "4.8.2",
-    "vevet": "3.3.2"
+    "vevet": "3.4.0"
   }
 }
