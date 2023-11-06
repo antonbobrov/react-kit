@@ -2,6 +2,21 @@
   "name": "@anton.bobrov/react-dat-gui",
   "entries": [
     {
+      "version": "2.0.1",
+      "tag": "@anton.bobrov/react-dat-gui_v2.0.1",
+      "date": "Mon, 06 Nov 2023 10:32:50 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.2.3`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `1.4.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.0.0",
       "tag": "@anton.bobrov/react-dat-gui_v2.0.0",
       "date": "Fri, 27 Oct 2023 17:31:56 GMT",

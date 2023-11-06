@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "2.2.3",
+      "tag": "@anton.bobrov/react-hooks_v2.2.3",
+      "date": "Mon, 06 Nov 2023 10:32:50 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `1.4.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.2.2",
       "tag": "@anton.bobrov/react-hooks_v2.2.2",
       "date": "Thu, 19 Oct 2023 10:08:29 GMT",

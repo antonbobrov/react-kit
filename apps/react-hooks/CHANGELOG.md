@@ -1,6 +1,11 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Thu, 19 Oct 2023 10:08:29 GMT and should not be manually modified.
+This log was last generated on Mon, 06 Nov 2023 10:32:50 GMT and should not be manually modified.
+
+## 2.2.3
+Mon, 06 Nov 2023 10:32:50 GMT
+
+_Version update only_
 
 ## 2.2.2
 Thu, 19 Oct 2023 10:08:29 GMT

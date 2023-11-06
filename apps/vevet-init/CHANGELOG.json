@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/vevet-init",
   "entries": [
     {
+      "version": "3.4.1",
+      "tag": "@anton.bobrov/vevet-init_v3.4.1",
+      "date": "Mon, 06 Nov 2023 10:32:50 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `1.4.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.4.0",
       "tag": "@anton.bobrov/vevet-init_v3.4.0",
       "date": "Wed, 01 Nov 2023 11:30:04 GMT",
