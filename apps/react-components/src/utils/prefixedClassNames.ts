@@ -6,6 +6,8 @@ export function prefixedClasNames(
   ...classNames: (string | boolean | undefined)[]
 ) {
   return cn(
-    classNames.map((value) => (isString(value) ? prefixedClassName(value) : ''))
+    classNames.map((value) =>
+      isString(value) ? prefixedClassName(value) : '',
+    ),
   );
 }

@@ -3,6 +3,7 @@
 ## Installation
 
 ```bash
+npm i eslint@8.53.0 prettier@3.0.3 --save-dev
 npm i "@anton.bobrov/eslint-config" --save-dev
 ```
 

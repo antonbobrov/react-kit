@@ -13,7 +13,7 @@ export const BaseImage = forwardRef<HTMLImageElement, IBaseImageProps>(
 
     const src = getSrc({ src: srcProp, paths });
     const [srcSet, setSrcSet] = useState<string | undefined>(
-      generatePlaceholderImage(width, height)
+      generatePlaceholderImage(width, height),
     );
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export const BaseImage = forwardRef<HTMLImageElement, IBaseImageProps>(
         alt={alt}
       />
     );
-  }
+  },
 );
 
 BaseImage.displayName = 'BaseImage';

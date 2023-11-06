@@ -47,7 +47,7 @@ export const Anchor: TBasePopupAnchorRenderer = forwardRef(
       ref: forwardedRef,
       ...props,
     });
-  }
+  },
 );
 
 Anchor.displayName = 'Anchor';

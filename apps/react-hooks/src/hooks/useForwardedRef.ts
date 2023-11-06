@@ -1,7 +1,7 @@
 import { ForwardedRef, RefObject, useImperativeHandle, useRef } from 'react';
 
 export function useForwardedRef<T>(
-  forwardedRef: ForwardedRef<T> | undefined
+  forwardedRef: ForwardedRef<T> | undefined,
 ): RefObject<T> {
   const ref = useRef<T>(null);
 

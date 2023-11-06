@@ -23,7 +23,7 @@ export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
       prependWhitespace,
       ...changeableProps
     },
-    forwardedRef
+    forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
     const marqueeContainerRef = useRef<HTMLSpanElement>(null);
@@ -90,7 +90,7 @@ export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
         </span>
       </span>
     );
-  }
+  },
 );
 
 Marquee.displayName = 'Marquee';

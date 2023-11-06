@@ -25,5 +25,5 @@ export interface IMoreContentButtonProps {
 }
 
 export type TMoreContentButtonRenderer = (
-  props: IMoreContentButtonProps
+  props: IMoreContentButtonProps,
 ) => ReactElement | null;

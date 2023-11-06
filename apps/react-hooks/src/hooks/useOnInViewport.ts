@@ -41,7 +41,7 @@ const observer =
           root: null,
           threshold: 0,
           rootMargin: '0px 0px 0px 0px',
-        }
+        },
       )
     : null;
 
@@ -133,7 +133,7 @@ export function useOnInViewport({
     return () => {
       element._useOnInViewportCallbacks =
         element._useOnInViewportCallbacks?.filter(
-          (callback) => callback.id !== id
+          (callback) => callback.id !== id,
         );
 
       observer.unobserve(element);

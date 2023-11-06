@@ -63,7 +63,7 @@ export const Provider: FC<IScrollViewProviderProps> = ({
 
   const contextValue: IScrollViewContext = useMemo(
     () => ({ scrollView }),
-    [scrollView]
+    [scrollView],
   );
 
   useEffect(() => {

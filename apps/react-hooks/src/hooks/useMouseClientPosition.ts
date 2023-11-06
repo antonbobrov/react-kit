@@ -17,7 +17,7 @@ export function useMouseClientPosition() {
     const listener = addEventListener(
       window,
       'mousemove',
-      ({ clientX, clientY }) => setPosition({ x: clientX, y: clientY })
+      ({ clientX, clientY }) => setPosition({ x: clientX, y: clientY }),
     );
 
     return () => listener();

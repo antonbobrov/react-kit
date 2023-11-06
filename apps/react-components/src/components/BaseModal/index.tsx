@@ -60,7 +60,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
         onClose?.();
       }
     },
-    { ref: parentRef, isDisabled: !isVisible }
+    { ref: parentRef, isDisabled: !isVisible },
   );
 
   useOutsideClick(
@@ -70,7 +70,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
         onClose?.();
       }
     },
-    { isDisabled: !isCloseOnOutsideClick }
+    { isDisabled: !isCloseOnOutsideClick },
   );
 
   usePreventDocumentScrolling(isUnderneathScrollingDisabled && isOpen);
@@ -121,7 +121,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
         ref={parentRef}
         className={cn(
           className,
-          prefixedClasNames('base-modal', !isVisible && 'invisible')
+          prefixedClasNames('base-modal', !isVisible && 'invisible'),
         )}
         style={style}
         role="dialog"
@@ -133,7 +133,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
           {...overlayProps}
           className={cn(
             overlayProps?.className,
-            prefixedClasNames('base-modal__overlay')
+            prefixedClasNames('base-modal__overlay'),
           )}
         />
 
@@ -142,7 +142,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
           {...scrollAreaProps}
           className={cn(
             scrollAreaProps?.className,
-            prefixedClasNames('base-modal__scroll-area')
+            prefixedClasNames('base-modal__scroll-area'),
           )}
         >
           <div
@@ -150,7 +150,7 @@ export const BaseModal: FC<IBaseModalProps> = ({
             {...wrapperProps}
             className={cn(
               wrapperProps?.className,
-              prefixedClasNames('base-modal__wrapper')
+              prefixedClasNames('base-modal__wrapper'),
             )}
           >
             {children}

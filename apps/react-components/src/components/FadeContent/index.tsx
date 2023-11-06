@@ -10,7 +10,7 @@ import { useParentHeight } from './utils/useParentHeight';
 export const FadeContent = forwardRef<HTMLDivElement, IFadeContentProps>(
   (
     { className, style, content, activeKey, duration = 600, hasFocus = true },
-    forwardedRef
+    forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
 
@@ -60,7 +60,7 @@ export const FadeContent = forwardRef<HTMLDivElement, IFadeContentProps>(
               key={key}
               className={cn(
                 prefixedClasNames('fade-content__item'),
-                prefixedClasNames(`fade-content__item_${state}`)
+                prefixedClasNames(`fade-content__item_${state}`),
               )}
               duration={duration / 2}
               state={state}
@@ -88,7 +88,7 @@ export const FadeContent = forwardRef<HTMLDivElement, IFadeContentProps>(
         })}
       </div>
     );
-  }
+  },
 );
 
 FadeContent.displayName = 'FadeContent';

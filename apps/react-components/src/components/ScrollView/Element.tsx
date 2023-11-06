@@ -46,7 +46,7 @@ export const Element: FC<IScrollViewElementProps> = ({
   const classNames = prefixedClasNames(
     'scroll-view',
     animation,
-    isViewed && 'viewed'
+    isViewed && 'viewed',
   );
 
   return (
@@ -56,7 +56,7 @@ export const Element: FC<IScrollViewElementProps> = ({
           children.props.className,
           classNames,
           viewClassName,
-          isViewed && viewedClassName
+          isViewed && viewedClassName,
         ),
         ref,
       })}

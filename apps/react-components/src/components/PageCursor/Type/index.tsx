@@ -24,7 +24,7 @@ export const Type: FC<IPageCursorTypeProps> = ({
     <div
       className={cn(
         prefixedClassName('page-cursor-type'),
-        isActive && prefixedClassName('active')
+        isActive && prefixedClassName('active'),
       )}
     >
       {children}

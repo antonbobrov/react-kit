@@ -16,7 +16,7 @@ export function usePageCursorProviderStore() {
     addType: (instance) => {
       setStore((prevValue) => {
         const isAlreadyPresent = prevValue.types.some(
-          ({ type, id }) => type === instance.type && id === instance.id
+          ({ type, id }) => type === instance.type && id === instance.id,
         );
 
         if (!isAlreadyPresent) {
@@ -33,7 +33,7 @@ export function usePageCursorProviderStore() {
     removeType: (instance) => {
       setStore((prevValue) => {
         const newTypes = prevValue.types.filter(
-          ({ id, type }) => !(id === instance.id && type === instance.type)
+          ({ id, type }) => !(id === instance.id && type === instance.type),
         );
 
         return {

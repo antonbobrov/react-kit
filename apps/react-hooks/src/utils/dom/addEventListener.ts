@@ -7,12 +7,12 @@ import { TEventElement } from '@types';
 export function addEventListener<
   Element extends TEventElement,
   Target extends keyof HTMLElementEventMap,
-  Listener extends (event: DocumentEventMap[Target]) => void
+  Listener extends (event: DocumentEventMap[Target]) => void,
 >(
   element: Element,
   target: Target,
   listener: Listener,
-  options?: boolean | AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions,
 ) {
   element.addEventListener(target, listener as any, options);
 

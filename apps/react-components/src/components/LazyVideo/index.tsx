@@ -9,7 +9,7 @@ import { prefixedClasNames } from '../../utils/prefixedClassNames';
 export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
   (
     { className, style, position = 'cover', onLoadedMetadata, ...videoProps },
-    ref
+    ref,
   ) => {
     const [videoRef, setVideoRef] = useState<HTMLVideoElement | null>(null);
     useImperativeHandle(ref, () => videoRef!);
@@ -22,7 +22,7 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
     const classNames = prefixedClasNames(
       'lazy-video',
       position,
-      isLoaded && 'is-loaded'
+      isLoaded && 'is-loaded',
     );
 
     if (!canLoad) {
@@ -41,7 +41,7 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
         }}
       />
     );
-  }
+  },
 );
 
 LazyVideo.displayName = 'LazyVideo';

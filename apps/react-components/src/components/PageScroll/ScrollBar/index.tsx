@@ -43,10 +43,10 @@ export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
       instance.destroy();
 
       vevet.html.classList.remove(
-        prefixedClasNames('page-scroll-scrollbar-parent')
+        prefixedClasNames('page-scroll-scrollbar-parent'),
       );
       vevet.body.classList.remove(
-        prefixedClasNames('page-scroll-scrollbar-parent')
+        prefixedClasNames('page-scroll-scrollbar-parent'),
       );
     };
   }, [scrollSelector, isDisabled]);

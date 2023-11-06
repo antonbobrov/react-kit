@@ -6,7 +6,7 @@ export interface IModalCloseButtonProps {
 }
 
 export type TModalCloseButtonRenderer = (
-  props: IModalCloseButtonProps
+  props: IModalCloseButtonProps,
 ) => ReactElement | null;
 
 export interface IModalRenderAnimationProps {

@@ -13,7 +13,7 @@ export interface IUsePointerHoverProps extends IUseEventListenerSettings {}
  */
 export function usePointerHover(
   ref: THookEventElement,
-  props?: IUsePointerHoverProps
+  props?: IUsePointerHoverProps,
 ) {
   const [isHovered, setIsHovered] = useState(false);
 

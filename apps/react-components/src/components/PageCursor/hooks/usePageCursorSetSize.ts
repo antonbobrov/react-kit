@@ -11,7 +11,7 @@ export interface IPageCursorSize {
 /** Scale cursor */
 export function usePageCursorSetSize(
   ref: RefObject<HTMLElement>,
-  targetSize?: IPageCursorSize
+  targetSize?: IPageCursorSize,
 ) {
   const { cursor } = usePageCursor();
 

@@ -18,7 +18,7 @@ export interface IUseOnResizeSettings
 export function useOnResize(
   effect: EffectCallback,
   deps: DependencyList,
-  settings?: IUseOnResizeSettings
+  settings?: IUseOnResizeSettings,
 ) {
   useEffect(() => {
     let destructor = effect();
@@ -33,7 +33,7 @@ export function useOnResize(
         destructor?.();
         destructor = effect();
       },
-      settings
+      settings,
     );
 
     return () => {

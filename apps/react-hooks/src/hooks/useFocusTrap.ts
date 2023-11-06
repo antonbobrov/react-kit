@@ -21,7 +21,7 @@ export interface IUseFocusTrapProps
  */
 export function useFocusTrap(
   ref: RefObject<HTMLElement>,
-  optionsProps: IUseFocusTrapProps = {}
+  optionsProps: IUseFocusTrapProps = {},
 ) {
   const defaultOptions: Required<IUseFocusTrapProps> = {
     isDisabled: false,
@@ -77,7 +77,7 @@ export function useFocusTrap(
       const focusableChildren = selectFocusableChildren(element);
       const firstFocusable = focusableChildren.item(0);
       const lastFocusable = focusableChildren.item(
-        focusableChildren.length - 1
+        focusableChildren.length - 1,
       );
 
       switch (document.activeElement) {

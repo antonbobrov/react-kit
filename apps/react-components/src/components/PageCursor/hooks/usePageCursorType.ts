@@ -6,7 +6,7 @@ import { PageCursorContext } from '../interal/context';
 /** Use a definite cursor type for some element */
 export function usePageCursorType(
   ref: RefObject<HTMLElement>,
-  type?: TPageCursorType
+  type?: TPageCursorType,
 ) {
   const id = useId();
   const { cursor, addType, removeType } = useContext(PageCursorContext);

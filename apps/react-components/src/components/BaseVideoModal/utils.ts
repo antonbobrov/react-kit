@@ -11,7 +11,7 @@ export type TBaseVideoModalWrapperSize = {
 export type TGetBaseVideoModalWrapperSize = () => TBaseVideoModalWrapperSize;
 
 export function useWrapperSize(
-  getSizeProp?: TGetBaseVideoModalWrapperSize
+  getSizeProp?: TGetBaseVideoModalWrapperSize,
 ): CSSProperties {
   const [size, setSize] = useState<TBaseVideoModalWrapperSize>({
     width: 0,

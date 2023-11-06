@@ -4,7 +4,7 @@ import { DependencyList, EffectCallback, useEffect } from 'react';
 export function useDebouncedEffect(
   effect: EffectCallback,
   deps: DependencyList,
-  delay: number
+  delay: number,
 ) {
   useEffect(() => {
     let destructor: ReturnType<EffectCallback> | null;

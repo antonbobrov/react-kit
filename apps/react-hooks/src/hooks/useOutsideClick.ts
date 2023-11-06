@@ -14,7 +14,7 @@ export interface IUseOutsideClickProps extends IUseEventListenerSettings {}
 export function useOutsideClick(
   ref: THookEventElement<Element>,
   callback: (event: TUseOutsideClickEvent) => void,
-  props?: IUseOutsideClickProps
+  props?: IUseOutsideClickProps,
 ) {
   const callbackEvent = useEvent(callback);
 

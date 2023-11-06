@@ -48,6 +48,7 @@ module.exports = {
         prefix: ['is', 'IS', 'Is', 'has', 'HAS', 'Has', 'can', 'CAN', 'Can', 'should', 'SHOULD', 'Should', 'will', 'WILL', 'Will'],
       },
     ],
+    "@typescript-eslint/no-empty-function": 0,
     'import/prefer-default-export': 0,
     'newline-before-return': 'error',
     'promise/always-return': 0,

@@ -16,7 +16,7 @@ export const FadeContentItem = forwardRef<HTMLDivElement, IProps>(
       onHide: onHideProp,
       onHidden: onHiddenProp,
     },
-    forwardedRef
+    forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
 
@@ -100,7 +100,7 @@ export const FadeContentItem = forwardRef<HTMLDivElement, IProps>(
         {children}
       </div>
     );
-  }
+  },
 );
 
 FadeContentItem.displayName = 'FadeContentItem';

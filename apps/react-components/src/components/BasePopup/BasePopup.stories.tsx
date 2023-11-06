@@ -80,7 +80,7 @@ const AnchorRenderer: TBasePopupAnchorRenderer = forwardRef(
     >
       custom button / {isActive ? 'active' : 'not active'}
     </button>
-  )
+  ),
 );
 
 AnchorRenderer.displayName = 'AnchorRenderer';

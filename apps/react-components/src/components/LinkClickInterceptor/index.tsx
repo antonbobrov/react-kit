@@ -16,7 +16,7 @@ export const LinkClickInterceptor = forwardRef<
 >(
   (
     { className, style, children, onExternalClick, onInternalClick, id },
-    forwardedRef
+    forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
 
@@ -68,7 +68,7 @@ export const LinkClickInterceptor = forwardRef<
         {children}
       </div>
     );
-  }
+  },
 );
 
 LinkClickInterceptor.displayName = 'LinkClickInterceptor';

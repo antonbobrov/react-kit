@@ -34,7 +34,7 @@ const Template: StoryFn<TComponent> = ({
                 <div>Element</div>
               </ScrollView.Element>
             ),
-            100
+            100,
           )}
         </div>
       </ScrollView.Provider>

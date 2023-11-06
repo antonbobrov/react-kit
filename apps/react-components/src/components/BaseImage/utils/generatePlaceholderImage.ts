@@ -5,7 +5,7 @@ const defaultPlaceholderImage =
 
 export function generatePlaceholderImage(
   width: string | number | undefined,
-  height: string | number | undefined
+  height: string | number | undefined,
 ) {
   if (isUndefined(width) && isUndefined(height)) {
     return defaultPlaceholderImage;

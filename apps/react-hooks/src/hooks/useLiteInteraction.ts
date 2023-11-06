@@ -5,7 +5,7 @@ import { useEventListener } from './useEventListener';
 /** Hook that detect user interaction */
 export function useLiteInteraction(
   ref: RefObject<Element>,
-  effect: () => void
+  effect: () => void,
 ) {
   const event = useEvent(effect);
 

@@ -36,7 +36,7 @@ export const BasePopup = forwardRef<HTMLDivElement, IBasePopupProps>(
       hasOutsideClick = true,
       lifetime,
     },
-    forwardedRef
+    forwardedRef,
   ) => {
     const contentRef = useForwardedRef(forwardedRef);
     const anchorRef = useRef<HTMLElement>(null);
@@ -115,7 +115,7 @@ export const BasePopup = forwardRef<HTMLDivElement, IBasePopupProps>(
                   isActive && prefixedClassName('show'),
                   prefixedClassName(`vertical_${verticalAlignment}`),
                   prefixedClassName(`horizontal_${horizontalAlignment}`),
-                  className
+                  className,
                 )}
                 style={style}
                 onAnimationEnd={() => {
@@ -131,7 +131,7 @@ export const BasePopup = forwardRef<HTMLDivElement, IBasePopupProps>(
         )}
       </>
     );
-  }
+  },
 );
 
 BasePopup.displayName = 'BasePopup';

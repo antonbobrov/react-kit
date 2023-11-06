@@ -24,7 +24,7 @@ const meta: Meta<TComponent> = {
               labore itaque. Ex!
             </div>
           ),
-          10
+          10,
         )}
       </>
     ),

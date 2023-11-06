@@ -7,7 +7,7 @@ export function usePrevious<T, I>(value: T, initialValue: I): T | I;
 /** Use previous property state */
 export function usePrevious<T, I>(
   value: T,
-  initialValue?: I
+  initialValue?: I,
 ): T | I | undefined {
   const previousRef = useRef<T | I | undefined>(initialValue);
 

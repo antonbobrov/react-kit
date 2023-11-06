@@ -1,7 +1,7 @@
 import { TBasePopupHorizontalAlignment } from '../types';
 
 export function getAutoHorizontalAlignment(
-  domRect: DOMRect | undefined
+  domRect: DOMRect | undefined,
 ): Exclude<TBasePopupHorizontalAlignment, 'auto'> | undefined {
   if (!domRect) {
     return undefined;

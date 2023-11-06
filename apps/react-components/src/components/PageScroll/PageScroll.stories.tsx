@@ -18,7 +18,7 @@ const Components: FC = () => (
       (index) => (
         <div key={index}>Element</div>
       ),
-      100
+      100,
     )}
   </div>
 );

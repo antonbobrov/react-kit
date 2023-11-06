@@ -11,7 +11,7 @@ export function useViewportOrientation() {
 
   useOnResize(
     () => setOrientation(vevet.viewport.isLandscape ? 'landscape' : 'portrait'),
-    []
+    [],
   );
 
   return orientation;

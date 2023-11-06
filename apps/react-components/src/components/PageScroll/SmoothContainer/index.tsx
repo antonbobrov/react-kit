@@ -31,8 +31,8 @@ export const SmoothContainer: FC<PropsWithChildren> = ({ children }) => {
       className={cn(
         prefixedClasNames(
           'page-scroll-smooth-container',
-          isSmooth && 'is-smooth'
-        )
+          isSmooth && 'is-smooth',
+        ),
       )}
     >
       <div ref={ref} className="v-smooth-scroll">

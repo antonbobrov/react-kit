@@ -20,7 +20,7 @@ export function useViewportSize() {
         width: vevet.viewport.width,
         height: vevet.viewport.height,
       }),
-    []
+    [],
   );
 
   return size;

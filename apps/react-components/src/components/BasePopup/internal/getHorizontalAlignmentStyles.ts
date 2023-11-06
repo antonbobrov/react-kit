@@ -60,7 +60,7 @@ export function getHorizontalAlignmentStyles({
     const maxWidth =
       Math.min(
         domRect.left + domRect.width / 2 - viewportRect.left,
-        viewportRect.right - (domRect.left + domRect.width / 2)
+        viewportRect.right - (domRect.left + domRect.width / 2),
       ) *
         2 -
       viewportGap * 2;

@@ -39,7 +39,7 @@ export function useDatGUISettings<T extends TSettings>({
   const onChange = useEvent(onChangeProp);
 
   const [settings, setSettings] = useState(
-    settingsToMutableObject(settingsProp)
+    settingsToMutableObject(settingsProp),
   );
 
   const [guiSettings, setGuiSettings] =

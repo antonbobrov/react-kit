@@ -21,7 +21,7 @@ export interface IUseOnResizeSettings {
 export function useOnElementResize(
   ref: THookEventElement<Element>,
   effectProp: EffectCallback,
-  settings?: IUseOnResizeSettings
+  settings?: IUseOnResizeSettings,
 ) {
   const isDisabled = settings?.isDisabled;
   const delay = settings?.delay ?? 10;

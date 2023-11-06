@@ -7,7 +7,7 @@ export interface IUseAnimationFrameOnFrameProps {
 }
 
 export type TUseAnimationFrameOnFrame = (
-  props: IUseAnimationFrameOnFrameProps
+  props: IUseAnimationFrameOnFrameProps,
 ) => void;
 
 export interface IUseAnimationFrameProps
@@ -50,7 +50,7 @@ export function useAnimationFrame({
       instance.addCallback('pause', onPause);
     }
     instance.addCallback('frame', () =>
-      onFrame({ easeMultiplier: instance.easeMultiplier })
+      onFrame({ easeMultiplier: instance.easeMultiplier }),
     );
 
     return () => instance.destroy();

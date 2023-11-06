@@ -7,7 +7,7 @@ import { usePageCursor } from './usePageCursor';
  * Callback on cursor move
  */
 export function usePageCursorMove(
-  onMove: (coords: NCustomCursor.ICoords) => void
+  onMove: (coords: NCustomCursor.ICoords) => void,
 ) {
   const handleMove = useEvent(onMove);
 
@@ -15,7 +15,7 @@ export function usePageCursorMove(
 
   useEffect(() => {
     const callback = cursor?.addCallback('render', () =>
-      handleMove(cursor.coords)
+      handleMove(cursor.coords),
     );
 
     return () => callback?.remove();

@@ -15,7 +15,7 @@ export const MoreContent = forwardRef<HTMLDivElement, IMoreContentProps>(
       duration = 500,
       minHeight = 120,
     },
-    forwardedRef
+    forwardedRef,
   ) => {
     const clipperRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
@@ -38,7 +38,7 @@ export const MoreContent = forwardRef<HTMLDivElement, IMoreContentProps>(
           className={prefixedClasNames(
             'more-content__clipper',
             isEnabled && 'more-content__clipper_enabled',
-            isActive && 'more-content__clipper_active'
+            isActive && 'more-content__clipper_active',
           )}
           style={{ maxHeight: `${minHeight}px` }}
         >
@@ -53,7 +53,7 @@ export const MoreContent = forwardRef<HTMLDivElement, IMoreContentProps>(
         {isEnabled && <Button isActive={isActive} toggle={toggle} />}
       </div>
     );
-  }
+  },
 );
 
 MoreContent.displayName = 'MoreContent';

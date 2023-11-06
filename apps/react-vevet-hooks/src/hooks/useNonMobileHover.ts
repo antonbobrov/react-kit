@@ -14,7 +14,7 @@ export interface IUseNonMobileHoverProps
  */
 export function useNonMobileHover(
   ref: THookEventElement,
-  props?: IUseNonMobileHoverProps
+  props?: IUseNonMobileHoverProps,
 ) {
   const [isHovered, setIsHovered] = useState(false);
 

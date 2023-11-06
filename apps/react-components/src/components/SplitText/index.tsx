@@ -15,7 +15,7 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
       hasLines,
       onInit: onInitProp,
     },
-    forwardedRef
+    forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
 
@@ -53,7 +53,7 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
         dangerouslySetInnerHTML={{ __html: textProp }}
       />
     );
-  }
+  },
 );
 
 SplitText.displayName = 'SplitText';

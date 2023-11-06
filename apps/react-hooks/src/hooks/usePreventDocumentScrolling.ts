@@ -33,7 +33,7 @@ export function usePreventDocumentScrolling(isPrevented: boolean) {
         style.remove();
       }
     },
-    [className, style, isPrevented]
+    [className, style, isPrevented],
   );
 
   useEffect(() => {

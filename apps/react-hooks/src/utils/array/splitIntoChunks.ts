@@ -5,7 +5,7 @@ export type TChunk<T> = {
 
 export function splitIntoChunks<T>(
   source: T[],
-  chunkSize: number
+  chunkSize: number,
 ): TChunk<T>[] {
   const chunks: TChunk<T>[] = [];
 

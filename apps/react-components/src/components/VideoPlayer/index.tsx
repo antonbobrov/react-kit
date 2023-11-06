@@ -33,7 +33,7 @@ export const VideoPlayer: FC<IVideoPlayerProps> = ({
   const classNames = cn(
     prefixedClasNames('video-player'),
     isLoaded && loadedClassName,
-    className
+    className,
   );
 
   if (source === 'mp4' && !!src) {

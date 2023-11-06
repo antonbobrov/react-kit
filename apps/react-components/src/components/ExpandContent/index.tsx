@@ -22,7 +22,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       onAnimationEnd: onAnimationEndProp,
       children,
     },
-    forwardedRef
+    forwardedRef,
   ) => {
     const parentRef = useForwardedRef(forwardedRef);
     const contentRef = useRef<HTMLDivElement>(null);
@@ -43,7 +43,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
         }
 
         const heightProgress = easingProgress(
-          clampScope(progress, hasAlpha ? EXPAND_SCOPE : GLOBAL_SCOPE)
+          clampScope(progress, hasAlpha ? EXPAND_SCOPE : GLOBAL_SCOPE),
         );
 
         const contentHeight = content.clientHeight;
@@ -94,7 +94,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 ExpandContent.displayName = 'ExpandContent';

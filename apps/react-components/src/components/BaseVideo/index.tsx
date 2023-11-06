@@ -8,7 +8,7 @@ import { requestVideoPlay } from './utils/requestVideoPlay';
 export const BaseVideo = forwardRef<HTMLVideoElement, IBaseVideoProps>(
   (
     { src, children, autoPlay, onLoadedMetadata, ...videoProps },
-    forwardedRef
+    forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
 
@@ -42,7 +42,7 @@ export const BaseVideo = forwardRef<HTMLVideoElement, IBaseVideoProps>(
         {children || <source src={src} type="video/mp4" />}
       </video>
     );
-  }
+  },
 );
 
 BaseVideo.displayName = 'BaseVideo';

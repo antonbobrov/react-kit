@@ -27,7 +27,7 @@ export const BaseVideoModal: FC<IBaseVideoModalProps> = ({
         ...wrapperProps,
         className: cn(
           wrapperProps?.className,
-          prefixedClasNames('base-video-modal__wrapper')
+          prefixedClasNames('base-video-modal__wrapper'),
         ),
         style: {
           ...wrapperProps?.style,
@@ -39,7 +39,7 @@ export const BaseVideoModal: FC<IBaseVideoModalProps> = ({
       <div
         className={prefixedClasNames(
           'base-video-modal__container',
-          isLoaded && 'base-video-modal__container_loaded'
+          isLoaded && 'base-video-modal__container_loaded',
         )}
       >
         <VideoPlayer {...player} onLoad={() => setIsLoaded(true)} />

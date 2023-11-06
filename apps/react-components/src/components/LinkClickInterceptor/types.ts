@@ -3,7 +3,7 @@ import React from 'react';
 
 export type TLinkClickInterceptorHandler = (
   event: React.MouseEvent<HTMLElement, MouseEvent>,
-  anchor: HTMLAnchorElement
+  anchor: HTMLAnchorElement,
 ) => void;
 
 export interface ILinkClickInterceptorProps extends IBaseComponent {

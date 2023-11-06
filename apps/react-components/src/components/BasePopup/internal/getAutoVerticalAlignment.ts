@@ -1,7 +1,7 @@
 import { TBasePopupVerticalAlignment } from '../types';
 
 export function getAutoVerticalAlignment(
-  domRect: DOMRect | undefined
+  domRect: DOMRect | undefined,
 ): Exclude<TBasePopupVerticalAlignment, 'auto'> | undefined {
   if (!domRect) {
     return undefined;

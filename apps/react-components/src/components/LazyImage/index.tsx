@@ -21,7 +21,7 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
       paths,
       ...tagProps
     },
-    forwardedRef
+    forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
 
@@ -33,7 +33,7 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
       'lazy-image',
       hasAlpha && 'has-alpha',
       position,
-      isLoaded && 'is-loaded'
+      isLoaded && 'is-loaded',
     );
 
     const width = paths?.width ?? tagProps.width;
@@ -64,7 +64,7 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
         }}
       />
     );
-  }
+  },
 );
 
 LazyImage.displayName = 'LazyImage';

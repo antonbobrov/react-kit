@@ -8,7 +8,7 @@ const INITIAL_VALUE = Symbol('Initial value');
 /** Hook that triggers a callback when the observable property changes */
 export function useChange<T>(
   observer: (value: T, prev: T) => void,
-  observable: T
+  observable: T,
 ): void {
   const prevObservable = usePrevious(observable, INITIAL_VALUE);
   const stableObserver = useEvent(observer);

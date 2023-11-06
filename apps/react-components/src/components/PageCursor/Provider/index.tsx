@@ -36,9 +36,9 @@ export const Provider: FC<IPageCursorProviderProps> = ({
       !!cursors.find((item) =>
         isString(item.props.type)
           ? item.props.type === 'default'
-          : item.props.type.includes('default')
+          : item.props.type.includes('default'),
       ),
-    [cursors]
+    [cursors],
   );
 
   // callback on type change
@@ -117,7 +117,7 @@ export const Provider: FC<IPageCursorProviderProps> = ({
     const className = prefixedClassName('hide-native-cursor');
     document.documentElement.classList.toggle(
       className,
-      !!isNativeCursorHidden
+      !!isNativeCursorHidden,
     );
 
     return () => document.documentElement.classList.remove(className);
