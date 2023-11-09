@@ -1,6 +1,6 @@
 {
   "name": "@anton.bobrov/react-dat-gui",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "React hooks for dat.gui",
   "private": false,
   "main": "lib/cjs/index.js",
