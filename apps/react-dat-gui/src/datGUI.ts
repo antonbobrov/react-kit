@@ -5,6 +5,7 @@ const isBrowser = typeof window !== 'undefined';
 declare global {
   interface Window {
     USE_DAT_GUI?: boolean;
+    OPEN_DAT_GUI?: boolean;
   }
 }
 
@@ -27,7 +28,10 @@ export const datGUI = new Promise((resolve: (arg: GUI | null) => void) => {
   import('dat.gui')
     .then((module) => {
       const instance = new module.GUI({
-        closed: true,
+        closed:
+          typeof window.OPEN_DAT_GUI === 'boolean'
+            ? !window.OPEN_DAT_GUI
+            : true,
       });
 
       const style = document.createElement('style');
