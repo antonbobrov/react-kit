@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "useScrollLock: add `Window` type of ref",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}
