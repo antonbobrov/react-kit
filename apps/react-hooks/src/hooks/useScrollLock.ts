@@ -21,7 +21,7 @@ export function useScrollLock(
         return;
       }
 
-      element.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      element.scrollTo({ top: 0, left: 0, behavior: 'instant' as any });
     },
     ...props,
   });
