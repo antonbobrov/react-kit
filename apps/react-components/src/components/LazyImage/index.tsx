@@ -31,6 +31,7 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
 
     const classNames = prefixedClasNames(
       'lazy-image',
+      'js-preload-ignore',
       hasAlpha && 'has-alpha',
       position,
       isLoaded && 'is-loaded',
