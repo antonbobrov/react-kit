@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Thu, 16 Nov 2023 14:50:57 GMT and should not be manually modified.
+This log was last generated on Tue, 28 Nov 2023 09:38:09 GMT and should not be manually modified.
+
+## 2.2.7
+Tue, 28 Nov 2023 09:38:09 GMT
+
+### Patches
+
+- Fix: do not preload LazyImage
 
 ## 2.2.6
 Thu, 16 Nov 2023 14:50:57 GMT

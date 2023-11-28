@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/vevet-init",
   "entries": [
     {
+      "version": "3.5.1",
+      "tag": "@anton.bobrov/vevet-init_v3.5.1",
+      "date": "Tue, 28 Nov 2023 09:38:09 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Upgrade Vevet to `3.5.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.5.0",
       "tag": "@anton.bobrov/vevet-init_v3.5.0",
       "date": "Thu, 16 Nov 2023 14:50:57 GMT",

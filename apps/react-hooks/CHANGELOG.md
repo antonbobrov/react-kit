@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Mon, 06 Nov 2023 10:32:50 GMT and should not be manually modified.
+This log was last generated on Tue, 28 Nov 2023 09:38:09 GMT and should not be manually modified.
+
+## 2.3.0
+Tue, 28 Nov 2023 09:38:09 GMT
+
+### Minor changes
+
+- useScrollLock: add `Window` type of ref
+
+### Patches
+
+- useScrollLock: fix types
 
 ## 2.2.3
 Mon, 06 Nov 2023 10:32:50 GMT
