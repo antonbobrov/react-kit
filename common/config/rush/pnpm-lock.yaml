@@ -202,9 +202,9 @@ importers:
       rimraf: 5.0.0
       tsc-alias: 1.8.5
       typescript: 4.8.2
-      vevet: 3.6.0
+      vevet: 3.7.0
     dependencies:
-      vevet: 3.6.0_typescript@4.8.2
+      vevet: 3.7.0_typescript@4.8.2
     devDependencies:
       '@anton.bobrov/eslint-config': link:../eslint-config
       eslint: 8.53.0
@@ -6133,8 +6133,8 @@ packages:
       stream-shift: 1.0.1
     dev: true
 
-  /easing-progress/0.0.4:
-    resolution: {integrity: sha512-BL5SY1FRdGWZzcOxlZO87sChYvvq4+aRqZZn5XgJR17yI1Xo25++0pap/FDKXJerKujSlzpCfGFDo01/jnZsqw==}
+  /easing-progress/1.0.0:
+    resolution: {integrity: sha512-YRWG6ysCNEjoGun64Y+XSydwImsaztQtkCSVhAfNtDqsLH8xoLE8goXCZNm2/di7OV2nRkv6ngenZ48HEPjUfQ==}
     dev: false
 
   /ee-first/1.1.1:
@@ -10834,12 +10834,12 @@ packages:
     resolution: {integrity: sha512-Y/6CilyXm3uaA2NrecuU6sPBoIjBG7DiP2TrDsbND80qqhzPAdZ58lzk9oYHUTGq72MiDZYFvq94p26edZCadg==}
     dev: false
 
-  /vevet/3.6.0_typescript@4.8.2:
-    resolution: {integrity: sha512-604sA8nSYEguxlukXqKO71XgTqKEOXJ7mrD3lQ+j9v3p1j1IdUH7IrwAkMudB6wP5/Ci5ErdMwcZzIO6hxBVIQ==}
+  /vevet/3.7.0_typescript@4.8.2:
+    resolution: {integrity: sha512-nnSQqoE7wYiLT9Iy5G8NbW8PUiUM+VAzwJnGe2uzmdvkEzO6MwfU9UeUVAs5a9JQz8x8xCMdrsKz5INkd643wQ==}
     dependencies:
       '@anton.bobrov/p-cancelable': 4.0.1
       detect-browser: 5.3.0
-      easing-progress: 0.0.4
+      easing-progress: 1.0.0
       get-image-pos: 0.0.11
       ismobilejs: 1.1.1
       lodash.mergewith: 4.6.2
