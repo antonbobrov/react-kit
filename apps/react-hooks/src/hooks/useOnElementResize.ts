@@ -1,7 +1,6 @@
 import { THookEventElement } from '@types';
 import { EffectCallback, useEffect, useRef } from 'react';
 import { getHookEventElement } from '@utils/internal/getHookEventElement';
-import ResizeObserver from 'resize-observer-polyfill';
 import { useEvent } from './useEvent';
 
 export interface IUseOnResizeSettings {
