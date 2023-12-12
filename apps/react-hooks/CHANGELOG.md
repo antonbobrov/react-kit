@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Tue, 28 Nov 2023 09:38:09 GMT and should not be manually modified.
+This log was last generated on Tue, 12 Dec 2023 20:45:40 GMT and should not be manually modified.
+
+## 2.4.0
+Tue, 12 Dec 2023 20:45:40 GMT
+
+### Minor changes
+
+- Add `uniqueeArray`
+
+### Patches
+
+- Drop `resize-observer-polyfill`
 
 ## 2.3.0
 Tue, 28 Nov 2023 09:38:09 GMT
