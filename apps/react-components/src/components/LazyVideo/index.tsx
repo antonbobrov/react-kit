@@ -21,6 +21,7 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
 
     const classNames = prefixedClasNames(
       'lazy-video',
+      'js-preload-ignore',
       position,
       isLoaded && 'is-loaded',
     );
