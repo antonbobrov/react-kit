@@ -12,6 +12,7 @@ export * from './useFocusIn';
 export * from './useFocusTrap';
 export * from './useForwardedRef';
 export * from './useHover';
+export * from './useIntersectionObserver';
 export * from './useIsOnceMounted';
 export * from './useLiteInteraction';
 export * from './useMouseClientPosition';
