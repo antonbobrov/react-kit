@@ -6,4 +6,9 @@ export interface ILazyVideoProps extends IBaseVideoProps {
    * @default 'cover'
    */
   position?: false | 'cover' | 'contain' | 'fullabs';
+  /**
+   * Loading type
+   * @default 'lazy'
+   */
+  loading?: 'eager' | 'lazy';
 }

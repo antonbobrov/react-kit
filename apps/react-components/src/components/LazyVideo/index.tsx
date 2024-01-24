@@ -1,6 +1,11 @@
 import cn from 'classnames';
-import React, { forwardRef, useImperativeHandle, useState } from 'react';
-import { useOnPageLoad } from '@anton.bobrov/react-vevet-hooks';
+import React, {
+  forwardRef,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from 'react';
+import { useOnInViewport } from '@anton.bobrov/react-hooks';
 import { ILazyVideoProps } from './types';
 import { BaseVideo } from '../BaseVideo';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
@@ -8,39 +13,52 @@ import { prefixedClasNames } from '../../utils/prefixedClassNames';
 /** Lazy video component */
 export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
   (
-    { className, style, position = 'cover', onLoadedMetadata, ...videoProps },
+    {
+      className,
+      style,
+      position = 'cover',
+      onLoadedMetadata,
+      loading = 'lazy',
+      ...videoProps
+    },
     ref,
   ) => {
     const [videoRef, setVideoRef] = useState<HTMLVideoElement | null>(null);
     useImperativeHandle(ref, () => videoRef!);
 
-    const [canLoad, setCanLoad] = useState(false);
+    const wrapperRef = useRef<HTMLDivElement>(null);
+
+    const [canLoad, setCanLoad] = useState(loading === 'eager');
     const [isLoaded, setIsLoaded] = useState(false);
 
-    useOnPageLoad(() => setCanLoad(true), []);
+    useOnInViewport({
+      ref: wrapperRef,
+      onIn: () => setCanLoad(true),
+      rootMargin: '0% 0% 175% 0%',
+      destroyOnIn: true,
+      isDisabled: loading === 'eager',
+    });
 
     const classNames = prefixedClasNames(
       'lazy-video',
-      'js-preload-ignore',
       position,
       isLoaded && 'is-loaded',
     );
 
-    if (!canLoad) {
-      return null;
-    }
-
     return (
-      <BaseVideo
-        ref={setVideoRef}
-        {...videoProps}
-        className={cn(className, classNames)}
-        style={style}
-        onLoadedMetadata={(event) => {
-          onLoadedMetadata?.(event);
-          setIsLoaded(true);
-        }}
-      />
+      <div ref={wrapperRef} className={cn(className, classNames)} style={style}>
+        {canLoad && (
+          <BaseVideo
+            ref={setVideoRef}
+            {...videoProps}
+            className="js-preload-ignore"
+            onLoadedMetadata={(event) => {
+              onLoadedMetadata?.(event);
+              setIsLoaded(true);
+            }}
+          />
+        )}
+      </div>
     );
   },
 );
