@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "useOnInViewport: add `root`, `threshold`, `rootMargin`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}

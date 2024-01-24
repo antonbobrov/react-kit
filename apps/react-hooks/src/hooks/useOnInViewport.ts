@@ -1,62 +1,19 @@
-/* eslint-disable no-underscore-dangle */
-import { THookEventElement } from '@types';
-import { isIntersectionObserverSupported } from '@utils/api';
-import { isBrowser } from '@utils/env';
-import { useEffect, useId, useState } from 'react';
-import { isUndefined } from '@utils/types';
-import { getHookEventElement } from '@utils/internal/getHookEventElement';
+import { useEffect, useState } from 'react';
 import { useEvent } from './useEvent';
+import { usePropState } from './usePropState';
+import {
+  IUseIntersectionObserverProps,
+  useIntersectionObserver,
+} from './useIntersectionObserver';
 
-interface ICallback {
-  id: string;
-  state: 'in' | 'out';
-  callback: () => void;
-}
-
-interface IElement extends Element {
-  _useOnInViewportCallbacks?: ICallback[];
-}
-
-const observer =
-  isBrowser && isIntersectionObserverSupported()
-    ? new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            const element = entry.target as IElement;
-
-            if (entry.isIntersecting) {
-              element._useOnInViewportCallbacks
-                ?.filter(({ state }) => state === 'in')
-                .forEach(({ callback }) => callback());
-            }
-
-            if (!entry.isIntersecting) {
-              element._useOnInViewportCallbacks
-                ?.filter(({ state }) => state === 'out')
-                .forEach(({ callback }) => callback());
-            }
-          });
-        },
-        {
-          root: null,
-          threshold: 0,
-          rootMargin: '0px 0px 0px 0px',
-        },
-      )
-    : null;
-
-export interface IUseOnInViewportProps {
-  ref: THookEventElement<Element>;
+export interface IUseOnInViewportProps
+  extends Omit<IUseIntersectionObserverProps, 'onEntry'> {
   /** Event when element is in viewport */
   onIn?: () => void;
   /** Event when element is out of viewport */
   onOut?: () => void;
-  /** Triggered when IntersectionObserver is not supported */
-  onFallback?: () => void;
   /** Destroy observable instance when the element once appears into viewport */
   destroyOnIn?: boolean;
-  /** The hook is disabled */
-  isDisabled?: boolean;
 }
 
 /**
@@ -66,79 +23,43 @@ export function useOnInViewport({
   ref,
   onIn: onInProp,
   onOut: onOutProp,
-  onFallback: onFallbackProp,
+  onFallback,
   destroyOnIn,
-  isDisabled,
+  isDisabled: isDisabledProp,
+  ...props
 }: IUseOnInViewportProps) {
-  const id = useId();
-
   const onIn = useEvent(onInProp);
   const onOut = useEvent(onOutProp);
-  const onFallback = useEvent(onFallbackProp);
 
   const [state, setState] = useState<'in' | 'out' | undefined>();
+  const [isDisabled, setIsDisabled] = usePropState(isDisabledProp);
 
+  // disable on 'in'
   useEffect(() => {
-    if (isDisabled) {
-      return undefined;
+    if (state === 'in' && destroyOnIn) {
+      setIsDisabled(true);
     }
+  }, [destroyOnIn, setIsDisabled, state]);
 
-    const element = getHookEventElement(ref) as IElement;
-    if (!element) {
-      return undefined;
-    }
-
-    if (!observer) {
+  // observe the element
+  useIntersectionObserver({
+    ...props,
+    ref,
+    onFallback: () => {
       setState('in');
       onFallback?.();
-
-      return undefined;
-    }
-
-    // create array of callbacks if it doesnt exist yet
-    if (
-      isUndefined(element._useOnInViewportCallbacks) ||
-      !Array.isArray(element._useOnInViewportCallbacks)
-    ) {
-      element._useOnInViewportCallbacks = [];
-    }
-
-    // add IN-callback
-    element._useOnInViewportCallbacks.push({
-      id,
-      state: 'in',
-      callback: () => {
+    },
+    onEntry: (entry) => {
+      if (entry.isIntersecting) {
         setState('in');
         onIn?.();
-
-        if (destroyOnIn) {
-          observer.unobserve(element);
-        }
-      },
-    });
-
-    // add OUT-callback
-    element._useOnInViewportCallbacks.push({
-      id,
-      state: 'out',
-      callback: () => {
+      } else {
         setState('out');
         onOut?.();
-      },
-    });
-
-    // observe element
-    observer.observe(element);
-
-    return () => {
-      element._useOnInViewportCallbacks =
-        element._useOnInViewportCallbacks?.filter(
-          (callback) => callback.id !== id,
-        );
-
-      observer.unobserve(element);
-    };
-  }, [destroyOnIn, id, onFallback, onIn, onOut, ref, isDisabled]);
+      }
+    },
+    isDisabled,
+  });
 
   return { state };
 }
