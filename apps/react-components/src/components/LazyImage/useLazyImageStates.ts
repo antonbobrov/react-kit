@@ -25,6 +25,7 @@ export function useLazyImageStates({
         setIsLazyToBeLoaded(true);
       }
     },
+    rootMargin: '0% 0% 175% 0%',
     destroyOnIn: true,
     isDisabled: isNativeLazy,
   });
