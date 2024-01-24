@@ -1,6 +1,14 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Tue, 12 Dec 2023 20:45:40 GMT and should not be manually modified.
+This log was last generated on Wed, 24 Jan 2024 10:16:18 GMT and should not be manually modified.
+
+## 2.5.0
+Wed, 24 Jan 2024 10:16:18 GMT
+
+### Minor changes
+
+- Add `useIntersectionObserver`
+- useOnInViewport: add `root`, `threshold`, `rootMargin`
 
 ## 2.4.0
 Tue, 12 Dec 2023 20:45:40 GMT

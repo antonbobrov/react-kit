@@ -2,6 +2,21 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "2.5.0",
+      "tag": "@anton.bobrov/react-hooks_v2.5.0",
+      "date": "Wed, 24 Jan 2024 10:16:18 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add `useIntersectionObserver`"
+          },
+          {
+            "comment": "useOnInViewport: add `root`, `threshold`, `rootMargin`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.4.0",
       "tag": "@anton.bobrov/react-hooks_v2.4.0",
       "date": "Tue, 12 Dec 2023 20:45:40 GMT",

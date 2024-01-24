@@ -2,6 +2,34 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.3.0",
+      "tag": "@anton.bobrov/react-components_v2.3.0",
+      "date": "Wed, 24 Jan 2024 10:16:18 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix: do not preload LazyVideo"
+          },
+          {
+            "comment": "LazyImage: update rootMargin"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "LazyVideo: add `loading` property & wrap the video in a div"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.5.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `2.2.9`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.2.11",
       "tag": "@anton.bobrov/react-components_v2.2.11",
       "date": "Thu, 18 Jan 2024 14:25:22 GMT",

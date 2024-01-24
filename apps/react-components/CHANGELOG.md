@@ -1,6 +1,18 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Thu, 18 Jan 2024 14:25:22 GMT and should not be manually modified.
+This log was last generated on Wed, 24 Jan 2024 10:16:18 GMT and should not be manually modified.
+
+## 2.3.0
+Wed, 24 Jan 2024 10:16:18 GMT
+
+### Minor changes
+
+- LazyVideo: add `loading` property & wrap the video in a div
+
+### Patches
+
+- Fix: do not preload LazyVideo
+- LazyImage: update rootMargin
 
 ## 2.2.11
 Thu, 18 Jan 2024 14:25:22 GMT
