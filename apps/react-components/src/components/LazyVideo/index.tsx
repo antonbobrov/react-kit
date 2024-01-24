@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import React, {
   forwardRef,
+  useEffect,
   useImperativeHandle,
   useRef,
   useState,
@@ -28,7 +29,7 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
 
     const wrapperRef = useRef<HTMLDivElement>(null);
 
-    const [canLoad, setCanLoad] = useState(loading === 'eager');
+    const [canLoad, setCanLoad] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
 
     useOnInViewport({
@@ -38,6 +39,12 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
       destroyOnIn: true,
       isDisabled: loading === 'eager',
     });
+
+    useEffect(() => {
+      if (loading === 'eager') {
+        setCanLoad(true);
+      }
+    }, [loading]);
 
     const classNames = prefixedClasNames(
       'lazy-video',
