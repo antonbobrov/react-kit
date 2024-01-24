@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 24 Jan 2024 10:16:18 GMT and should not be manually modified.
+This log was last generated on Wed, 24 Jan 2024 15:15:14 GMT and should not be manually modified.
+
+## 2.3.1
+Wed, 24 Jan 2024 15:15:14 GMT
+
+### Patches
+
+- LazyVideo: dynamic render for `loading: eager`
 
 ## 2.3.0
 Wed, 24 Jan 2024 10:16:18 GMT

@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.3.1",
+      "tag": "@anton.bobrov/react-components_v2.3.1",
+      "date": "Wed, 24 Jan 2024 15:15:14 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "LazyVideo: dynamic render for `loading: eager`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.3.0",
       "tag": "@anton.bobrov/react-components_v2.3.0",
       "date": "Wed, 24 Jan 2024 10:16:18 GMT",
