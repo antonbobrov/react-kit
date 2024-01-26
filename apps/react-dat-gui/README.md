@@ -13,13 +13,13 @@ npm i "@anton.bobrov/react-dat-gui"
 ## Create a single dat.GUI folder
 
 ```ts
-const folder = useDatGUIFolder({ name: 'folder name' });
+const folder = useDatGuiFolder({ name: 'folder name' });
 ```
 
 ## Create settings
 
 ```ts
-const gui = useDatGUISettings({
+const gui = useDatGuiSettings({
   name: 'settings folder',
   isOpen: true,
   source: {

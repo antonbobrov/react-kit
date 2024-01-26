@@ -1,2 +1,2 @@
-export * from './createGUIFolder';
-export * from './useDatGUIFolder';
+export * from './react';
+export * from './vanilla';

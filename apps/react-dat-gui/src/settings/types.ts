@@ -1,5 +1,4 @@
 export type TNumber = {
-  value: number;
   type: 'number';
   min: number;
   max: number;
@@ -7,19 +6,19 @@ export type TNumber = {
 };
 
 export type TColor = {
-  value: number;
   type: 'color';
 };
 
 export type TBoolean = {
-  value: boolean;
   type: 'boolean';
 };
 
-export type TSetting = TNumber | TColor | TBoolean;
+export type TData = Record<string, number | boolean | unknown>;
 
-export type TSettings = Record<string, TSetting>;
-
-export type TMutableObject<T extends TSettings> = {
-  [Prop in keyof T]: T[Prop]['value'];
+export type TDataParameters<T extends TData> = {
+  [Prop in keyof T]: T[Prop] extends boolean
+    ? TBoolean
+    : T[Prop] extends number
+    ? TNumber | TColor
+    : null;
 };

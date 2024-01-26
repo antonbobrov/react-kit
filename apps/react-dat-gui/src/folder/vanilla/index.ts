@@ -1,31 +1,25 @@
-import { GUI, datGUI } from '../datGUI';
+import { GUI, datGUI } from '../../base';
+import { TCreateDatGuiFolderReturns, TCreateDatGuiFolderProps } from './types';
 
-export interface ICreateDatGUIFolderProps {
-  /** GUI folder name */
-  name: string;
-  /** Callback on folder created */
-  onCreate: (folder: GUI) => void;
-  /** The folder is opened by default */
-  isOpen?: boolean;
-}
+export * from './types';
 
 /**
  * Creates a dat.gui folder
  *
  * @example
  *
- * const instance = createDatGUIFolder({
+ * const instance = createDatGuiFolder({
  *   name: 'GUI Folder',
  *   onCreate: (folder) => console.log(folder),
  * });
  *
  * instance.destroy();
  */
-export function createDatGUIFolder({
+export function createDatGuiFolder({
   name,
   onCreate,
   isOpen = true,
-}: ICreateDatGUIFolderProps) {
+}: TCreateDatGuiFolderProps): TCreateDatGuiFolderReturns {
   let isDestroyed = false;
   let folder: GUI | undefined;
   let instance: GUI | null = null;

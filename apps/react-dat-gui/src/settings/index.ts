@@ -1,3 +1,4 @@
-export * from './createDatGUISettings';
-export * from './useDatGUISettings';
 export * from './types';
+
+export * from './react';
+export * from './vanilla';
