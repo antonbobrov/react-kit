@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-dat-gui",
   "entries": [
     {
+      "version": "3.0.0",
+      "tag": "@anton.bobrov/react-dat-gui_v3.0.0",
+      "date": "Mon, 29 Jan 2024 06:26:54 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Update logic: v3"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.3",
       "tag": "@anton.bobrov/react-dat-gui_v2.1.3",
       "date": "Wed, 24 Jan 2024 10:16:18 GMT",

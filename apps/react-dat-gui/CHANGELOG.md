@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-dat-gui
 
-This log was last generated on Wed, 24 Jan 2024 10:16:18 GMT and should not be manually modified.
+This log was last generated on Mon, 29 Jan 2024 06:26:54 GMT and should not be manually modified.
+
+## 3.0.0
+Mon, 29 Jan 2024 06:26:54 GMT
+
+### Breaking changes
+
+- Update logic: v3
 
 ## 2.1.3
 Wed, 24 Jan 2024 10:16:18 GMT
