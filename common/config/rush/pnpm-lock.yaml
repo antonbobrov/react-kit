@@ -200,9 +200,9 @@ importers:
       rimraf: 5.0.0
       tsc-alias: 1.8.5
       typescript: 4.8.2
-      vevet: 3.7.1
+      vevet: 3.7.2
     dependencies:
-      vevet: 3.7.1_typescript@4.8.2
+      vevet: 3.7.2_typescript@4.8.2
     devDependencies:
       '@anton.bobrov/eslint-config': link:../eslint-config
       eslint: 8.53.0
@@ -10824,8 +10824,8 @@ packages:
     resolution: {integrity: sha512-Y/6CilyXm3uaA2NrecuU6sPBoIjBG7DiP2TrDsbND80qqhzPAdZ58lzk9oYHUTGq72MiDZYFvq94p26edZCadg==}
     dev: false
 
-  /vevet/3.7.1_typescript@4.8.2:
-    resolution: {integrity: sha512-Wh6wxkZV8RXYMNOqIFIQZ9Eea5HPD1qzDWXRwoscD317ZoWu824Sk+4Lb3MJ6P9vJrG8YuCPRcAOFQ8nCf8Ayw==}
+  /vevet/3.7.2_typescript@4.8.2:
+    resolution: {integrity: sha512-LJCi0PAwf82rVc9HsLAAXMbpuEthjUfgU42Gc8b20bkFRNnYs1O05+FPAigEE+44dRu5cNj7Jmy3Ru83bPjQCw==}
     dependencies:
       '@anton.bobrov/p-cancelable': 4.0.1
       detect-browser: 5.3.0
