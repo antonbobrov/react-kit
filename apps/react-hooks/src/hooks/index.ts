@@ -19,6 +19,7 @@ export * from './useMouseClientPosition';
 export * from './useOnElementResize';
 export * from './useOnEscape';
 export * from './useOnInViewport';
+export * from './useOnLazyIntersection';
 export * from './useOutsideClick';
 export * from './usePointerHover';
 export * from './usePreventDocumentScrolling';
