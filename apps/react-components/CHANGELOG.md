@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 31 Jan 2024 11:17:05 GMT and should not be manually modified.
+This log was last generated on Tue, 06 Feb 2024 18:53:48 GMT and should not be manually modified.
+
+## 2.4.0
+Tue, 06 Feb 2024 18:53:48 GMT
+
+### Minor changes
+
+- Refactor lazy image & video
 
 ## 2.3.3
 Wed, 31 Jan 2024 11:17:05 GMT

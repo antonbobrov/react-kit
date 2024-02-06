@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Wed, 24 Jan 2024 10:16:18 GMT and should not be manually modified.
+This log was last generated on Tue, 06 Feb 2024 18:53:48 GMT and should not be manually modified.
+
+## 2.6.0
+Tue, 06 Feb 2024 18:53:48 GMT
+
+### Minor changes
+
+- Add `useOnLazyIntersection`
 
 ## 2.5.0
 Wed, 24 Jan 2024 10:16:18 GMT
