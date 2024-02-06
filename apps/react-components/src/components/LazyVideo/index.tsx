@@ -6,7 +6,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { useOnInViewport } from '@anton.bobrov/react-hooks';
+import { useOnLazyIntersection } from '@anton.bobrov/react-hooks';
 import { ILazyVideoProps } from './types';
 import { BaseVideo } from '../BaseVideo';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
@@ -32,19 +32,19 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
     const [canLoad, setCanLoad] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
 
-    useOnInViewport({
+    const isLazy = loading === 'lazy';
+
+    useOnLazyIntersection({
       ref: wrapperRef,
       onIn: () => setCanLoad(true),
-      rootMargin: '0% 0% 175% 0%',
-      destroyOnIn: true,
-      isDisabled: loading === 'eager',
+      isDisabled: !isLazy,
     });
 
     useEffect(() => {
-      if (loading === 'eager') {
+      if (!isLazy) {
         setCanLoad(true);
       }
-    }, [loading]);
+    }, [isLazy]);
 
     const classNames = prefixedClasNames(
       'lazy-video',
@@ -58,7 +58,7 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
           <BaseVideo
             ref={setVideoRef}
             {...videoProps}
-            className="js-preload-ignore"
+            className={isLazy ? 'js-preload-ignore' : undefined}
             onLoadedMetadata={(event) => {
               onLoadedMetadata?.(event);
               setIsLoaded(true);
