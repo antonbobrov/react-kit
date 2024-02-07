@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.4.1",
+      "tag": "@anton.bobrov/react-components_v2.4.1",
+      "date": "Wed, 07 Feb 2024 17:58:49 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "FadeContent: more precision"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.4.0",
       "tag": "@anton.bobrov/react-components_v2.4.0",
       "date": "Tue, 06 Feb 2024 18:53:48 GMT",
