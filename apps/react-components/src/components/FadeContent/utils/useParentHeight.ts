@@ -10,7 +10,7 @@ export function useParentHeight(ref: RefObject<HTMLElement>) {
       return;
     }
 
-    currentHeightRef.current = parent.clientHeight;
+    currentHeightRef.current = parent.getBoundingClientRect().height;
     parent.style.height = `${currentHeightRef.current}px`;
   });
 
