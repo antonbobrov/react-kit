@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/vevet-init
 
-This log was last generated on Wed, 31 Jan 2024 11:17:05 GMT and should not be manually modified.
+This log was last generated on Thu, 08 Feb 2024 08:11:44 GMT and should not be manually modified.
+
+## 3.9.0
+Thu, 08 Feb 2024 08:11:44 GMT
+
+### Minor changes
+
+- Upgrade Veveto to 3.9.0
 
 ## 3.8.0
 Wed, 31 Jan 2024 11:17:05 GMT

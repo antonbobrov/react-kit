@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/vevet-init",
   "entries": [
     {
+      "version": "3.9.0",
+      "tag": "@anton.bobrov/vevet-init_v3.9.0",
+      "date": "Thu, 08 Feb 2024 08:11:44 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Upgrade Veveto to 3.9.0"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.8.0",
       "tag": "@anton.bobrov/vevet-init_v3.8.0",
       "date": "Wed, 31 Jan 2024 11:17:05 GMT",
