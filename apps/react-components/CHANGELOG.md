@@ -1,6 +1,14 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Thu, 08 Feb 2024 18:42:04 GMT and should not be manually modified.
+This log was last generated on Fri, 16 Feb 2024 05:45:31 GMT and should not be manually modified.
+
+## 2.5.0
+Fri, 16 Feb 2024 05:45:31 GMT
+
+### Minor changes
+
+- ExpandContent: add `isContentRendered`
+- ExpandContent: add `onAnimationRender`
 
 ## 2.4.3
 Thu, 08 Feb 2024 18:42:04 GMT
