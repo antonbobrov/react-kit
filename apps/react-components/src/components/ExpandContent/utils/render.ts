@@ -5,12 +5,22 @@ import {
 } from '@anton.bobrov/vevet-init';
 import { RefObject } from 'react';
 
+export type TExpandContentRenderAnimationProps = {
+  content: HTMLElement;
+  progress: number;
+};
+
+export type TExpandContentRenderAnimation = (
+  data: TExpandContentRenderAnimationProps,
+) => void;
+
 interface IProps {
   parentRef: RefObject<HTMLElement>;
   contentRef: RefObject<HTMLElement>;
   timeline: Timeline | undefined;
   progress: number;
   hasAlpha: boolean;
+  onRender?: TExpandContentRenderAnimation;
   onEnd?: (isActive: boolean) => void;
 }
 
@@ -24,6 +34,7 @@ export function render({
   timeline,
   progress,
   hasAlpha,
+  onRender,
   onEnd,
 }: IProps) {
   const parent = parentRef.current;
@@ -53,7 +64,10 @@ export function render({
     content.style.opacity = `${contentProgress}`;
   }
 
-  // callbacks
+  // render callbacks
+  onRender?.({ content, progress: contentProgress });
+
+  // end callbacks
   if (timeline.isReversed && progress === 0) {
     onEnd?.(false);
   } else if (!timeline.isReversed && progress === 1) {

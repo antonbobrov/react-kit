@@ -1,5 +1,6 @@
 import { IBaseComponent } from '@types';
 import { ReactNode } from 'react';
+import { TExpandContentRenderAnimation } from './utils/render';
 
 export interface IExpandContentProps extends IBaseComponent {
   /**
@@ -22,6 +23,8 @@ export interface IExpandContentProps extends IBaseComponent {
    * @default true
    */
   isContentRendered?: boolean;
+  /** Event on animation end */
+  onAnimationRender?: TExpandContentRenderAnimation;
   /** Event on animation end */
   onAnimationEnd?: (isActive: boolean) => void;
   children?: ReactNode;

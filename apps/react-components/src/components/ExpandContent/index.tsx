@@ -17,6 +17,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       duration: durationProp = 500,
       hasAlpha = true,
       isContentRendered: isContentRenderedProp = true,
+      onAnimationRender: onAnimationRenderProp,
       onAnimationEnd: onAnimationEndProp,
       children,
     },
@@ -25,14 +26,15 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
     const parentRef = useForwardedRef(forwardedRef);
     const contentRef = useRef<HTMLDivElement>(null);
 
+    const onAnimationRender = useEvent(onAnimationRenderProp);
+    const onAnimationEnd = useEvent(onAnimationEndProp);
+
     const { isActive, setIsFirstExpand, isContentRendered, duration } =
       useStates({
         isActive: isActiveProp,
         duration: durationProp,
         isContentRendered: isContentRenderedProp,
       });
-
-    const onAnimationEnd = useEvent(onAnimationEndProp);
 
     const { play, reverse, timeline } = useTimeline({
       duration,
@@ -43,6 +45,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
           timeline,
           progress,
           hasAlpha,
+          onRender: onAnimationRender,
           onEnd: (data) => {
             onAnimationEnd?.(data);
             setIsFirstExpand(false);

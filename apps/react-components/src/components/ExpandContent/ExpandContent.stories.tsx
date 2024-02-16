@@ -71,3 +71,14 @@ export const WithoutAlpha = Template.bind({});
 WithoutAlpha.args = {
   hasAlpha: false,
 };
+
+export const WithCustomAnimation = Template.bind({});
+WithCustomAnimation.args = {
+  onAnimationRender: ({ content, progress }) => {
+    const scale = 0.9 + 0.1 * progress;
+    const y = 1 - progress;
+
+    // eslint-disable-next-line no-param-reassign
+    content.style.transform = `scale(${scale}) translateY(${y}rem)`;
+  },
+};
