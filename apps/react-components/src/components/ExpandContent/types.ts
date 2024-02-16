@@ -17,6 +17,11 @@ export interface IExpandContentProps extends IBaseComponent {
    * @default true
    */
   hasAlpha?: boolean;
+  /**
+   * Should render hidden content
+   * @default true
+   */
+  isContentRendered?: boolean;
   /** Event on animation end */
   onAnimationEnd?: (isActive: boolean) => void;
   children?: ReactNode;

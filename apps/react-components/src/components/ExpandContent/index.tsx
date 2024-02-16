@@ -1,14 +1,11 @@
-import React, { forwardRef, useEffect, useRef, useState } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import { useEvent, useForwardedRef } from '@anton.bobrov/react-hooks';
 import { useTimeline } from '@anton.bobrov/react-vevet-hooks';
-import { easing as easingProgress, clampScope } from '@anton.bobrov/vevet-init';
 import cn from 'classnames';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 import { IExpandContentProps } from './types';
-
-const GLOBAL_SCOPE = [0, 1];
-const EXPAND_SCOPE = [0, 0.75];
-const ALPHA_SCOPE = [0.5, 1];
+import { useStates } from './utils/useStates';
+import { render } from './utils/render';
 
 /** Accordion base */
 export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
@@ -16,9 +13,10 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
     {
       className,
       style,
-      isActive = false,
+      isActive: isActiveProp = false,
       duration: durationProp = 500,
       hasAlpha = true,
+      isContentRendered: isContentRenderedProp = true,
       onAnimationEnd: onAnimationEndProp,
       children,
     },
@@ -27,44 +25,29 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
     const parentRef = useForwardedRef(forwardedRef);
     const contentRef = useRef<HTMLDivElement>(null);
 
-    const [isFirstExpand, setIsFirstExpand] = useState(isActive);
-    const duration = isFirstExpand ? 1 : durationProp;
+    const { isActive, setIsFirstExpand, isContentRendered, duration } =
+      useStates({
+        isActive: isActiveProp,
+        duration: durationProp,
+        isContentRendered: isContentRenderedProp,
+      });
 
     const onAnimationEnd = useEvent(onAnimationEndProp);
 
     const { play, reverse, timeline } = useTimeline({
       duration,
       onProgress: ({ progress }) => {
-        const parent = parentRef.current;
-        const content = contentRef.current;
-
-        if (!parent || !content || !timeline) {
-          return;
-        }
-
-        const heightProgress = easingProgress(
-          clampScope(progress, hasAlpha ? EXPAND_SCOPE : GLOBAL_SCOPE),
-        );
-
-        const contentHeight = content.clientHeight;
-        parent.style.height =
-          progress === 1 ? 'auto' : `${contentHeight * heightProgress}px`;
-
-        content.style.visibility = progress === 0 ? 'hidden' : 'visible';
-
-        if (hasAlpha) {
-          const alpha = easingProgress(clampScope(progress, ALPHA_SCOPE));
-
-          content.style.opacity = `${alpha}`;
-        }
-
-        if (timeline.isReversed && progress === 0) {
-          onAnimationEnd?.(false);
-          setIsFirstExpand(false);
-        } else if (!timeline.isReversed && progress === 1) {
-          onAnimationEnd?.(true);
-          setIsFirstExpand(false);
-        }
+        render({
+          parentRef,
+          contentRef,
+          timeline,
+          progress,
+          hasAlpha,
+          onEnd: (data) => {
+            onAnimationEnd?.(data);
+            setIsFirstExpand(false);
+          },
+        });
       },
     });
 
@@ -90,7 +73,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
           ref={contentRef}
           className={prefixedClasNames('expand-content__content')}
         >
-          {children}
+          {isContentRendered && children}
         </div>
       </div>
     );
