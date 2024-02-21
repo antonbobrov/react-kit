@@ -16,6 +16,7 @@ export * from './useIntersectionObserver';
 export * from './useIsOnceMounted';
 export * from './useLiteInteraction';
 export * from './useMouseClientPosition';
+export * from './useOnceProp';
 export * from './useOnElementResize';
 export * from './useOnEscape';
 export * from './useOnInViewport';
