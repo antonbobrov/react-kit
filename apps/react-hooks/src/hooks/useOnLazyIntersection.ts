@@ -37,7 +37,7 @@ export function useOnLazyIntersection({
       onIn?.();
       setIsIn(true);
     },
-    rootMargin: '0% 175% 175% 0%',
+    rootMargin: '0% 0% 175% 0%',
     destroyOnIn: true,
     isDisabled,
   });
