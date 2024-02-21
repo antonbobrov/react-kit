@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-dat-gui",
   "entries": [
     {
+      "version": "3.0.4",
+      "tag": "@anton.bobrov/react-dat-gui_v3.0.4",
+      "date": "Wed, 21 Feb 2024 15:25:23 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.7.2`"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.0.3",
       "tag": "@anton.bobrov/react-dat-gui_v3.0.3",
       "date": "Wed, 21 Feb 2024 15:16:10 GMT",

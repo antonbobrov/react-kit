@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Wed, 21 Feb 2024 15:16:10 GMT and should not be manually modified.
+This log was last generated on Wed, 21 Feb 2024 15:25:23 GMT and should not be manually modified.
+
+## 2.7.2
+Wed, 21 Feb 2024 15:25:23 GMT
+
+### Patches
+
+- useOnLazyIntersection: update `rootMargin`
 
 ## 2.7.1
 Wed, 21 Feb 2024 15:16:10 GMT
