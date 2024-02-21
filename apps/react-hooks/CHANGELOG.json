@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "2.7.0",
+      "tag": "@anton.bobrov/react-hooks_v2.7.0",
+      "date": "Wed, 21 Feb 2024 12:54:44 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add `useOnceProp`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.6.0",
       "tag": "@anton.bobrov/react-hooks_v2.6.0",
       "date": "Tue, 06 Feb 2024 18:53:48 GMT",

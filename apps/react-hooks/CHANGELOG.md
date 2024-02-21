@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Tue, 06 Feb 2024 18:53:48 GMT and should not be manually modified.
+This log was last generated on Wed, 21 Feb 2024 12:54:44 GMT and should not be manually modified.
+
+## 2.7.0
+Wed, 21 Feb 2024 12:54:44 GMT
+
+### Minor changes
+
+- Add `useOnceProp`
 
 ## 2.6.0
 Tue, 06 Feb 2024 18:53:48 GMT
