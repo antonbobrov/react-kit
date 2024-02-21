@@ -9,6 +9,7 @@ const defaultProps: Required<TProps> = {
   resizeDebounce: 30,
   easing: [0.25, 0.1, 0.25, 1],
   shouldCheckWebpSupport: true,
+  widthDetection: 'boundingRect',
 };
 
 const overrideProps =
