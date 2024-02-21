@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "2.7.1",
+      "tag": "@anton.bobrov/react-hooks_v2.7.1",
+      "date": "Wed, 21 Feb 2024 15:16:10 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "useOnLazyIntersection: update `rootMargin`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.7.0",
       "tag": "@anton.bobrov/react-hooks_v2.7.0",
       "date": "Wed, 21 Feb 2024 12:54:44 GMT",
