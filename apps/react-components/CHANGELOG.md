@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 21 Feb 2024 15:25:23 GMT and should not be manually modified.
+This log was last generated on Mon, 26 Feb 2024 08:55:42 GMT and should not be manually modified.
+
+## 2.6.0
+Mon, 26 Feb 2024 08:55:42 GMT
+
+### Minor changes
+
+- BaseVideo: add `isPlaying`
 
 ## 2.5.3
 Wed, 21 Feb 2024 15:25:23 GMT

@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.6.0",
+      "tag": "@anton.bobrov/react-components_v2.6.0",
+      "date": "Mon, 26 Feb 2024 08:55:42 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "BaseVideo: add `isPlaying`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.5.3",
       "tag": "@anton.bobrov/react-components_v2.5.3",
       "date": "Wed, 21 Feb 2024 15:25:23 GMT",
