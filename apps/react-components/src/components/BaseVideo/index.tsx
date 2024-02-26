@@ -7,16 +7,29 @@ import { requestVideoPlay } from './utils/requestVideoPlay';
 /** Base Video component */
 export const BaseVideo = forwardRef<HTMLVideoElement, IBaseVideoProps>(
   (
-    { src, children, autoPlay, onLoadedMetadata, ...videoProps },
+    {
+      src,
+      children,
+      autoPlay,
+      isPlaying: isPlayingProp,
+      onLoadedMetadata,
+      ...videoProps
+    },
     forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
 
     const [isLoaded, setIsLoaded] = useState(false);
-    const isAutoPlay = isLoaded && autoPlay;
+    const isPlaying = autoPlay || isPlayingProp;
 
     useEffect(() => {
-      if (!isAutoPlay || !ref.current) {
+      if (!isLoaded || !ref.current) {
+        return undefined;
+      }
+
+      if (!isPlaying) {
+        ref.current.pause();
+
         return undefined;
       }
 
@@ -24,7 +37,7 @@ export const BaseVideo = forwardRef<HTMLVideoElement, IBaseVideoProps>(
       promise?.then(() => {}).catch(() => {});
 
       return () => promise?.cancel();
-    }, [isAutoPlay, ref]);
+    }, [isLoaded, isPlaying, ref]);
 
     return (
       <video
