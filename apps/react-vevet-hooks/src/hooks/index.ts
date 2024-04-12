@@ -1,6 +1,7 @@
 export * from './useAnimationFrame';
 export * from './useBreakpointName';
 export * from './useDraggerDirection';
+export * from './useIsMobile';
 export * from './useNonMobileHover';
 export * from './useNonMobilePointerHover';
 export * from './useOnPageLoad';
