@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Wed, 20 Mar 2024 12:42:22 GMT and should not be manually modified.
+This log was last generated on Fri, 12 Apr 2024 07:10:16 GMT and should not be manually modified.
+
+## 2.3.0
+Fri, 12 Apr 2024 07:10:16 GMT
+
+### Minor changes
+
+- Add `useIsMobile`
 
 ## 2.2.21
 Wed, 20 Mar 2024 12:42:22 GMT

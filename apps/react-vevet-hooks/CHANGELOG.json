@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-vevet-hooks",
   "entries": [
     {
+      "version": "2.3.0",
+      "tag": "@anton.bobrov/react-vevet-hooks_v2.3.0",
+      "date": "Fri, 12 Apr 2024 07:10:16 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add `useIsMobile`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.2.21",
       "tag": "@anton.bobrov/react-vevet-hooks_v2.2.21",
       "date": "Wed, 20 Mar 2024 12:42:22 GMT",
