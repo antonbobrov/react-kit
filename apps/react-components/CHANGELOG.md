@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Fri, 12 Apr 2024 07:10:16 GMT and should not be manually modified.
+This log was last generated on Tue, 23 Apr 2024 19:09:55 GMT and should not be manually modified.
+
+## 2.7.0
+Tue, 23 Apr 2024 19:09:55 GMT
+
+### Minor changes
+
+- LazyVideo: add `hasAlpha`
+
+### Patches
+
+- BaseVideo: update `autoPlay`
 
 ## 2.6.5
 Fri, 12 Apr 2024 07:10:16 GMT

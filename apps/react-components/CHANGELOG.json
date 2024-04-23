@@ -2,6 +2,23 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.7.0",
+      "tag": "@anton.bobrov/react-components_v2.7.0",
+      "date": "Tue, 23 Apr 2024 19:09:55 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "BaseVideo: update `autoPlay`"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "LazyVideo: add `hasAlpha`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.6.5",
       "tag": "@anton.bobrov/react-components_v2.6.5",
       "date": "Fri, 12 Apr 2024 07:10:16 GMT",
