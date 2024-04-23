@@ -11,4 +11,9 @@ export interface ILazyVideoProps extends IBaseVideoProps {
    * @default 'lazy'
    */
   loading?: 'eager' | 'lazy';
+  /**
+   * Use opacity animation
+   * @default true
+   */
+  hasAlpha?: boolean;
 }

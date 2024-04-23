@@ -1,11 +1,13 @@
 @import '../../settings';
 
 .#{$rkc-prefix}-lazy-video {
-  transition: opacity 0.35s ease-in;
-  opacity: 0;
+  &.#{$rkc-prefix}-has-alpha {
+    transition: opacity 0.35s ease-in;
+    opacity: 0;
 
-  &.#{$rkc-prefix}-is-loaded {
-    opacity: 1;
+    &.#{$rkc-prefix}-is-loaded {
+      opacity: 1;
+    }
   }
 
   &.#{$rkc-prefix}-cover,

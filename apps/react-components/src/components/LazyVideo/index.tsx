@@ -20,6 +20,7 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
       position = 'cover',
       onLoadedMetadata,
       loading = 'lazy',
+      hasAlpha = true,
       ...videoProps
     },
     ref,
@@ -49,6 +50,7 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
     const classNames = prefixedClasNames(
       'lazy-video',
       position,
+      hasAlpha && 'has-alpha',
       isLoaded && 'is-loaded',
     );
 
