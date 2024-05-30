@@ -5,6 +5,8 @@ export type TCreateDatGuiFolderProps = {
   name: string;
   /** Callback on folder created */
   onCreate: (folder: GUI) => void;
+  /** GUI parent folder */
+  parent?: GUI | null;
   /** The folder is opened by default */
   isOpen?: boolean;
 };

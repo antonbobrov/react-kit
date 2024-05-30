@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-dat-gui",
+      "comment": "Add `parent`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-dat-gui"
+}

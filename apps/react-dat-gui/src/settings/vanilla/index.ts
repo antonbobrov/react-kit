@@ -16,6 +16,7 @@ export * from './types';
  *
  * const instance = createDatGuiSettings({
  *   name: 'GUI Folder',
+ *   parent: guiParentFolder,
  *   data: {
  *     color: 0xff0000,
  *     intensity: 0.5,
@@ -36,6 +37,7 @@ export * from './types';
 export function createDatGuiSettings<T extends TData>({
   name,
   isOpen,
+  parent,
   data,
   parameters,
   onChange: onChangeProp,
@@ -80,6 +82,7 @@ export function createDatGuiSettings<T extends TData>({
 
   const folderInstance = createDatGuiFolder({
     name,
+    parent,
     isOpen,
     onCreate,
   });

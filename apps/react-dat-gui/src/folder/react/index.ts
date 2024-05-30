@@ -10,20 +10,25 @@ export * from './types';
  *
  * @example
  *
- * useDatGuiFolder({ name: 'GUI Folder' });
+ * useDatGuiFolder({ name: 'GUI Folder', parent: guiParentFolder });
  */
-export function useDatGuiFolder({ name, isOpen }: TUseDatGuiFolderProps) {
+export function useDatGuiFolder({
+  name,
+  isOpen,
+  parent,
+}: TUseDatGuiFolderProps) {
   const [folder, setFolder] = useState<GUI | null>(null);
 
   useEffect(() => {
     const instance = createDatGuiFolder({
       name,
       isOpen,
-      onCreate: () => setFolder(folder),
+      parent,
+      onCreate: (data) => setFolder(data),
     });
 
     return () => instance.destroy();
-  }, [folder, isOpen, name]);
+  }, [isOpen, name, parent]);
 
   return folder;
 }

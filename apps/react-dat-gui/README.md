@@ -46,3 +46,10 @@ To disable dat.GUI, add this code to `head` tag
   window.USE_DAT_GUI = false;
 </script>
 ```
+
+## Global settings
+```html
+<script>
+  window.OPEN_DAT_GUI = true;
+</script>
+```

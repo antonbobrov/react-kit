@@ -10,6 +10,7 @@ export * from './types';
  *
  * const instance = createDatGuiFolder({
  *   name: 'GUI Folder',
+ *   parent: guiParentFolder,
  *   onCreate: (folder) => console.log(folder),
  * });
  *
@@ -18,6 +19,7 @@ export * from './types';
 export function createDatGuiFolder({
   name,
   onCreate,
+  parent,
   isOpen = true,
 }: TCreateDatGuiFolderProps): TCreateDatGuiFolderReturns {
   let isDestroyed = false;
@@ -26,7 +28,7 @@ export function createDatGuiFolder({
 
   datGUI
     .then((result) => {
-      instance = result;
+      instance = parent ?? result;
 
       if (isDestroyed || !instance) {
         return;

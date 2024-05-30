@@ -13,6 +13,7 @@ export * from './types';
  *
  * const { defaults } = useDatGuiSettings({
  *   name: 'GUI Folder',
+ *   parent: guiParentFolder,
  *   data: {
  *     color: 0xff0000,
  *     intensity: 0.5,
@@ -31,6 +32,7 @@ export * from './types';
 export function useDatGuiSettings<T extends TData>({
   name,
   isOpen,
+  parent,
   data,
   parameters,
   onChange: onChangeProp,
@@ -45,6 +47,7 @@ export function useDatGuiSettings<T extends TData>({
     const instance = createDatGuiSettings({
       name,
       isOpen,
+      parent,
       data,
       parameters,
       debounceDelay,
@@ -58,7 +61,7 @@ export function useDatGuiSettings<T extends TData>({
 
     return () => instance.destroy();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debounceDelay, isOpen, name, onChange]);
+  }, [debounceDelay, isOpen, name, parent, onChange]);
 
   return {
     defaults: gui?.defaults ?? data,
