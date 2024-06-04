@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-dat-gui
 
-This log was last generated on Thu, 30 May 2024 21:51:41 GMT and should not be manually modified.
+This log was last generated on Tue, 04 Jun 2024 07:23:57 GMT and should not be manually modified.
+
+## 3.1.1
+Tue, 04 Jun 2024 07:23:57 GMT
+
+### Patches
+
+- Fix destroying a folder
 
 ## 3.1.0
 Thu, 30 May 2024 21:51:41 GMT

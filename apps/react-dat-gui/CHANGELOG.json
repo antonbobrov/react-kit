@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-dat-gui",
   "entries": [
     {
+      "version": "3.1.1",
+      "tag": "@anton.bobrov/react-dat-gui_v3.1.1",
+      "date": "Tue, 04 Jun 2024 07:23:57 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix destroying a folder"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.1.0",
       "tag": "@anton.bobrov/react-dat-gui_v3.1.0",
       "date": "Thu, 30 May 2024 21:51:41 GMT",
