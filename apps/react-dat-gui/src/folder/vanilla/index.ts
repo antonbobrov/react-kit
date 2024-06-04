@@ -49,8 +49,13 @@ export function createDatGuiFolder({
   const destroy = () => {
     isDestroyed = true;
 
-    if (folder) {
-      instance?.removeFolder(folder);
+    try {
+      if (folder) {
+        instance?.removeFolder(folder);
+      }
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error(e);
     }
   };
 
