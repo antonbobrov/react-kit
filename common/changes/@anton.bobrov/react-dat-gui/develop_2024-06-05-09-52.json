@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-dat-gui",
+      "comment": "Fix nullish parent",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-dat-gui"
+}

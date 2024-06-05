@@ -28,6 +28,10 @@ export function createDatGuiFolder({
 
   datGUI
     .then((result) => {
+      if (parent === null) {
+        return;
+      }
+
       instance = parent ?? result;
 
       if (isDestroyed || !instance) {
