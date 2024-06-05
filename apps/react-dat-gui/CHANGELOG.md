@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-dat-gui
 
-This log was last generated on Tue, 04 Jun 2024 07:23:57 GMT and should not be manually modified.
+This log was last generated on Wed, 05 Jun 2024 09:53:03 GMT and should not be manually modified.
+
+## 3.1.2
+Wed, 05 Jun 2024 09:53:03 GMT
+
+### Patches
+
+- Fix nullish parent
 
 ## 3.1.1
 Tue, 04 Jun 2024 07:23:57 GMT
