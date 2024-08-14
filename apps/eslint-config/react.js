@@ -24,6 +24,9 @@ module.exports = {
     ],
     'react/require-default-props': 0,
     'react/display-name': 2,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react-hooks/exhaustive-deps": ["error", {
+      "additionalHooks": "(useDebouncedEffect|useOnPageLoad|useOnResize)"
+    }]
   },
 };
