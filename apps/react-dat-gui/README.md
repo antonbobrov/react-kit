@@ -20,20 +20,20 @@ const folder = useDatGuiFolder({ name: 'folder name' });
 
 ```ts
 const gui = useDatGuiSettings({
-  name: 'settings folder',
-  isOpen: true,
-  source: {
-    isEnabled: true,
-    ease: 1,
-    color: 0xff00ff,
+  name: 'GUI Folder',
+  parent: folder,
+  data: {
+    color: 0xff0000,
+    intensity: 0.5,
+    isVisible: true,
   },
-  controls: [
-    { name: 'isEnabled', type: 'boolean' },
-    { name: 'ease', type: 'number', min: 0, max: 1, step: 0.01 },
-    { name: 'color', type: 'color' },
-  ],
-  onChange(object) {
-    console.log(object);
+  parameters: {
+    color: { type: 'color' },
+    intensity: { type: 'number', min: 0, max: 1, step: 0.1 },
+    isVisible: { type: 'boolean' },
+  },
+  onChange(current) {
+    console.log(defaults, current);
   },
 });
 ```
