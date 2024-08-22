@@ -28,16 +28,16 @@ export function useScopedTimelineProgress({
     let prevProgress: undefined | number;
 
     const callback = timeline?.addCallback('progress', (data) => {
-      const progress = clampScope(data.progress, scope);
+      const p = clampScope(data.p, scope);
 
-      if (prevProgress === progress) {
+      if (prevProgress === p) {
         return;
       }
 
-      prevProgress = progress;
-      const easingProgress = easing(progress);
+      prevProgress = p;
+      const e = easing(p);
 
-      onProgress({ progress, easing: easingProgress });
+      onProgress({ p, e });
     });
 
     return () => callback?.remove();
