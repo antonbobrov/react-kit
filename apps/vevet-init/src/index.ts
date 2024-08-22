@@ -3,7 +3,6 @@ import { Application, NApplication } from 'vevet';
 type TProps = Omit<NApplication.IProps, 'prefix'>;
 
 const defaultProps: Required<TProps> = {
-  shouldPrintVersion: true,
   tablet: 1199,
   phone: 899,
   resizeDebounce: 30,
