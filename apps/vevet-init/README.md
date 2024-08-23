@@ -11,7 +11,6 @@ npm i "@anton.bobrov/vevet-init"
 ```html
 <script>
   window.vevetProps = {
-    shouldPrintVersion: true,
     resizeDebounce: 30,
     shouldCheckWebpSupport: true,
   };
