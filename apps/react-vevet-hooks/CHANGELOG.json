@@ -2,6 +2,29 @@
   "name": "@anton.bobrov/react-vevet-hooks",
   "entries": [
     {
+      "version": "2.3.1",
+      "tag": "@anton.bobrov/react-vevet-hooks_v2.3.1",
+      "date": "Fri, 23 Aug 2024 10:32:05 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "`useScopedTimelineProgress`: fix after vevet upgrade"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.7.3`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/vevet-init\" to `3.14.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `1.4.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.3.0",
       "tag": "@anton.bobrov/react-vevet-hooks_v2.3.0",
       "date": "Fri, 12 Apr 2024 07:10:16 GMT",

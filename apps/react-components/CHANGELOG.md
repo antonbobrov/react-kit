@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Tue, 23 Apr 2024 19:09:55 GMT and should not be manually modified.
+This log was last generated on Fri, 23 Aug 2024 10:32:05 GMT and should not be manually modified.
+
+## 2.8.0
+Fri, 23 Aug 2024 10:32:05 GMT
+
+### Minor changes
+
+- SplitText: add `isLazy`
 
 ## 2.7.0
 Tue, 23 Apr 2024 19:09:55 GMT

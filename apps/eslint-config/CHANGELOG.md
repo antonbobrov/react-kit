@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/eslint-config
 
-This log was last generated on Mon, 06 Nov 2023 10:32:50 GMT and should not be manually modified.
+This log was last generated on Fri, 23 Aug 2024 10:32:05 GMT and should not be manually modified.
+
+## 1.4.1
+Fri, 23 Aug 2024 10:32:05 GMT
+
+### Patches
+
+- Check deps for custom hooks
 
 ## 1.4.0
 Mon, 06 Nov 2023 10:32:50 GMT

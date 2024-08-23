@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/eslint-config",
   "entries": [
     {
+      "version": "1.4.1",
+      "tag": "@anton.bobrov/eslint-config_v1.4.1",
+      "date": "Fri, 23 Aug 2024 10:32:05 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Check deps for custom hooks"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.4.0",
       "tag": "@anton.bobrov/eslint-config_v1.4.0",
       "date": "Mon, 06 Nov 2023 10:32:50 GMT",

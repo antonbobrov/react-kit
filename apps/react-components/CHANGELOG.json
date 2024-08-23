@@ -2,6 +2,32 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.8.0",
+      "tag": "@anton.bobrov/react-components_v2.8.0",
+      "date": "Fri, 23 Aug 2024 10:32:05 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "SplitText: add `isLazy`"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.7.3`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `2.3.1`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/vevet-init\" to `3.14.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `1.4.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.7.0",
       "tag": "@anton.bobrov/react-components_v2.7.0",
       "date": "Tue, 23 Apr 2024 19:09:55 GMT",
