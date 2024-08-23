@@ -26,13 +26,13 @@ export const FadeContentItem = forwardRef<HTMLDivElement, IProps>(
     const onHide = useEvent(onHideProp);
     const onHidden = useEvent(onHiddenProp);
 
-    const render = useEvent((state: 'hide' | 'show', progress: number) => {
+    const render = useEvent((state: 'hide' | 'show', p: number) => {
       if (state === 'show') {
-        ref.current!.style.opacity = `${progress}`;
+        ref.current!.style.opacity = `${p}`;
       }
 
       if (state === 'hide') {
-        ref.current!.style.opacity = `${1 - progress}`;
+        ref.current!.style.opacity = `${1 - p}`;
       }
     });
 
@@ -61,16 +61,16 @@ export const FadeContentItem = forwardRef<HTMLDivElement, IProps>(
 
       const timeline = new Timeline({ duration });
 
-      timeline.addCallback('progress', ({ easing, progress }) => {
-        render(stateProp, easing);
+      timeline.addCallback('progress', ({ p, e }) => {
+        render(stateProp, e);
 
         if (stateProp === 'show') {
-          onShowProgress(element, progress);
+          onShowProgress(element, p);
         }
 
-        if (stateProp === 'show' && progress === 1) {
+        if (stateProp === 'show' && p === 1) {
           onShown();
-        } else if (stateProp === 'hide' && progress === 1) {
+        } else if (stateProp === 'hide' && p === 1) {
           onHidden();
         }
       });

@@ -11,9 +11,9 @@ export type TModalCloseButtonRenderer = (
 
 export interface IModalRenderAnimationProps {
   /** Current animation progress (0-1) */
-  progress: number;
+  p: number;
   /** Current animation progress (0-1) with easing function */
-  easing: number;
+  e: number;
   /** Root modal element */
   parent: HTMLElement | null;
   /** Modal overlay element */

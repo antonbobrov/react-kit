@@ -26,16 +26,16 @@ export function useWrapperMoreContent({
 
   const timeline = useTimeline({
     duration,
-    onProgress: ({ easing, progress }) => {
+    onProgress: ({ p, e }) => {
       const clipper = clipperRef.current;
       if (!clipper) {
         return;
       }
 
       const difference = Math.max(contentHeight - minHeight, 0);
-      const height = minHeight + difference * easing;
+      const height = minHeight + difference * e;
 
-      clipper.style.height = progress < 1 ? `${height}px` : '';
+      clipper.style.height = p < 1 ? `${height}px` : '';
       clipper.style.maxHeight = 'initial';
     },
   });

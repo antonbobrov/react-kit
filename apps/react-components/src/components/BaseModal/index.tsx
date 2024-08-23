@@ -82,16 +82,16 @@ export const BaseModal: FC<IBaseModalProps> = ({
 
   const timeline = useTimeline({
     duration,
-    onProgress({ progress, easing }) {
+    onProgress({ p, e }) {
       renderAnimation({
         parent: parentRef.current,
         overlay: overlayRef.current,
         scroll: scrollRef.current,
-        progress,
-        easing,
+        p,
+        e,
       });
 
-      if (progress === 0 && timeline?.timeline?.isReversed) {
+      if (p === 0 && timeline?.timeline?.isReversed) {
         if (isUnmountOnClose) {
           setCanRender(false);
         }

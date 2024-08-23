@@ -8,13 +8,18 @@ const meta: Meta<TComponent> = {
   title: 'Text/SplitText',
   component: SplitText,
   tags: ['autodocs'],
+  args: {
+    style: {
+      fontSize: 30,
+    },
+  },
 };
 
 export default meta;
 
 export const Default: StoryObj<TComponent> = {
   args: {
-    text: 'This is a <br /> split text',
+    text: ' <b>Lorem</b>ipsum dolor <b style="color: red;">sit</b> amet,&nbsp;consectetur adipiscing elit, <span style="color: blue;">sed <b><i>d</i>o</b></span> eius<b>m<i>od</i></b> tempor <i>incididunt ut</i> labore et dolore magna aliqua. <br /> <br /> <button type="button" style="font: inherit; background-color: #ccc;">Ut enim</button> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
     hasLetters: true,
     hasLines: true,
   },

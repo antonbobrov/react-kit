@@ -18,7 +18,7 @@ interface IProps {
   parentRef: RefObject<HTMLElement>;
   contentRef: RefObject<HTMLElement>;
   timeline: Timeline | undefined;
-  progress: number;
+  p: number;
   hasAlpha: boolean;
   onRender?: TExpandContentRenderAnimation;
   onEnd?: (isActive: boolean) => void;
@@ -32,7 +32,7 @@ export function render({
   parentRef,
   contentRef,
   timeline,
-  progress,
+  p,
   hasAlpha,
   onRender,
   onEnd,
@@ -46,18 +46,18 @@ export function render({
 
   // calculate progress
   const heightProgress = easingProgress(
-    clampScope(progress, hasAlpha ? EXPAND_SCOPE : GLOBAL_SCOPE),
+    clampScope(p, hasAlpha ? EXPAND_SCOPE : GLOBAL_SCOPE),
   );
   const contentProgress = easingProgress(
-    clampScope(progress, hasAlpha ? ALPHA_SCOPE : GLOBAL_SCOPE),
+    clampScope(p, hasAlpha ? ALPHA_SCOPE : GLOBAL_SCOPE),
   );
 
   // animate height
   parent.style.height =
-    progress === 1 ? 'auto' : `${content.clientHeight * heightProgress}px`;
+    p === 1 ? 'auto' : `${content.clientHeight * heightProgress}px`;
 
   // animate visibility
-  content.style.visibility = progress === 0 ? 'hidden' : 'visible';
+  content.style.visibility = p === 0 ? 'hidden' : 'visible';
 
   // animate alpha
   if (hasAlpha) {
@@ -68,9 +68,9 @@ export function render({
   onRender?.({ content, progress: contentProgress });
 
   // end callbacks
-  if (timeline.isReversed && progress === 0) {
+  if (timeline.isReversed && p === 0) {
     onEnd?.(false);
-  } else if (!timeline.isReversed && progress === 1) {
+  } else if (!timeline.isReversed && p === 1) {
     onEnd?.(true);
   }
 }

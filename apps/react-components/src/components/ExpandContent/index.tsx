@@ -38,12 +38,12 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
 
     const { play, reverse, timeline } = useTimeline({
       duration,
-      onProgress: ({ progress }) => {
+      onProgress: ({ p }) => {
         render({
           parentRef,
           contentRef,
           timeline,
-          progress,
+          p,
           hasAlpha,
           onRender: onAnimationRender,
           onEnd: (data) => {
