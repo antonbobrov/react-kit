@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-vevet-hooks",
+      "comment": "useOnResize: fix `isMobileOptimizedTarget`",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-vevet-hooks"
+}

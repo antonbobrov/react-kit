@@ -23,9 +23,10 @@ export function useOnResize(
   useEffect(() => {
     let destructor = effect();
 
+    const isMobileOptimizedTarget = settings?.isMobileOptimizedTarget ?? true;
+
     let target = settings?.target ?? 'any';
-    target =
-      settings?.isMobileOptimizedTarget && vevet.isMobile ? 'width' : target;
+    target = isMobileOptimizedTarget && vevet.isMobile ? 'width' : target;
 
     const viewportCallback = vevet.viewport.add(
       target,
