@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Fri, 23 Aug 2024 10:32:05 GMT and should not be manually modified.
+This log was last generated on Wed, 28 Aug 2024 07:55:07 GMT and should not be manually modified.
+
+## 2.3.2
+Wed, 28 Aug 2024 07:55:07 GMT
+
+### Patches
+
+- useOnResize: fix `isMobileOptimizedTarget`
 
 ## 2.3.1
 Fri, 23 Aug 2024 10:32:05 GMT
