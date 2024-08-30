@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "2.8.0",
+      "tag": "@anton.bobrov/react-hooks_v2.8.0",
+      "date": "Fri, 30 Aug 2024 10:20:59 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add `useClientHeight`, `useClientWidth`, `useOffsetHeight`, `useOffsetSize` & `useOffsetWidth` hooks"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.7.3",
       "tag": "@anton.bobrov/react-hooks_v2.7.3",
       "date": "Fri, 23 Aug 2024 10:32:05 GMT",

@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Fri, 23 Aug 2024 10:32:05 GMT and should not be manually modified.
+This log was last generated on Fri, 30 Aug 2024 10:20:59 GMT and should not be manually modified.
+
+## 2.8.0
+Fri, 30 Aug 2024 10:20:59 GMT
+
+### Minor changes
+
+- Add `useClientHeight`, `useClientWidth`, `useOffsetHeight`, `useOffsetSize` & `useOffsetWidth` hooks
 
 ## 2.7.3
 Fri, 23 Aug 2024 10:32:05 GMT
