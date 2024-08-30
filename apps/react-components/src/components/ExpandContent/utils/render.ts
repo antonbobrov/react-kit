@@ -54,7 +54,7 @@ export function render({
 
   // animate height
   parent.style.height =
-    p === 1 ? 'auto' : `${content.clientHeight * heightProgress}px`;
+    p === 1 ? 'auto' : `${content.offsetHeight * heightProgress}px`;
 
   // animate visibility
   content.style.visibility = p === 0 ? 'hidden' : 'visible';

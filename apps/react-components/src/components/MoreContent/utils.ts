@@ -1,4 +1,4 @@
-import { useClientSize, useEvent } from '@anton.bobrov/react-hooks';
+import { useEvent, useOffsetHeight } from '@anton.bobrov/react-hooks';
 import { useTimeline } from '@anton.bobrov/react-vevet-hooks';
 import { RefObject, useEffect, useState } from 'react';
 
@@ -15,7 +15,7 @@ export function useWrapperMoreContent({
   minHeight,
   duration,
 }: IProps) {
-  const { clientHeight: contentHeight } = useClientSize(contentRef);
+  const contentHeight = useOffsetHeight(contentRef);
 
   const [isActive, setIsActive] = useState(false);
   const [isEnabled, setIsEnabled] = useState(false);
