@@ -1,5 +1,7 @@
 export * from './useChange';
+export * from './useClientHeight';
 export * from './useClientSize';
+export * from './useClientWidth';
 export * from './useDebouncedEffect';
 export * from './useDebouncedEvent';
 export * from './useDebouncedProp';
@@ -16,6 +18,9 @@ export * from './useIntersectionObserver';
 export * from './useIsOnceMounted';
 export * from './useLiteInteraction';
 export * from './useMouseClientPosition';
+export * from './useOffsetHeight';
+export * from './useOffsetSize';
+export * from './useOffsetWidth';
 export * from './useOnceProp';
 export * from './useOnElementResize';
 export * from './useOnEscape';

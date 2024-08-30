@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "Add `useClientHeight`, `useClientWidth`, `useOffsetHeight`, `useOffsetSize` & `useOffsetWidth` hooks",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}

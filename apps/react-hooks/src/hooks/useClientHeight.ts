@@ -3,9 +3,8 @@ import { getHookEventElement } from '@utils/internal/getHookEventElement';
 import { useOnElementResize } from './useOnElementResize';
 import { THookEventElement } from '../types';
 
-/** Get client sizes of an element */
-export function useClientSize(ref: THookEventElement<Element>) {
-  const [clientWidth, setClientWidth] = useState(0);
+/** Get client height of an element */
+export function useClientHeight(ref: THookEventElement<Element>) {
   const [clientHeight, setClientHeight] = useState(0);
 
   useOnElementResize(ref, () => {
@@ -14,9 +13,8 @@ export function useClientSize(ref: THookEventElement<Element>) {
       return;
     }
 
-    setClientWidth(element.clientWidth);
     setClientHeight(element.clientHeight);
   });
 
-  return { clientWidth, clientHeight };
+  return clientHeight;
 }
