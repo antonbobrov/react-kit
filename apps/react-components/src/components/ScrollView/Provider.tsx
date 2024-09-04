@@ -11,13 +11,13 @@ import { IScrollViewProviderProps } from './types';
 export const Provider: FC<IScrollViewProviderProps> = ({
   children,
   instanceKey,
-  intersectionRoot,
-  states,
-  hasDelay,
-  maxDelay,
-  direction,
-  viewportTarget,
-  resizeDebounce,
+  intersectionRoot = null,
+  states = 'in',
+  hasDelay = true,
+  maxDelay = 1000,
+  direction = 'vertical',
+  viewportTarget = 'any',
+  resizeDebounce = 0,
   isEnabled = false,
   ...props
 }) => {
@@ -43,6 +43,8 @@ export const Provider: FC<IScrollViewProviderProps> = ({
       viewportTarget,
       resizeDebounce,
     });
+
+    console.log(instance.props);
 
     setScrollView(instance);
 
