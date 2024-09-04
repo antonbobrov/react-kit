@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/eslint-config
 
-This log was last generated on Fri, 23 Aug 2024 10:32:05 GMT and should not be manually modified.
+This log was last generated on Wed, 04 Sep 2024 11:47:01 GMT and should not be manually modified.
+
+## 2.0.0
+Wed, 04 Sep 2024 11:47:01 GMT
+
+### Breaking changes
+
+- Upgrade eslint
 
 ## 1.4.1
 Fri, 23 Aug 2024 10:32:05 GMT

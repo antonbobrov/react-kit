@@ -1,6 +1,6 @@
 {
   "name": "@anton.bobrov/vevet-init",
-  "version": "3.15.2",
+  "version": "3.15.3",
   "description": "VEVET initialization",
   "private": false,
   "main": "lib/cjs/index.js",
