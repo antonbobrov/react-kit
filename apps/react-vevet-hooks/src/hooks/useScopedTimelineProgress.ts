@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import {
   NTimeline,
   Timeline,
@@ -19,16 +19,18 @@ export interface IUseScopedTimelineProgressProps {
 /** Cast timeline progress relative to the given scope */
 export function useScopedTimelineProgress({
   onProgress: onProgressProp,
-  scope,
+  scope: scopeProp,
   timeline,
 }: IUseScopedTimelineProgressProps) {
   const onProgress = useEvent(onProgressProp);
+
+  const scopeRef = useRef(scopeProp);
 
   useEffect(() => {
     let prevProgress: undefined | number;
 
     const callback = timeline?.addCallback('progress', (data) => {
-      const p = clampScope(data.p, scope);
+      const p = clampScope(data.p, scopeRef.current);
 
       if (prevProgress === p) {
         return;
@@ -41,5 +43,5 @@ export function useScopedTimelineProgress({
     });
 
     return () => callback?.remove();
-  }, [onProgress, scope, timeline]);
+  }, [onProgress, timeline]);
 }
