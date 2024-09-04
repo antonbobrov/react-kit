@@ -2,6 +2,27 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.9.6",
+      "tag": "@anton.bobrov/react-components_v2.9.6",
+      "date": "Wed, 04 Sep 2024 14:57:32 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.8.2`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `2.3.9`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/vevet-init\" to `3.16.1`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `2.0.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.9.5",
       "tag": "@anton.bobrov/react-components_v2.9.5",
       "date": "Wed, 04 Sep 2024 13:59:37 GMT",

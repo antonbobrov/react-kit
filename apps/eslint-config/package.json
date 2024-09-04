@@ -1,6 +1,6 @@
 {
   "name": "@anton.bobrov/eslint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Eslint config for react projects",
   "private": false,
   "files": [
