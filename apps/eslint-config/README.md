@@ -1,4 +1,4 @@
-# Eslint config for React projects
+# Eslint configs for vanilla/react/next projects
 
 ## Installation
 

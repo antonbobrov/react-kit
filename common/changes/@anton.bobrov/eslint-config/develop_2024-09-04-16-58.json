@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/eslint-config",
+      "comment": "Eslint: update description",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/eslint-config"
+}

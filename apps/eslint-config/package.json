@@ -1,7 +1,7 @@
 {
   "name": "@anton.bobrov/eslint-config",
   "version": "2.0.1",
-  "description": "Eslint config for react projects",
+  "description": "Eslint configs for vanilla/react/next projects",
   "private": false,
   "files": [
     "index.js",
