@@ -1,6 +1,14 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Fri, 30 Aug 2024 10:20:59 GMT and should not be manually modified.
+This log was last generated on Wed, 04 Sep 2024 08:57:09 GMT and should not be manually modified.
+
+## 2.9.0
+Wed, 04 Sep 2024 08:57:09 GMT
+
+### Minor changes
+
+- ScrollView.Provider: fix default props
+- Marquee: fix default props
 
 ## 2.8.2
 Fri, 30 Aug 2024 10:20:59 GMT

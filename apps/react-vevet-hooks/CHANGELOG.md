@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Fri, 30 Aug 2024 10:20:59 GMT and should not be manually modified.
+This log was last generated on Wed, 04 Sep 2024 08:57:09 GMT and should not be manually modified.
+
+## 2.3.4
+Wed, 04 Sep 2024 08:57:09 GMT
+
+### Patches
+
+- useScopedTimelineProgress: save scope
 
 ## 2.3.3
 Fri, 30 Aug 2024 10:20:59 GMT
