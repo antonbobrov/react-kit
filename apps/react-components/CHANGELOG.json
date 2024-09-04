@@ -2,6 +2,26 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.9.5",
+      "tag": "@anton.bobrov/react-components_v2.9.5",
+      "date": "Wed, 04 Sep 2024 13:59:37 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Fix docs build"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `2.3.8`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/vevet-init\" to `3.16.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.9.4",
       "tag": "@anton.bobrov/react-components_v2.9.4",
       "date": "Wed, 04 Sep 2024 11:47:01 GMT",
