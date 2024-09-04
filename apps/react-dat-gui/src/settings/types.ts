@@ -19,6 +19,6 @@ export type TDataParameters<T extends TData> = {
   [Prop in keyof T]: T[Prop] extends boolean
     ? TBoolean
     : T[Prop] extends number
-    ? TNumber | TColor
-    : null;
+      ? TNumber | TColor
+      : null;
 };

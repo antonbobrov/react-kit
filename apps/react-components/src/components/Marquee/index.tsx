@@ -86,6 +86,7 @@ export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
           aria-hidden
         >
           {children}
+
           {separator}
         </span>
       </span>

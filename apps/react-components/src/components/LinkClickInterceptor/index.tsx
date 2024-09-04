@@ -7,7 +7,7 @@ import { getAnchor } from './utils';
  * Component that catches click on link
  *
  * Callbacks will never be triggered if an anchor
- * has the `data-link`, `target` or `download` attribute
+ * has the `data-ignore-link-interceptor`, `target` or `download` attribute
  * or the `href` contains a `#`
  */
 export const LinkClickInterceptor = forwardRef<
@@ -31,7 +31,7 @@ export const LinkClickInterceptor = forwardRef<
       const currentURL = new URL(window.location.href);
       const isExternal = targetURL.origin !== currentURL.origin;
 
-      if (anchor.hasAttribute('data-framework-link')) {
+      if (anchor.hasAttribute('data-ignore-link-interceptor')) {
         return;
       }
 

@@ -51,7 +51,8 @@ module.exports = {
     "@typescript-eslint/no-empty-function": 0,
     'import/prefer-default-export': 0,
     'newline-before-return': 'error',
-    'promise/always-return': 0,
+    'promise/always-return': "off",
+    "promise/catch-or-return": "error",
     'no-underscore-dangle': [
       'error',
       { allowAfterThis: true, allowAfterSuper: true },

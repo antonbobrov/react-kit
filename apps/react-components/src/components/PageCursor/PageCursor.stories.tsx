@@ -69,6 +69,7 @@ const Template: StoryFn<TComponent> = ({ children, cursors, ...props }) => (
     </PageCursor.Target>
 
     <br />
+
     <br />
 
     <PageCursor.Target type="second">

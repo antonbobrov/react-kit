@@ -16,7 +16,7 @@
    * path segment in the "$schema" field for all your Rush config files.  This will ensure
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
-  "rushVersion": "5.75.0",
+  "rushVersion": "5.133.3",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -123,7 +123,7 @@
    * LTS schedule: https://nodejs.org/en/about/releases/
    * LTS versions: https://nodejs.org/en/download/releases/
    */
-  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || >=16.13.0 <17.0.0",
+  "nodeSupportedVersionRange": ">=20.0.0",
 
   /**
    * Odd-numbered major versions of Node.js are experimental.  Even-numbered releases
@@ -397,32 +397,32 @@
   "projects": [
     {
       "packageName": "@anton.bobrov/eslint-config",
-      "projectFolder": "apps/eslint-config/",
+      "projectFolder": "apps/eslint-config",
       "shouldPublish": true
     },
     {
       "packageName": "@anton.bobrov/react-hooks",
-      "projectFolder": "apps/react-hooks/",
+      "projectFolder": "apps/react-hooks",
       "shouldPublish": true
     },
     {
       "packageName": "@anton.bobrov/vevet-init",
-      "projectFolder": "apps/vevet-init/",
+      "projectFolder": "apps/vevet-init",
       "shouldPublish": true
     },
     {
       "packageName": "@anton.bobrov/react-vevet-hooks",
-      "projectFolder": "apps/react-vevet-hooks/",
+      "projectFolder": "apps/react-vevet-hooks",
       "shouldPublish": true
     },
     {
       "packageName": "@anton.bobrov/react-dat-gui",
-      "projectFolder": "apps/react-dat-gui/",
+      "projectFolder": "apps/react-dat-gui",
       "shouldPublish": true
     },
     {
       "packageName": "@anton.bobrov/react-components",
-      "projectFolder": "apps/react-components/",
+      "projectFolder": "apps/react-components",
       "shouldPublish": true
     }
     // {

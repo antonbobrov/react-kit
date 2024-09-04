@@ -12,23 +12,35 @@ const meta: Meta<TComponent> = {
     children: (
       <>
         <a href="https://google.com/">External link</a>
+
         <br />
+
         <a href="https://google.com/" target="_blank" rel="noreferrer">
           External link with target
         </a>
+
         <br />
+
         <a href="/" download>
           Download
         </a>
+
         <br />
+
         <a href="/">Interal link</a>
+
         <br />
+
         <a href="#hash">Link with hash</a>
+
         <br />
+
         <a href="/">
           <span>Link with children</span>
         </a>
+
         <br />
+
         <a href="/" data-framework-link="">
           <span>Framework link</span>
         </a>

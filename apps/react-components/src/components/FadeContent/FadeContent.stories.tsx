@@ -32,7 +32,7 @@ const Template: StoryFn<TComponent> = ({
         {content.map(({ key }) => (
           <li key={key}>
             <button type="button" onClick={() => setActiveKey(key)}>
-              Activate content #{key} {activeKey === key && ' / active'}
+              {`Activate content #${key} ${activeKey === key ? ' / active' : ''}`}
             </button>
           </li>
         ))}

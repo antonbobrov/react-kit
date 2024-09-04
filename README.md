@@ -9,5 +9,4 @@
 - [`vevet-init`](apps/vevet-init)
 
 ## Dev Config
-* node v16.13.0
-* npm v8.1.0
+* node v20.17.0

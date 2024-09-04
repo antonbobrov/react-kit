@@ -13,7 +13,9 @@ const meta: Meta<TComponent> = {
     children: (
       <>
         <p>Some text</p>
+
         <input type="text" placeholder="Some text" />
+
         <button type="button">Some button</button>
       </>
     ),
