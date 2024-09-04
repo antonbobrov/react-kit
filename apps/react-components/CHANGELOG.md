@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 04 Sep 2024 09:33:19 GMT and should not be manually modified.
+This log was last generated on Wed, 04 Sep 2024 09:41:35 GMT and should not be manually modified.
+
+## 2.9.3
+Wed, 04 Sep 2024 09:41:35 GMT
+
+### Patches
+
+- ScrollView.Provider: remove extra console.log
 
 ## 2.9.2
 Wed, 04 Sep 2024 09:33:19 GMT
