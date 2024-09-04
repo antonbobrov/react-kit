@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "push-docs": "node ./build-docs.js && gh-pages -d build-docs",
+    "push-docs": "cd ./apps/react-components && npm run build-storybook && cd ../../ && node ./build-docs.js && gh-pages -d build-docs",
     "publish": "rush build && rush version --bump && git add . && git commit -m \"Release\" && npm run publish:rush && npm run push-docs",
     "publish:rush": "rush publish --include-all --publish --apply --set-access-level public"
   }
