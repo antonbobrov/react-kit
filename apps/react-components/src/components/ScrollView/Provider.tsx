@@ -44,8 +44,6 @@ export const Provider: FC<IScrollViewProviderProps> = ({
       resizeDebounce,
     });
 
-    console.log(instance.props);
-
     setScrollView(instance);
 
     return () => {
