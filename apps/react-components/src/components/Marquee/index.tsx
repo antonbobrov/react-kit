@@ -20,7 +20,7 @@ export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
       'aria-label': ariaLabel,
       separator,
       isEnabled = true,
-      prependWhitespace,
+      prependWhitespace = true,
       ...changeableProps
     },
     forwardedRef,
