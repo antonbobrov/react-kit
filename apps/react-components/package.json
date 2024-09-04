@@ -12,7 +12,7 @@
   "sideEffects": false,
   "scripts": {
     "lint": "eslint . --ext .jsx,.js,.tsx,.ts",
-    "build": "rimraf lib && run-s lint build:lib",
+    "build": "rimraf lib && run-s lint build:lib build-storybook",
     "build:lib": "run-p build:esm build:cjs build:types build:styles",
     "build:esm": "tsc -p config/tsconfig.esm.json && tsc-alias -p config/tsconfig.esm.json",
     "build:cjs": "tsc -p config/tsconfig.cjs.json && tsc-alias -p config/tsconfig.cjs.json",

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "Fix docs build",
+      "type": "none"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}

@@ -1,4 +1,3 @@
-const { execSync } = require('node:child_process');
 const fs = require('fs');
 
 fs.cpSync('./apps/react-components/storybook-static/', './build-docs/', { recursive: true });
