@@ -25,11 +25,11 @@ const Components: FC = () => (
 
 const Template: StoryFn<TComponent> = (props) => (
   <PageScroll.Provider {...props}>
-    <PageScroll.ScrollBar>
-      <PageScroll.SmoothContainer>
-        <Components />
-      </PageScroll.SmoothContainer>
-    </PageScroll.ScrollBar>
+    <PageScroll.ScrollBar />
+
+    <PageScroll.SmoothContainer>
+      <Components />
+    </PageScroll.SmoothContainer>
   </PageScroll.Provider>
 );
 
