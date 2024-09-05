@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "PageScroll.ScrollBar: add `isDraggable`, `shouldAutoSize`, `canAutoHide` & `minSize` props",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}

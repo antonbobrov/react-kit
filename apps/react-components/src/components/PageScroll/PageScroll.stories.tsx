@@ -25,7 +25,7 @@ const Components: FC = () => (
 
 const Template: StoryFn<TComponent> = (props) => (
   <PageScroll.Provider {...props}>
-    <PageScroll.ScrollBar />
+    <PageScroll.ScrollBar canAutoHide={false} />
 
     <PageScroll.SmoothContainer>
       <Components />

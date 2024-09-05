@@ -9,6 +9,10 @@ export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
   children,
   resizeKey,
   isDisabled,
+  isDraggable = true,
+  shouldAutoSize = true,
+  canAutoHide = true,
+  minSize = 50,
 }) => {
   const [scrollbar, setScrollbar] = useState<VevetScrollBar | undefined>();
 
@@ -22,6 +26,10 @@ export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
     const instance = new VevetScrollBar({
       container: scrollSelector,
       domParent: document.body,
+      isDraggable,
+      shouldAutoSize,
+      canAutoHide,
+      minSize,
     });
     setScrollbar(instance);
 
@@ -49,7 +57,14 @@ export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
         prefixedClasNames('page-scroll-scrollbar-parent'),
       );
     };
-  }, [scrollSelector, isDisabled]);
+  }, [
+    scrollSelector,
+    isDisabled,
+    isDraggable,
+    shouldAutoSize,
+    canAutoHide,
+    minSize,
+  ]);
 
   useEffect(() => {
     if (!scrollbar?.isDestroyed) {
