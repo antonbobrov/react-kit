@@ -1,6 +1,15 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 04 Sep 2024 17:10:21 GMT and should not be manually modified.
+This log was last generated on Fri, 06 Sep 2024 15:09:31 GMT and should not be manually modified.
+
+## 2.10.0
+Fri, 06 Sep 2024 15:09:31 GMT
+
+### Minor changes
+
+- PageScroll.ScrollBar: make children optional
+- PageScroll.ScrollBar: add `isDraggable`, `shouldAutoSize`, `canAutoHide` & `minSize` props
+- ButtonAnchor: add `renderAnchor`
 
 ## 2.9.7
 Wed, 04 Sep 2024 17:10:21 GMT

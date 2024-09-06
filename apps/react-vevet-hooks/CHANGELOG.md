@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Wed, 04 Sep 2024 17:10:21 GMT and should not be manually modified.
+This log was last generated on Fri, 06 Sep 2024 15:09:31 GMT and should not be manually modified.
+
+## 2.3.11
+Fri, 06 Sep 2024 15:09:31 GMT
+
+### Patches
+
+- Fixes after vevet upgrade
 
 ## 2.3.10
 Wed, 04 Sep 2024 17:10:21 GMT

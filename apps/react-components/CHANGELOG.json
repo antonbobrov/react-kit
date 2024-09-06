@@ -2,6 +2,32 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.10.0",
+      "tag": "@anton.bobrov/react-components_v2.10.0",
+      "date": "Fri, 06 Sep 2024 15:09:31 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "PageScroll.ScrollBar: make children optional"
+          },
+          {
+            "comment": "PageScroll.ScrollBar: add `isDraggable`, `shouldAutoSize`, `canAutoHide` & `minSize` props"
+          },
+          {
+            "comment": "ButtonAnchor: add `renderAnchor`"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `2.3.11`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/vevet-init\" to `3.18.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.9.7",
       "tag": "@anton.bobrov/react-components_v2.9.7",
       "date": "Wed, 04 Sep 2024 17:10:21 GMT",
