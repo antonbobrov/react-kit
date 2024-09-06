@@ -28,7 +28,7 @@ export function useOnResize(
     let target = settings?.target ?? 'any';
     target = isMobileOptimizedTarget && vevet.isMobile ? 'width' : target;
 
-    const viewportCallback = vevet.viewport.add(
+    const viewportCallback = vevet.viewport.callbacks.add(
       target,
       () => {
         destructor?.();

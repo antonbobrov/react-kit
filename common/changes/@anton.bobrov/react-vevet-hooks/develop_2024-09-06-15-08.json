@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-vevet-hooks",
+      "comment": "Fixes after vevet upgrade",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-vevet-hooks"
+}
