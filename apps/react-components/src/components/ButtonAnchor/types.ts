@@ -1,7 +1,21 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
+import {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
+
+export type TButtonAnchorRenderAnchor = ForwardRefExoticComponent<
+  any & RefAttributes<HTMLAnchorElement>
+>;
+
+export interface IButtonAnchorBaseProps {
+  renderAnchor?: TButtonAnchorRenderAnchor;
+}
 
 export interface IButtonAnchorBtn
-  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> {
+  extends IButtonAnchorBaseProps,
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> {
   /** Element tagName */
   tag: 'button';
   /** Button type */
@@ -9,7 +23,8 @@ export interface IButtonAnchorBtn
 }
 
 export interface IButtonAnchorLink
-  extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'children'> {
+  extends IButtonAnchorBaseProps,
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'children'> {
   /** Element tagName */
   tag: 'a';
   /** Link */
