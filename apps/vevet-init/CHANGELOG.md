@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/vevet-init
 
-This log was last generated on Fri, 06 Sep 2024 15:09:31 GMT and should not be manually modified.
+This log was last generated on Wed, 11 Sep 2024 08:52:46 GMT and should not be manually modified.
+
+## 3.19.0
+Wed, 11 Sep 2024 08:52:46 GMT
+
+### Minor changes
+
+- Upgrade Vevet to 3.19.0
 
 ## 3.18.0
 Fri, 06 Sep 2024 15:09:31 GMT
