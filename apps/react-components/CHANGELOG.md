@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Wed, 11 Sep 2024 08:52:46 GMT and should not be manually modified.
+This log was last generated on Wed, 11 Sep 2024 09:37:16 GMT and should not be manually modified.
+
+## 2.10.2
+Wed, 11 Sep 2024 09:37:16 GMT
+
+### Patches
+
+- useScrollViewAnimationTrigger: fix `onOut`
 
 ## 2.10.1
 Wed, 11 Sep 2024 08:52:46 GMT

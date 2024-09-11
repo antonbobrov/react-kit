@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.10.2",
+      "tag": "@anton.bobrov/react-components_v2.10.2",
+      "date": "Wed, 11 Sep 2024 09:37:16 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "useScrollViewAnimationTrigger: fix `onOut`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.10.1",
       "tag": "@anton.bobrov/react-components_v2.10.1",
       "date": "Wed, 11 Sep 2024 08:52:46 GMT",
