@@ -26,6 +26,7 @@ export function useScrollViewAnimationTrigger({
   useScrollView({
     ref,
     onIn: () => setIsActive(true),
+    onOut: () => setIsActive(false),
     isDisabled: animation !== 'view',
     inDelay: inViewDelay,
   });
