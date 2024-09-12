@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Wed, 04 Sep 2024 17:10:21 GMT and should not be manually modified.
+This log was last generated on Thu, 12 Sep 2024 17:13:01 GMT and should not be manually modified.
+
+## 2.9.0
+Thu, 12 Sep 2024 17:13:01 GMT
+
+### Minor changes
+
+- Add `useDomId`
+
+### Patches
+
+- useFocusTrap: fix keyboard events
 
 ## 2.8.3
 Wed, 04 Sep 2024 17:10:21 GMT
