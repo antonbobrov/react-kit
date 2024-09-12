@@ -1,5 +1,6 @@
 import { RefObject, useEffect } from 'react';
 import { resetFocus, selectFocusableChildren } from '@utils/dom';
+import { isBrowser } from '@utils/env';
 import {
   IUseEventListenerSettings,
   useEventListener,
@@ -65,7 +66,7 @@ export function useFocusTrap(
   }, [isDisabled, isRestoreFocus, ref]);
 
   useEventListener({
-    ref,
+    ref: isBrowser ? window : null,
     target: 'keydown',
     listener: (event) => {
       const { current: element } = ref;
@@ -98,5 +99,6 @@ export function useFocusTrap(
         default:
       }
     },
+    isDisabled,
   });
 }
