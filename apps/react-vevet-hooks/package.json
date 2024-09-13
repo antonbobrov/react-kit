@@ -1,6 +1,6 @@
 {
   "name": "@anton.bobrov/react-vevet-hooks",
-  "version": "2.3.13",
+  "version": "2.3.14",
   "description": "React + Vevet hooks",
   "private": false,
   "main": "lib/cjs/index.js",

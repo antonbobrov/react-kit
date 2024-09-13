@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-vevet-hooks",
   "entries": [
     {
+      "version": "2.3.14",
+      "tag": "@anton.bobrov/react-vevet-hooks_v2.3.14",
+      "date": "Fri, 13 Sep 2024 12:27:19 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/vevet-init\" to `3.19.2`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.3.13",
       "tag": "@anton.bobrov/react-vevet-hooks_v2.3.13",
       "date": "Thu, 12 Sep 2024 17:13:01 GMT",
