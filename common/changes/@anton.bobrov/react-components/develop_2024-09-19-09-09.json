@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-components",
+      "comment": "Update video player version",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-components"
+}
