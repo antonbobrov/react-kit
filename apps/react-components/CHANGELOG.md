@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Thu, 19 Sep 2024 09:10:41 GMT and should not be manually modified.
+This log was last generated on Thu, 19 Sep 2024 10:11:17 GMT and should not be manually modified.
+
+## 2.10.6
+Thu, 19 Sep 2024 10:11:17 GMT
+
+### Patches
+
+- useScrollViewAnimationTrigger: apply `inViewDelay` for `animation=true`
 
 ## 2.10.5
 Thu, 19 Sep 2024 09:10:41 GMT
