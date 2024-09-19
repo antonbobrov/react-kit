@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Fri, 13 Sep 2024 12:27:19 GMT and should not be manually modified.
+This log was last generated on Thu, 19 Sep 2024 09:10:41 GMT and should not be manually modified.
+
+## 2.10.5
+Thu, 19 Sep 2024 09:10:41 GMT
+
+### Patches
+
+- Update video player version
 
 ## 2.10.4
 Fri, 13 Sep 2024 12:27:19 GMT
