@@ -1,5 +1,5 @@
-import { RefObject, useEffect, useState } from 'react';
-import { isBoolean } from '@anton.bobrov/react-hooks';
+import { RefObject, useState } from 'react';
+import { isBoolean, useDebouncedEffect } from '@anton.bobrov/react-hooks';
 import { useScrollView } from './useScrollView';
 
 export interface IUseScrollViewAnimationTrigger {
@@ -31,13 +31,17 @@ export function useScrollViewAnimationTrigger({
     inDelay: inViewDelay,
   });
 
-  useEffect(() => {
-    if (!isBoolean(animation)) {
-      return;
-    }
+  useDebouncedEffect(
+    () => {
+      if (!isBoolean(animation)) {
+        return;
+      }
 
-    setIsActive(animation);
-  }, [animation]);
+      setIsActive(animation);
+    },
+    [animation],
+    inViewDelay ?? 0,
+  );
 
   return { isActive };
 }
