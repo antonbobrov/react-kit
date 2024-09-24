@@ -1,6 +1,11 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Tue, 24 Sep 2024 11:23:31 GMT and should not be manually modified.
+This log was last generated on Tue, 24 Sep 2024 12:32:57 GMT and should not be manually modified.
+
+## 2.10.9
+Tue, 24 Sep 2024 12:32:57 GMT
+
+_Version update only_
 
 ## 2.10.8
 Tue, 24 Sep 2024 11:23:31 GMT
