@@ -1,4 +1,5 @@
 export * from './useAnimationFrame';
+export * from './useAnimationFrameSync';
 export * from './useBreakpointName';
 export * from './useDraggerDirection';
 export * from './useIsMobile';
