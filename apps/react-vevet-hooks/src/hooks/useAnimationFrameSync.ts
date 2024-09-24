@@ -3,9 +3,11 @@ import { lerp, objectKeys } from '@anton.bobrov/vevet-init';
 import { useCallback, useRef } from 'react';
 import { useAnimationFrame } from './useAnimationFrame';
 
-type TData = Record<string, number>;
+export type TUseAnimationFrameSyncData = Record<string, number>;
 
-interface IProps<T extends TData> {
+export interface IUseAnimationFrameSyncProps<
+  T extends TUseAnimationFrameSyncData,
+> {
   data: T;
   onUpdate: (data: T) => void;
   ease?: number;
@@ -25,11 +27,11 @@ interface IProps<T extends TData> {
  * set('x', 1);
  * set('y', 0.5);
  */
-export function useAnimationFrameSync<T extends TData>({
+export function useAnimationFrameSync<T extends TUseAnimationFrameSyncData>({
   data: initialData,
   onUpdate: onUpdateProp,
   ease: easeProp = 0.1,
-}: IProps<T>) {
+}: IUseAnimationFrameSyncProps<T>) {
   const onUpdate = useEvent(onUpdateProp);
 
   const dataRef = useRef({
