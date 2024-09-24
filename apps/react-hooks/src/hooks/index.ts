@@ -18,6 +18,7 @@ export * from './useHover';
 export * from './useIntersectionObserver';
 export * from './useIsOnceMounted';
 export * from './useLiteInteraction';
+export * from './useLocalStorage';
 export * from './useMouseClientPosition';
 export * from './useOffsetHeight';
 export * from './useOffsetSize';
