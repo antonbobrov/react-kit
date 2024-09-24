@@ -1,6 +1,14 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Thu, 19 Sep 2024 10:11:17 GMT and should not be manually modified.
+This log was last generated on Tue, 24 Sep 2024 09:32:04 GMT and should not be manually modified.
+
+## 2.10.7
+Tue, 24 Sep 2024 09:32:04 GMT
+
+### Patches
+
+- ExpandContent: remove initial render
+- PageScroll: fix classnames on destroy
 
 ## 2.10.6
 Thu, 19 Sep 2024 10:11:17 GMT

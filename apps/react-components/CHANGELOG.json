@@ -2,6 +2,21 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.10.7",
+      "tag": "@anton.bobrov/react-components_v2.10.7",
+      "date": "Tue, 24 Sep 2024 09:32:04 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "ExpandContent: remove initial render"
+          },
+          {
+            "comment": "PageScroll: fix classnames on destroy"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.10.6",
       "tag": "@anton.bobrov/react-components_v2.10.6",
       "date": "Thu, 19 Sep 2024 10:11:17 GMT",
