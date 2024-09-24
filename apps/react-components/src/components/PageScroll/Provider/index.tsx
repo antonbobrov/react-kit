@@ -77,6 +77,7 @@ export const Provider: FC<IPageScrollProviderProps> = ({
     return () => {
       setSelector?.(undefined);
       scroll.destroy();
+      html.classList.remove(htmlSmoothClassName);
     };
   }, [
     canBeSmoothProp,
