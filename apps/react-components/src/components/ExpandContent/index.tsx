@@ -32,11 +32,16 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
     const onAnimationRender = useEvent(onAnimationRenderProp);
     const onAnimationEnd = useEvent(onAnimationEndProp);
 
-    const { isActive, isPrevActive, isDefaultActive, isContentRendered } =
-      useStates({
-        isActive: isActiveProp,
-        isContentRendered: isContentRenderedProp,
-      });
+    const {
+      isActive,
+      isPrevActive,
+      isDefaultActive,
+      isContentRendered,
+      setIsHidden,
+    } = useStates({
+      isActive: isActiveProp,
+      isContentRendered: isContentRenderedProp,
+    });
 
     const { play, reverse, timeline } = useTimeline({
       duration,
@@ -50,10 +55,20 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
           onRender: onAnimationRender,
           onEnd: (data) => {
             onAnimationEnd?.(data);
+
+            if (!data) {
+              setIsHidden(true);
+            }
           },
         });
       },
     });
+
+    useEffect(() => {
+      if (isActiveProp) {
+        setIsHidden(false);
+      }
+    }, [isActiveProp, setIsHidden]);
 
     useEffect(() => {
       if (!timeline || !isDefaultActive) {
