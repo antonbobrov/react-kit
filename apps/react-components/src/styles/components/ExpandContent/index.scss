@@ -4,7 +4,15 @@
   height: 0;
   overflow: hidden;
 
+  &_default_active {
+    height: auto;
+  }
+
   &__content {
     visibility: hidden;
+
+    &_default_active {
+      visibility: visible;
+    }
   }
 }

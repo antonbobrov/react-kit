@@ -7,6 +7,9 @@ import { IExpandContentProps } from './types';
 import { useStates } from './utils/useStates';
 import { render } from './utils/render';
 
+const classNamePrefix = 'expand-content';
+const contentClassNamePrefix = `${classNamePrefix}__content`;
+
 /** Accordion base */
 export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
   (
@@ -14,7 +17,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       className,
       style,
       isActive: isActiveProp = false,
-      duration: durationProp = 500,
+      duration = 500,
       hasAlpha = true,
       isContentRendered: isContentRenderedProp = true,
       onAnimationRender: onAnimationRenderProp,
@@ -29,10 +32,9 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
     const onAnimationRender = useEvent(onAnimationRenderProp);
     const onAnimationEnd = useEvent(onAnimationEndProp);
 
-    const { isActive, setIsFirstExpand, isContentRendered, duration } =
+    const { isActive, isPrevActive, isDefaultActive, isContentRendered } =
       useStates({
         isActive: isActiveProp,
-        duration: durationProp,
         isContentRendered: isContentRenderedProp,
       });
 
@@ -48,14 +50,23 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
           onRender: onAnimationRender,
           onEnd: (data) => {
             onAnimationEnd?.(data);
-            setIsFirstExpand(false);
           },
         });
       },
     });
 
     useEffect(() => {
-      if (!timeline) {
+      if (!timeline || !isDefaultActive) {
+        return;
+      }
+
+      // @ts-ignore
+      // eslint-disable-next-line no-underscore-dangle
+      timeline._p = 1;
+    }, [timeline, isDefaultActive]);
+
+    useEffect(() => {
+      if (isActive === isPrevActive) {
         return;
       }
 
@@ -64,17 +75,25 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       } else {
         reverse();
       }
-    }, [isActive, play, reverse, timeline]);
+    }, [isActive, isPrevActive, play, reverse]);
 
     return (
       <div
         ref={parentRef}
-        className={cn(className, prefixedClasNames('expand-content'))}
+        className={cn(
+          className,
+          prefixedClasNames(classNamePrefix),
+          isDefaultActive &&
+            prefixedClasNames(`${classNamePrefix}_default_active`),
+        )}
         style={style}
       >
         <div
           ref={contentRef}
-          className={prefixedClasNames('expand-content__content')}
+          className={cn(
+            prefixedClasNames(contentClassNamePrefix),
+            prefixedClasNames(`${contentClassNamePrefix}_default_active`),
+          )}
         >
           {isContentRendered && children}
         </div>
