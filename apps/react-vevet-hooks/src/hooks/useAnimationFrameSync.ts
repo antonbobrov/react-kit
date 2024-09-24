@@ -11,8 +11,6 @@ interface IProps<T extends TData> {
   ease?: number;
 }
 
-// todo: to react-kit
-
 /**
  * Launches an animation frame with linear interpolation of all values.
  * When the values are interpolated, the animation frame is automatically stopped.
