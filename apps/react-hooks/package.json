@@ -1,6 +1,6 @@
 {
   "name": "@anton.bobrov/react-hooks",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "description": "React hooks",
   "private": false,
   "main": "lib/cjs/index.js",

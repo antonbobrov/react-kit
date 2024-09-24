@@ -2,6 +2,26 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.10.8",
+      "tag": "@anton.bobrov/react-components_v2.10.8",
+      "date": "Tue, 24 Sep 2024 11:23:31 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "ExpandContent: fix `isContentRendered`"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `2.10.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `2.4.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.10.7",
       "tag": "@anton.bobrov/react-components_v2.10.7",
       "date": "Tue, 24 Sep 2024 09:32:04 GMT",

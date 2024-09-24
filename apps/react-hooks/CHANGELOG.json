@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-hooks",
   "entries": [
     {
+      "version": "2.10.0",
+      "tag": "@anton.bobrov/react-hooks_v2.10.0",
+      "date": "Tue, 24 Sep 2024 11:23:31 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Add `useLocalStorage`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.9.0",
       "tag": "@anton.bobrov/react-hooks_v2.9.0",
       "date": "Thu, 12 Sep 2024 17:13:01 GMT",

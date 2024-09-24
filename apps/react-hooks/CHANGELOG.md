@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Thu, 12 Sep 2024 17:13:01 GMT and should not be manually modified.
+This log was last generated on Tue, 24 Sep 2024 11:23:31 GMT and should not be manually modified.
+
+## 2.10.0
+Tue, 24 Sep 2024 11:23:31 GMT
+
+### Minor changes
+
+- Add `useLocalStorage`
 
 ## 2.9.0
 Thu, 12 Sep 2024 17:13:01 GMT

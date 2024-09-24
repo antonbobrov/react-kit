@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Fri, 13 Sep 2024 12:27:19 GMT and should not be manually modified.
+This log was last generated on Tue, 24 Sep 2024 11:23:31 GMT and should not be manually modified.
+
+## 2.4.0
+Tue, 24 Sep 2024 11:23:31 GMT
+
+### Minor changes
+
+- Add `useAnimationFrameSync`
 
 ## 2.3.14
 Fri, 13 Sep 2024 12:27:19 GMT
