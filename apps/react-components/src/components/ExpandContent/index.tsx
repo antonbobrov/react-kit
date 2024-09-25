@@ -23,6 +23,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       onAnimationRender: onAnimationRenderProp,
       onAnimationEnd: onAnimationEndProp,
       children,
+      ...props
     },
     forwardedRef,
   ) => {
@@ -94,6 +95,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
 
     return (
       <div
+        {...props}
         ref={parentRef}
         className={cn(
           className,

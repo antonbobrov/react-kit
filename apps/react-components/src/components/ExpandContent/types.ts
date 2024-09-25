@@ -1,8 +1,13 @@
 import { IBaseComponent } from '@types';
-import { ReactNode } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 import { TExpandContentRenderAnimation } from './utils/render';
 
-export interface IExpandContentProps extends IBaseComponent {
+type TExpandContentHTMLProps = Omit<
+  HTMLAttributes<HTMLDivElement>,
+  'children' | 'onAnimationEnd'
+>;
+
+type TExpandContentBaseProps = {
   /**
    * If active, the content will be shown
    * @default false
@@ -27,5 +32,11 @@ export interface IExpandContentProps extends IBaseComponent {
   onAnimationRender?: TExpandContentRenderAnimation;
   /** Event on animation end */
   onAnimationEnd?: (isActive: boolean) => void;
+};
+
+export interface IExpandContentProps
+  extends IBaseComponent,
+    TExpandContentBaseProps,
+    TExpandContentHTMLProps {
   children?: ReactNode;
 }
