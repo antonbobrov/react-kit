@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Tue, 24 Sep 2024 12:32:57 GMT and should not be manually modified.
+This log was last generated on Wed, 25 Sep 2024 10:21:03 GMT and should not be manually modified.
+
+## 2.11.0
+Wed, 25 Sep 2024 10:21:03 GMT
+
+### Minor changes
+
+- ExpandContent: add html props
 
 ## 2.10.9
 Tue, 24 Sep 2024 12:32:57 GMT

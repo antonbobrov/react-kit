@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "2.11.0",
+      "tag": "@anton.bobrov/react-components_v2.11.0",
+      "date": "Wed, 25 Sep 2024 10:21:03 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "ExpandContent: add html props"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.10.9",
       "tag": "@anton.bobrov/react-components_v2.10.9",
       "date": "Tue, 24 Sep 2024 12:32:57 GMT",
