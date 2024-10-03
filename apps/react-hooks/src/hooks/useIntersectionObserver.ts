@@ -1,24 +1,35 @@
 import { THookEventElement } from '@types';
 import { getHookEventElement } from '@utils/internal/getHookEventElement';
 import { useCallback, useEffect, useId } from 'react';
-import { isIntersectionObserverSupported } from '@utils/api';
 import { useEvent } from './useEvent';
 
 export interface IUseIntersectionObserverProps {
   /** Observable element */
   ref: THookEventElement<Element>;
-  /** Observer callback */
+
+  /** Observer callback triggered when the observed entry is intersected */
   onEntry: (entry: IntersectionObserverEntry) => void;
-  /** Triggered when IntersectionObserver is not supported */
-  onFallback?: () => void;
-  /** @default null */
-  root?: Element | Document | null | undefined;
-  /** @default 0 */
-  threshold?: number | number[];
-  /** @default '0px 0px 0px 0px' */
-  rootMargin?: string;
+
   /**
-   * The hook is disabled
+   * The root element used for the intersection calculation.
+   * @default null
+   */
+  root?: Element | Document | null | undefined;
+
+  /**
+   * The threshold(s) at which to trigger the callback.
+   * @default 0
+   */
+  threshold?: number | number[];
+
+  /**
+   * The margin around the root.
+   * @default '0px 0px 0px 0px'
+   */
+  rootMargin?: string;
+
+  /**
+   * If true, disables the intersection observer.
    * @default false
    */
   isDisabled?: boolean;
@@ -41,11 +52,36 @@ type TObserverInstance = {
 // save instances to not create a new observer per hook call
 const instances: TObserverInstance[] = [];
 
-/** Create an intersection observer and observe an element */
+/**
+ * Custom React hook that creates an Intersection Observer to monitor the visibility
+ * of a specified element in relation to the viewport or a specified root element.
+ *
+ * When the observed element intersects with the specified threshold, the provided
+ * `onEntry` callback is triggered.
+ *
+ * @param props - The hook properties.
+ *
+ * @example
+ * const MyComponent = () => {
+ *   const ref = useRef<HTMLDivElement>(null);
+ *
+ *   const handleIntersection = (entry: IntersectionObserverEntry) => {
+ *     if (entry.isIntersecting) {
+ *       console.log('Element is visible!');
+ *     }
+ *   };
+ *
+ *   useIntersectionObserver({
+ *     ref,
+ *     onEntry: handleIntersection,
+ *   });
+ *
+ *   return <div ref={ref}>Observe me!</div>;
+ * };
+ */
 export function useIntersectionObserver({
   ref,
   onEntry: onEntryProp,
-  onFallback: onFallbackProp,
   root = null,
   threshold = 0,
   rootMargin = '0px 0px 0px 0px',
@@ -54,7 +90,6 @@ export function useIntersectionObserver({
   const id = useId();
 
   const onEntry = useEvent(onEntryProp);
-  const onFallback = useEvent(onFallbackProp);
 
   const getObserverInstance = useCallback(
     () =>
@@ -69,12 +104,6 @@ export function useIntersectionObserver({
 
   useEffect(() => {
     if (isDisabled) {
-      return undefined;
-    }
-
-    if (!isIntersectionObserverSupported()) {
-      onFallback?.();
-
       return undefined;
     }
 
@@ -142,7 +171,6 @@ export function useIntersectionObserver({
     id,
     isDisabled,
     onEntry,
-    onFallback,
     ref,
     root,
     rootMargin,
