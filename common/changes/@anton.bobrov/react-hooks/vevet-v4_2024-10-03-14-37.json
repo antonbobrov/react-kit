@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "useOnInViewport: remove `onFallback`",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}

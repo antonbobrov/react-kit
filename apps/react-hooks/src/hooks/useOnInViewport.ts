@@ -8,22 +8,42 @@ import {
 
 export interface IUseOnInViewportProps
   extends Omit<IUseIntersectionObserverProps, 'onEntry'> {
-  /** Event when element is in viewport */
+  /** Callback triggered when the element enters the viewport */
   onIn?: () => void;
-  /** Event when element is out of viewport */
+
+  /** Callback triggered when the element exits the viewport */
   onOut?: () => void;
-  /** Destroy observable instance when the element once appears into viewport */
+
+  /** If true, destroys the observer instance when the element appears in the viewport */
   destroyOnIn?: boolean;
 }
 
 /**
- * Observe whether the element is in the visible area
+ * Custom React hook that observes whether a specified element is within the visible area (viewport).
+ *
+ * This hook uses the Intersection Observer API to monitor the visibility of an element.
+ * It provides callbacks for when the element enters or exits the viewport, and
+ * can optionally destroy the observer when the element enters the viewport for the first time.
+ *
+ * @param props - The hook properties.
+ *
+ * @example
+ * const MyComponent = () => {
+ *   const ref = useRef<HTMLDivElement>(null);
+ *
+ *   const { state } = useOnInViewport({
+ *     ref,
+ *     onIn: () => console.log('Element is in the viewport!'),
+ *     onOut: () => console.log('Element is out of the viewport!'),
+ *   });
+ *
+ *   return <div ref={ref}>Observe me! State: {state}</div>;
+ * };
  */
 export function useOnInViewport({
   ref,
   onIn: onInProp,
   onOut: onOutProp,
-  onFallback,
   destroyOnIn,
   isDisabled: isDisabledProp,
   ...props
@@ -34,21 +54,17 @@ export function useOnInViewport({
   const [state, setState] = useState<'in' | 'out' | undefined>();
   const [isDisabled, setIsDisabled] = usePropState(isDisabledProp);
 
-  // disable on 'in'
+  // Destroy on 'in'
   useEffect(() => {
     if (state === 'in' && destroyOnIn) {
       setIsDisabled(true);
     }
   }, [destroyOnIn, setIsDisabled, state]);
 
-  // observe the element
+  // Observe the element
   useIntersectionObserver({
     ...props,
     ref,
-    onFallback: () => {
-      setState('in');
-      onFallback?.();
-    },
     onEntry: (entry) => {
       if (entry.isIntersecting) {
         setState('in');
