@@ -4,27 +4,25 @@ import { useEventListener } from './useEventListener';
 import { useEvent } from './useEvent';
 
 /**
- * Use local storage state
+ * Custom React hook that manages state synchronized with local storage.
  *
- * @param name Name of the storage
- * @param defaultValueProp Default value
- * @param hasServerState Has SSR. When SSR is used, set to false to prevent hydration errors
- * @param onLsChangeProp Callback on local storage change
+ * This hook provides a way to store and retrieve a value in local storage,
+ * keeping the state in sync with the storage. It can handle server-side
+ * rendering (SSR) scenarios and allows for a callback when local storage changes.
+ *
+ * @param name - The name of the local storage key.
+ * @param defaultValueProp - The default value to use if there is no value in local storage.
+ * @param hasServerState - Indicates if server-side rendering is used. Set to false to prevent hydration errors.
+ * @param onLsChangeProp - Callback function to be called when local storage changes.
  *
  * @example
- *
  * const [state, setState] = useLocalStorage(
  *   'localStorageKey',
- *   {
- *     searchQuery: '',
- *   },
+ *   { searchQuery: '' },
  *   false,
  * );
  *
- * setState({
- *   ...state,
- *   searchQuery: 'test',
- * });
+ * setState({ ...state, searchQuery: 'test' });
  */
 export function useLocalStorage<T>(
   name: string,
@@ -33,7 +31,6 @@ export function useLocalStorage<T>(
   onLsChangeProp?: (value: T) => void,
 ): [T, (value: T) => void] {
   const defaultValueRef = useRef(defaultValueProp);
-
   const onLsChange = useEvent(onLsChangeProp);
 
   const getLsValue = useCallback(() => {

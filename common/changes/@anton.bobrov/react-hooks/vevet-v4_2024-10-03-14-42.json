@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "Update jsdoc",
+      "type": "none"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}

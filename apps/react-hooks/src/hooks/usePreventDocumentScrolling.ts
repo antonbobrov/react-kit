@@ -2,7 +2,28 @@ import { isBrowser } from '@utils/env';
 import { useCallback, useEffect, useId, useMemo } from 'react';
 
 /**
- * Prevent document scrolling
+ * Custom React hook to prevent document scrolling.
+ *
+ * This hook adds a CSS class to the document's root element to disable scrolling
+ * when `isPrevented` is true. It creates a style element with the necessary
+ * CSS rules and manages its lifecycle based on the value of `isPrevented`.
+ *
+ * @param isPrevented - A boolean indicating whether to prevent scrolling.
+ *
+ * @example
+ * const MyComponent = () => {
+ *   const [isScrollingDisabled, setScrollingDisabled] = useState(false);
+ *
+ *   usePreventDocumentScrolling(isScrollingDisabled);
+ *
+ *   return (
+ *     <div>
+ *       <button onClick={() => setScrollingDisabled(!isScrollingDisabled)}>
+ *         {isScrollingDisabled ? 'Enable Scrolling' : 'Disable Scrolling'}
+ *       </button>
+ *     </div>
+ *   );
+ * };
  */
 export function usePreventDocumentScrolling(isPrevented: boolean) {
   const id = useId();
