@@ -1,5 +1,12 @@
 /**
- * Remove duplicate slashes from string
+ * Removes duplicate slashes from a given URL string.
+ *
+ * @param value - The URL string from which to remove duplicate slashes.
+ *
+ * @example
+ * const url = 'http://example.com//path//to//resource';
+ * const cleanedUrl = removeDublicateSlashes(url);
+ * console.log(cleanedUrl); // Outputs: 'http://example.com/path/to/resource'
  */
 export function removeDublicateSlashes(value: string) {
   /** Check if a url starts with the protocol */

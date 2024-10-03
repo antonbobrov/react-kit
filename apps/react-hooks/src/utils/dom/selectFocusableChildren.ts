@@ -13,7 +13,9 @@ const focusableElementsSelector = [
   )
   .join(',');
 
-/** Select focusable elements within container */
+/**
+ * Selects all focusable elements within a specified container.
+ */
 export function selectFocusableChildren(
   element: HTMLElement,
 ): NodeListOf<HTMLElement> {
