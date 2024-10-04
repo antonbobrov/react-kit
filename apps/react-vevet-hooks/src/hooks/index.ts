@@ -8,7 +8,6 @@ export * from './useNonMobilePointerHover';
 export * from './useOnPageLoad';
 export * from './useOnResize';
 export * from './useOnViewportOritentationChange';
-export * from './useScopedTimelineProgress';
 export * from './useTimeline';
 export * from './useViewportOrientation';
 export * from './useViewportSize';
