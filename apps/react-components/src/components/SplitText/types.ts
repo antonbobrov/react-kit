@@ -1,4 +1,4 @@
-import { NSplitText, SplitText } from '@anton.bobrov/vevet-init';
+import { NSplitText, SplitText } from 'vevet';
 import { IBaseComponent } from '@types';
 
 type TPickedProps =
@@ -14,7 +14,7 @@ export interface ISplitTextProps
   /** Source text */
   text: string;
   /** Event on creation */
-  onInit: (text: SplitText) => void;
+  onInit?: (text: SplitText) => void;
   /**
    * Lazy initialization
    *
@@ -22,3 +22,5 @@ export interface ISplitTextProps
    */
   isLazy?: boolean;
 }
+
+export type TSplitTextInstance = SplitText;

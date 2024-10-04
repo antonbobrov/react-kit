@@ -1,10 +1,10 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, { forwardRef, useEffect, useMemo, useRef } from 'react';
 import {
   useEvent,
   useForwardedRef,
   useOnLazyIntersection,
 } from '@anton.bobrov/react-hooks';
-import { SplitText as VevetSplitText, vevet } from '@anton.bobrov/vevet-init';
+import { SplitText as VevetSplitText, vevet } from 'vevet';
 import { ISplitTextProps } from './types';
 
 /** Split text into letters, words or lines */
@@ -33,8 +33,11 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
     const { isIn } = useOnLazyIntersection({ ref });
     const canInit = (isLazy && isIn) || !isLazy;
 
+    const html = useMemo(() => ({ __html: textProp }), [textProp]);
+
     useEffect(() => {
       const container = ref.current;
+
       if (!container || !canInit) {
         return undefined;
       }
@@ -53,7 +56,7 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
         viewportTarget: vevet.isMobile ? 'width' : undefined,
       });
 
-      onInit(instance);
+      onInit?.(instance);
 
       return () => instance.destroy();
     }, [
@@ -74,7 +77,7 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
         className={className}
         style={{ ...style, display: 'block', fontKerning: 'none' }}
         // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: textProp }}
+        dangerouslySetInnerHTML={html}
       />
     );
   },
