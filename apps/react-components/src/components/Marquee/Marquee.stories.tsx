@@ -38,17 +38,11 @@ const Template: StoryFn<TComponent> = ({
         Disable
       </button>
 
-      <button
-        type="button"
-        onClick={() => setSpeed((val) => Math.max(val + 0.2, 0.2))}
-      >
+      <button type="button" onClick={() => setSpeed((val) => val * 2)}>
         Faster
       </button>
 
-      <button
-        type="button"
-        onClick={() => setSpeed((val) => Math.max(val - 0.2, 0.2))}
-      >
+      <button type="button" onClick={() => setSpeed((val) => val / 2)}>
         Slower
       </button>
 
