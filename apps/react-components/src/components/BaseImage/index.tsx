@@ -12,6 +12,7 @@ export const BaseImage = forwardRef<HTMLImageElement, IBaseImageProps>(
     const height = paths?.height ?? props.height;
 
     const src = getSrc({ src: srcProp, paths });
+
     const [srcSet, setSrcSet] = useState<string | undefined>(
       generatePlaceholderImage(width, height),
     );
