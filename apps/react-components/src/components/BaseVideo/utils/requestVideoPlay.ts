@@ -1,7 +1,4 @@
-import {
-  PCancelable,
-  normalizedTimeoutCallback,
-} from '@anton.bobrov/vevet-init';
+import { normalizedTimeoutCallback, PCancelable } from 'vevet';
 
 /**
  * Request video play.

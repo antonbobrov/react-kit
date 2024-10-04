@@ -1,7 +1,7 @@
 import { useEvent } from '@anton.bobrov/react-hooks';
 import { useOnResize } from '@anton.bobrov/react-vevet-hooks';
-import { vevet } from '@anton.bobrov/vevet-init';
 import { CSSProperties, useEffect, useState } from 'react';
+import { vevet } from 'vevet';
 
 export type TBaseVideoModalWrapperSize = {
   width: number | string;

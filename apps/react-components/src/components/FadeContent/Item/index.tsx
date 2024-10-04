@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useState } from 'react';
 import { useEvent, useForwardedRef } from '@anton.bobrov/react-hooks';
-import { Timeline, vevet } from '@anton.bobrov/vevet-init';
+import { Timeline } from 'vevet';
 import { IProps } from './types';
 
 export const FadeContentItem = forwardRef<HTMLDivElement, IProps>(
@@ -39,10 +39,6 @@ export const FadeContentItem = forwardRef<HTMLDivElement, IProps>(
     const [initialState] = useState(stateProp);
 
     useEffect(() => {
-      if (!vevet) {
-        return undefined;
-      }
-
       if (initialState === stateProp) {
         return undefined;
       }

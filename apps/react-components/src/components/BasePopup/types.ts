@@ -18,6 +18,7 @@ export type TBasePopupHorizontalAlignment =
 export interface IBasePopupProps
   extends IBaseComponent,
     Pick<IBasePopupAnchorRendererProps, 'anchor' | 'showEvent'> {
+  /** Popup children */
   children: ReactNode;
   /** Custom anchor renderer */
   renderAnchor?: TBasePopupAnchorRenderer;
@@ -35,7 +36,7 @@ export interface IBasePopupProps
   gap?: number | (() => number);
   /** Gap between popup and viewport */
   viewportGap?: number | (() => number);
-  /** Viewport ref which bounds popup */
+  /** The element ref which bounds the popup position */
   viewportRef?: RefObject<HTMLElement>;
   /** The popup is disabled */
   isDisabled?: boolean;

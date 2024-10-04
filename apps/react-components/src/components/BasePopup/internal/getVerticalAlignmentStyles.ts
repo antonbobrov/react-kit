@@ -1,5 +1,5 @@
-import { vevet } from '@anton.bobrov/vevet-init';
 import { isNumber } from '@anton.bobrov/react-hooks';
+import { vevet } from 'vevet';
 import { IBasePopupProps, TBasePopupVerticalAlignment } from '../types';
 
 interface IProps extends Required<Pick<IBasePopupProps, 'gap'>> {

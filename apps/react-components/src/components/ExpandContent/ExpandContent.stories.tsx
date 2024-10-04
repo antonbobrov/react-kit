@@ -38,6 +38,10 @@ const meta: Meta<TComponent> = {
       </>
     ),
   },
+  argTypes: {
+    onAnimationRender: { table: { disable: true } },
+    children: { table: { disable: true } },
+  },
 };
 
 export default meta;
@@ -74,9 +78,9 @@ WithoutAlpha.args = {
 
 export const WithCustomAnimation = Template.bind({});
 WithCustomAnimation.args = {
-  onAnimationRender: ({ content, progress }) => {
-    const scale = 0.9 + 0.1 * progress;
-    const y = 1 - progress;
+  onAnimationRender: ({ content, p }) => {
+    const scale = 0.9 + 0.1 * p;
+    const y = 1 - p;
 
     // eslint-disable-next-line no-param-reassign
     content.style.transform = `scale(${scale}) translateY(${y}rem)`;

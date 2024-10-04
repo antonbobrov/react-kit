@@ -8,6 +8,11 @@ const meta: Meta<TComponent> = {
   title: 'Elements/LinkClickInterceptor',
   component: LinkClickInterceptor,
   tags: ['autodocs'],
+  argTypes: {
+    children: { table: { disable: true } },
+    onExternalClick: { table: { disable: true } },
+    onInternalClick: { table: { disable: true } },
+  },
   args: {
     children: (
       <>
@@ -41,7 +46,7 @@ const meta: Meta<TComponent> = {
 
         <br />
 
-        <a href="/" data-framework-link="">
+        <a href="/" data-ignore-link-interceptor="">
           <span>Framework link</span>
         </a>
       </>

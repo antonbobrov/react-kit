@@ -27,7 +27,7 @@ type TExpandContentBaseProps = {
    * Should render hidden content
    * @default true
    */
-  isContentRendered?: boolean;
+  isHiddenContentRendered?: boolean;
   /** Event on animation end */
   onAnimationRender?: TExpandContentRenderAnimation;
   /** Event on animation end */

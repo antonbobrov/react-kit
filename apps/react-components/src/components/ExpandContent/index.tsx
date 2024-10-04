@@ -19,7 +19,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       isActive: isActiveProp = false,
       duration = 500,
       hasAlpha = true,
-      isContentRendered: isContentRenderedProp = true,
+      isHiddenContentRendered: isHiddenContentRenderedProp = true,
       onAnimationRender: onAnimationRenderProp,
       onAnimationEnd: onAnimationEndProp,
       children,
@@ -37,11 +37,11 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       isActive,
       isPrevActive,
       isDefaultActive,
-      isContentRendered,
+      isHiddenContentRendered,
       setIsHidden,
     } = useStates({
       isActive: isActiveProp,
-      isContentRendered: isContentRenderedProp,
+      isHiddenContentRendered: isHiddenContentRenderedProp,
     });
 
     const { play, reverse, timeline } = useTimeline({
@@ -112,7 +112,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
             prefixedClasNames(`${contentClassNamePrefix}_default_active`),
           )}
         >
-          {isContentRendered && children}
+          {isHiddenContentRendered && children}
         </div>
       </div>
     );

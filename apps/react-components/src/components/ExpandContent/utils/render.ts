@@ -1,13 +1,9 @@
-import {
-  Timeline,
-  easing as easingProgress,
-  clampScope,
-} from '@anton.bobrov/vevet-init';
+import { Timeline, easing as easingProgress, clampScope } from 'vevet';
 import { RefObject } from 'react';
 
 export type TExpandContentRenderAnimationProps = {
   content: HTMLElement;
-  progress: number;
+  p: number;
 };
 
 export type TExpandContentRenderAnimation = (
@@ -65,7 +61,7 @@ export function render({
   }
 
   // render callbacks
-  onRender?.({ content, progress: contentProgress });
+  onRender?.({ content, p: contentProgress });
 
   // end callbacks
   if (timeline.isReversed && p === 0) {
