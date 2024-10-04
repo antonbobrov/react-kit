@@ -102,9 +102,3 @@ In addition to hooks, the package also provides several utility functions:
 - **`isNumber`**: Checks if a value is a number.
 - **`isString`**: Checks if a value is a string.
 - **`isUndefined`**: Checks if a value is undefined.
-
-## License
-
-MIT License
-
-For more details, visit the [GitHub repository](https://github.com/antonbobrov/react-kit).
