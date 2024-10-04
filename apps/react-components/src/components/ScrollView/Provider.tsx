@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
-import { ScrollView, vevet } from '@anton.bobrov/vevet-init';
+import { ScrollView, vevet } from 'vevet';
 import { isUndefined, useDeepCompareMemoize } from '@anton.bobrov/react-hooks';
 import { IScrollViewContext, ScrollViewContext } from './utils/context';
 import { IScrollViewProviderProps } from './types';
@@ -16,7 +16,7 @@ export const Provider: FC<IScrollViewProviderProps> = ({
   hasDelay = true,
   maxDelay = 1000,
   direction = 'vertical',
-  viewportTarget = 'any',
+  viewportTarget,
   resizeDebounce = 0,
   isEnabled = false,
   ...props
@@ -40,7 +40,7 @@ export const Provider: FC<IScrollViewProviderProps> = ({
       hasDelay,
       maxDelay,
       direction,
-      viewportTarget,
+      viewportTarget: viewportTarget || (vevet.isMobile ? 'width' : 'any'),
       resizeDebounce,
     });
 

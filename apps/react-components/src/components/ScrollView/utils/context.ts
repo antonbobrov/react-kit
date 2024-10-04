@@ -1,4 +1,4 @@
-import { ScrollView } from '@anton.bobrov/vevet-init';
+import { ScrollView } from 'vevet';
 import { createContext } from 'react';
 
 export interface IScrollViewContext {
