@@ -4,7 +4,12 @@ import { BaseModal } from '../BaseModal';
 
 const DefaultModal = memo(BaseModal);
 
-/** Modal trigger */
+/**
+ * This component provides a convenient way to display modal dialogs when
+ * users interact with anchor tags.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/modals-modalanchor--docs
+ */
 export const ModalAnchor = <T,>({
   anchor,
   modal: ModalComponent = DefaultModal as any,

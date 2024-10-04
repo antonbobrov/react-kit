@@ -7,6 +7,14 @@ import { useWrapperSize } from './utils';
 import { VideoPlayer } from '../VideoPlayer';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 
+/**
+ * BaseVideoModal component for displaying videos in a modal dialog.
+ *
+ * This component combines the functionality of a modal with a video player,
+ * providing a seamless way to present video content in a focused overlay.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/modals-basevideomodal--docs
+ */
 export const BaseVideoModal: FC<IBaseVideoModalProps> = ({
   className,
   player,

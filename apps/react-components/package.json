@@ -1,7 +1,7 @@
 {
   "name": "@anton.bobrov/react-components",
   "version": "2.11.1",
-  "description": "React Components",
+  "description": "A collection of reusable React components designed to streamline development and enhance user interfaces.",
   "private": false,
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -26,18 +26,18 @@
     "url": "git+https://github.com/antonbobrov/react-kit.git"
   },
   "keywords": [
-    "react components",
-    "responsive image",
+    "react",
+    "components",
+    "ui",
+    "react-components",
+    "customizable",
+    "responsive",
     "modal",
-    "popup",
-    "accordion",
-    "lazy image",
-    "lazy video",
-    "marquee",
-    "custom cursor",
-    "smooth scroll",
-    "scroll view",
-    "video player"
+    "video",
+    "image",
+    "scroll",
+    "animation",
+    "lazy-loading"
   ],
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",

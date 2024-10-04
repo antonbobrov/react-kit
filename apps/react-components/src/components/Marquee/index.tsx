@@ -11,7 +11,19 @@ import { Marquee as VevetMarquee } from 'vevet';
 import { IMarqueeProps } from './types';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 
-/** Custom marquee element */
+/**
+ * Marquee component for creating scrolling text or content.
+ *
+ * This component provides a simple way to display text or other elements that
+ * scroll horizontally across the screen. It supports various features such as
+ * customizable speed, direction, and behavior, allowing developers to create
+ * engaging and dynamic content displays. The Marquee component is designed
+ * to enhance user experience by providing an attention-grabbing method for
+ * presenting important information or announcements while ensuring accessibility
+ * and responsiveness across different devices and screen sizes.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/text-marquee--docs
+ */
 export const Marquee = forwardRef<HTMLDivElement, IMarqueeProps>(
   (
     {

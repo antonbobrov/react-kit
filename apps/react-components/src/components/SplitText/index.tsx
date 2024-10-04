@@ -7,7 +7,17 @@ import {
 import { SplitText as VevetSplitText, vevet } from 'vevet';
 import { ISplitTextProps } from './types';
 
-/** Split text into letters, words or lines */
+/**
+ * SplitText component for splitting text into manageable parts.
+ *
+ * This component enables developers to split text into individual letters,
+ * words, or lines for more flexible layout and styling options. It supports
+ * auto-resizing to fit different layouts and can be a good base for further
+ * text animations or custom interactions.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/text-splittext--docs
+ */
+
 export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
   (
     {

@@ -4,11 +4,17 @@ import { ILinkClickInterceptorProps } from './types';
 import { getAnchor } from './utils';
 
 /**
- * Component that catches click on link
+ * LinkClickInterceptor component for intercepting link click events.
  *
- * Callbacks will never be triggered if an anchor
- * has the `data-ignore-link-interceptor`, `target` or `download` attribute
- * or the `href` contains a `#`
+ * This component enhances link functionality by providing a mechanism to intercept
+ * click events on anchor tags, allowing developers to implement custom logic
+ * before navigating to a new page. This can include features such as analytics tracking,
+ * confirmation dialogs, or conditionally preventing navigation based on specific criteria.
+ * The LinkClickInterceptor component also supports the `data-ignore-link-interceptor`
+ * attribute, which allows certain links to bypass the interceptor, enabling flexibility
+ * in navigation handling.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/elements-linkclickinterceptor--docs
  */
 export const LinkClickInterceptor = forwardRef<
   HTMLDivElement,

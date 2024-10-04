@@ -4,7 +4,10 @@ import { getSrc, getSrcSet } from './utils/src';
 import { generatePlaceholderImage } from './utils/generatePlaceholderImage';
 
 /**
- * Base image that supports adaptive paths
+ * BaseImage component for rendering images. It supports adaptive paths
+ * to ensure optimal image loading based on the device or screen size.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/image-baseimage--docs
  */
 export const BaseImage = forwardRef<HTMLImageElement, IBaseImageProps>(
   ({ src: srcProp, paths, srcSet: srcSetProp, ...props }, ref) => {

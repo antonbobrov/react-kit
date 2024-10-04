@@ -5,7 +5,11 @@ import { RenderAnchor } from './RenderAnchor';
 
 const DefaultRenderAnchor = memo(RenderAnchor);
 
-/** Button or Anchor */
+/**
+ * ButtonAnchor component for rendering a clickable button or a link.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/elements-buttonanchor--docs
+ */
 export const ButtonAnchor = forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
   PropsWithChildren<TButtonAnchor>
