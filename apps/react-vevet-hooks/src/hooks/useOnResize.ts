@@ -1,20 +1,33 @@
 import { DependencyList, EffectCallback, useEffect } from 'react';
-import { NViewport, NCallbacks, vevet } from '@anton.bobrov/vevet-init';
+import { IViewportCallbackTypes, NCallbacks, vevet } from 'vevet';
 
-type TTarget = keyof NViewport.ICallbacksTypes;
+export type TUseOnResizeTarget = keyof IViewportCallbackTypes;
 
 export interface IUseOnResizeSettings
   extends Omit<NCallbacks.ISettings, 'isProtected'> {
-  /** Resize target */
-  target?: TTarget;
+  /** Viewport target. */
+  target?: TUseOnResizeTarget;
+
   /**
-   * Use optimized target for mobile devices
+   * If true, uses an optimized target for mobile devices.
    * @default true
    */
   isMobileOptimizedTarget?: boolean;
 }
 
-/** Event on viewport resize */
+/**
+ * Custom React hook that listens for viewport resize events.
+ * The effect callback is called both on mount and resize.
+ *
+ * @example
+ * const MyComponent = () => {
+ *   useOnResize(() => {
+ *     console.log('Viewport resized!');
+ *   }, []);
+ *
+ *   return <div>Resize the viewport to see the effect!</div>;
+ * };
+ */
 export function useOnResize(
   effect: EffectCallback,
   deps: DependencyList,
