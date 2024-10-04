@@ -1,14 +1,14 @@
 import { Provider } from './Provider';
-import { SmoothContainer } from './SmoothContainer';
+import { CustomContainer } from './CustomContainer';
 import { ScrollBar } from './ScrollBar';
 
 Provider.displayName = 'PageScroll.Provider';
-SmoothContainer.displayName = 'PageScroll.SmoothContainer';
+CustomContainer.displayName = 'PageScroll.CustomContainer';
 ScrollBar.displayName = 'PageScroll.ScrollBar';
 
 export const PageScroll = {
   Provider,
-  SmoothContainer,
+  CustomContainer,
   ScrollBar,
 };
 

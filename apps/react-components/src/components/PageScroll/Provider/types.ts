@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
-import { NSmoothScroll, SmoothScroll } from '@anton.bobrov/vevet-init';
+import { CustomScroll, NCustomScroll } from 'vevet';
 
 export interface IPageScrollProviderProps {
   children: ReactNode;
-  /** Define if global scrolling should be custom */
-  canBeSmooth?: boolean | (() => boolean);
-  /** Smooth scrolling properties */
-  smoothProps?: NSmoothScroll.IChangeableProps;
-  /** Callback on smooth scroll initialization */
-  onSmoothInit?: (smoothScroll: SmoothScroll) => void;
+  /** Define type of scrolling */
+  getType?: () => 'custom' | 'native';
+  /** Custom scrolling properties */
+  customScrollProps?: NCustomScroll.IChangeableProps;
+  /** Callback on custom scroll initialization */
+  onCustomScrollInit?: (customScroll: CustomScroll) => void;
 }

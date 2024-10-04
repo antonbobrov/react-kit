@@ -17,3 +17,5 @@ npm i "@anton.bobrov/react-components"
 // include styles for one component
 @import '~@anton.bobrov/react-components/lib/styles/components/LazyImage';
 ```
+
+// todo: styles to components

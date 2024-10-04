@@ -1,4 +1,4 @@
-import { NScrollBar } from '@anton.bobrov/vevet-init';
+import { NScrollBar } from 'vevet';
 import { ReactNode } from 'react';
 
 type TPickedProps = Pick<

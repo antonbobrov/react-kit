@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react';
 import React, { FC } from 'react';
-import { times } from '@anton.bobrov/vevet-init';
+import { times } from 'vevet';
 import { PageScroll } from '.';
 
 type TComponent = typeof PageScroll.Provider;
@@ -24,12 +24,12 @@ const Components: FC = () => (
 );
 
 const Template: StoryFn<TComponent> = (props) => (
-  <PageScroll.Provider {...props}>
+  <PageScroll.Provider {...props} getType={() => 'custom'}>
     <PageScroll.ScrollBar canAutoHide={false} />
 
-    <PageScroll.SmoothContainer>
+    <PageScroll.CustomContainer>
       <Components />
-    </PageScroll.SmoothContainer>
+    </PageScroll.CustomContainer>
   </PageScroll.Provider>
 );
 
