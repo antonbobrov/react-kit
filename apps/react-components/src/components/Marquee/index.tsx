@@ -2,54 +2,61 @@ import React, { forwardRef, useEffect, useRef, useState } from 'react';
 import {
   isString,
   useDeepCompareMemoize,
+  useEvent,
   useForwardedRef,
   useOnInViewport,
 } from '@anton.bobrov/react-hooks';
 import cn from 'classnames';
-import { Marquee as VevetMarquee, vevet } from '@anton.bobrov/vevet-init';
+import { Marquee as VevetMarquee } from 'vevet';
 import { IMarqueeProps } from './types';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 
 /** Custom marquee element */
-export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
+export const Marquee = forwardRef<HTMLDivElement, IMarqueeProps>(
   (
     {
       className,
       style,
       children,
       'aria-label': ariaLabel,
-      separator,
+      canCloneNodes = false,
+      onInit: onInitProp,
       isEnabled = true,
-      prependWhitespace = true,
       ...changeableProps
     },
     forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
-    const marqueeContainerRef = useRef<HTMLSpanElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const [marquee, setMarquee] = useState<VevetMarquee | undefined>();
 
+    const onInit = useEvent(onInitProp);
+
     const initialPropsRef = useRef({ isEnabled, ...changeableProps });
 
+    // create the marquee
     useEffect(() => {
-      if (!marqueeContainerRef.current || !vevet) {
+      if (!containerRef.current) {
         return undefined;
       }
 
       const instance = new VevetMarquee({
         ...initialPropsRef.current,
-        container: marqueeContainerRef.current,
-        prependWhitespace,
+        container: containerRef.current,
+        canCloneNodes,
       });
 
       setMarquee(instance);
+      onInit?.(instance);
 
       return () => instance?.destroy();
-    }, [ref, prependWhitespace]);
+    }, [canCloneNodes, onInit, ref]);
 
+    // viewport position state
     const { state } = useOnInViewport({ ref });
 
+    // enable or disable on viewport position change
     useEffect(() => {
       if (!marquee || !state) {
         return;
@@ -73,23 +80,21 @@ export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
     }, [marquee, useDeepCompareMemoize(changeableProps)]);
 
     return (
-      <span
+      <div
         ref={ref}
         className={cn(className, prefixedClasNames('marquee'))}
         style={style}
         role="marquee"
         aria-label={ariaLabel ?? (isString(children) ? children : undefined)}
       >
-        <span
-          ref={marqueeContainerRef}
+        <div
+          ref={containerRef}
           className={prefixedClasNames('marquee__container')}
           aria-hidden
         >
           {children}
-
-          {separator}
-        </span>
-      </span>
+        </div>
+      </div>
     );
   },
 );
