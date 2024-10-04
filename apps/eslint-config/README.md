@@ -2,6 +2,9 @@
 
 An ESLint configuration package that integrates Prettier and provides tailored setups for TypeScript, React, and Next.js.
 
+### Links
+- [Changelog](https://github.com/antonbobrov/react-kit/blob/develop/apps/eslint-config/CHANGELOG.md)
+
 ## Installation
 Install ESLint, Prettier, and the configuration:
 

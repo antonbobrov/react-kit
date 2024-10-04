@@ -1,10 +1,10 @@
-
 # `@anton.bobrov/react-hooks`
 
 A collection of custom React hooks and utility functions designed to simplify component logic and enhance performance. This library provides a robust set of hooks with full TypeScript support, offering solutions for common patterns in modern React applications.
 
 ### Links
 - [Documentation](https://antonbobrov.github.io/react-kit/react-hooks/)
+- [Changelog](https://github.com/antonbobrov/react-kit/blob/develop/apps/react-hooks/CHANGELOG.md)
 
 ## Installation
 
@@ -45,7 +45,7 @@ export const MyComponent = () => {
 
 ## Available Hooks
 
-Here are some of the available hooks and what they do:
+Here are the available hooks and what they do:
 
 - **`useChange`**: Tracks changes to a property.
 - **`useClientHeight`**: Retrieves and tracks the client height of an element.
