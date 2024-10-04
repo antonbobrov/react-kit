@@ -27,6 +27,7 @@ export type TModalRenderAnimation = (data: IModalRenderAnimationProps) => void;
 export interface IBaseModalProps extends IBaseComponent {
   /** The modal is opened */
   isOpen: boolean;
+  /** Modal children */
   children: ReactNode;
   /** Parent element of the modal */
   parentNode?: Element | null;
