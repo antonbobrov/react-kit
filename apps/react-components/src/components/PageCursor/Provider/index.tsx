@@ -1,4 +1,3 @@
-import { CustomCursor, vevet } from '@anton.bobrov/vevet-init';
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
 import { Portal } from 'react-portal';
 import {
@@ -6,6 +5,7 @@ import {
   useEvent,
   useDeepCompareMemoize,
 } from '@anton.bobrov/react-hooks';
+import { CustomCursor, vevet } from 'vevet';
 import { prefixedClassName } from '../../../utils/prefixedClassName';
 import { IPageCursorProviderProps } from './types';
 import { usePageCursorProviderStore } from './usePageCursorProviderStore';
@@ -115,6 +115,7 @@ export const Provider: FC<IPageCursorProviderProps> = ({
     }
 
     const className = prefixedClassName('hide-native-cursor');
+
     document.documentElement.classList.toggle(
       className,
       !!isNativeCursorHidden,

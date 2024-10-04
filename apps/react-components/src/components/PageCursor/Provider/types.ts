@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from 'react';
-import { CustomCursor, NCustomCursor } from '@anton.bobrov/vevet-init';
+import { CustomCursor, NCustomCursor } from 'vevet';
 import { IPageCursorTypeProps } from '../Type/types';
 import { IPageCursorType } from '../types';
 
