@@ -1,9 +1,9 @@
 import { useEvent, useDeepCompareMemoize } from '@anton.bobrov/react-hooks';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { AnimationFrame, NAnimationFrame } from '@anton.bobrov/vevet-init';
+import { AnimationFrame, NAnimationFrame } from 'vevet';
 
 export interface IUseAnimationFrameOnFrameProps {
-  easeMultiplier: number;
+  fpsMultiplier: number;
 }
 
 export type TUseAnimationFrameOnFrame = (
@@ -50,7 +50,7 @@ export function useAnimationFrame({
       instance.addCallback('pause', onPause);
     }
     instance.addCallback('frame', () =>
-      onFrame({ easeMultiplier: instance.easeMultiplier }),
+      onFrame({ fpsMultiplier: instance.fpsMultiplier }),
     );
 
     return () => instance.destroy();
