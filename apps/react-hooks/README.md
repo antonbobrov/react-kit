@@ -87,6 +87,9 @@ Here are the available hooks and what they do:
 
 In addition to hooks, the package also provides several utility functions:
 
+- **`objectKeys`**: Retrieves the keys of an object as an array of the object's keys.
+- **`pickObjectProps`**: Pick specific properties from an object.
+- **`times`**: Repeats a function `n` times and returns an array of the results.
 - **`splitIntoChunks`**: Splits an array into chunks.
 - **`uniqueArray`**: Returns an array with unique values.
 - **`addEventListener`**: Adds an event listener to a target.

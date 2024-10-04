@@ -1,6 +1,6 @@
-import { useEvent } from '@anton.bobrov/react-hooks';
+import { objectKeys, useEvent } from '@anton.bobrov/react-hooks';
 import { useCallback, useRef } from 'react';
-import { lerp, objectKeys } from 'vevet';
+import { lerp } from 'vevet';
 import { useAnimationFrame } from './useAnimationFrame';
 
 export type TUseAnimationFrameSyncData = Record<string, number>;

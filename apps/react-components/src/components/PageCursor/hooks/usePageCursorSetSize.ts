@@ -1,6 +1,9 @@
 import { RefObject, useEffect } from 'react';
-import { addEventListener, isUndefined } from '@anton.bobrov/react-hooks';
-import { pickObjectProps } from 'vevet';
+import {
+  addEventListener,
+  isUndefined,
+  pickObjectProps,
+} from '@anton.bobrov/react-hooks';
 import { usePageCursor } from './usePageCursor';
 
 export interface IPageCursorSize {

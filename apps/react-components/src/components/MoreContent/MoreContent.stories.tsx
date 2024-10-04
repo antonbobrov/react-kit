@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { times } from 'vevet';
+import { times } from '@anton.bobrov/react-hooks';
 import { MoreContent } from '.';
 
 type TComponent = typeof MoreContent;
