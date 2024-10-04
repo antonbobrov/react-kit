@@ -11,7 +11,7 @@ This monorepo includes several packages:
 2. **[@anton.bobrov/react-components](https://github.com/antonbobrov/react-kit/tree/develop/apps/react-components)**: todo: description after the package is done
 3. **[@anton.bobrov/react-dat-gui](https://github.com/antonbobrov/react-kit/tree/develop/apps/react-dat-gui)**: todo: description after the package is done
 4. **[@anton.bobrov/react-hooks](https://github.com/antonbobrov/react-kit/tree/develop/apps/react-hooks)**: A collection of custom React hooks and utility functions designed to simplify component logic and enhance performance
-5. **[@anton.bobrov/react-vevet-hooks](https://github.com/antonbobrov/react-kit/tree/develop/apps/react-vevet-hooks)**: todo: description after the package is done
+5. **[@anton.bobrov/react-vevet-hooks](https://github.com/antonbobrov/react-kit/tree/develop/apps/react-vevet-hooks)**: A collection of custom React hooks designed to seamlessly integrate with the `Vevet` library.
 
 ## Development
 * node v20.17.0
