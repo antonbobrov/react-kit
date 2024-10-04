@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-vevet-hooks",
+      "comment": "useDraggerDirection: add `onAny`",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-vevet-hooks"
+}
