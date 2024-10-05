@@ -14,6 +14,8 @@ import { prefixedClasNames } from '../../utils/prefixedClassNames';
  * providing a seamless way to present video content in a focused overlay.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/modals-basevideomodal--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/BaseVideoModal';`
  */
 export const BaseVideoModal: FC<IBaseVideoModalProps> = ({
   className,

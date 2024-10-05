@@ -16,13 +16,24 @@ ScrollBar.displayName = 'PageScroll.ScrollBar';
  * styling and branding options.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/story/scroll-pagescroll--default
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/PageScroll';`
  */
 export const PageScroll = {
-  /** Creates a global context for page scrolling */
+  /**
+   * Creates a global context for page scrolling
+   *
+   * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/PageScroll';` */
   Provider,
-  /** Container for custom scrolling */
+  /**
+   * Container for custom scrolling
+   *
+   * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/PageScroll';` */
   CustomContainer,
-  /** Custom scrollbar */
+  /**
+   * Custom scrollbar
+   *
+   * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/PageScroll';` */
   ScrollBar,
 };
 

@@ -12,11 +12,19 @@ Element.displayName = 'ScrollView.Element';
  * over the timing of the visibility events.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/scroll-scrollvew--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/ScrollView';`
  */
 export const ScrollView = {
-  /** Create a global contexts for ScrollView */
+  /**
+   * Create a global contexts for ScrollView
+   *
+   * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/ScrollView';` */
   Provider,
-  /** Wraps each element that should be monitored */
+  /**
+   * Wraps each element that should be monitored
+   *
+   * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/ScrollView';` */
   Element,
 };
 

@@ -18,6 +18,8 @@ import { prefixedClasNames } from '../../utils/prefixedClassNames';
  * the viewport, improving performance and reducing bandwidth usage.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/video-lazyvideo--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/LazyVideo';`
  */
 export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
   (

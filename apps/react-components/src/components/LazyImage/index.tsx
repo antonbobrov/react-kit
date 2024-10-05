@@ -19,6 +19,8 @@ import { BaseImage } from '../BaseImage';
  * as well as WebP detection to utilize the most efficient image format available.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/image-lazyimage--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/LazyImage';`
  */
 export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
   (

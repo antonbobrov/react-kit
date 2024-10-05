@@ -12,6 +12,8 @@ import { Button as DefaultButton } from './Button';
  * as customizable triggers, animations, and limits on the amount of content displayed.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/wrappers-morecontent--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/MoreContent';`
  */
 export const MoreContent = forwardRef<HTMLDivElement, IMoreContentProps>(
   (

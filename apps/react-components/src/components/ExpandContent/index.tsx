@@ -19,6 +19,8 @@ const contentClassNamePrefix = `${classNamePrefix}__content`;
  * allowing for better management of large amounts of information.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/wrappers-expandcontent--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/ExpandContent';`
  */
 export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
   (

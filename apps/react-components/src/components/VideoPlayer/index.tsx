@@ -12,6 +12,8 @@ import { VideoPlayerMp4 } from './Mp4';
  * embedding YouTube and Vimeo videos.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/video-videoplayer--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/VideoPlayer';`
  */
 
 export const VideoPlayer: FC<IVideoPlayerProps> = ({

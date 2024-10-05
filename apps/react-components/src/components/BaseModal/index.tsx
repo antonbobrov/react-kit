@@ -20,6 +20,8 @@ import { renderModalAnimation } from './utils';
  * The BaseModal component ensures a seamless user experience by managing focus, keyboard navigation, and close actions.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/modals-basemodal--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/BaseModal';`
  */
 export const BaseModal: FC<IBaseModalProps> = ({
   className,

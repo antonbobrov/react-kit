@@ -48,5 +48,3 @@ For example, to import styles for the LazyImage:
 ```scss
 @import '~@anton.bobrov/react-components/lib/styles/components/LazyImage';
 ```
-
-// todo: styles to components

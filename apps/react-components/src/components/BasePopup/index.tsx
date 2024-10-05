@@ -23,6 +23,8 @@ const DefaultAnchor = memo(DefaultAnchorComponent);
  * such as positioning, customizable styles, and the ability to control visibility.
  *
  * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/popups-basepopup--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/BasePopup';`
  */
 export const BasePopup = forwardRef<HTMLDivElement, IBasePopupProps>(
   (
