@@ -63,7 +63,7 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
         letterTag,
         wordTag,
         lineTag,
-        viewportTarget: vevet.isMobile ? 'width' : undefined,
+        viewportTarget: vevet.isMobile ? 'width' : 'any',
       });
 
       onInit?.(instance);
