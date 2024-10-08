@@ -25,7 +25,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">IUseAnimationFrameSyncProps</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts#L8">apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts:8</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts#L8">apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts:8</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -41,14 +41,18 @@
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member"><a id="data" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>data</span><a href="#data" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">data</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type tsd-kind-type-parameter">T</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">data</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type tsd-kind-type-parameter">T</span></div>
+<div class="tsd-comment tsd-typography"><p>The initial data for the animation frame, with properties to animate.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts#L11">apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts:11</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts#L12">apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts:12</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="ease" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>ease</span><a href="#ease" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">ease</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">ease</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>The easing factor for the interpolation. Defaults to 0.1.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts#L13">apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts:13</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts#L18">apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts:18</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="onUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Update</span><a href="#onUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Update</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">data</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
@@ -59,6 +63,8 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature" id="onUpdate.__type.__type-1"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">data</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Callback function to be called on each update with the current interpolated values.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -66,7 +72,7 @@
 <h5><span class="tsd-kind-parameter">data</span>: <span class="tsd-signature-type tsd-kind-type-parameter">T</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts#L12">apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts:12</a></li></ul></aside></section></section></div>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts#L15">apps/react-vevet-hooks/src/hooks/useAnimationFrameSync.ts:15</a></li></ul></aside></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -99,11 +105,11 @@
 <li><a href="IUseNonMobileHoverProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Non<wbr/>Mobile<wbr/>Hover<wbr/>Props</span></a></li>
 <li><a href="IUseNonMobilePointerHoverProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Non<wbr/>Mobile<wbr/>Pointer<wbr/>Hover<wbr/>Props</span></a></li>
 <li><a href="IUseOnResizeSettings.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>On<wbr/>Resize<wbr/>Settings</span></a></li>
-<li><a href="IUseScopedTimelineProgressProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Scoped<wbr/>Timeline<wbr/>Progress<wbr/>Props</span></a></li>
 <li><a href="IUseTimelineProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Timeline<wbr/>Props</span></a></li>
 <li><a href="../types/TUseAnimationFrameOnFrame.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-type-alias)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4194304-path"></rect><path d="M11.31 16V8.224H8.91V7.24H14.79V8.224H12.39V16H11.31Z" fill="var(--color-text)" id="icon-4194304-text"></path></svg><span>TUse<wbr/>Animation<wbr/>Frame<wbr/>On<wbr/>Frame</span></a></li>
 <li><a href="../types/TUseAnimationFrameSyncData.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TUse<wbr/>Animation<wbr/>Frame<wbr/>Sync<wbr/>Data</span></a></li>
 <li><a href="../types/TUseBreakpointName.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TUse<wbr/>Breakpoint<wbr/>Name</span></a></li>
+<li><a href="../types/TUseOnResizeTarget.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TUse<wbr/>On<wbr/>Resize<wbr/>Target</span></a></li>
 <li><a href="../types/TUseViewportSize.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TUse<wbr/>Viewport<wbr/>Size</span></a></li>
 <li><a href="../types/TViewportOrientation.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TViewport<wbr/>Orientation</span></a></li>
 <li><a href="../functions/useAnimationFrame.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg><span>use<wbr/>Animation<wbr/>Frame</span></a></li>
@@ -111,12 +117,14 @@
 <li><a href="../functions/useBreakpointName.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Breakpoint<wbr/>Name</span></a></li>
 <li><a href="../functions/useDraggerDirection.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Dragger<wbr/>Direction</span></a></li>
 <li><a href="../functions/useIsMobile.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Is<wbr/>Mobile</span></a></li>
+<li><a href="../functions/useIsViewportDesktop.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Is<wbr/>Viewport<wbr/>Desktop</span></a></li>
+<li><a href="../functions/useIsViewportPhone.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Is<wbr/>Viewport<wbr/>Phone</span></a></li>
+<li><a href="../functions/useIsViewportTablet.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Is<wbr/>Viewport<wbr/>Tablet</span></a></li>
 <li><a href="../functions/useNonMobileHover.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Non<wbr/>Mobile<wbr/>Hover</span></a></li>
 <li><a href="../functions/useNonMobilePointerHover.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Non<wbr/>Mobile<wbr/>Pointer<wbr/>Hover</span></a></li>
 <li><a href="../functions/useOnPageLoad.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>Page<wbr/>Load</span></a></li>
 <li><a href="../functions/useOnResize.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>Resize</span></a></li>
 <li><a href="../functions/useOnViewportOritentationChange.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>Viewport<wbr/>Oritentation<wbr/>Change</span></a></li>
-<li><a href="../functions/useScopedTimelineProgress.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Scoped<wbr/>Timeline<wbr/>Progress</span></a></li>
 <li><a href="../functions/useTimeline.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Timeline</span></a></li>
 <li><a href="../functions/useViewportOrientation.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Viewport<wbr/>Orientation</span></a></li>
 <li><a href="../functions/useViewportSize.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Viewport<wbr/>Size</span></a></li></ul></nav></div></div></div>

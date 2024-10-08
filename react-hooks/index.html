@@ -12,8 +12,78 @@
 <div class="col-content">
 <div class="tsd-page-title">
 <h2>@anton.bobrov/react-hooks</h2></div>
-<div class="tsd-panel tsd-typography"><a id="md:react-hooks" class="tsd-anchor"></a><h1><a href="#$react-hooks" style="color:inherit;text-decoration:none">React hooks</a></h1><a id="md:see-docs" class="tsd-anchor"></a><h2><a href="#$see-docs" style="color:inherit;text-decoration:none">See <a href="https://antonbobrov.github.io/react-kit/react-hooks">Docs</a></a></h2><a id="md:installation" class="tsd-anchor"></a><h2><a href="#$installation" style="color:inherit;text-decoration:none">Installation</a></h2><pre><code class="language-bash"><span class="hl-0">npm </span><span class="hl-1">i</span><span class="hl-0"> </span><span class="hl-1">&quot;@anton.bobrov/react-hooks&quot;</span>
+<div class="tsd-panel tsd-typography"><a id="md:antonbobrovreact-hooks" class="tsd-anchor"></a><h1><a href="#$antonbobrovreact-hooks" style="color:inherit;text-decoration:none"><code>@anton.bobrov/react-hooks</code></a></h1><p>A collection of custom React hooks and utility functions designed to simplify component logic and enhance performance. This library provides a robust set of hooks with full TypeScript support, offering solutions for common patterns in modern React applications.</p>
+<a id="md:links" class="tsd-anchor"></a><h3><a href="#$links" style="color:inherit;text-decoration:none">Links</a></h3><ul>
+<li><a href="https://antonbobrov.github.io/react-kit/react-hooks/">Documentation</a></li>
+<li><a href="https://github.com/antonbobrov/react-kit/blob/develop/apps/react-hooks/CHANGELOG.md">Changelog</a></li>
+</ul>
+<a id="md:installation" class="tsd-anchor"></a><h2><a href="#$installation" style="color:inherit;text-decoration:none">Installation</a></h2><p>To install the package, use npm:</p>
+<pre><code class="language-bash"><span class="hl-0">npm </span><span class="hl-1">i</span><span class="hl-0"> </span><span class="hl-1">&quot;@anton.bobrov/react-hooks&quot;</span>
 </code></pre>
+<a id="md:usage" class="tsd-anchor"></a><h2><a href="#$usage" style="color:inherit;text-decoration:none">Usage</a></h2><p>Here&#39;s an example of how to use one of the hooks, <code>useDebouncedEffect</code>, in your component:</p>
+<pre><code class="language-js"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-3">useDebouncedEffect</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;@anton.bobrov/react-hooks&#39;</span><span class="hl-0">;</span><br/><span class="hl-2">import</span><span class="hl-0"> </span><span class="hl-3">React</span><span class="hl-0">, { </span><span class="hl-3">useState</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-1">&#39;react&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-2">export</span><span class="hl-0"> </span><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">MyComponent</span><span class="hl-0"> = () </span><span class="hl-4">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-4">const</span><span class="hl-0"> [</span><span class="hl-6">value</span><span class="hl-0">, </span><span class="hl-6">setValue</span><span class="hl-0">] = </span><span class="hl-5">useState</span><span class="hl-0">(</span><span class="hl-1">&#39;&#39;</span><span class="hl-0">);</span><br/><br/><span class="hl-0">  </span><span class="hl-5">useDebouncedEffect</span><span class="hl-0">(</span><br/><span class="hl-0">    () </span><span class="hl-4">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">      </span><span class="hl-3">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">(</span><span class="hl-1">&#39;Debounced effect executed with value:&#39;</span><span class="hl-0">, </span><span class="hl-3">value</span><span class="hl-0">);</span><br/><span class="hl-0">    },</span><br/><span class="hl-0">    [</span><span class="hl-3">value</span><span class="hl-0">],</span><br/><span class="hl-0">    </span><span class="hl-7">300</span><span class="hl-0">, </span><span class="hl-8">// Debounce delay in milliseconds</span><br/><span class="hl-0">  );</span><br/><br/><span class="hl-0">  </span><span class="hl-2">return</span><span class="hl-0"> (</span><br/><span class="hl-0">    </span><span class="hl-9">&lt;</span><span class="hl-10">input</span><br/><span class="hl-0">      </span><span class="hl-11">type</span><span class="hl-0">=</span><span class="hl-1">&quot;text&quot;</span><br/><span class="hl-0">      </span><span class="hl-11">value</span><span class="hl-0">=</span><span class="hl-4">{</span><span class="hl-3">value</span><span class="hl-4">}</span><br/><span class="hl-0">      </span><span class="hl-11">onChange</span><span class="hl-0">=</span><span class="hl-4">{</span><span class="hl-12">(</span><span class="hl-3">e</span><span class="hl-12">) </span><span class="hl-4">=&gt;</span><span class="hl-12"> </span><span class="hl-5">setValue</span><span class="hl-12">(</span><span class="hl-3">e</span><span class="hl-12">.</span><span class="hl-3">target</span><span class="hl-12">.</span><span class="hl-3">value</span><span class="hl-12">)</span><span class="hl-4">}</span><br/><span class="hl-0">    </span><span class="hl-9">/&gt;</span><br/><span class="hl-0">  );</span><br/><span class="hl-0">};</span>
+</code></pre>
+<a id="md:available-hooks" class="tsd-anchor"></a><h2><a href="#$available-hooks" style="color:inherit;text-decoration:none">Available Hooks</a></h2><p>Here are the available hooks and what they do:</p>
+<ul>
+<li><strong><code>useChange</code></strong>: Tracks changes to a property.</li>
+<li><strong><code>useClientHeight</code></strong>: Retrieves and tracks the client height of an element.</li>
+<li><strong><code>useClientSize</code></strong>: Retrieves and tracks the client width and height of an element.</li>
+<li><strong><code>useClientWidth</code></strong>: Retrieves and tracks the client width of an element.</li>
+<li><strong><code>useDebouncedEffect</code></strong>: Runs an effect after a specified debounce delay.</li>
+<li><strong><code>useDebouncedEvent</code></strong>: Debounces a callback.</li>
+<li><strong><code>useDebouncedProp</code></strong>: Debounces updates to a prop value.</li>
+<li><strong><code>useDomId</code></strong>: Generates a unique DOM element ID.</li>
+<li><strong><code>useDOMRect</code></strong>: Tracks the size and position of an element.</li>
+<li><strong><code>useEvent</code></strong>: Create a stable link for a callback function.</li>
+<li><strong><code>useEventListener</code></strong>: Adds event listeners to DOM elements.</li>
+<li><strong><code>useFocus</code></strong>: Detects focus state of an element.</li>
+<li><strong><code>useFocusIn</code></strong>: Detects focus inside a given element.</li>
+<li><strong><code>useFocusTrap</code></strong>: Traps focus within a specific container.</li>
+<li><strong><code>useForwardedRef</code></strong>: Forwards refs in components.</li>
+<li><strong><code>useHover</code></strong>: Detects hover state on an element.</li>
+<li><strong><code>useIntersectionObserver</code></strong>: Uses the IntersectionObserver API to track visibility of elements.</li>
+<li><strong><code>useInViewport</code></strong>: Detects when an element enters or leaves the viewport.</li>
+<li><strong><code>useIsOnceMounted</code></strong>: Returns true if the component has been mounted once.</li>
+<li><strong><code>useLazyReady</code></strong>: Tracks element visibility with lazy loading behavior.</li>
+<li><strong><code>useLiteInteraction</code></strong>: Detect a slight user interaction with elements.</li>
+<li><strong><code>useLocalStorage</code></strong>: A hook to work with the <code>localStorage</code> API.</li>
+<li><strong><code>useMouseClientPosition</code></strong>: Tracks the mouse position relative to the client window.</li>
+<li><strong><code>useOffsetHeight</code></strong>: Retrieves and tracks the offset height of an element.</li>
+<li><strong><code>useOffsetSize</code></strong>: Tracks the offset size of an element.</li>
+<li><strong><code>useOffsetWidth</code></strong>: Retrieves and tracks the offset width of an element.</li>
+<li><strong><code>useOnceProp</code></strong>: Updates the state only once when the current value matches the target value.</li>
+<li><strong><code>useOnElementResize</code></strong>: Listens for resize events on a specific element.</li>
+<li><strong><code>useOnEscape</code></strong>: Executes a callback when the Escape key is pressed.</li>
+<li><strong><code>useOutsideClick</code></strong>: Detects clicks outside a specific element.</li>
+<li><strong><code>usePointerHover</code></strong>: Detects hover state using pointer events.</li>
+<li><strong><code>usePreventDocumentScrolling</code></strong>: Temporarily prevents document scrolling.</li>
+<li><strong><code>usePrevious</code></strong>: Tracks the previous value of a variable.</li>
+<li><strong><code>usePropState</code></strong>: Creates a state that automatically synchronizes with an external value.</li>
+<li><strong><code>useScrollLock</code></strong>: Locks the scroll behavior of an element.</li>
+</ul>
+<a id="md:available-utilities" class="tsd-anchor"></a><h2><a href="#$available-utilities" style="color:inherit;text-decoration:none">Available Utilities</a></h2><p>In addition to hooks, the package also provides several utility functions:</p>
+<ul>
+<li><strong><code>objectKeys</code></strong>: Retrieves the keys of an object as an array of the object&#39;s keys.</li>
+<li><strong><code>pickObjectProps</code></strong>: Pick specific properties from an object.</li>
+<li><strong><code>times</code></strong>: Repeats a function <code>n</code> times and returns an array of the results.</li>
+<li><strong><code>splitIntoChunks</code></strong>: Splits an array into chunks.</li>
+<li><strong><code>uniqueArray</code></strong>: Returns an array with unique values.</li>
+<li><strong><code>addEventListener</code></strong>: Adds an event listener to a target.</li>
+<li><strong><code>getSiblingsFocusableElements</code></strong>: Retrieves focusable sibling elements.</li>
+<li><strong><code>resetFocus</code></strong>: Resets focus to a specific element.</li>
+<li><strong><code>selectFocusableChildren</code></strong>: Selects focusable children within an element.</li>
+<li><strong><code>isBrowser</code></strong>: Checks if the code is running in a browser environment.</li>
+<li><strong><code>isServer</code></strong>: Checks if the code is running in a server environment.</li>
+<li><strong><code>getRandomInt</code></strong>: Generates a random integer.</li>
+<li><strong><code>cleanTelephone</code></strong>: Cleans telephone strings.</li>
+<li><strong><code>removeDuplicateSlashes</code></strong>: Removes duplicate slashes from a URL or path.</li>
+<li><strong><code>isBoolean</code></strong>: Checks if a value is a boolean.</li>
+<li><strong><code>isNumber</code></strong>: Checks if a value is a number.</li>
+<li><strong><code>isString</code></strong>: Checks if a value is a string.</li>
+<li><strong><code>isUndefined</code></strong>: Checks if a value is undefined.</li>
+</ul>
+<a id="md:license" class="tsd-anchor"></a><h2><a href="#$license" style="color:inherit;text-decoration:none">License</a></h2><p>This project is licensed under the terms of the
+<a href="https://github.com/antonbobrov/react-kit/blob/develop/LICENSE">MIT license</a>.</p>
 </div></div>
 <div class="col-sidebar">
 <div class="page-menu">
@@ -36,11 +106,15 @@
 <ul>
 <li>
 <ul>
-<li><a href="#md:react-hooks"><span>React hooks</span></a></li>
+<li><a href="#md:antonbobrovreact-hooks"><span>@anton.bobrov/react-<wbr/>hooks</span></a></li>
 <li>
 <ul>
-<li><a href="#md:see-docs"><span>See <wbr/>Docs</span></a></li>
-<li><a href="#md:installation"><span>Installation</span></a></li></ul></li></ul></li></ul></div></details></div>
+<li><a href="#md:links"><span>Links</span></a></li>
+<li><a href="#md:installation"><span>Installation</span></a></li>
+<li><a href="#md:usage"><span>Usage</span></a></li>
+<li><a href="#md:available-hooks"><span>Available <wbr/>Hooks</span></a></li>
+<li><a href="#md:available-utilities"><span>Available <wbr/>Utilities</span></a></li>
+<li><a href="#md:license"><span>License</span></a></li></ul></li></ul></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4-path"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)" id="icon-4-text"></path></svg><span>@anton.bobrov/react-<wbr/>hooks</span></a>
 <ul class="tsd-small-nested-navigation">
@@ -52,10 +126,10 @@
 <li><a href="interfaces/IUseFocusProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Focus<wbr/>Props</span></a></li>
 <li><a href="interfaces/IUseFocusTrapProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Focus<wbr/>Trap<wbr/>Props</span></a></li>
 <li><a href="interfaces/IUseHoverProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Hover<wbr/>Props</span></a></li>
+<li><a href="interfaces/IUseInViewportProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>In<wbr/>Viewport<wbr/>Props</span></a></li>
 <li><a href="interfaces/IUseIntersectionObserverProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Intersection<wbr/>Observer<wbr/>Props</span></a></li>
+<li><a href="interfaces/IUseLazyReady.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Lazy<wbr/>Ready</span></a></li>
 <li><a href="interfaces/IUseOnEscapeProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>On<wbr/>Escape<wbr/>Props</span></a></li>
-<li><a href="interfaces/IUseOnInViewportProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>On<wbr/>In<wbr/>Viewport<wbr/>Props</span></a></li>
-<li><a href="interfaces/IUseOnLazyIntersection.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>On<wbr/>Lazy<wbr/>Intersection</span></a></li>
 <li><a href="interfaces/IUseOnResizeSettings.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>On<wbr/>Resize<wbr/>Settings</span></a></li>
 <li><a href="interfaces/IUseOutsideClickProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Outside<wbr/>Click<wbr/>Props</span></a></li>
 <li><a href="interfaces/IUsePointerHoverProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Pointer<wbr/>Hover<wbr/>Props</span></a></li>
@@ -72,14 +146,16 @@
 <li><a href="functions/getRandomInt.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>get<wbr/>Random<wbr/>Int</span></a></li>
 <li><a href="functions/getSiblingsFocusableElements.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>get<wbr/>Siblings<wbr/>Focusable<wbr/>Elements</span></a></li>
 <li><a href="functions/isBoolean.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>is<wbr/>Boolean</span></a></li>
-<li><a href="functions/isIntersectionObserverSupported.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>is<wbr/>Intersection<wbr/>Observer<wbr/>Supported</span></a></li>
 <li><a href="functions/isNumber.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>is<wbr/>Number</span></a></li>
 <li><a href="functions/isString.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>is<wbr/>String</span></a></li>
 <li><a href="functions/isUndefined.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>is<wbr/>Undefined</span></a></li>
+<li><a href="functions/objectKeys.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>object<wbr/>Keys</span></a></li>
+<li><a href="functions/pickObjectProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>pick<wbr/>Object<wbr/>Props</span></a></li>
 <li><a href="functions/removeDublicateSlashes.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>remove<wbr/>Dublicate<wbr/>Slashes</span></a></li>
 <li><a href="functions/resetFocus.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>reset<wbr/>Focus</span></a></li>
 <li><a href="functions/selectFocusableChildren.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>select<wbr/>Focusable<wbr/>Children</span></a></li>
 <li><a href="functions/splitIntoChunks.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>split<wbr/>Into<wbr/>Chunks</span></a></li>
+<li><a href="functions/times.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>times</span></a></li>
 <li><a href="functions/uniqueeArray.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>uniquee<wbr/>Array</span></a></li>
 <li><a href="functions/useChange.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Change</span></a></li>
 <li><a href="functions/useClientHeight.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Client<wbr/>Height</span></a></li>
@@ -100,8 +176,10 @@
 <li><a href="functions/useFocusTrap.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Focus<wbr/>Trap</span></a></li>
 <li><a href="functions/useForwardedRef.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Forwarded<wbr/>Ref</span></a></li>
 <li><a href="functions/useHover.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Hover</span></a></li>
+<li><a href="functions/useInViewport.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>In<wbr/>Viewport</span></a></li>
 <li><a href="functions/useIntersectionObserver.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Intersection<wbr/>Observer</span></a></li>
 <li><a href="functions/useIsOnceMounted.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Is<wbr/>Once<wbr/>Mounted</span></a></li>
+<li><a href="functions/useLazyReady.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Lazy<wbr/>Ready</span></a></li>
 <li><a href="functions/useLiteInteraction.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Lite<wbr/>Interaction</span></a></li>
 <li><a href="functions/useLocalStorage.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Local<wbr/>Storage</span></a></li>
 <li><a href="functions/useMouseClientPosition.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Mouse<wbr/>Client<wbr/>Position</span></a></li>
@@ -110,8 +188,6 @@
 <li><a href="functions/useOffsetWidth.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Offset<wbr/>Width</span></a></li>
 <li><a href="functions/useOnElementResize.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>Element<wbr/>Resize</span></a></li>
 <li><a href="functions/useOnEscape.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>Escape</span></a></li>
-<li><a href="functions/useOnInViewport.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>In<wbr/>Viewport</span></a></li>
-<li><a href="functions/useOnLazyIntersection.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>Lazy<wbr/>Intersection</span></a></li>
 <li><a href="functions/useOnceProp.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Once<wbr/>Prop</span></a></li>
 <li><a href="functions/useOutsideClick.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Outside<wbr/>Click</span></a></li>
 <li><a href="functions/usePointerHover.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Pointer<wbr/>Hover</span></a></li>

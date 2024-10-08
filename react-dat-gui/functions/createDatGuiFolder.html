@@ -19,7 +19,8 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="createDatGuiFolder"><span class="tsd-kind-call-signature">create<wbr/>Dat<wbr/>Gui<wbr/>Folder</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">__namedParameters</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../types/TCreateDatGuiFolderReturns.html" class="tsd-signature-type tsd-kind-type-alias">TCreateDatGuiFolderReturns</a><a href="#createDatGuiFolder" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Creates a dat.gui folder</p>
+<div class="tsd-comment tsd-typography"><p>Creates a folder in a dat.GUI instance and provides a method to destroy it later.
+This function handles asynchronous loading of <code>dat.gui</code> and manages the folder creation within the given <code>parent</code> GUI instance.</p>
 
 <h3>Example</h3><pre><code class="language-ts"><span class="hl-2">const</span><span class="hl-0"> </span><span class="hl-3">instance</span><span class="hl-0"> = </span><span class="hl-4">createDatGuiFolder</span><span class="hl-0">({</span><br/><span class="hl-0">  </span><span class="hl-5">name:</span><span class="hl-0"> </span><span class="hl-1">&#39;GUI Folder&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-5">parent:</span><span class="hl-0"> </span><span class="hl-5">guiParentFolder</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-4">onCreate</span><span class="hl-5">:</span><span class="hl-0"> (</span><span class="hl-5">folder</span><span class="hl-0">) </span><span class="hl-2">=&gt;</span><span class="hl-0"> </span><span class="hl-5">console</span><span class="hl-0">.</span><span class="hl-4">log</span><span class="hl-0">(</span><span class="hl-5">folder</span><span class="hl-0">),</span><br/><span class="hl-0">});</span><br/><br/><span class="hl-5">instance</span><span class="hl-0">.</span><span class="hl-4">destroy</span><span class="hl-0">();</span>
 </code></pre>
@@ -31,7 +32,7 @@
 <h5><span class="tsd-kind-parameter">__namedParameters</span>: <a href="../types/TCreateDatGuiFolderProps.html" class="tsd-signature-type tsd-kind-type-alias">TCreateDatGuiFolderProps</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="../types/TCreateDatGuiFolderReturns.html" class="tsd-signature-type tsd-kind-type-alias">TCreateDatGuiFolderReturns</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/55798f7/apps/react-dat-gui/src/folder/vanilla/index.ts#L19">apps/react-dat-gui/src/folder/vanilla/index.ts:19</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-dat-gui/src/folder/vanilla/index.ts#L19">apps/react-dat-gui/src/folder/vanilla/index.ts:19</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

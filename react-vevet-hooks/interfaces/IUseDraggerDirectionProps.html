@@ -23,7 +23,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">IUseDraggerDirectionProps</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L5">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:5</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L5">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:5</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -33,6 +33,7 @@
 <h3 class="tsd-index-heading">Properties</h3>
 <div class="tsd-index-list"><a href="IUseDraggerDirectionProps.html#isEnabled" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>is<wbr/>Enabled?</span></a>
 <a href="IUseDraggerDirectionProps.html#minLength" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>min<wbr/>Length?</span></a>
+<a href="IUseDraggerDirectionProps.html#onAny" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>on<wbr/>Any?</span></a>
 <a href="IUseDraggerDirectionProps.html#onDown" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>on<wbr/>Down?</span></a>
 <a href="IUseDraggerDirectionProps.html#onLeft" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>on<wbr/>Left?</span></a>
 <a href="IUseDraggerDirectionProps.html#onRight" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>on<wbr/>Right?</span></a>
@@ -44,25 +45,46 @@
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isEnabled" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>is<wbr/>Enabled</span><a href="#isEnabled" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Enabled</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
-<div class="tsd-comment tsd-typography"><p>Dragging is enabled</p>
+<div class="tsd-comment tsd-typography"><p>Determines if dragging is enabled for the dragger. When set to <code>false</code>, dragging is disabled.</p>
 
-<h3>Default</h3><pre><code class="language-ts"><span class="hl-3">true</span>
+<h3>Default</h3><pre><code class="language-ts"><span class="hl-4">true</span>
 </code></pre>
 </div><aside class="tsd-sources">
 <p>Inherited from Pick.isEnabled</p>
 <ul>
-<li>Defined in common/temp/node_modules/.pnpm/vevet@3.20.0_typescript@4.8.2/node_modules/vevet/lib/types/components/DraggerBase/types.d.ts:20</li></ul></aside></section>
+<li>Defined in common/temp/node_modules/.pnpm/vevet@4.0.1_typescript@4.8.2/node_modules/vevet/lib/types/components/DraggerBase/types.d.ts:20</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="minLength" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>min<wbr/>Length</span><a href="#minLength" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">min<wbr/>Length</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
-<div class="tsd-comment tsd-typography"><p>The minimum swipe length (px) to launch events</p>
+<div class="tsd-comment tsd-typography"><p>The minimum length (in pixels) required for a swipe to be considered valid and trigger direction events.
+If the drag distance is less than this value, no directional callback will be triggered.</p>
 
-<h3>Default</h3><pre><code class="language-ts"><span class="hl-2">75</span>
+<h3>Default</h3><pre><code class="language-ts"><span class="hl-10">75</span>
 </code></pre>
 </div><aside class="tsd-sources">
 <p>Inherited from Pick.minLength</p>
 <ul>
-<li>Defined in common/temp/node_modules/.pnpm/vevet@3.20.0_typescript@4.8.2/node_modules/vevet/lib/types/components/DraggerDirection/types.d.ts:8</li></ul></aside></section>
+<li>Defined in common/temp/node_modules/.pnpm/vevet@4.0.1_typescript@4.8.2/node_modules/vevet/lib/types/components/DraggerDirection/types.d.ts:10</li></ul></aside></section>
+<section class="tsd-panel tsd-member"><a id="onAny" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>on<wbr/>Any</span><a href="#onAny" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Any</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">direction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-type-declaration">
+<h4>Type declaration</h4>
+<ul class="tsd-parameters">
+<li class="tsd-parameter-signature">
+<ul class="tsd-signatures">
+<li class="tsd-signature" id="onAny.__type.__type-1"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">direction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Callback event triggered on any swipe</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">direction</span>: <span class="tsd-signature-type">&quot;left&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;right&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;up&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;down&quot;</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L12">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:12</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="onDown" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>on<wbr/>Down</span><a href="#onDown" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Down</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
@@ -71,13 +93,13 @@
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="onDown.__type.__type-1"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-signature" id="onDown.__type-2.__type-3"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Event on down swipe</p>
+<div class="tsd-comment tsd-typography"><p>Callback event triggered on down swipe</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L17">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:17</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L24">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:24</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="onLeft" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>on<wbr/>Left</span><a href="#onLeft" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Left</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
@@ -86,13 +108,13 @@
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="onLeft.__type-2.__type-3"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-signature" id="onLeft.__type-4.__type-5"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Event on left swipe</p>
+<div class="tsd-comment tsd-typography"><p>Callback event triggered on left swipe</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L11">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:11</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L15">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:15</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="onRight" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>on<wbr/>Right</span><a href="#onRight" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Right</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
@@ -101,13 +123,13 @@
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="onRight.__type-4.__type-5"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-signature" id="onRight.__type-6.__type-7"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Event on right swipe</p>
+<div class="tsd-comment tsd-typography"><p>Callback event triggered on right swipe</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L13">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:13</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L18">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:18</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="onUp" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>on<wbr/>Up</span><a href="#onUp" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Up</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
@@ -116,20 +138,20 @@
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="onUp.__type-6.__type-7"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-signature" id="onUp.__type-8.__type-9"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Event on up swipe</p>
+<div class="tsd-comment tsd-typography"><p>Callback event triggered on up swipe</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L15">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:15</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L21">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:21</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="ref" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>ref</span><a href="#ref" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">ref</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">RefObject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">HTMLElement</span><span class="tsd-signature-symbol">&gt;</span></div>
-<div class="tsd-comment tsd-typography"><p>Element ref</p>
+<div class="tsd-comment tsd-typography"><p>Reference to the container element for dragging gestures</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/c711425/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L9">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:9</a></li></ul></aside></section></section></div>
+<li>Defined in <a href="https://github.com/antonbobrov/react-kit/blob/bae0eb8/apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts#L9">apps/react-vevet-hooks/src/hooks/useDraggerDirection.ts:9</a></li></ul></aside></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -151,6 +173,7 @@
 <ul>
 <li><a href="#isEnabled" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>is<wbr/>Enabled</span></a></li>
 <li><a href="#minLength" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>min<wbr/>Length</span></a></li>
+<li><a href="#onAny" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>on<wbr/>Any</span></a></li>
 <li><a href="#onDown" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>on<wbr/>Down</span></a></li>
 <li><a href="#onLeft" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>on<wbr/>Left</span></a></li>
 <li><a href="#onRight" class=""><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>on<wbr/>Right</span></a></li>
@@ -166,11 +189,11 @@
 <li><a href="IUseNonMobileHoverProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Non<wbr/>Mobile<wbr/>Hover<wbr/>Props</span></a></li>
 <li><a href="IUseNonMobilePointerHoverProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Non<wbr/>Mobile<wbr/>Pointer<wbr/>Hover<wbr/>Props</span></a></li>
 <li><a href="IUseOnResizeSettings.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>On<wbr/>Resize<wbr/>Settings</span></a></li>
-<li><a href="IUseScopedTimelineProgressProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Scoped<wbr/>Timeline<wbr/>Progress<wbr/>Props</span></a></li>
 <li><a href="IUseTimelineProps.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>IUse<wbr/>Timeline<wbr/>Props</span></a></li>
 <li><a href="../types/TUseAnimationFrameOnFrame.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-type-alias)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4194304-path"></rect><path d="M11.31 16V8.224H8.91V7.24H14.79V8.224H12.39V16H11.31Z" fill="var(--color-text)" id="icon-4194304-text"></path></svg><span>TUse<wbr/>Animation<wbr/>Frame<wbr/>On<wbr/>Frame</span></a></li>
 <li><a href="../types/TUseAnimationFrameSyncData.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TUse<wbr/>Animation<wbr/>Frame<wbr/>Sync<wbr/>Data</span></a></li>
 <li><a href="../types/TUseBreakpointName.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TUse<wbr/>Breakpoint<wbr/>Name</span></a></li>
+<li><a href="../types/TUseOnResizeTarget.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TUse<wbr/>On<wbr/>Resize<wbr/>Target</span></a></li>
 <li><a href="../types/TUseViewportSize.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TUse<wbr/>Viewport<wbr/>Size</span></a></li>
 <li><a href="../types/TViewportOrientation.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>TViewport<wbr/>Orientation</span></a></li>
 <li><a href="../functions/useAnimationFrame.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg><span>use<wbr/>Animation<wbr/>Frame</span></a></li>
@@ -178,12 +201,14 @@
 <li><a href="../functions/useBreakpointName.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Breakpoint<wbr/>Name</span></a></li>
 <li><a href="../functions/useDraggerDirection.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Dragger<wbr/>Direction</span></a></li>
 <li><a href="../functions/useIsMobile.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Is<wbr/>Mobile</span></a></li>
+<li><a href="../functions/useIsViewportDesktop.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Is<wbr/>Viewport<wbr/>Desktop</span></a></li>
+<li><a href="../functions/useIsViewportPhone.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Is<wbr/>Viewport<wbr/>Phone</span></a></li>
+<li><a href="../functions/useIsViewportTablet.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Is<wbr/>Viewport<wbr/>Tablet</span></a></li>
 <li><a href="../functions/useNonMobileHover.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Non<wbr/>Mobile<wbr/>Hover</span></a></li>
 <li><a href="../functions/useNonMobilePointerHover.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Non<wbr/>Mobile<wbr/>Pointer<wbr/>Hover</span></a></li>
 <li><a href="../functions/useOnPageLoad.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>Page<wbr/>Load</span></a></li>
 <li><a href="../functions/useOnResize.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>Resize</span></a></li>
 <li><a href="../functions/useOnViewportOritentationChange.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>On<wbr/>Viewport<wbr/>Oritentation<wbr/>Change</span></a></li>
-<li><a href="../functions/useScopedTimelineProgress.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Scoped<wbr/>Timeline<wbr/>Progress</span></a></li>
 <li><a href="../functions/useTimeline.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Timeline</span></a></li>
 <li><a href="../functions/useViewportOrientation.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Viewport<wbr/>Orientation</span></a></li>
 <li><a href="../functions/useViewportSize.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>use<wbr/>Viewport<wbr/>Size</span></a></li></ul></nav></div></div></div>
