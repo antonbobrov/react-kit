@@ -122,3 +122,8 @@ If you want to keep the dat.GUI panel open by default, use the following script:
   window.OPEN_DAT_GUI = true;
 </script>
 ```
+
+## License
+
+This project is licensed under the terms of the
+[MIT license](https://github.com/antonbobrov/react-kit/blob/develop/LICENSE).

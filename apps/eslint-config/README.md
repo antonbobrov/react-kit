@@ -50,3 +50,8 @@ module.exports = {
 module.exports = require('@anton.bobrov/eslint-config/prettier');
 
 ```
+
+## License
+
+This project is licensed under the terms of the
+[MIT license](https://github.com/antonbobrov/react-kit/blob/develop/LICENSE).

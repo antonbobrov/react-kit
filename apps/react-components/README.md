@@ -48,3 +48,8 @@ For example, to import styles for the LazyImage:
 ```scss
 @import '~@anton.bobrov/react-components/lib/styles/components/LazyImage';
 ```
+
+## License
+
+This project is licensed under the terms of the
+[MIT license](https://github.com/antonbobrov/react-kit/blob/develop/LICENSE).

@@ -60,3 +60,8 @@ Here are available hooks and what they do:
 - **`useTimeline`**: Creates a `vevet` timeline instance and sets up event callbacks for timeline events.
 - **`useViewportOrientation`**: Detects the current viewport orientation.
 - **`useViewportSize`**: Provides the current size of the viewport.
+
+## License
+
+This project is licensed under the terms of the
+[MIT license](https://github.com/antonbobrov/react-kit/blob/develop/LICENSE).
