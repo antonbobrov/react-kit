@@ -3,7 +3,7 @@ import { THookEventElement } from '@types';
 import { useEvent } from './useEvent';
 import { useInViewport } from './useInViewport';
 
-export interface IUseOnLazyIntersection {
+export interface IUseLazyReady {
   /** A reference to the observable element */
   ref: THookEventElement<Element>;
 
@@ -31,7 +31,7 @@ export interface IUseOnLazyIntersection {
  * const MyComponent = () => {
  *   const ref = useRef<HTMLDivElement>(null);
  *
- *   const { isIn } = useOnLazyIntersection({
+ *   const { isReady } = useLazyReady({
  *     ref,
  *     onIn: () => console.log('Element is almost in the viewport!'),
  *   });
@@ -39,25 +39,25 @@ export interface IUseOnLazyIntersection {
  *   return <div ref={ref}>Observe me!</div>;
  * };
  */
-export function useOnLazyIntersection({
+export function useLazyReady({
   ref,
   onIn: onInProp,
   isDisabled,
-}: IUseOnLazyIntersection) {
+}: IUseLazyReady) {
   const onIn = useEvent(onInProp);
 
-  const [isIn, setIsIn] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   useInViewport({
     ref,
     onIn: () => {
       onIn?.();
-      setIsIn(true);
+      setIsReady(true);
     },
     rootMargin: '0% 0% 175% 0%',
     destroyOnIn: true,
     isDisabled,
   });
 
-  return { isIn };
+  return { isReady };
 }

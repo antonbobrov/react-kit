@@ -4,7 +4,7 @@ import {
   useDeepCompareMemoize,
   useEvent,
   useForwardedRef,
-  useOnInViewport,
+  useInViewport,
 } from '@anton.bobrov/react-hooks';
 import cn from 'classnames';
 import { Marquee as VevetMarquee } from 'vevet';
@@ -66,7 +66,7 @@ export const Marquee = forwardRef<HTMLDivElement, IMarqueeProps>(
     }, [canCloneNodes, onInit, ref]);
 
     // viewport position state
-    const { state } = useOnInViewport({ ref });
+    const { state } = useInViewport({ ref });
 
     // enable or disable on viewport position change
     useEffect(() => {

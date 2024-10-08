@@ -66,6 +66,7 @@ Here are the available hooks and what they do:
 - **`useIntersectionObserver`**: Uses the IntersectionObserver API to track visibility of elements.
 - **`useInViewport`**: Detects when an element enters or leaves the viewport.
 - **`useIsOnceMounted`**: Returns true if the component has been mounted once.
+- **`useLazyReady`**: Tracks element visibility with lazy loading behavior.
 - **`useLiteInteraction`**: Detect a slight user interaction with elements.
 - **`useLocalStorage`**: A hook to work with the `localStorage` API.
 - **`useMouseClientPosition`**: Tracks the mouse position relative to the client window.
@@ -75,7 +76,6 @@ Here are the available hooks and what they do:
 - **`useOnceProp`**: Updates the state only once when the current value matches the target value.
 - **`useOnElementResize`**: Listens for resize events on a specific element.
 - **`useOnEscape`**: Executes a callback when the Escape key is pressed.
-- **`useOnLazyIntersection`**: Tracks element visibility with lazy loading behavior.
 - **`useOutsideClick`**: Detects clicks outside a specific element.
 - **`usePointerHover`**: Detects hover state using pointer events.
 - **`usePreventDocumentScrolling`**: Temporarily prevents document scrolling.

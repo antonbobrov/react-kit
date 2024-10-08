@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-hooks",
+      "comment": "Rename `useOnLazyIntersection` to `useLazyReady`",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-hooks"
+}
