@@ -67,7 +67,7 @@ export const Provider: FC<IPageScrollProviderProps> = ({
 
     scroll.addPlugin(new CustomScrollKeyboardPlugin());
 
-    if (vevet.isMobile) {
+    if (window.matchMedia('(any-pointer: coarse)').matches) {
       scroll.addPlugin(new CustomScrollDragPlugin({ lerp: 0.35 }));
     }
 
