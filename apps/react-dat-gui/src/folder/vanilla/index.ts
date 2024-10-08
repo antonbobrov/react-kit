@@ -4,10 +4,10 @@ import { TCreateDatGuiFolderReturns, TCreateDatGuiFolderProps } from './types';
 export * from './types';
 
 /**
- * Creates a dat.gui folder
+ * Creates a folder in a dat.GUI instance and provides a method to destroy it later.
+ * This function handles asynchronous loading of `dat.gui` and manages the folder creation within the given `parent` GUI instance.
  *
  * @example
- *
  * const instance = createDatGuiFolder({
  *   name: 'GUI Folder',
  *   parent: guiParentFolder,
@@ -26,6 +26,7 @@ export function createDatGuiFolder({
   let folder: GUI | undefined;
   let instance: GUI | null = null;
 
+  // Load dat.GUI instance and create the folder if not already destroyed
   datGUI
     .then((result) => {
       if (parent === null) {
@@ -50,6 +51,9 @@ export function createDatGuiFolder({
       throw new Error(e);
     });
 
+  /**
+   * Destroys the folder by removing it from the parent `dat.GUI` instance.
+   */
   const destroy = () => {
     isDestroyed = true;
 

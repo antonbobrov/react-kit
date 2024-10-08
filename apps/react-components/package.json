@@ -1,13 +1,14 @@
 {
   "name": "@anton.bobrov/react-components",
   "version": "2.11.1",
-  "description": "React Components",
+  "description": "A collection of reusable React components designed to streamline development and enhance user interfaces.",
   "private": false,
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/types/index.d.ts",
   "files": [
-    "/lib"
+    "/lib",
+    "/src"
   ],
   "sideEffects": false,
   "scripts": {
@@ -26,28 +27,28 @@
     "url": "git+https://github.com/antonbobrov/react-kit.git"
   },
   "keywords": [
-    "react components",
-    "responsive image",
+    "react",
+    "components",
+    "ui",
+    "react-components",
+    "customizable",
+    "responsive",
     "modal",
-    "popup",
-    "accordion",
-    "lazy image",
-    "lazy video",
-    "marquee",
-    "custom cursor",
-    "smooth scroll",
-    "scroll view",
-    "video player"
+    "video",
+    "image",
+    "scroll",
+    "animation",
+    "lazy-loading"
   ],
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">= 18.0.0"
+    "react": ">= 18.0.0",
+    "vevet": "~4.0.1"
   },
   "dependencies": {
     "@anton.bobrov/react-hooks": "workspace:*",
     "@anton.bobrov/react-vevet-hooks": "workspace:*",
-    "@anton.bobrov/vevet-init": "workspace:*",
     "@vimeo/player": "~2.19.0",
     "classnames": "2.3.2",
     "react-portal": "4.2.2",
@@ -82,6 +83,7 @@
     "sass": "~1.62.1",
     "storybook": "^7.1.0-alpha.20",
     "tsc-alias": "1.8.5",
-    "typescript": "4.8.2"
+    "typescript": "4.8.2",
+    "vevet": "~4.0.1"
   }
 }

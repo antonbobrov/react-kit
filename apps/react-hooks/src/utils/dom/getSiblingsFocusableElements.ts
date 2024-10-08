@@ -1,6 +1,15 @@
 import { selectFocusableChildren } from './selectFocusableChildren';
 
-/** Get element's `focusable` siblings */
+/**
+ * Retrieves the focusable siblings of a given element within the document.
+ *
+ * This function identifies all focusable elements in the document body
+ * and determines the siblling elements relative to
+ * the specified element. If the specified element is not found among
+ * the focusable elements, it returns `null` for both siblings.
+ *
+ * @param element - The element for which to find focusable siblings.
+ */
 export function getSiblingsFocusableElements(element: HTMLElement) {
   const focusableElements = Array.from(selectFocusableChildren(document.body));
   const index = focusableElements.findIndex((el) => el === element);

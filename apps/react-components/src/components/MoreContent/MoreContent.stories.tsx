@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { times } from '@anton.bobrov/vevet-init';
+import { times } from '@anton.bobrov/react-hooks';
 import { MoreContent } from '.';
 
 type TComponent = typeof MoreContent;
@@ -9,6 +9,10 @@ const meta: Meta<TComponent> = {
   title: 'Wrappers/MoreContent',
   component: MoreContent,
   tags: ['autodocs'],
+  argTypes: {
+    style: { table: { disable: true } },
+    children: { table: { disable: true } },
+  },
   args: {
     style: {
       maxWidth: 300,

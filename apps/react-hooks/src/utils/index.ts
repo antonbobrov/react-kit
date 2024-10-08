@@ -1,5 +1,4 @@
-export * from './api';
-export * from './array';
+export * from './data';
 export * from './dom';
 export * from './env';
 export * from './math';

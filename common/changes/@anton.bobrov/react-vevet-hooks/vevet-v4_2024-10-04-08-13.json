@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-vevet-hooks",
+      "comment": "Use `vevet` instead of `vevet-init`",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-vevet-hooks"
+}

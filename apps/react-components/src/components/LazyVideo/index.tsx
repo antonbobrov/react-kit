@@ -6,12 +6,21 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { useOnLazyIntersection } from '@anton.bobrov/react-hooks';
+import { useLazyReady } from '@anton.bobrov/react-hooks';
 import { ILazyVideoProps } from './types';
 import { BaseVideo } from '../BaseVideo';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 
-/** Lazy video component */
+/**
+ * LazyVideo component for rendering videos with lazy loading functionality.
+ *
+ * This component optimizes video loading by only loading videos when they enter
+ * the viewport, improving performance and reducing bandwidth usage.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/video-lazyvideo--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/LazyVideo';`
+ */
 export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
   (
     {
@@ -35,7 +44,7 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
 
     const isLazy = loading === 'lazy';
 
-    useOnLazyIntersection({
+    useLazyReady({
       ref: wrapperRef,
       onIn: () => setCanLoad(true),
       isDisabled: !isLazy,

@@ -4,7 +4,17 @@ import { prefixedClasNames } from '../../utils/prefixedClassNames';
 import { IMoreContentProps } from './types';
 import { useWrapperMoreContent } from './utils';
 import { Button as DefaultButton } from './Button';
-
+/**
+ * MoreContent component for revealing additional content on demand.
+ *
+ * This component allows users to expand or collapse content sections, providing
+ * a clean and organized way to present information. It supports features such
+ * as customizable triggers, animations, and limits on the amount of content displayed.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/wrappers-morecontent--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/MoreContent';`
+ */
 export const MoreContent = forwardRef<HTMLDivElement, IMoreContentProps>(
   (
     {

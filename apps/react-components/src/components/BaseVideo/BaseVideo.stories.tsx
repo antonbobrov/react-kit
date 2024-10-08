@@ -1,4 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
+import { usePropState } from '@anton.bobrov/react-hooks';
+import React from 'react';
 import { BaseVideo } from '.';
 
 type TComponent = typeof BaseVideo;
@@ -17,8 +19,31 @@ const meta: Meta<TComponent> = {
 
 export default meta;
 
-export const Default: StoryObj<TComponent> = {
-  args: {
-    src: './video/video.mp4',
-  },
+const Template: StoryFn<TComponent> = ({
+  isPlaying: isPlayingProp,
+  ...props
+}) => {
+  const [isPlaying, setIsPlaying] = usePropState(isPlayingProp);
+
+  return (
+    <>
+      <button type="button" onClick={() => setIsPlaying(true)}>
+        Play
+      </button>
+
+      <button type="button" onClick={() => setIsPlaying(false)}>
+        Pause
+      </button>
+
+      <br />
+
+      <BaseVideo {...props} isPlaying={isPlaying} />
+    </>
+  );
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  src: './video/video.mp4',
+  isPlaying: true,
 };

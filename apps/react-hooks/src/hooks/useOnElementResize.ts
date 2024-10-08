@@ -4,18 +4,39 @@ import { getHookEventElement } from '@utils/internal/getHookEventElement';
 import { useEvent } from './useEvent';
 
 export interface IUseOnResizeSettings {
-  /** The hook is disabled */
+  /** If true, disables the resize detection. */
   isDisabled?: boolean;
+
   /**
-   * Debounce delay
+   * Debounce delay in milliseconds.
    * @default 10
    */
   delay?: number;
 }
 
 /**
- * Hook for element resize detection
- * @see https://developer.mozilla.org/docs/Web/API/ResizeObserver
+ * Custom React hook that detects resize events on a specified element.
+ *
+ * This hook utilizes the `ResizeObserver` API to listen for changes in the
+ * dimensions of the referenced element. It executes the provided effect
+ * callback whenever the element is resized, with an optional debounce
+ * delay to limit the frequency of calls.
+ *
+ * @param ref - A reference to the target element to observe for resizing.
+ * @param effectProp - The effect callback to be executed when the element is resized.
+ * @param settings - Optional settings for managing the behavior of the hook.
+ *
+ * @example
+ * const MyComponent = () => {
+ *   const ref = useRef<HTMLDivElement>(null);
+ *   const handleResize = () => {
+ *     console.log('Element resized');
+ *   };
+ *
+ *   useOnElementResize(ref, handleResize, { delay: 100 });
+ *
+ *   return <div ref={ref} style={{ width: '100%', height: '100px' }}>Resize me!</div>;
+ * };
  */
 export function useOnElementResize(
   ref: THookEventElement<Element>,

@@ -9,7 +9,11 @@ const meta: Meta<TComponent> = {
   title: 'Text/Marquee',
   component: Marquee,
   tags: ['autodocs'],
+  argTypes: {
+    children: { table: { disable: true } },
+  },
   args: {
+    gap: 10,
     children: 'Marquee text',
   },
 };
@@ -34,17 +38,11 @@ const Template: StoryFn<TComponent> = ({
         Disable
       </button>
 
-      <button
-        type="button"
-        onClick={() => setSpeed((val) => Math.max(val + 0.2, 0.2))}
-      >
+      <button type="button" onClick={() => setSpeed((val) => val * 2)}>
         Faster
       </button>
 
-      <button
-        type="button"
-        onClick={() => setSpeed((val) => Math.max(val - 0.2, 0.2))}
-      >
+      <button type="button" onClick={() => setSpeed((val) => val / 2)}>
         Slower
       </button>
 
@@ -61,16 +59,39 @@ const Template: StoryFn<TComponent> = ({
 
 export const Default = Template.bind({});
 Default.args = {
-  isFpsNormalized: true,
+  canCloneNodes: true,
 };
+
+export const WithNotClonableText = Template.bind({});
+WithNotClonableText.args = {};
 
 export const WithReverseSpeed = Template.bind({});
 WithReverseSpeed.args = {
   speed: -1,
 };
 
-export const WithSeparator = Template.bind({});
-WithSeparator.args = {
-  separator: <b style={{ display: 'inline-block', margin: '0 0.25em' }}>*</b>,
-  prependWhitespace: false,
+export const WithHTMLElements = Template.bind({});
+WithHTMLElements.args = {
+  children: [
+    <div
+      style={{ width: '20vw', height: '100px', backgroundColor: '#dd7171' }}
+    />,
+    <div
+      style={{ width: '40vw', height: '50px', backgroundColor: '#8abd41' }}
+    />,
+    <div
+      style={{ width: '10vw', height: '100px', backgroundColor: '#32e3d7' }}
+    />,
+    <div
+      style={{ width: '15vw', height: '10px', backgroundColor: '#5139d7' }}
+    />,
+    <div
+      style={{ width: '5vw', height: '100px', backgroundColor: '#e332d4' }}
+    />,
+    <div style={{ width: '50vw', height: '100px', backgroundColor: '#000' }} />,
+    <div
+      style={{ width: '10vw', height: '30px', backgroundColor: '#e34a32' }}
+    />,
+  ],
+  speed: 3,
 };

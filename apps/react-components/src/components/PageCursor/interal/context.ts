@@ -1,5 +1,5 @@
-import { CustomCursor } from '@anton.bobrov/vevet-init';
 import { createContext } from 'react';
+import { CustomCursor } from 'vevet';
 import { IPageCursorType } from '../types';
 
 export interface IPageCursorContext {

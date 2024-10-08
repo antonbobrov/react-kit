@@ -12,12 +12,12 @@ export function usePageScrollProviderStore() {
       }));
     },
 
-    smoothContainer: undefined,
+    customContainer: undefined,
 
-    setSmoothContainer: (data) => {
+    setCustomContainer: (data) => {
       setStore((prevValue) => ({
         ...prevValue,
-        smoothContainer: data,
+        customContainer: data,
       }));
     },
   });

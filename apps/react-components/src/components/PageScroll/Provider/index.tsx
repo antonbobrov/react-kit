@@ -1,12 +1,11 @@
 import React, { FC, useEffect, useState } from 'react';
 import {
-  SmoothScroll,
-  SmoothScrollDragPlugin,
-  SmoothScrollKeyboardPlugin,
+  CustomScroll,
+  CustomScrollDragPlugin,
+  CustomScrollKeyboardPlugin,
   vevet,
-} from '@anton.bobrov/vevet-init';
+} from 'vevet';
 import {
-  isBoolean,
   isUndefined,
   useEvent,
   useDeepCompareMemoize,
@@ -14,37 +13,37 @@ import {
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { usePageScrollProviderStore } from './utils/usePageScrollProviderStore';
 import { IPageScrollProviderProps } from './types';
-import { canBeSmooth as canBeSmoothDefault } from './utils/canBeSmooth';
 import { PageScrollContext } from '../context';
 
 /** PageScroll provider */
 export const Provider: FC<IPageScrollProviderProps> = ({
   children,
-  canBeSmooth: canBeSmoothProp,
-  smoothProps = {},
-  onSmoothInit: onSmoothInitProp,
+  getType: getTypeProp,
+  customScrollProps = {},
+  onCustomScrollInit: onCustomScrollInitProp,
 }) => {
   const store = usePageScrollProviderStore();
-  const { selector, setSelector, smoothContainer } = store;
+  const { selector, setSelector, customContainer } = store;
 
-  const [initialSmoothProps] = useState(smoothProps);
+  const [initialCustomScrollProps] = useState(customScrollProps);
 
-  const htmlSmoothClassName = prefixedClasNames('page-scroll-use-smooth');
+  const htmlCustomClassName = prefixedClasNames('page-scroll-use-custom');
 
-  const onSmoothInit = useEvent(onSmoothInitProp);
+  const onCustomScrollInit = useEvent(onCustomScrollInitProp);
+  const getType = useEvent(getTypeProp);
+  const hasGetType = !isUndefined(getTypeProp);
 
   useEffect(() => {
     const html = document.documentElement;
 
-    const isSmoothByProp = isBoolean(canBeSmoothProp)
-      ? canBeSmoothProp
-      : canBeSmoothProp?.();
-    const isSmoothByDefault = canBeSmoothDefault();
-    const isSmooth = isSmoothByProp ?? isSmoothByDefault;
+    const isCustomByProp =
+      hasGetType && getType ? getType() === 'custom' : undefined;
+    const isCustomByDefault = !vevet.isMobile;
+    const isCustom = isCustomByProp ?? isCustomByDefault;
 
-    if (!isSmooth || !smoothContainer) {
+    if (!isCustom || !customContainer) {
       const timeout = setTimeout(() => {
-        html.classList.remove(htmlSmoothClassName);
+        html.classList.remove(htmlCustomClassName);
         setSelector?.(window);
       }, 16);
 
@@ -54,38 +53,39 @@ export const Provider: FC<IPageScrollProviderProps> = ({
       };
     }
 
-    html.classList.add(htmlSmoothClassName);
+    html.classList.add(htmlCustomClassName);
 
-    const scroll = new SmoothScroll({
-      container: smoothContainer,
+    const scroll = new CustomScroll({
+      container: customContainer,
       hasWillChange: !vevet.browserName.includes('firefox'),
       lerp: 0.1,
       lerpApproximation: 0.5,
       isEnabled: true,
-      ...initialSmoothProps,
+      ...initialCustomScrollProps,
     });
     setSelector?.(scroll);
 
-    scroll.addPlugin(new SmoothScrollKeyboardPlugin());
+    scroll.addPlugin(new CustomScrollKeyboardPlugin());
 
-    if (vevet.isMobile) {
-      scroll.addPlugin(new SmoothScrollDragPlugin({ lerp: 0.35 }));
+    if (window.matchMedia('(any-pointer: coarse)').matches) {
+      scroll.addPlugin(new CustomScrollDragPlugin({ lerp: 0.35 }));
     }
 
-    onSmoothInit?.(scroll);
+    onCustomScrollInit?.(scroll);
 
     return () => {
       setSelector?.(undefined);
       scroll.destroy();
-      html.classList.remove(htmlSmoothClassName);
+      html.classList.remove(htmlCustomClassName);
     };
   }, [
-    canBeSmoothProp,
-    htmlSmoothClassName,
-    initialSmoothProps,
-    onSmoothInit,
+    getType,
+    htmlCustomClassName,
+    initialCustomScrollProps,
+    onCustomScrollInit,
     setSelector,
-    smoothContainer,
+    customContainer,
+    hasGetType,
   ]);
 
   useEffect(() => {
@@ -93,11 +93,11 @@ export const Provider: FC<IPageScrollProviderProps> = ({
       return;
     }
 
-    if (selector instanceof SmoothScroll) {
-      selector.changeProps({ ...smoothProps });
+    if (selector instanceof CustomScroll) {
+      selector.changeProps({ ...customScrollProps });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selector, useDeepCompareMemoize(smoothProps)]);
+  }, [selector, useDeepCompareMemoize(customScrollProps)]);
 
   useEffect(() => {
     if (!isUndefined(selector) && 'resize' in selector) {

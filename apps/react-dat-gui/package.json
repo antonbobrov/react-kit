@@ -1,13 +1,14 @@
 {
   "name": "@anton.bobrov/react-dat-gui",
   "version": "3.1.10",
-  "description": "React hooks for dat.gui",
+  "description": "React adaptation of [dat.GUI](https://www.npmjs.com/package/dat.gui)",
   "private": false,
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/types/index.d.ts",
   "files": [
-    "/lib"
+    "/lib",
+    "/src"
   ],
   "sideEffects": false,
   "scripts": {
@@ -24,9 +25,15 @@
     "url": "git+https://github.com/antonbobrov/react-kit.git"
   },
   "keywords": [
-    "react hooks",
+    "react",
     "dat.gui",
-    "useDatGui"
+    "gui",
+    "datgui",
+    "settings-panel",
+    "control-panel",
+    "dat-gui-integration",
+    "ui-controls",
+    "parameter-control"
   ],
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",

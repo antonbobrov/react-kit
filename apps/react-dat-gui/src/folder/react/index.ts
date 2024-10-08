@@ -6,11 +6,10 @@ import { createDatGuiFolder } from '../vanilla';
 export * from './types';
 
 /**
- * Creates a dat.gui folder
+ * React hook to create and manage a dat.GUI folder.
  *
  * @example
- *
- * useDatGuiFolder({ name: 'GUI Folder', parent: guiParentFolder });
+ * const folder = useDatGuiFolder({ name: 'GUI Folder', parent: guiParentFolder });
  */
 export function useDatGuiFolder({
   name,

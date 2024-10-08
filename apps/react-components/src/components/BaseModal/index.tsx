@@ -14,7 +14,15 @@ import { IBaseModalProps } from './types';
 import { CloseButton as DefaultCloseButton } from './CloseButton';
 import { renderModalAnimation } from './utils';
 
-/** Base Modal */
+/**
+ * BaseModal component for creating customizable modal dialogs.
+ * This component provides a flexible and accessible way to display modal content.
+ * The BaseModal component ensures a seamless user experience by managing focus, keyboard navigation, and close actions.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/modals-basemodal--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/BaseModal';`
+ */
 export const BaseModal: FC<IBaseModalProps> = ({
   className,
   style,

@@ -10,7 +10,18 @@ import { render } from './utils/render';
 const classNamePrefix = 'expand-content';
 const contentClassNamePrefix = `${classNamePrefix}__content`;
 
-/** Accordion base */
+/**
+ * ExpandContent component for creating accordion-style expandable content sections.
+ *
+ * This component allows users to toggle the visibility of additional content
+ * within a collapsible section, making it an ideal base for accordion functionality.
+ * It enhances user experience by saving space and providing a clean interface,
+ * allowing for better management of large amounts of information.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/wrappers-expandcontent--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/ExpandContent';`
+ */
 export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
   (
     {
@@ -19,7 +30,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       isActive: isActiveProp = false,
       duration = 500,
       hasAlpha = true,
-      isContentRendered: isContentRenderedProp = true,
+      isHiddenContentRendered: isHiddenContentRenderedProp = true,
       onAnimationRender: onAnimationRenderProp,
       onAnimationEnd: onAnimationEndProp,
       children,
@@ -37,11 +48,11 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       isActive,
       isPrevActive,
       isDefaultActive,
-      isContentRendered,
+      isHiddenContentRendered,
       setIsHidden,
     } = useStates({
       isActive: isActiveProp,
-      isContentRendered: isContentRenderedProp,
+      isHiddenContentRendered: isHiddenContentRenderedProp,
     });
 
     const { play, reverse, timeline } = useTimeline({
@@ -112,7 +123,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
             prefixedClasNames(`${contentClassNamePrefix}_default_active`),
           )}
         >
-          {isContentRendered && children}
+          {isHiddenContentRendered && children}
         </div>
       </div>
     );

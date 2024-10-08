@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-dat-gui",
+      "comment": "Update jsdoc, readme & package.json",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-dat-gui"
+}

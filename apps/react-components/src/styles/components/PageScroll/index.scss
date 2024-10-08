@@ -1,6 +1,6 @@
 @import '../../settings';
 
-.#{$rkc-prefix}-page-scroll-use-smooth {
+.#{$rkc-prefix}-page-scroll-use-custom {
   overflow: hidden;
 
   body {
@@ -9,24 +9,24 @@
   }
 }
 
-.#{$rkc-prefix}-page-scroll-smooth-container {
-  &.#{$rkc-prefix}-is-smooth {
+.#{$rkc-prefix}-page-scroll-custom-container {
+  &.#{$rkc-prefix}-is-custom {
     position: relative;
     height: calc(100 * var(--vh));
 
-    .v-smooth-scroll {
+    .v-custom-scroll {
       position: relative;
       width: 100%;
       height: 100%;
       overflow: hidden;
 
       &__wrapper {
-        &.v-smooth-scroll_vertical {
+        &.v-custom-scroll_vertical {
           width: 100%;
           height: auto;
         }
     
-        &.v-smooth-scroll_horizontal {
+        &.v-custom-scroll_horizontal {
           width: max-content;
           height: 100%;
         }

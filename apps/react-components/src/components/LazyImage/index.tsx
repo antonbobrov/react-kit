@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect, useState } from 'react';
 import {
   useEvent,
   useForwardedRef,
-  useOnLazyIntersection,
+  useLazyReady,
 } from '@anton.bobrov/react-hooks';
 import cn from 'classnames';
 import { generatePlaceholderImage } from '../BaseImage/utils/generatePlaceholderImage';
@@ -10,7 +10,18 @@ import { prefixedClasNames } from '../../utils/prefixedClassNames';
 import { ILazyImageProps } from './types';
 import { BaseImage } from '../BaseImage';
 
-/** Lazy image component */
+/**
+ * LazyImage component for rendering images with lazy loading functionality.
+ *
+ * This component optimizes image loading by only loading images when they enter
+ * the viewport, improving performance and reducing bandwidth usage. It supports
+ * adaptive paths to ensure optimal image loading based on device or screen size,
+ * as well as WebP detection to utilize the most efficient image format available.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/image-lazyimage--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/LazyImage';`
+ */
 export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
   (
     {
@@ -36,7 +47,7 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
     const height = paths?.height ?? tagProps.height;
     const isLazy = loading === 'lazy';
 
-    useOnLazyIntersection({
+    useLazyReady({
       ref,
       onIn: () => setCanLoad(true),
       isDisabled: !isLazy,

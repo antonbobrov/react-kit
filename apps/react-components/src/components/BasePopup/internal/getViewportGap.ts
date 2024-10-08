@@ -1,4 +1,4 @@
-import { vevet } from '@anton.bobrov/vevet-init';
+import { vevet } from 'vevet';
 
 export function getViewportGap() {
   if (vevet.viewport.isPhone) {

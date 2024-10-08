@@ -1,19 +1,18 @@
+import { objectKeys } from '@anton.bobrov/react-hooks';
 import { GUI } from '../../base';
 import {
   TCreateDatGuiSettingsReturns,
   TCreateDatGuiSettingsProps,
 } from './types';
 import { createDatGuiFolder } from '../../folder';
-import { objectKeys } from '../utils/objectKeys';
 import { TData } from '../types';
 
 export * from './types';
 
 /**
- * Create dat.gui settings
+ * Creates a dat.GUI settings interface with different controls based on the provided parameters.
  *
  * @example
- *
  * const instance = createDatGuiSettings({
  *   name: 'GUI Folder',
  *   parent: guiParentFolder,

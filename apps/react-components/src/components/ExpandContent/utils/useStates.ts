@@ -3,18 +3,20 @@ import { useState } from 'react';
 
 interface IProps {
   isActive: boolean;
-  isContentRendered: boolean;
+  isHiddenContentRendered: boolean;
 }
 
 export function useStates({
   isActive: isActiveProp,
-  isContentRendered: isContentRenderedProp,
+  isHiddenContentRendered: isHiddenContentRenderedProp,
 }: IProps) {
   const [isDefaultActive] = useState(isActiveProp);
 
   const [isHidden, setIsHidden] = useState(!isDefaultActive);
 
-  const isContentRendered = isContentRenderedProp ? true : !isHidden;
+  const isHiddenContentRendered = isHiddenContentRenderedProp
+    ? true
+    : !isHidden;
 
   const isActive = useDebouncedProp(isActiveProp, 1);
 
@@ -24,7 +26,7 @@ export function useStates({
     isActive,
     isPrevActive,
     isDefaultActive,
-    isContentRendered,
+    isHiddenContentRendered,
     setIsHidden,
   };
 }

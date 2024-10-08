@@ -49,7 +49,6 @@ importers:
       '@anton.bobrov/eslint-config': workspace:*
       '@anton.bobrov/react-hooks': workspace:*
       '@anton.bobrov/react-vevet-hooks': workspace:*
-      '@anton.bobrov/vevet-init': workspace:*
       '@babel/preset-env': ^7.21.4
       '@babel/preset-react': ^7.18.6
       '@babel/preset-typescript': ^7.21.4
@@ -80,12 +79,12 @@ importers:
       storybook: ^7.1.0-alpha.20
       tsc-alias: 1.8.5
       typescript: 4.8.2
+      vevet: ~4.0.1
       video.js: 8.17.4
       youtube-player: 5.6.0
     dependencies:
       '@anton.bobrov/react-hooks': link:../react-hooks
       '@anton.bobrov/react-vevet-hooks': link:../react-vevet-hooks
-      '@anton.bobrov/vevet-init': link:../vevet-init
       '@vimeo/player': 2.19.0
       classnames: 2.3.2
       react-portal: 4.2.2_react-dom@18.2.0+react@18.2.0
@@ -120,6 +119,7 @@ importers:
       storybook: 7.1.0-alpha.20
       tsc-alias: 1.8.5
       typescript: 4.8.2
+      vevet: 4.0.1_typescript@4.8.2
 
   ../../apps/react-dat-gui:
     specifiers:
@@ -183,7 +183,6 @@ importers:
     specifiers:
       '@anton.bobrov/eslint-config': workspace:*
       '@anton.bobrov/react-hooks': workspace:*
-      '@anton.bobrov/vevet-init': workspace:*
       '@types/react': 18.0.18
       eslint: 8.56.0
       npm-run-all: 4.1.5
@@ -193,9 +192,9 @@ importers:
       tsc-alias: 1.8.5
       typedoc: ~0.24.4
       typescript: 4.8.2
+      vevet: ~4.0.1
     dependencies:
       '@anton.bobrov/react-hooks': link:../react-hooks
-      '@anton.bobrov/vevet-init': link:../vevet-init
     devDependencies:
       '@anton.bobrov/eslint-config': link:../eslint-config
       '@types/react': 18.0.18
@@ -207,27 +206,7 @@ importers:
       tsc-alias: 1.8.5
       typedoc: 0.24.4_typescript@4.8.2
       typescript: 4.8.2
-
-  ../../apps/vevet-init:
-    specifiers:
-      '@anton.bobrov/eslint-config': workspace:*
-      eslint: 8.56.0
-      npm-run-all: 4.1.5
-      prettier: 3.3.3
-      rimraf: 5.0.0
-      tsc-alias: 1.8.5
-      typescript: 4.8.2
-      vevet: 3.20.0
-    dependencies:
-      vevet: 3.20.0_typescript@4.8.2
-    devDependencies:
-      '@anton.bobrov/eslint-config': link:../eslint-config
-      eslint: 8.56.0
-      npm-run-all: 4.1.5
-      prettier: 3.3.3
-      rimraf: 5.0.0
-      tsc-alias: 1.8.5
-      typescript: 4.8.2
+      vevet: 4.0.1_typescript@4.8.2
 
 packages:
 
@@ -247,7 +226,7 @@ packages:
   /@anton.bobrov/p-cancelable/4.0.1:
     resolution: {integrity: sha512-f9kPvJUKhXIM/Ghx5jJfmYT3IQQ4Cg2Fpvd5AisPwbIXLQFDMb64L/1oqPUrAQoZChBCS8je/6D2dy1YSupc+Q==}
     engines: {node: '>=14.16'}
-    dev: false
+    dev: true
 
   /@aw-web-design/x-default-browser/1.4.88:
     resolution: {integrity: sha512-AkEmF0wcwYC2QkhK703Y83fxWARttIWXDmQN8+cof8FmFZ5BRhnNXGymeb1S73bOCLfWjYELxtujL56idCN/XA==}
@@ -6117,7 +6096,7 @@ packages:
 
   /detect-browser/5.3.0:
     resolution: {integrity: sha512-53rsFbGdwMwlF7qvCt0ypLM5V5/Mbl0szB7GPN8y9NCcbknYOeVVXdrXEq+90IwAfrrzt6Hd+u2E2ntakICU8w==}
-    dev: false
+    dev: true
 
   /detect-indent/6.1.0:
     resolution: {integrity: sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==}
@@ -6230,7 +6209,7 @@ packages:
 
   /easing-progress/1.0.0:
     resolution: {integrity: sha512-YRWG6ysCNEjoGun64Y+XSydwImsaztQtkCSVhAfNtDqsLH8xoLE8goXCZNm2/di7OV2nRkv6ngenZ48HEPjUfQ==}
-    dev: false
+    dev: true
 
   /eastasianwidth/0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -7336,7 +7315,7 @@ packages:
 
   /get-image-pos/0.0.11:
     resolution: {integrity: sha512-wQNsmFTk74/lC1K6aYsG2aDMLJGDTjvan0JaKeMVo050r+oqgRrv0ZZDcU7wJ7Awz5cnzfsmps6cjpHfzK6DSA==}
-    dev: false
+    dev: true
 
   /get-intrinsic/1.2.0:
     resolution: {integrity: sha512-L049y6nFOuom5wGyRc3/gdTLO94dySVKRACj1RmJZBQXlbTMhtNIgkWkUHq+jYmZvKf14EW1EoJnnjbmoHij0Q==}
@@ -8114,7 +8093,7 @@ packages:
 
   /ismobilejs/1.1.1:
     resolution: {integrity: sha512-VaFW53yt8QO61k2WJui0dHf4SlL8lxBofUuUmwBo0ljPk0Drz2TiuDW4jo3wDcv41qy/SxrJ+VAzJ/qYqsmzRw==}
-    dev: false
+    dev: true
 
   /isobject/3.0.1:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
@@ -8917,7 +8896,7 @@ packages:
 
   /normalize-wheel/1.0.1:
     resolution: {integrity: sha512-1OnlAPZ3zgrk8B91HyRj+eVv+kS5u+Z0SCsak6Xil/kmgEia50ga7zfkumayonZrImffAxPU/5WcyGhzetHNPA==}
-    dev: false
+    dev: true
 
   /npm-run-all/4.1.5:
     resolution: {integrity: sha512-Oo82gJDAVcaMdi3nuoKFavkIHBRVqQ1qvMb+9LHk/cF4P6B2m8aP04hGf7oL6wZ9BuGwX1onlLhpuoofSyoQDQ==}
@@ -10835,7 +10814,7 @@ packages:
         optional: true
     dependencies:
       typescript: 4.8.2
-    dev: false
+    dev: true
 
   /tsc-alias/1.8.5:
     resolution: {integrity: sha512-Y3ka0olwSRdbHPyX5kXhYY2aoBKuT53DFdeY+PpQUR4hg5M/b8eIRmC8dL4FBdd0wT366iWc6iDUUGe6QwI7mg==}
@@ -11175,10 +11154,10 @@ packages:
 
   /vevet-dom/0.0.15:
     resolution: {integrity: sha512-Y/6CilyXm3uaA2NrecuU6sPBoIjBG7DiP2TrDsbND80qqhzPAdZ58lzk9oYHUTGq72MiDZYFvq94p26edZCadg==}
-    dev: false
+    dev: true
 
-  /vevet/3.20.0_typescript@4.8.2:
-    resolution: {integrity: sha512-aaJvphx1m/uBTFiCSQEkDXnLNRsOdD/ZJ1XM592cx4D7a3NWHsVN33p9IEIKWDpAYejx5pYzOlzOWy61pJ0iwA==}
+  /vevet/4.0.1_typescript@4.8.2:
+    resolution: {integrity: sha512-IXuX5dnS5p7LkkBjm8HmByeuUwmDLRdZU8auh6JXJWxnD+h9hXtdHt5oHYrhKgvrIcdnfQkFGEOgjfH7aYHfEw==}
     dependencies:
       '@anton.bobrov/p-cancelable': 4.0.1
       detect-browser: 5.3.0
@@ -11190,7 +11169,7 @@ packages:
       vevet-dom: 0.0.15
     transitivePeerDependencies:
       - typescript
-    dev: false
+    dev: true
 
   /video.js/8.17.4:
     resolution: {integrity: sha512-AECieAxKMKB/QgYK36ci50phfpWys6bFT6+pGMpSafeFYSoZaQ2Vpl83T9Qqcesv4TO7oNtiycnVeaBnrva2oA==}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/eslint-config",
+      "comment": "Update readme & package.json meta",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/eslint-config"
+}

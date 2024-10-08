@@ -1,13 +1,14 @@
 {
   "name": "@anton.bobrov/react-vevet-hooks",
   "version": "2.4.2",
-  "description": "React + Vevet hooks",
+  "description": "A collection of custom React hooks designed to seamlessly integrate with the `Vevet` library",
   "private": false,
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/types/index.d.ts",
   "files": [
-    "/lib"
+    "/lib",
+    "/src"
   ],
   "sideEffects": false,
   "scripts": {
@@ -24,17 +25,21 @@
     "url": "git+https://github.com/antonbobrov/react-kit.git"
   },
   "keywords": [
-    "react hooks",
+    "react",
+    "react-hooks",
+    "hooks",
+    "typescript",
+    "custom-hooks",
     "vevet"
   ],
   "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">= 18.0.0"
+    "react": ">= 18.0.0",
+    "vevet": "~4.0.1"
   },
   "dependencies": {
-    "@anton.bobrov/react-hooks": "workspace:*",
-    "@anton.bobrov/vevet-init": "workspace:*"
+    "@anton.bobrov/react-hooks": "workspace:*"
   },
   "devDependencies": {
     "@anton.bobrov/eslint-config": "workspace:*",
@@ -46,6 +51,7 @@
     "rimraf": "5.0.0",
     "tsc-alias": "1.8.5",
     "typedoc": "~0.24.4",
-    "typescript": "4.8.2"
+    "typescript": "4.8.2",
+    "vevet": "~4.0.1"
   }
 }

@@ -7,6 +7,16 @@ import { IFadeContentProps } from './types';
 import { FadeContentItem } from './Item';
 import { useParentHeight } from './utils/useParentHeight';
 
+/**
+ * FadeContent component for displaying content with fade-in and fade-out transitions.
+
+ * This component is ideal for creating animated tabs, providing a smooth transition.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/wrappers-fadecontent--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/FadeContent';`
+ */
+
 export const FadeContent = forwardRef<HTMLDivElement, IFadeContentProps>(
   (
     { className, style, content, activeKey, duration = 600, hasFocus = true },

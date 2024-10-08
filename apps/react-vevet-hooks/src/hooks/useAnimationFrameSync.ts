@@ -1,6 +1,6 @@
-import { useEvent } from '@anton.bobrov/react-hooks';
-import { lerp, objectKeys } from '@anton.bobrov/vevet-init';
+import { objectKeys, useEvent } from '@anton.bobrov/react-hooks';
 import { useCallback, useRef } from 'react';
+import { lerp } from 'vevet';
 import { useAnimationFrame } from './useAnimationFrame';
 
 export type TUseAnimationFrameSyncData = Record<string, number>;
@@ -8,17 +8,24 @@ export type TUseAnimationFrameSyncData = Record<string, number>;
 export interface IUseAnimationFrameSyncProps<
   T extends TUseAnimationFrameSyncData,
 > {
+  /** The initial data for the animation frame, with properties to animate. */
   data: T;
+
+  /** Callback function to be called on each update with the current interpolated values. */
   onUpdate: (data: T) => void;
+
+  /** The easing factor for the interpolation. Defaults to 0.1. */
   ease?: number;
 }
 
 /**
- * Launches an animation frame with linear interpolation of all values.
- * When the values are interpolated, the animation frame is automatically stopped.
+ * Custom React hook that synchronizes animation frame data using linear interpolation.
+ *
+ * This hook allows you to smoothly animate properties by specifying their initial values.
+ * It uses linear interpolation to transition between current and target values.
+ * The animation frame will automatically stop once all values reach their targets.
  *
  * @example
- *
  * const { set } = useAnimationFrameSync({
  *   data: { x: 0, y: 0 },
  *   onUpdate: ({ x, y }) => console.log(x, y),
@@ -43,8 +50,8 @@ export function useAnimationFrameSync<T extends TUseAnimationFrameSyncData>({
   const { moment, target } = dataRef.current;
 
   const { play, pause } = useAnimationFrame({
-    onFrame: ({ easeMultiplier }) => {
-      const ease = easeProp * easeMultiplier;
+    onFrame: ({ fpsMultiplier }) => {
+      const ease = easeProp * fpsMultiplier;
 
       props.forEach((prop) => {
         // @ts-ignore

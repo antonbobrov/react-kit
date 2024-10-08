@@ -1,5 +1,5 @@
 import { PropsWithChildren, ReactElement } from 'react';
-import { NScrollView } from '@anton.bobrov/vevet-init';
+import { NScrollView } from 'vevet';
 import { IUseScrollView } from './utils/useScrollView';
 
 export interface IScrollViewProviderProps
@@ -15,9 +15,10 @@ export interface IScrollViewProviderProps
       | 'resizeDebounce'
     >,
     Pick<NScrollView.IChangeableProps, 'isEnabled' | 'rootMargin'> {
+  /** Used to destory the previous instance and create a new one */
   instanceKey: string | number;
   /**
-   * Enable `IntersectionObserver`
+   * Enable or disable the ScrollView
    * @default false
    */
   isEnabled?: boolean;

@@ -1,19 +1,46 @@
 import { useEvent, useDeepCompareMemoize } from '@anton.bobrov/react-hooks';
-import { NTimeline, Timeline, vevet } from '@anton.bobrov/vevet-init';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { NTimeline, Timeline } from 'vevet';
 
 export interface IUseTimelineProps
   extends Pick<NTimeline.IStaticProps, 'easing'>,
     Pick<NTimeline.IChangeableProps, 'duration'> {
-  /** Event on timeline start */
+  /** Callback event triggered when the timeline starts */
   onStart?: () => void;
-  /** Event on timeline progress update */
+
+  /** Callback event triggered on timeline progress update */
   onProgress?: (data: NTimeline.ICallbacksTypes['progress']) => void;
-  /** Event on timeline end */
+
+  /** Callback event triggered when the timeline ends */
   onEnd?: () => void;
 }
 
-/** Create `vevet` `Timeline` */
+/**
+ * Custom React hook that creates a `vevet` timeline instance.
+ *
+ * This hook initializes a timeline with the specified properties and
+ * sets up event callbacks for timeline events such as start, progress,
+ * and end. It provides functions to control the playback of the timeline.
+ *
+ * @example
+ * const MyComponent = () => {
+ *   const { play, pause, reset } = useTimeline({
+ *     easing: EaseInBounce,
+ *     duration: 1000,
+ *     onStart: () => console.log('Timeline started'),
+ *     onProgress: (data) => console.log('Progress:', data),
+ *     onEnd: () => console.log('Timeline ended'),
+ *   });
+ *
+ *   return (
+ *     <div>
+ *       <button onClick={play}>Play</button>
+ *       <button onClick={pause}>Pause</button>
+ *       <button onClick={reset}>Reset</button>
+ *     </div>
+ *   );
+ * };
+ */
 export function useTimeline({
   easing,
   onStart: onStartProp,
@@ -30,10 +57,6 @@ export function useTimeline({
   const onEnd = useEvent(onEndProp);
 
   useEffect(() => {
-    if (!vevet) {
-      return undefined;
-    }
-
     const instance = new Timeline({
       ...initialChangeablePropsRef.current,
       easing,

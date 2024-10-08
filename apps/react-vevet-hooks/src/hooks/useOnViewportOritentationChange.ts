@@ -1,8 +1,19 @@
 import { useEvent } from '@anton.bobrov/react-hooks';
-import { vevet } from '@anton.bobrov/vevet-init';
 import { useEffect } from 'react';
+import { vevet } from 'vevet';
 
-/** Event on viewport orientation change */
+/**
+ * Custom React hook that listens for changes in the viewport orientation.
+ *
+ * @example
+ * const MyComponent = () => {
+ *   useOnViewportOrientationChange(() => {
+ *     console.log('Viewport orientation changed!');
+ *   });
+ *
+ *   return <div>Change the orientation of the viewport to see the effect!</div>;
+ * };
+ */
 export function useOnViewportOritentationChange(effectProp: () => void) {
   const effect = useEvent(effectProp);
 

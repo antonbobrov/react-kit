@@ -8,8 +8,26 @@ import { THookEventElement } from '../types';
 export interface IUsePointerHoverProps extends IUseEventListenerSettings {}
 
 /**
- * Hook for hover detection
- * @see https://developer.mozilla.org/docs/Web/API/Element/pointerenter_event
+ * Custom React hook for detecting pointer hover state over a referenced element.
+ *
+ * This hook listens for `pointerenter` and `pointerleave` events on the specified
+ * element and updates the `isHovered` state accordingly. It returns a boolean value
+ * indicating whether the pointer is currently hovering over the element.
+ *
+ * @param ref - A reference to the target element to monitor for hover events.
+ * @param props - Optional settings for managing event listener behavior.
+ *
+ * @example
+ * const MyComponent = () => {
+ *   const ref = useRef<HTMLDivElement>(null);
+ *   const isHovered = usePointerHover(ref);
+ *
+ *   return (
+ *     <div ref={ref} style={{ background: isHovered ? 'lightblue' : 'lightgray' }}>
+ *       {isHovered ? 'Hovered!' : 'Hover over me!'}
+ *     </div>
+ *   );
+ * };
  */
 export function usePointerHover(
   ref: THookEventElement,

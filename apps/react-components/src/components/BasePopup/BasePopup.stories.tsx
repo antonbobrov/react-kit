@@ -90,3 +90,8 @@ WithCustomAnchor.args = {
   anchor: null,
   renderAnchor: AnchorRenderer,
 };
+
+export const WithLifetine = Template.bind({});
+WithLifetine.args = {
+  lifetime: 3000,
+};

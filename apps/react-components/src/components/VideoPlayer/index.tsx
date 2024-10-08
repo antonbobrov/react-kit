@@ -7,7 +7,15 @@ import { VideoPlayerVimeo } from './Vimeo';
 import { VideoPlayerYoutube } from './YouTube';
 import { VideoPlayerMp4 } from './Mp4';
 
-/** Custom video player */
+/**
+ * VideoPlayer component for creating HTML5 video players as well as
+ * embedding YouTube and Vimeo videos.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/video-videoplayer--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/VideoPlayer';`
+ */
+
 export const VideoPlayer: FC<IVideoPlayerProps> = ({
   className,
   style,

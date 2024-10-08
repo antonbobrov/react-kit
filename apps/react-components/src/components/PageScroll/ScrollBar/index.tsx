@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import { ScrollBar as VevetScrollBar, vevet } from '@anton.bobrov/vevet-init';
+import { vevet, ScrollBar as VevetScrollBar } from 'vevet';
 import { usePageScrollSelector } from '../hooks/usePageScrollSelector';
 import { IPageScrollSCrollBarProps } from './types';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
@@ -31,31 +31,28 @@ export const ScrollBar: FC<IPageScrollSCrollBarProps> = ({
       canAutoHide,
       minSize,
     });
+
     setScrollbar(instance);
 
-    // @ts-ignore
-    // eslint-disable-next-line no-underscore-dangle
-    const xBar = instance._xBar;
+    const { xBar, yBar } = instance;
 
-    // @ts-ignore
-    // eslint-disable-next-line no-underscore-dangle
-    const yBar = instance._yBar;
+    const scrollbarClassName = prefixedClasNames('page-scroll-scrollbar');
+    const pageScrollBarClassName = prefixedClasNames(
+      'page-scroll-scrollbar-parent',
+    );
 
-    xBar.outer.classList.add(prefixedClasNames('page-scroll-scrollbar'));
-    yBar.outer.classList.add(prefixedClasNames('page-scroll-scrollbar'));
+    xBar.outer.classList.add(scrollbarClassName);
+    yBar.outer.classList.add(scrollbarClassName);
 
-    vevet.html.classList.add(prefixedClasNames('page-scroll-scrollbar-parent'));
-    vevet.body.classList.add(prefixedClasNames('page-scroll-scrollbar-parent'));
+    vevet.html.classList.add(pageScrollBarClassName);
+    vevet.body.classList.add(pageScrollBarClassName);
 
     return () => {
       instance.destroy();
 
-      vevet.html.classList.remove(
-        prefixedClasNames('page-scroll-scrollbar-parent'),
-      );
-      vevet.body.classList.remove(
-        prefixedClasNames('page-scroll-scrollbar-parent'),
-      );
+      vevet.html.classList.remove(pageScrollBarClassName);
+
+      vevet.body.classList.remove(pageScrollBarClassName);
     };
   }, [
     scrollSelector,

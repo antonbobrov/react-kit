@@ -3,14 +3,26 @@ import {
   THookEventElement,
   useEventListener,
 } from '@anton.bobrov/react-hooks';
-import { vevet } from '@anton.bobrov/vevet-init';
 import { useState } from 'react';
+import { vevet } from 'vevet';
 
 export interface IUseNonMobileHoverProps
   extends Omit<IUseEventListenerSettings, 'getIsDisabled'> {}
 
 /**
- * Hook for hover detection (**non-mobile devices only**)
+ * Custom React hook for detecting hover state on non-mobile devices.
+ *
+ * @example
+ * const MyComponent = () => {
+ *   const ref = useRef<HTMLDivElement>(null);
+ *   const isHovered = useNonMobileHover(ref);
+ *
+ *   return (
+ *     <div ref={ref} style={{ backgroundColor: isHovered ? 'lightblue' : 'white' }}>
+ *       Hover over me!
+ *     </div>
+ *   );
+ * };
  */
 export function useNonMobileHover(
   ref: THookEventElement,

@@ -1,4 +1,4 @@
-import { SmoothScroll } from '@anton.bobrov/vevet-init';
+import { CustomScroll } from 'vevet';
 
 /** Global scrollable element */
-export type TPageScrollSelector = undefined | SmoothScroll | Window;
+export type TPageScrollSelector = undefined | CustomScroll | Window;

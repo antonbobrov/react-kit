@@ -1,12 +1,17 @@
-# React Kit
+
+# React Kit Monorepo
+
+A monorepo that contains various tools, components, and utilities for building modern React applications.
 
 ## Packages
-- [`eslint-config`](apps/eslint-config)
-- [`react-components`](apps/react-components) / ([`docs`](https://antonbobrov.github.io/react-kit))
-- [`react-dat-gui`](apps/react-dat-gui) / ([`docs`](https://antonbobrov.github.io/react-kit/react-dat-gui/))
-- [`react-hooks`](apps/react-hooks) / ([`docs`](https://antonbobrov.github.io/react-kit/react-hooks/))
-- [`react-vevet-hooks`](apps/react-vevet-hooks) / ([`docs`](https://antonbobrov.github.io/react-kit/react-vevet-hooks/))
-- [`vevet-init`](apps/vevet-init)
 
-## Dev Config
+This monorepo includes several packages:
+
+1. **[@anton.bobrov/eslint-config](https://github.com/antonbobrov/react-kit/tree/develop/apps/eslint-config)**: An ESLint configuration package that integrates Prettier and provides tailored setups for TypeScript, React, and Next.js.
+2. **[@anton.bobrov/react-components](https://github.com/antonbobrov/react-kit/tree/develop/apps/react-components)**: A collection of reusable React components designed to streamline development and enhance user interfaces.
+3. **[@anton.bobrov/react-dat-gui](https://github.com/antonbobrov/react-kit/tree/develop/apps/react-dat-gui)**: React adaptation of [dat.GUI](https://www.npmjs.com/package/dat.gui), a lightweight graphical user interface for changing variables in JavaScript.
+4. **[@anton.bobrov/react-hooks](https://github.com/antonbobrov/react-kit/tree/develop/apps/react-hooks)**: A collection of custom React hooks and utility functions designed to simplify component logic and enhance performance
+5. **[@anton.bobrov/react-vevet-hooks](https://github.com/antonbobrov/react-kit/tree/develop/apps/react-vevet-hooks)**: A collection of custom React hooks designed to seamlessly integrate with the `Vevet` library.
+
+## Development
 * node v20.17.0

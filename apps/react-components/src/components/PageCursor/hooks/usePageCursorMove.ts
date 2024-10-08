@@ -1,6 +1,6 @@
 import { useEvent } from '@anton.bobrov/react-hooks';
 import { useEffect } from 'react';
-import { NCustomCursor } from '@anton.bobrov/vevet-init';
+import { NCustomCursor } from 'vevet';
 import { usePageCursor } from './usePageCursor';
 
 /**

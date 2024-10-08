@@ -24,10 +24,6 @@
       "name": "@react-vevet-hooks",
       "path": "apps/react-vevet-hooks"
     },
-    {
-      "name": "@vevet-init",
-      "path": "apps/vevet-init"
-    },
 	],
 	"settings": {}
 }

@@ -2,54 +2,73 @@ import React, { forwardRef, useEffect, useRef, useState } from 'react';
 import {
   isString,
   useDeepCompareMemoize,
+  useEvent,
   useForwardedRef,
-  useOnInViewport,
+  useInViewport,
 } from '@anton.bobrov/react-hooks';
 import cn from 'classnames';
-import { Marquee as VevetMarquee, vevet } from '@anton.bobrov/vevet-init';
+import { Marquee as VevetMarquee } from 'vevet';
 import { IMarqueeProps } from './types';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
 
-/** Custom marquee element */
-export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
+/**
+ * Marquee component for creating scrolling text or content.
+ *
+ * This component provides a simple way to display text or other elements that
+ * scroll horizontally across the screen. It supports various features such as
+ * customizable speed, direction, and behavior, allowing developers to create
+ * engaging and dynamic content displays. The Marquee component is designed
+ * to enhance user experience by providing an attention-grabbing method for
+ * presenting important information or announcements while ensuring accessibility
+ * and responsiveness across different devices and screen sizes.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/text-marquee--docs
+ */
+export const Marquee = forwardRef<HTMLDivElement, IMarqueeProps>(
   (
     {
       className,
       style,
       children,
       'aria-label': ariaLabel,
-      separator,
+      canCloneNodes = false,
+      onInit: onInitProp,
       isEnabled = true,
-      prependWhitespace = true,
       ...changeableProps
     },
     forwardedRef,
   ) => {
     const ref = useForwardedRef(forwardedRef);
-    const marqueeContainerRef = useRef<HTMLSpanElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const [marquee, setMarquee] = useState<VevetMarquee | undefined>();
 
+    const onInit = useEvent(onInitProp);
+
     const initialPropsRef = useRef({ isEnabled, ...changeableProps });
 
+    // create the marquee
     useEffect(() => {
-      if (!marqueeContainerRef.current || !vevet) {
+      if (!containerRef.current) {
         return undefined;
       }
 
       const instance = new VevetMarquee({
         ...initialPropsRef.current,
-        container: marqueeContainerRef.current,
-        prependWhitespace,
+        container: containerRef.current,
+        canCloneNodes,
       });
 
       setMarquee(instance);
+      onInit?.(instance);
 
       return () => instance?.destroy();
-    }, [ref, prependWhitespace]);
+    }, [canCloneNodes, onInit, ref]);
 
-    const { state } = useOnInViewport({ ref });
+    // viewport position state
+    const { state } = useInViewport({ ref });
 
+    // enable or disable on viewport position change
     useEffect(() => {
       if (!marquee || !state) {
         return;
@@ -73,23 +92,21 @@ export const Marquee = forwardRef<HTMLSpanElement, IMarqueeProps>(
     }, [marquee, useDeepCompareMemoize(changeableProps)]);
 
     return (
-      <span
+      <div
         ref={ref}
         className={cn(className, prefixedClasNames('marquee'))}
         style={style}
         role="marquee"
         aria-label={ariaLabel ?? (isString(children) ? children : undefined)}
       >
-        <span
-          ref={marqueeContainerRef}
+        <div
+          ref={containerRef}
           className={prefixedClasNames('marquee__container')}
           aria-hidden
         >
           {children}
-
-          {separator}
-        </span>
-      </span>
+        </div>
+      </div>
     );
   },
 );

@@ -15,6 +15,17 @@ import { Anchor as DefaultAnchorComponent } from './Anchor';
 
 const DefaultAnchor = memo(DefaultAnchorComponent);
 
+/**
+ * BasePopup component for creating customizable popup elements.
+ *
+ * This component provides a versatile way to display contextual information, tooltips,
+ * or interactive content that appears above other content. It supports various features
+ * such as positioning, customizable styles, and the ability to control visibility.
+ *
+ * @link See examples https://antonbobrov.github.io/react-kit/?path=/docs/popups-basepopup--docs
+ *
+ * @requires Requires styles: `@import '~@anton.bobrov/react-components/lib/styles/components/BasePopup';`
+ */
 export const BasePopup = forwardRef<HTMLDivElement, IBasePopupProps>(
   (
     {

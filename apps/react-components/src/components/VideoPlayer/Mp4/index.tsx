@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { useEvent } from '@anton.bobrov/react-hooks';
-import { vevet } from '@anton.bobrov/vevet-init';
 import type Player from 'video.js/dist/types/player';
+import { vevet } from 'vevet';
 import { prefixedClasNames } from '../../../utils/prefixedClassNames';
 import { IVideoPlayerMp4Props } from './types';
 

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useEvent } from '@anton.bobrov/react-hooks';
-import { onScroll } from '@anton.bobrov/vevet-init';
+import { onScroll } from 'vevet';
 import { usePageScrollSelector } from './usePageScrollSelector';
 
 export type TUseOnPageScrollEffect = Parameters<typeof onScroll>[0]['callback'];

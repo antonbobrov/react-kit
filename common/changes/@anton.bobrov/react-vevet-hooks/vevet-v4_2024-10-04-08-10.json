@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/react-vevet-hooks",
+      "comment": "Delete `useScopedTimelineProgress`",
+      "type": "major"
+    }
+  ],
+  "packageName": "@anton.bobrov/react-vevet-hooks"
+}

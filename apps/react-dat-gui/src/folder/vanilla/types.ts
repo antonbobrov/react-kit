@@ -1,17 +1,17 @@
 import { GUI } from '../../base';
 
 export type TCreateDatGuiFolderProps = {
-  /** GUI folder name */
+  /** The name of the folder to be created. */
   name: string;
-  /** Callback on folder created */
+  /** Callback function triggered when the folder is created, receiving the folder as an argument. */
   onCreate: (folder: GUI) => void;
-  /** GUI parent folder */
+  /** The parent GUI or folder where this new folder should be added. If `null` or not provided, the folder is added to the root GUI. */
   parent?: GUI | null;
-  /** The folder is opened by default */
+  /** Whether the folder should be open by default when created. */
   isOpen?: boolean;
 };
 
 export type TCreateDatGuiFolderReturns = {
-  /** Destroy the folder */
+  /** Function to destroy the folder and remove it from the parent GUI instance. */
   destroy: () => void;
 };
