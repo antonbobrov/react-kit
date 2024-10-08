@@ -1,6 +1,25 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Mon, 30 Sep 2024 09:05:50 GMT and should not be manually modified.
+This log was last generated on Tue, 08 Oct 2024 14:39:29 GMT and should not be manually modified.
+
+## 3.0.0
+Tue, 08 Oct 2024 14:39:29 GMT
+
+### Breaking changes
+
+- Delete `useScopedTimelineProgress`
+- Use `vevet` instead of `vevet-init`
+- useAnimationFrame: `easeMultiplier` -> `fpsMultiplier`
+
+### Minor changes
+
+- Add `useIsViewportDesktop`, `useIsViewportTablet` & `useIsViewportPhone`
+- useAnimationFrame: add `computedFPS`
+- useDraggerDirection: add `onAny`
+
+### Patches
+
+- Upgrade vevet to 4.0.1
 
 ## 2.4.2
 Mon, 30 Sep 2024 09:05:50 GMT

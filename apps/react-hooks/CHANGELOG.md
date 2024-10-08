@@ -1,6 +1,21 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Tue, 24 Sep 2024 12:32:57 GMT and should not be manually modified.
+This log was last generated on Tue, 08 Oct 2024 14:39:29 GMT and should not be manually modified.
+
+## 3.0.0
+Tue, 08 Oct 2024 14:39:29 GMT
+
+### Breaking changes
+
+- useIntersectionObserver: remove `onFallback`
+- useOnInViewport: remove `onFallback`
+- Delete `isIntersectionObserverSupported`
+- Rename `useOnInViewport` to `useInViewport`
+- Rename `useOnLazyIntersection` to `useLazyReady`
+
+### Minor changes
+
+- Add `objectKeys`, `pickObjectProps`, and `times`
 
 ## 2.11.0
 Tue, 24 Sep 2024 12:32:57 GMT

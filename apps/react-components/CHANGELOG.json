@@ -2,6 +2,45 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "3.0.0",
+      "tag": "@anton.bobrov/react-components_v3.0.0",
+      "date": "Tue, 08 Oct 2024 14:39:29 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Use `vevet` instead of `vevet-init`"
+          },
+          {
+            "comment": "Marquee: add `canCloneNodes`, `onInit`, remove `separator`, `prependWhitespace`, update children props and extend new vevet props"
+          },
+          {
+            "comment": "PageScroll: use CustomScroll instead of SmoothScroll"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "SplitText: make `onInit` optional"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Upgrade vevet to 4.0.1"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `3.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `3.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `2.0.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.11.1",
       "tag": "@anton.bobrov/react-components_v2.11.1",
       "date": "Mon, 30 Sep 2024 09:05:50 GMT",

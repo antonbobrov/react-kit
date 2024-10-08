@@ -2,6 +2,26 @@
   "name": "@anton.bobrov/react-dat-gui",
   "entries": [
     {
+      "version": "3.1.11",
+      "tag": "@anton.bobrov/react-dat-gui_v3.1.11",
+      "date": "Tue, 08 Oct 2024 14:39:29 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update jsdoc, readme & package.json"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `3.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `2.0.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.1.10",
       "tag": "@anton.bobrov/react-dat-gui_v3.1.10",
       "date": "Tue, 24 Sep 2024 12:32:57 GMT",

@@ -2,6 +2,53 @@
   "name": "@anton.bobrov/react-vevet-hooks",
   "entries": [
     {
+      "version": "3.0.0",
+      "tag": "@anton.bobrov/react-vevet-hooks_v3.0.0",
+      "date": "Tue, 08 Oct 2024 14:39:29 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Delete `useScopedTimelineProgress`"
+          },
+          {
+            "comment": "Use `vevet` instead of `vevet-init`"
+          },
+          {
+            "comment": "useAnimationFrame: `easeMultiplier` -> `fpsMultiplier`"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Add `useIsViewportDesktop`, `useIsViewportTablet` & `useIsViewportPhone`"
+          },
+          {
+            "comment": "useAnimationFrame: add `computedFPS`"
+          },
+          {
+            "comment": "useDraggerDirection: add `onAny`"
+          }
+        ],
+        "none": [
+          {
+            "comment": "Update jsdoc"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Upgrade vevet to 4.0.1"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `3.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/eslint-config\" to `2.0.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.4.2",
       "tag": "@anton.bobrov/react-vevet-hooks_v2.4.2",
       "date": "Mon, 30 Sep 2024 09:05:50 GMT",

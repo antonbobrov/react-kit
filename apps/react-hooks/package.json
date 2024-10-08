@@ -1,6 +1,6 @@
 {
   "name": "@anton.bobrov/react-hooks",
-  "version": "2.11.0",
+  "version": "3.0.0",
   "description": "A collection of custom React hooks and utility functions designed to simplify component logic and enhance performance.",
   "private": false,
   "main": "lib/cjs/index.js",
