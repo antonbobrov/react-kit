@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect, useState } from 'react';
 import {
   useEvent,
   useForwardedRef,
-  useOnLazyIntersection,
+  useLazyReady,
 } from '@anton.bobrov/react-hooks';
 import cn from 'classnames';
 import { generatePlaceholderImage } from '../BaseImage/utils/generatePlaceholderImage';
@@ -47,7 +47,7 @@ export const LazyImage = forwardRef<HTMLImageElement, ILazyImageProps>(
     const height = paths?.height ?? tagProps.height;
     const isLazy = loading === 'lazy';
 
-    useOnLazyIntersection({
+    useLazyReady({
       ref,
       onIn: () => setCanLoad(true),
       isDisabled: !isLazy,

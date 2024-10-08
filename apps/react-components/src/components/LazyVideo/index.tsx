@@ -6,7 +6,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { useOnLazyIntersection } from '@anton.bobrov/react-hooks';
+import { useLazyReady } from '@anton.bobrov/react-hooks';
 import { ILazyVideoProps } from './types';
 import { BaseVideo } from '../BaseVideo';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
@@ -44,7 +44,7 @@ export const LazyVideo = forwardRef<HTMLVideoElement, ILazyVideoProps>(
 
     const isLazy = loading === 'lazy';
 
-    useOnLazyIntersection({
+    useLazyReady({
       ref: wrapperRef,
       onIn: () => setCanLoad(true),
       isDisabled: !isLazy,

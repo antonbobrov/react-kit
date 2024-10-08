@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect, useMemo, useRef } from 'react';
 import {
   useEvent,
   useForwardedRef,
-  useOnLazyIntersection,
+  useLazyReady,
 } from '@anton.bobrov/react-hooks';
 import { SplitText as VevetSplitText, vevet } from 'vevet';
 import { ISplitTextProps } from './types';
@@ -40,8 +40,8 @@ export const SplitText = forwardRef<HTMLSpanElement, ISplitTextProps>(
 
     const onInit = useEvent(onInitProp);
 
-    const { isIn } = useOnLazyIntersection({ ref });
-    const canInit = (isLazy && isIn) || !isLazy;
+    const { isReady } = useLazyReady({ ref });
+    const canInit = (isLazy && isReady) || !isLazy;
 
     const html = useMemo(() => ({ __html: textProp }), [textProp]);
 
