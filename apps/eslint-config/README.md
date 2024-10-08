@@ -6,7 +6,8 @@ An ESLint configuration package that integrates Prettier and provides tailored s
 - [Changelog](https://github.com/antonbobrov/react-kit/blob/develop/apps/eslint-config/CHANGELOG.md)
 
 ## Installation
-Install ESLint, Prettier, and the configuration:
+
+To get started, install ESLint, Prettier, and the configuration package. Ensure the versions match those below:
 
 ```bash
 npm i eslint@8.56.0 prettier@3.3.3 --save-dev
