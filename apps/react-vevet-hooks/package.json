@@ -36,7 +36,7 @@
   "license": "MIT",
   "peerDependencies": {
     "react": ">= 18.0.0",
-    "vevet": "~4.0.0-beta.2"
+    "vevet": "~4.0.1"
   },
   "dependencies": {
     "@anton.bobrov/react-hooks": "workspace:*"
@@ -52,6 +52,6 @@
     "tsc-alias": "1.8.5",
     "typedoc": "~0.24.4",
     "typescript": "4.8.2",
-    "vevet": "~4.0.0-beta.2"
+    "vevet": "~4.0.1"
   }
 }
