@@ -64,6 +64,7 @@ Here are the available hooks and what they do:
 - **`useForwardedRef`**: Forwards refs in components.
 - **`useHover`**: Detects hover state on an element.
 - **`useIntersectionObserver`**: Uses the IntersectionObserver API to track visibility of elements.
+- **`useInViewport`**: Detects when an element enters or leaves the viewport.
 - **`useIsOnceMounted`**: Returns true if the component has been mounted once.
 - **`useLiteInteraction`**: Detect a slight user interaction with elements.
 - **`useLocalStorage`**: A hook to work with the `localStorage` API.
@@ -74,7 +75,6 @@ Here are the available hooks and what they do:
 - **`useOnceProp`**: Updates the state only once when the current value matches the target value.
 - **`useOnElementResize`**: Listens for resize events on a specific element.
 - **`useOnEscape`**: Executes a callback when the Escape key is pressed.
-- **`useOnInViewport`**: Detects when an element enters or leaves the viewport.
 - **`useOnLazyIntersection`**: Tracks element visibility with lazy loading behavior.
 - **`useOutsideClick`**: Detects clicks outside a specific element.
 - **`usePointerHover`**: Detects hover state using pointer events.

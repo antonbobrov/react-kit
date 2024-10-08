@@ -6,7 +6,7 @@ import {
   useIntersectionObserver,
 } from './useIntersectionObserver';
 
-export interface IUseOnInViewportProps
+export interface IUseInViewportProps
   extends Omit<IUseIntersectionObserverProps, 'onEntry'> {
   /** Callback triggered when the element enters the viewport */
   onIn?: () => void;
@@ -31,7 +31,7 @@ export interface IUseOnInViewportProps
  * const MyComponent = () => {
  *   const ref = useRef<HTMLDivElement>(null);
  *
- *   const { state } = useOnInViewport({
+ *   const { state } = useInViewport({
  *     ref,
  *     onIn: () => console.log('Element is in the viewport!'),
  *     onOut: () => console.log('Element is out of the viewport!'),
@@ -40,14 +40,14 @@ export interface IUseOnInViewportProps
  *   return <div ref={ref}>Observe me! State: {state}</div>;
  * };
  */
-export function useOnInViewport({
+export function useInViewport({
   ref,
   onIn: onInProp,
   onOut: onOutProp,
   destroyOnIn,
   isDisabled: isDisabledProp,
   ...props
-}: IUseOnInViewportProps) {
+}: IUseInViewportProps) {
   const onIn = useEvent(onInProp);
   const onOut = useEvent(onOutProp);
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { THookEventElement } from '@types';
 import { useEvent } from './useEvent';
-import { useOnInViewport } from './useOnInViewport';
+import { useInViewport } from './useInViewport';
 
 export interface IUseOnLazyIntersection {
   /** A reference to the observable element */
@@ -21,7 +21,7 @@ export interface IUseOnLazyIntersection {
  * Custom React hook that observes whether the specified element is
  * "almost" within the visible area (viewport).
  *
- * This hook uses the `useOnInViewport` hook to determine when the element
+ * This hook uses the `useInViewport` hook to determine when the element
  * is nearly visible, based on a defined root margin. When the element
  * enters this threshold, the provided callback is executed.
  *
@@ -48,7 +48,7 @@ export function useOnLazyIntersection({
 
   const [isIn, setIsIn] = useState(false);
 
-  useOnInViewport({
+  useInViewport({
     ref,
     onIn: () => {
       onIn?.();
