@@ -52,5 +52,8 @@ export * from './ScrollView';
 export * from './SplitText';
 export * from './SplitText/types';
 
+export * from './TagName';
+export * from './TagName/types';
+
 export * from './VideoPlayer';
 export * from './VideoPlayer/types';

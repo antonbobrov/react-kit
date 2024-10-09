@@ -34,6 +34,7 @@ npm i "@anton.bobrov/react-components"
 - **`PageScroll`**: ([Demo](https://antonbobrov.github.io/react-kit/?path=/story/scroll-pagescroll--default)): A component for managing global page scrolling with support for custom smooth scrolling and scrollbars.
 - **`ScrollView`**: ([Demo](https://antonbobrov.github.io/react-kit/?path=/docs/scroll-scrollvew--docs)): A component for monitoring elements entering and leaving the viewport.
 - **`SplitText`**: ([Demo](https://antonbobrov.github.io/react-kit/?path=/docs/text-splittext--docs)): A component for splitting text into letters, words, or lines.
+- **`TagName`**: ([Demo](https://antonbobrov.github.io/react-kit/?path=/docs/elements-tagname--docs)): A React component that creates a DOM element with a dynamic tag name.
 - **`VideoPlayer`**: ([Demo](https://antonbobrov.github.io/react-kit/?path=/docs/video-videoplayer--docs)): A component for rendering HTML5 videos or YouTube or Vimeo embedded players.
 
 ## Importing Styles
