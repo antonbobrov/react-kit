@@ -1,6 +1,17 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Tue, 08 Oct 2024 14:39:29 GMT and should not be manually modified.
+This log was last generated on Sun, 13 Oct 2024 17:40:07 GMT and should not be manually modified.
+
+## 3.1.0
+Sun, 13 Oct 2024 17:40:07 GMT
+
+### Minor changes
+
+- Add `TagName` component
+
+### Patches
+
+- ExpandContent: fix active classnames
 
 ## 3.0.0
 Tue, 08 Oct 2024 14:39:29 GMT
