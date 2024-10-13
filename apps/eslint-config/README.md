@@ -51,6 +51,26 @@ module.exports = require('@anton.bobrov/eslint-config/prettier');
 
 ```
 
+### Create `.gitattributes`:
+
+```
+* text=auto eol=lf
+```
+
+### Create `.editorconfig`:
+
+```
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = false
+```
+
 ## License
 
 This project is licensed under the terms of the
