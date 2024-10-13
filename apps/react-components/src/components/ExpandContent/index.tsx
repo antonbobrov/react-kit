@@ -120,7 +120,8 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
           ref={contentRef}
           className={cn(
             prefixedClasNames(contentClassNamePrefix),
-            prefixedClasNames(`${contentClassNamePrefix}_default_active`),
+            isDefaultActive &&
+              prefixedClasNames(`${contentClassNamePrefix}_default_active`),
           )}
         >
           {isHiddenContentRendered && children}
