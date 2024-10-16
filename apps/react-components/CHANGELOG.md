@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-components
 
-This log was last generated on Sun, 13 Oct 2024 17:40:07 GMT and should not be manually modified.
+This log was last generated on Wed, 16 Oct 2024 07:54:04 GMT and should not be manually modified.
+
+## 3.1.1
+Wed, 16 Oct 2024 07:54:04 GMT
+
+### Patches
+
+- Upgrade vevet to 4.0.2
 
 ## 3.1.0
 Sun, 13 Oct 2024 17:40:07 GMT

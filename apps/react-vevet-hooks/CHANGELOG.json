@@ -2,6 +2,18 @@
   "name": "@anton.bobrov/react-vevet-hooks",
   "entries": [
     {
+      "version": "3.0.2",
+      "tag": "@anton.bobrov/react-vevet-hooks_v3.0.2",
+      "date": "Wed, 16 Oct 2024 07:54:04 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Upgrade vevet to 4.0.2"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.0.1",
       "tag": "@anton.bobrov/react-vevet-hooks_v3.0.1",
       "date": "Sun, 13 Oct 2024 17:40:07 GMT",
