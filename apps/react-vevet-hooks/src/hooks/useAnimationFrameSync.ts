@@ -33,6 +33,7 @@ export interface IUseAnimationFrameSyncProps<
  *
  * set('x', 1);
  * set('y', 0.5);
+ * set('y', 0.5, true); // instant change
  */
 export function useAnimationFrameSync<T extends TUseAnimationFrameSyncData>({
   data: initialData,
@@ -49,14 +50,20 @@ export function useAnimationFrameSync<T extends TUseAnimationFrameSyncData>({
   const props = objectKeys(initialData);
   const { moment, target } = dataRef.current;
 
+  const render = useEvent((ease: number) => {
+    props.forEach((prop) => {
+      // @ts-ignore
+      moment[prop] = lerp(moment[prop], target[prop], ease);
+    });
+
+    onUpdate(moment);
+  });
+
   const { play, pause } = useAnimationFrame({
     onFrame: ({ fpsMultiplier }) => {
       const ease = easeProp * fpsMultiplier;
 
-      props.forEach((prop) => {
-        // @ts-ignore
-        moment[prop] = lerp(moment[prop], target[prop], ease);
-      });
+      render(ease);
 
       const undone = props.filter((prop) => moment[prop] !== target[prop]);
       const isInterpolated = undone.length === 0;
@@ -64,19 +71,30 @@ export function useAnimationFrameSync<T extends TUseAnimationFrameSyncData>({
       if (isInterpolated) {
         pause();
       }
-
-      onUpdate(moment);
     },
   });
 
   const set = useCallback(
-    (prop: keyof T, value: number) => {
+    (prop: keyof T, value: number, isInstant?: boolean) => {
       // @ts-ignore
       target[prop] = value;
 
-      play();
+      // instant change
+      if (isInstant) {
+        // @ts-ignore
+        moment[prop] = value;
+
+        render(0);
+      } else {
+        // interpolated change
+
+        // @ts-ignore
+        target[prop] = value;
+
+        play();
+      }
     },
-    [play, target],
+    [moment, play, render, target],
   );
 
   const getMoment = useCallback(() => moment, [moment]);
