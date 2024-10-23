@@ -2,6 +2,21 @@
   "name": "@anton.bobrov/react-vevet-hooks",
   "entries": [
     {
+      "version": "3.1.0",
+      "tag": "@anton.bobrov/react-vevet-hooks_v3.1.0",
+      "date": "Wed, 23 Oct 2024 10:34:22 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "useAnimationFrameSync / set: add `isInstant`"
+          },
+          {
+            "comment": "Upgrade Vevet to 4.2.0"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.0.2",
       "tag": "@anton.bobrov/react-vevet-hooks_v3.0.2",
       "date": "Wed, 16 Oct 2024 07:54:04 GMT",

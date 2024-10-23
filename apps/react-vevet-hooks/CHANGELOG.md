@@ -1,6 +1,14 @@
 # Change Log - @anton.bobrov/react-vevet-hooks
 
-This log was last generated on Wed, 16 Oct 2024 07:54:04 GMT and should not be manually modified.
+This log was last generated on Wed, 23 Oct 2024 10:34:22 GMT and should not be manually modified.
+
+## 3.1.0
+Wed, 23 Oct 2024 10:34:22 GMT
+
+### Minor changes
+
+- useAnimationFrameSync / set: add `isInstant`
+- Upgrade Vevet to 4.2.0
 
 ## 3.0.2
 Wed, 16 Oct 2024 07:54:04 GMT
