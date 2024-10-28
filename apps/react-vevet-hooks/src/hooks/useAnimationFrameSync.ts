@@ -14,6 +14,9 @@ export interface IUseAnimationFrameSyncProps<
   /** Callback function to be called on each update with the current interpolated values. */
   onUpdate: (data: T) => void;
 
+  /** Callback function to be called on each update with the target values. */
+  onSet?: (data: T) => void;
+
   /** The easing factor for the interpolation. Defaults to 0.1. */
   ease?: number;
 }
@@ -38,9 +41,11 @@ export interface IUseAnimationFrameSyncProps<
 export function useAnimationFrameSync<T extends TUseAnimationFrameSyncData>({
   data: initialData,
   onUpdate: onUpdateProp,
+  onSet: onSetProp,
   ease: easeProp = 0.1,
 }: IUseAnimationFrameSyncProps<T>) {
   const onUpdate = useEvent(onUpdateProp);
+  const onSet = useEvent(onSetProp);
 
   const dataRef = useRef({
     moment: { ...initialData },
@@ -88,13 +93,12 @@ export function useAnimationFrameSync<T extends TUseAnimationFrameSyncData>({
       } else {
         // interpolated change
 
-        // @ts-ignore
-        target[prop] = value;
-
         play();
       }
+
+      onSet?.(target);
     },
-    [moment, play, render, target],
+    [moment, onSet, play, render, target],
   );
 
   const getMoment = useCallback(() => moment, [moment]);
