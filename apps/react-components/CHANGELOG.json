@@ -2,6 +2,26 @@
   "name": "@anton.bobrov/react-components",
   "entries": [
     {
+      "version": "3.3.0",
+      "tag": "@anton.bobrov/react-components_v3.3.0",
+      "date": "Tue, 29 Oct 2024 23:35:48 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Upgrade Vevet to 4.2.0"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-hooks\" to `3.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@anton.bobrov/react-vevet-hooks\" to `3.2.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.2.0",
       "tag": "@anton.bobrov/react-components_v3.2.0",
       "date": "Wed, 23 Oct 2024 10:34:22 GMT",
