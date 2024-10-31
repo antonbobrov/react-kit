@@ -39,7 +39,10 @@ const meta: Meta<TComponent> = {
     ),
   },
   argTypes: {
-    onAnimationRender: { table: { disable: true } },
+    onExpandStart: { table: { disable: true } },
+    onExpandRender: { table: { disable: true } },
+    onExpandEnd: { table: { disable: true } },
+    onHiddenContentRender: { table: { disable: true } },
     children: { table: { disable: true } },
   },
 };
@@ -78,7 +81,8 @@ WithoutAlpha.args = {
 
 export const WithCustomAnimation = Template.bind({});
 WithCustomAnimation.args = {
-  onAnimationRender: ({ content, p }) => {
+  isHiddenContentRendered: false,
+  onExpandRender: ({ content, p }) => {
     const scale = 0.9 + 0.1 * p;
     const y = 1 - p;
 

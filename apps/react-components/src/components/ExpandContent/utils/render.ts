@@ -16,6 +16,7 @@ interface IProps {
   timeline: Timeline | undefined;
   p: number;
   hasAlpha: boolean;
+  onStart?: () => void;
   onRender?: TExpandContentRenderAnimation;
   onEnd?: (isActive: boolean) => void;
 }
@@ -30,6 +31,7 @@ export function render({
   timeline,
   p,
   hasAlpha,
+  onStart,
   onRender,
   onEnd,
 }: IProps) {
@@ -58,6 +60,13 @@ export function render({
   // animate alpha
   if (hasAlpha) {
     content.style.opacity = `${contentProgress}`;
+  }
+
+  // start callbacks
+  if (timeline.isReversed && p === 1) {
+    onStart?.();
+  } else if (!timeline.isReversed && p === 0) {
+    onStart?.();
   }
 
   // render callbacks

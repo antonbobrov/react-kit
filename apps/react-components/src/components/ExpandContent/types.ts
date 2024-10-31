@@ -4,7 +4,7 @@ import { TExpandContentRenderAnimation } from './utils/render';
 
 type TExpandContentHTMLProps = Omit<
   HTMLAttributes<HTMLDivElement>,
-  'children' | 'onAnimationEnd'
+  'children' | 'onAnimationStart' | 'onAnimationEnd'
 >;
 
 type TExpandContentBaseProps = {
@@ -28,10 +28,14 @@ type TExpandContentBaseProps = {
    * @default true
    */
   isHiddenContentRendered?: boolean;
+  /** Event on expanding animation start */
+  onExpandStart?: () => void;
+  /** Event on expanding animation render */
+  onExpandRender?: TExpandContentRenderAnimation;
   /** Event on animation end */
-  onAnimationRender?: TExpandContentRenderAnimation;
-  /** Event on animation end */
-  onAnimationEnd?: (isActive: boolean) => void;
+  onExpandEnd?: (isActive: boolean) => void;
+  /** Event on hidden content render */
+  onHiddenContentRender?: () => void;
 };
 
 export interface IExpandContentProps

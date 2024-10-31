@@ -1,5 +1,9 @@
 import React, { forwardRef, useEffect, useRef } from 'react';
-import { useEvent, useForwardedRef } from '@anton.bobrov/react-hooks';
+import {
+  useDebouncedEffect,
+  useEvent,
+  useForwardedRef,
+} from '@anton.bobrov/react-hooks';
 import { useTimeline } from '@anton.bobrov/react-vevet-hooks';
 import cn from 'classnames';
 import { prefixedClasNames } from '../../utils/prefixedClassNames';
@@ -31,8 +35,10 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
       duration = 500,
       hasAlpha = true,
       isHiddenContentRendered: isHiddenContentRenderedProp = true,
-      onAnimationRender: onAnimationRenderProp,
-      onAnimationEnd: onAnimationEndProp,
+      onExpandStart,
+      onExpandRender,
+      onExpandEnd,
+      onHiddenContentRender: onHiddenContentRenderProp,
       children,
       ...props
     },
@@ -41,8 +47,7 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
     const parentRef = useForwardedRef(forwardedRef);
     const contentRef = useRef<HTMLDivElement>(null);
 
-    const onAnimationRender = useEvent(onAnimationRenderProp);
-    const onAnimationEnd = useEvent(onAnimationEndProp);
+    const onHiddenContentRender = useEvent(onHiddenContentRenderProp);
 
     const {
       isActive,
@@ -64,9 +69,12 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
           timeline,
           p,
           hasAlpha,
-          onRender: onAnimationRender,
+          onStart: () => {
+            onExpandStart?.();
+          },
+          onRender: onExpandRender,
           onEnd: (data) => {
-            onAnimationEnd?.(data);
+            onExpandEnd?.(data);
 
             if (!data) {
               setIsHidden(true);
@@ -103,6 +111,16 @@ export const ExpandContent = forwardRef<HTMLDivElement, IExpandContentProps>(
         reverse();
       }
     }, [isActive, isPrevActive, play, reverse]);
+
+    useDebouncedEffect(
+      () => {
+        if (isHiddenContentRendered) {
+          onHiddenContentRender?.();
+        }
+      },
+      [isHiddenContentRendered, onHiddenContentRender],
+      1,
+    );
 
     return (
       <div
