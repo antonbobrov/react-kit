@@ -49,8 +49,17 @@ type TObserverInstance = {
   elements: TElement[];
 };
 
+
+declare global {
+  interface Window {
+    __rkhUseIntersectionObserverInstances: TObserverInstance[];
+  }
+}
+
 // save instances to not create a new observer per hook call
-const instances: TObserverInstance[] = [];
+if (typeof window !== 'undefined') {
+  window.__rkhUseIntersectionObserverInstances = [];
+}
 
 /**
  * Custom React hook that creates an Intersection Observer to monitor the visibility
@@ -93,7 +102,7 @@ export function useIntersectionObserver({
 
   const getObserverInstance = useCallback(
     () =>
-      instances.find(
+      window.__rkhUseIntersectionObserverInstances.find(
         (data) =>
           data.root === root &&
           data.threshold === threshold &&
@@ -140,7 +149,7 @@ export function useIntersectionObserver({
         elements: [],
       };
 
-      instances.push(instance);
+      window.__rkhUseIntersectionObserverInstances.push(instance);
     }
 
     instance.elements.push({ id, element, onEntry });
@@ -162,7 +171,7 @@ export function useIntersectionObserver({
       }
 
       if (instance.elements.length === 0) {
-        instances.splice(instances.indexOf(instance), 1);
+        window.__rkhUseIntersectionObserverInstances.splice(window.__rkhUseIntersectionObserverInstances.indexOf(instance), 1);
         instance.observer.disconnect();
       }
     };
