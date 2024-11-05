@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@anton.bobrov/eslint-config",
+      "comment": "Boolean: add `allow` prefix",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@anton.bobrov/eslint-config"
+}
