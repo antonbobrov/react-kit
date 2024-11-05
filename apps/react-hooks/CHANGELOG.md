@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/react-hooks
 
-This log was last generated on Tue, 29 Oct 2024 23:35:48 GMT and should not be manually modified.
+This log was last generated on Tue, 05 Nov 2024 15:21:50 GMT and should not be manually modified.
+
+## 3.1.1
+Tue, 05 Nov 2024 15:21:50 GMT
+
+### Patches
+
+- useIntersectionObserver: save instances globally
 
 ## 3.1.0
 Tue, 29 Oct 2024 23:35:48 GMT

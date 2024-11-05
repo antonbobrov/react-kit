@@ -1,6 +1,13 @@
 # Change Log - @anton.bobrov/eslint-config
 
-This log was last generated on Sun, 13 Oct 2024 17:40:07 GMT and should not be manually modified.
+This log was last generated on Tue, 05 Nov 2024 15:21:50 GMT and should not be manually modified.
+
+## 2.0.5
+Tue, 05 Nov 2024 15:21:50 GMT
+
+### Patches
+
+- Boolean: add `allow` prefix
 
 ## 2.0.4
 Sun, 13 Oct 2024 17:40:07 GMT
