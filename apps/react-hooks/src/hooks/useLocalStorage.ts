@@ -18,7 +18,6 @@ import { useEvent } from './useEvent';
  * const [state, setState] = useLocalStorage(
  *   'localStorageKey',
  *   { searchQuery: '' },
- *   false,
  * );
  *
  * setState({ ...state, searchQuery: 'test' });
