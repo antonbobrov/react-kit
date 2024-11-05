@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { THookEventElement } from '@types';
 import { getHookEventElement } from '@utils/internal/getHookEventElement';
 import { useCallback, useEffect, useId } from 'react';
@@ -48,7 +49,6 @@ type TObserverInstance = {
   rootMargin: string;
   elements: TElement[];
 };
-
 
 declare global {
   interface Window {
@@ -171,7 +171,10 @@ export function useIntersectionObserver({
       }
 
       if (instance.elements.length === 0) {
-        window.__rkhUseIntersectionObserverInstances.splice(window.__rkhUseIntersectionObserverInstances.indexOf(instance), 1);
+        window.__rkhUseIntersectionObserverInstances.splice(
+          window.__rkhUseIntersectionObserverInstances.indexOf(instance),
+          1,
+        );
         instance.observer.disconnect();
       }
     };
