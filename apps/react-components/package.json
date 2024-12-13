@@ -1,6 +1,6 @@
 {
   "name": "@anton.bobrov/react-components",
-  "version": "3.4.1",
+  "version": "3.5.0",
   "description": "A collection of reusable React components designed to streamline development and enhance user interfaces.",
   "private": false,
   "main": "lib/cjs/index.js",
